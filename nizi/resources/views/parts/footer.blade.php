@@ -1,10 +1,5 @@
     <footer>
-         <!-- Fonts -->
-         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-         <!-- CSS(Bootstrap)読み込み -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <!-- fontawesome 読み込み -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        
         <!-- SNS連携 -->
         <div class="footer-contents .align-middle">
             <a class="footer-logo">Sophia univ.</a>
