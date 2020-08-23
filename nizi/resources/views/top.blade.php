@@ -11,10 +11,32 @@
 @include("parts.header")
 
 <main>
-	<h1>-授業内容-</h1>
-    <nav>
-		<a href="{{ url('/general') }}">一般教養</a>
-	</nav>
+	<!-- 画像挿入-->
+	<div class="img-sophia">
+		<img src="{{ asset('img/sophia.jpg') }}" class="img-fluid">
+	</div>
+
+	<!-- 科目一覧表示 -->
+	<div>
+		<h1	class="text-center">
+			~授業情報~
+		</h1>
+		<div class="container text-center">
+			<div class="row">
+				<div class="col" href="{{ url('/general') }}">
+					
+					<a href="{{ url('/general') }}" >
+
+						<div>
+							<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
+						</div>
+						<h1>一般教養</h1>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
 </main>
 
 @include("parts.footer")

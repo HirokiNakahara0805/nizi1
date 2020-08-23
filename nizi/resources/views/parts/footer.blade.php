@@ -1,5 +1,6 @@
     <footer>
-        
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
         <!-- SNS連携 -->
         <div class="footer-contents .align-middle">
             <a class="footer-logo">Sophia univ.</a>
