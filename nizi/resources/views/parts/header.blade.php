@@ -1,5 +1,5 @@
 <header>
-<nav>
+	<nav>
 		<a href="/">Sophia univ</a>
 	</nav>
 </header>
