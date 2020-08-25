@@ -8,7 +8,7 @@
                 <ul class="sns-lists .text-center	">
 
                     <li class="sns-item twitter list-inline-item">
-                        <a target="_blank" href="">
+                        <a target="_blank" href="https://mobile.twitter.com/8pilotis">
 
                             <i class="fab fa-twitter-square"></i>
                         </a>
