@@ -43,7 +43,7 @@
 				<div id="mon" class="section ">
 					<div>
 						<a href="#mon1" class="periodList">1st period</h2>
-						<P id="mon1" class="mon12345">1111</P>
+						<P id="mon1" class="mon12345">1111ｍ</P>
 					</div>
 					<div>
 						<a href="#mon2" class="periodList">2nd period</h2>
@@ -66,7 +66,7 @@
 				<div id="tue" class="section">
 					<div>
 						<a href="#tue1" class="periodList">1st period</h2>
-						<P id="tue1" class="tue12345">1111</P>
+						<P id="tue1" class="tue12345">1111ｔ</P>
 					</div>
 					<div>
 						<a href="#tue2" class="periodList">2nd period</h2>
@@ -89,7 +89,7 @@
 				<div id="wed" class="section">
 					<div>
 						<a href="#wed1" class="periodList">1st period</h2>
-						<P id="wed1" class="wed12345">1111</P>
+						<P id="wed1" class="wed12345">1111ｗ</P>
 					</div>
 					<div>
 						<a href="#wed2" class="periodList">2nd period</h2>
@@ -112,7 +112,7 @@
 				<div id="thu" class="section">
 					<div>
 						<a href="#thu1" class="periodList">1st period</h2>
-						<P id="thu1" class="thu12345">1111</P>
+						<P id="thu1" class="thu12345">1111ｔ</P>
 					</div>
 					<div>
 						<a href="#thu2" class="periodList">2nd period</h2>
@@ -135,7 +135,7 @@
 				<div id="fri" class="section">
 					<div>
 						<a href="#fri1" class="periodList">1st period</h2>
-						<P id="fri1" class="fri12345">1111</P>
+						<P id="fri1" class="fri12345">1111ｆ</P>
 					</div>
 					<div>
 						<a href="#fri2" class="periodList">2nd period</h2>
