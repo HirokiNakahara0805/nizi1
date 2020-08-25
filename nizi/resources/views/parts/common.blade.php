@@ -8,12 +8,16 @@
 <title>Top Sophia</title>
 @endisset
 
- <!-- Fonts -->
- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
          <!-- CSS(Bootstrap)読み込み -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <!-- fontawesome 読み込み -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-<link rel="stylesheet" href="{{  asset('css/style.css') }}" />
+        <link rel="stylesheet" href="{{  asset('css/style.css') }}" />
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/general.js"></script>
+
 
 </head>
