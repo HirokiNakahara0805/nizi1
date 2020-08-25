@@ -1,0 +1,24 @@
+a{
+    color: white;
+    text-decoration:none;
+    font-size: 30px;
+}
+a:hover {
+    color:white;
+    text-decoration: none;
+    
+  }
+
+.header-color{
+    background-color: black;
+    height: 40px;
+}
+.img-sophia{
+    height: auto;
+}
+a.secList{
+    color: black;
+}
+a.periodList{
+    color: black;
+}
