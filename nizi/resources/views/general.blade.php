@@ -159,6 +159,9 @@
 	</div>
 </main>
 @include("parts.footer")
+        <!-- javascript (general) 読み込み-->
+		<script type="text/javascript" src="js/general.js"></script>
+		
 </body>
 </html>
 
