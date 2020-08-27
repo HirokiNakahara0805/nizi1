@@ -25,7 +25,7 @@ class PostRequest extends FormRequest
     {
         return [
             'name' => 'required|max:40',
-            'subject' => 'required|max:80',
+            'subject' => 'required|integer|max:2',
             'message' => 'required|max:350',
             'category_id' => 'required|integer',
         ];
@@ -38,10 +38,11 @@ class PostRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => '名前を入力してください',
-            'name.max' => '名前は40文字以内で入力してください',
-            'subject.required' => '件名を入力してください',
-            'subject.max' => '件名は80文字以内で入力してください',
+            'name.required' => 'ニックネームを入力してください',
+            'name.max' => 'ニックネームは40文字以内で入力してください',
+            'subject.required' => '学年を入力してください',
+            'subject.integer'=>'学年は半角数字１文字で入力してください',
+            'subject.max' => '学年は半角数字１文字で入力してください',
             'message.required' => 'メッセージを入力してください',
             'message.max' => 'メッセージは350文字以内で入力してください',
             'category_id.required' => 'カテゴリーを選択してください',

@@ -10,14 +10,14 @@
 @section('content')
 <div class="container mt-4">
     <div class="border p-4">
-        <!-- 件名 -->
+        <!-- ニックネーム -->
         <h1 class="h4 mb-4">
             {{ $post->name }}
         </h1>
  
         <!-- 投稿情報 -->
         <div class="summary">
-            <p><span>{{ $post->subject }}</span> / <time>{{ $post->updated_at->format('Y.m.d H:i') }}</time> / {{ $post->category->name }} / {{ $post->id }}</p>
+            <p><span>{{ $post->subject }}</span> / <time>{{ $post->updated_at->format('Y.m.d H:i') }}</time> / </p>
         </div>
  
         <!-- 本文 -->
@@ -26,9 +26,7 @@
         </p>
  
         <section>
-            <h2 class="h5 mb-4">
-                コメント
-            </h2>
+            
             <form class="mb-4" method="POST" action="{{ route('comment.store') }}">
     @csrf
  
@@ -40,7 +38,7 @@
  
     <div class="form-group">
         <label for="subject">
-        名前
+        ニックネーム
         </label>
  
  <input
@@ -81,6 +79,10 @@
      </button>
     </div>
 </form>
+
+<h2 class="h5 mb-4">
+                コメント
+            </h2>
  
 @if (session('commentstatus'))
     <div class="alert alert-success mt-4 mb-4">
@@ -92,8 +94,8 @@
                 <div class="border-top p-4">
                     <time class="text-secondary">
                         {{ $comment->name }} / 
-                        {{ $comment->created_at->format('Y.m.d H:i') }} / 
-                        {{ $comment->id }}
+                        {{ $comment->created_at->format('Y.m.d H:i') }} 
+                        <!-- コメントid消した -->
                     </time>
                     <p class="mt-2">
                         {!! nl2br(e($comment->comment)) !!}

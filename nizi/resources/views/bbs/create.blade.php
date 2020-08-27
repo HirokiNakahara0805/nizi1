@@ -21,7 +21,7 @@
  
                 <div class="form-group">
                     <label for="subject">
-                        名前
+                        ニックネーム
                     </label>
                     <input
                         id="name"

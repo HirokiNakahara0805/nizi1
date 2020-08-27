@@ -26,7 +26,7 @@
         <tr>
             
             <th>投稿時間</th>
-            <th>名前</th>
+            <th>ニックネーム</th>
             <th>学年</th>
             <th>メイン内容</th>
         
@@ -37,9 +37,9 @@
             
             <tr>
                 
-                <td>{{ $post->created_at->format('Y.m.d') }}</td>
+                <td>{{ $post->created_at->format('Y.m.d H:i') }}</td>
                 <td>{{ $post->name }}</td>
-                <td>{{ $post->subject }}</td>
+                <td>{{ $post->subject }}学年</td>
                 <td>{!! nl2br(e(Str::limit($post->message, 100))) !!}
                 @if ($post->comments->count() >= 1)
                     <p><span class="badge badge-primary">コメント：{{ $post->comments->count() }}件</span></p>
