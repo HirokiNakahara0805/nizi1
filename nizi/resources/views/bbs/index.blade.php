@@ -34,6 +34,7 @@
         </thead>
         <tbody id="tbl">
         @foreach ($posts as $post)
+            
             <tr>
                 
                 <td>{{ $post->created_at->format('Y.m.d') }}</td>
@@ -49,6 +50,7 @@
 
                 </td>
             </tr>
+            
         @endforeach
         </tbody>
     </table>
