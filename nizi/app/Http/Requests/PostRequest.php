@@ -25,7 +25,7 @@ class PostRequest extends FormRequest
     {
         return [
             'name' => 'required|max:40',
-            'subject' => 'required|integer|max:2',
+            'subject' => 'required|integer|max:3',
             'message' => 'required|max:350',
             'category_id' => 'required|integer',
         ];
