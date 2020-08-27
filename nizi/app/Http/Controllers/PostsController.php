@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
-use App\Post; 
+use App\Post, App\Category; 
 use App\Http\Requests\PostRequest;
  
 class PostsController extends Controller

@@ -12,4 +12,10 @@ class Category extends Model
         // カテゴリは複数のポストを持つ
         return $this->hasMany('App\Post');
     }
+    public function getLists()
+{
+    $categories = Category::orderBy('id','asc')->pluck('name', 'id');
+ 
+    return $categories;
+}
 }
