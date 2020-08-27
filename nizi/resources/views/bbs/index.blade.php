@@ -7,7 +7,6 @@
 <link href="/css/bbs/style.css" rel="stylesheet">
 @endsection
  
-@include('layout.bbsheader')
  
 @section('content')
 @if (session('poststatus'))
@@ -34,20 +33,18 @@
     <table class="table table-hover">
         <thead>
         <tr>
-            <th>ID</th>
-            <th>カテゴリ</th>
-            <th>作成日時</th>
+            
+            <th>投稿時間</th>
             <th>名前</th>
-            <th>件名</th>
-            <th>メッセージ</th>
-            <th>処理</th>
+            <th>学年</th>
+            <th>メイン内容</th>
+        
         </tr>
         </thead>
         <tbody id="tbl">
         @foreach ($posts as $post)
             <tr>
-                <td>{{ $post->id }}</td>
-                <td>{{ $post->category->name }}</td>
+                
                 <td>{{ $post->created_at->format('Y.m.d') }}</td>
                 <td>{{ $post->name }}</td>
                 <td>{{ $post->subject }}</td>
@@ -71,4 +68,3 @@
 @endsection
 
  
-@include('layout.bbsfooter')
