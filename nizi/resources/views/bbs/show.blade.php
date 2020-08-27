@@ -6,20 +6,18 @@
 @section('pageCss')
 <link href="/css/bbs/style.css" rel="stylesheet">
 @endsection
- 
-@include('layout.bbsheader')
- 
+
 @section('content')
 <div class="container mt-4">
     <div class="border p-4">
         <!-- 件名 -->
         <h1 class="h4 mb-4">
-            {{ $post->subject }}
+            {{ $post->name }}
         </h1>
  
         <!-- 投稿情報 -->
         <div class="summary">
-            <p><span>{{ $post->name }}</span> / <time>{{ $post->updated_at->format('Y.m.d H:i') }}</time> / {{ $post->category->name }} / {{ $post->id }}</p>
+            <p><span>{{ $post->subject }}</span> / <time>{{ $post->updated_at->format('Y.m.d H:i') }}</time> / {{ $post->category->name }} / {{ $post->id }}</p>
         </div>
  
         <!-- 本文 -->
@@ -116,6 +114,3 @@
 </div>
 
 @endsection
-
- 
-@include('layout.bbsfooter')

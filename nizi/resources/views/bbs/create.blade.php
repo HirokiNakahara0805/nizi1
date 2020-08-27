@@ -6,9 +6,7 @@
 @section('pageCss')
 <link href="/css/bbs/style.css" rel="stylesheet">
 @endsection
- 
-@include('layout.bbsheader')
- 
+
 @section('content')
 <div class="container mt-4">
     <div class="border p-4">
@@ -59,7 +57,7 @@
  
                 <div class="form-group">
                     <label for="subject">
-                        件名
+                        学年
                     </label>
                     <input
                         id="subject"
@@ -77,7 +75,7 @@
  
                 <div class="form-group">
                     <label for="message">
-                        メッセージ
+                        メイン内容
                     </label>
  
                     <textarea
@@ -108,4 +106,3 @@
 </div>
 @endsection
  
-@include('layout.bbsfooter')
