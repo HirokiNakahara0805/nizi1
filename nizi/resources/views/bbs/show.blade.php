@@ -17,7 +17,7 @@
  
         <!-- 投稿情報 -->
         <div class="summary">
-            <p><span>{{ $post->subject }}</span> / <time>{{ $post->updated_at->format('Y.m.d H:i') }}</time> / </p>
+            <p><span>{{ $post->subject }}学年</span> / <time>{{ $post->updated_at->format('Y.m.d H:i') }}</time> / </p>
         </div>
  
         <!-- 本文 -->
@@ -110,7 +110,7 @@
 
 
 <div class="mt-4 mb-4">
-    <a href="{{ route('bbs.index') }}" class="btn btn-info">
+    <a href="#" class="btn" onclick="history.back(); return false;">
         一覧に戻る
     </a>
 </div>
