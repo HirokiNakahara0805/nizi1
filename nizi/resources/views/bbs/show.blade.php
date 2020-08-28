@@ -1,3 +1,5 @@
+
+
 @extends('layout.bbslayout')
  
 @section('title', '8pilotis BBS 投稿の詳細ページ')
@@ -116,3 +118,4 @@
 </div>
 
 @endsection
+
