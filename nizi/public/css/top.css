@@ -22,3 +22,9 @@ a.secList{
 a.periodList{
     color: black;
 }
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+
