@@ -72,8 +72,21 @@
 		</div>
 	</div>
 
+	<!-- 掲示板一覧 -->
+	<div>
+		<div>
+			<ul>
+				<li><a><p>経営学入門掲示板</p></a></li>
+				<li><a><p></p></a></li>
+				<li><a><p></p></a></li>
+				<li><a><p></p></a></li>
+				<li><a><p></p></a></li>
+			</ul>
+		</div>
+	</div>
 
 
+</main>
 @include("parts.footer")
         <!--JS(slick用)読み込み-->
         
