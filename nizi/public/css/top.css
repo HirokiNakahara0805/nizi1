@@ -28,3 +28,7 @@ a.periodList{
     color: #000;
 }
 
+a.class-list{
+    color:black;
+    border-right-color: grey;
+}
