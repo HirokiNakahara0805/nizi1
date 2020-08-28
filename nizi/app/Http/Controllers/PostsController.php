@@ -39,8 +39,8 @@ class PostsController extends Controller
     $category = new Category;
     $categories = $category->getLists()->prepend('選択', '');
  
-    return view('bbs.create', ['categories' => $categories]);
-}
+    return view('bbs.index');
+}  
  
  
     /**
