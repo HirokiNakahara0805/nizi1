@@ -46,21 +46,14 @@
                 </div>
  
                 <div class="form-group">
-                    <label for="subject">
-                        カテゴリー
-                    </label>
-                    <input
-                        id="category_id"
-                        name="category_id"
-                        class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
-                        value="{{ old('category_id') }}"
-                        type="text"
-                    >
-                    @if ($errors->has('category_id'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('category_id') }}
-                        </div>
-                    @endif
+                <input
+                    id="category_id"
+                    name="category_id"
+                    value = "{{ $category_id }}"
+                    class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
+                    text="text"
+                    type="hidden"
+                >
                 </div>
  
                 <div class="form-group">

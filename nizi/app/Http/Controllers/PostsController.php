@@ -58,6 +58,6 @@ class PostsController extends Controller
         $post = new Post;
         $post->fill($savedata)->save();
  
-        return redirect('/bbs')->with('poststatus', '新規投稿しました');
+        return back()->with('poststatus', '新規投稿しました');
     }
 }
