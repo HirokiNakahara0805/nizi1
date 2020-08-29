@@ -26,4 +26,7 @@ Route::resource('comment', 'CommentsController', ['only' => ['store']]);
 Route::get('/bbskari', function () {
     return view('bbskari');
 });
-//経営学　カテゴリーid1
+
+//評価投稿テストページ
+Route::resource('evaluation', 'Post2sController', ['only' => ['index','create', 'store']]);
+
