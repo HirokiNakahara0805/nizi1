@@ -33,13 +33,13 @@
 <div class="all-index">
 
 
-    <div class="container mt-4">
-        <div class="border p-2">
+    <div class="container mt-4 rounded">
+        <div class=" p-2 rounded comment-box">
 
             <form method="POST" action="{{ route('bbs.store') }}" >
                 @csrf
 
-                <fieldset class="">
+                <fieldset class="rounded">
                     <div class="row text-center">
                         <div class="form-group col-sm-6">
                             
@@ -120,7 +120,7 @@
         </div>
     </div>
 
-    <div class="mt-4 mb-4">
+    <div class="mt-4 mb-4 text-center">
         <p>{{ $posts->total() }}件が見つかりました。</p>
     </div>
 
@@ -141,14 +141,14 @@
             <div id="tbl">
             @foreach ($posts as $post)
 
-                <div class="comment-box">
+                <div class="comment-box rounded">
                     <div class="comment-text">{!! nl2br(e(Str::limit($post->message, 100))) !!}
                         @if ($post->comments->count() >= 1)
                             <p><span class="badge badge-primary">コメント：{{ $post->comments->count() }}件</span></p>
                         @endif
                     </div>
                     <div class="">
-                        <div class="f-container comment-info">
+                        <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
                             <div class="f-item float-right">{{ $post->name }}</div>
                             <div class="f-item float-right ">{{ $post->subject }}学年</div>
