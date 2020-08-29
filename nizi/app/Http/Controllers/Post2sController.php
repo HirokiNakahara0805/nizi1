@@ -3,18 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post2; // ←★忘れず追記
+use App\Post2,App\Category;// ←★忘れず追記
 use App\Http\Requests\Post2Request; // class宣言の外に追記
 
 class Post2sController extends Controller
 {
-    public function index()
+        public function index(Request $request)
     {
-        $post2s = Post2::orderBy('created_at', 'desc')->paginate(10);
-        return view('evaluation.index', ['post2s' => $post2s]);
-
-       
-        
+        // カテゴリ取得
+        $category = new Category;
+        $categories = $category->getLists();
+    
+        $category_id = $request->category_id;
+        if (!is_null($category_id)) {
+            $post2s = Post2::where('category_id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
+        } else {
+            $post2s = Post2::orderBy('created_at', 'desc')->paginate(10);
+        }
+    
+        return view('evaluation.index', [
+            'post2s' => $post2s, 
+            'categories' => $categories, 
+            'category_id'=>$category_id
+        ]);
     }
 
         /**
@@ -45,6 +56,6 @@ class Post2sController extends Controller
         $post2 = new Post2;
         $post2->fill($savedata)->save();
     
-        return redirect('/evaluation')->with('poststatus', '新規投稿しました');
+        return back()->with('poststatus', '新規投稿しました');
     }
 }
