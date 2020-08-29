@@ -22,7 +22,7 @@
 <div class="container mt-4">
     <div class="border p-4">
         <h1 class="h4 mb-4 font-weight-bold">
-            投稿の新規作成
+            評価投稿の新規作成
         </h1>
  
         <form method="POST" action="{{ route('evaluation.store') }}">
@@ -49,21 +49,14 @@
                 </div>
  
                 <div class="form-group">
-                    <label for="category_id"> <!-- subject だった-->
-                        カテゴリー
-                    </label>
-                    <input
-                        id="category_id"
-                        name="category_id"
-                        class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
-                        value="{{ old('category_id') }}"
-                        type="text"
-                    >
-                    @if ($errors->has('category_id'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('category_id') }}
-                        </div>
-                    @endif
+                <input
+                    id="category_id"
+                    name="category_id"
+                    value = "{{ $category_id }}"
+                    class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
+                    text="text"
+                    type="hidden"
+                >
                 </div>
  
                 <div class="form-group">
