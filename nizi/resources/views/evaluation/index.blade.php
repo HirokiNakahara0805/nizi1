@@ -17,6 +17,8 @@
     </div>
 @endif
 
+<span class="btn"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></span>
+
 <div class="container mt-4">
     <div class="border p-4">
         <h1 class="h4 mb-4 font-weight-bold">
