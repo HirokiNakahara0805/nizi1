@@ -28,40 +28,40 @@
 		<div class="container text-center fluid">
 		 	<!-- 学科表示(スライダー) -->
 			<div class="row your-class">
-				<div class="col-sm-3 img-sophia">
+				<div class=" img-sophia border border-secondary  m-2">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
 						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
 
-				<div class="col-sm-3 img-sophia">
+				<div class=" img-sophia border border-secondary  m-2">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
 						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
-				<div class="col-sm-3 img-sophia">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
-						<h1 class="your-class">一般教養</h1>
-						</a>
-				</div>
-
-				<div class="col-sm-3 img-sophia">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
-						<h1 class="your-class">一般教養</h1>
-						</a>
-				</div>
-				<div class="col-sm-3 img-sophia">
+				<div class=" img-sophia border border-secondary  m-2">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
 						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
 
-				<div class="col-sm-3 img-sophia">
+				<div class=" img-sophia border border-secondary  m-2">
+						<a href="{{ url('/general') }}" >
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
+						<h1 class="your-class">一般教養</h1>
+						</a>
+				</div>
+				<div class=" img-sophia border border-secondary  m-2 rounded">
+						<a href="{{ url('/general') }}" >
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
+						<h1 class="your-class">一般教養</h1>
+						</a>
+				</div>
+
+				<div class=" img-sophia border border-secondary  m-2">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
 						<h1 class="your-class">一般教養</h1>
