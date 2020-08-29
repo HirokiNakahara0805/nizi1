@@ -71,3 +71,9 @@ h3 {
 body{
   background-color:rgba(224, 224, 224, 0.356);
 }
+
+.reply-box{
+  background-color:white;
+  border-radius:10px;
+  
+}

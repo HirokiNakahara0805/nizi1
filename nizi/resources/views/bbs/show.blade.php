@@ -105,7 +105,7 @@
 @endif
  
             @forelse($post->comments as $comment)
-                <div class="border-top p-4">
+                <div class="m-2 p-3 reply-box">
                     <time class="text-secondary">
                         {{ $comment->name }} さん　/　
                         {{ $comment->created_at->format('Y.m.d H:i') }} 
