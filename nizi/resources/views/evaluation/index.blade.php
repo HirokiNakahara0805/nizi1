@@ -17,6 +17,8 @@
     </div>
 @endif
 
+
+
 <span class="btn"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></span>
 
 <div class="container mt-4">
@@ -77,17 +79,36 @@
                     @endif
                 </div>
 
-                <div class="form-group">
-                    <label for="good">
-                        いいね
-                    </label>
-                    <input
+                <div class="p-modal-bkm__fav-spinner">
+        <label for="good">
+                いいね
+        </label>
+                    <input 
                         id="good"
+                        type="number" 
+                        step="1" 
+                        min="1.0" 
+                        max="5.0" 
                         name="good"
                         class="form-control {{ $errors->has('good') ? 'is-invalid' : '' }}"
                         value="{{ old('good') }}"
-                        type="text"
+                        placeholder="-" 
+                        maxlength="3" 
+                        style="width: 50px; margin-right: 20px; text-align: right;"
                     >
+                        <div class="ui-spinner ui-widget">
+                            <div class="ui-spinner-buttons" style="height: 31px; left: -16px; top: 0px; width: 16px;">
+                                <div class="ui-spinner-up ui-spinner-button ui-state-default ui-corner-tr" style="width: 16px; height: 15.5px;">
+                                <span class="ui-icon ui-icon-triangle-1-n" style="margin-left: 0px; margin-top: -0.25px;">&nbsp;
+                                </span>
+                                </div>
+                                <div class="ui-spinner-down ui-spinner-button ui-state-default ui-corner-br" style="width: 16px; height: 15.5px;">
+                                <span class="ui-icon ui-icon-triangle-1-s" style="margin-left: 0px; margin-top: -0.25px;">&nbsp;
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
                     @if ($errors->has('good'))
                         <div class="invalid-feedback">
                             {{ $errors->first('good') }}
