@@ -15,7 +15,10 @@ a:hover {
 }
 .img-sophia{
     height: auto;
+    color: black;
+    border-radius: 3px;
 }
+
 a.secList{
     color: black;
 }
@@ -31,4 +34,18 @@ a.periodList{
 a.class-list{
     color:black;
     border-right-color: grey;
+}
+.all-class-info{
+    background-color: rgba(224, 224, 224, 0.356);
+
+    padding:40px;
+}
+.to-class{
+    margin:20px;
+    padding:20px;
+}
+h1.your-class{
+    color:black;
+    padding:10px;
+    margin:10px;
 }

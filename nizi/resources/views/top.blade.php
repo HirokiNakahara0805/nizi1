@@ -22,8 +22,8 @@
 	</div>
 
 	<!-- 科目一覧表示 -->
-	<div>
-		<h1	class="text-center">~授業情報~</h1>
+	<div class="to-class">
+		<h1	class="text-center p-3 m-3">~授業情報~</h1>
 
 		<div class="container text-center fluid">
 		 	<!-- 学科表示(スライダー) -->
@@ -31,40 +31,40 @@
 				<div class="col-sm-3 img-sophia">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
-						<h1>一般教養</h1>
+						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
 
 				<div class="col-sm-3 img-sophia">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
-						<h1>一般教養</h1>
+						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
 				<div class="col-sm-3 img-sophia">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
-						<h1>一般教養</h1>
-						</a>
-				</div>
-
-				<div class="col-sm-3 img-sophia">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
-						<h1>一般教養</h1>
-						</a>
-				</div>
-				<div class="col-sm-3 img-sophia">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
-						<h1>一般教養</h1>
+						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
 
 				<div class="col-sm-3 img-sophia">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
-						<h1>一般教養</h1>
+						<h1 class="your-class">一般教養</h1>
+						</a>
+				</div>
+				<div class="col-sm-3 img-sophia">
+						<a href="{{ url('/general') }}" >
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
+						<h1 class="your-class">一般教養</h1>
+						</a>
+				</div>
+
+				<div class="col-sm-3 img-sophia">
+						<a href="{{ url('/general') }}" >
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center">
+						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
 
@@ -73,16 +73,15 @@
 	</div>
 
 	<!-- 掲示板一覧 -->
-	<div>
-		<div>
-			<ul>
-				<li><a><p>経営学入門掲示板</p></a></li>
-				<li><a><p></p></a></li>
-				<li><a><p></p></a></li>
-				<li><a><p></p></a></li>
-				<li><a><p></p></a></li>
+	<div class="all-class-info text-center">
+			
+				<a><p>経営学入門掲示板</p></a>
+				<a><p>経営学入門掲示板</p></a>
+				<a><p>経営学入門掲示板</p></a>
+				<a><p>経営学入門掲示板</p></a>
+				<a><p>経営学入門掲示板</p></a>
+				<a><p>経営学入門掲示板</p></a>
 			</ul>
-		</div>
 	</div>
 
 
