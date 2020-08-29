@@ -33,7 +33,7 @@
                 {!! nl2br(e($post->message)) !!}
             </p>
 
-            <div class="f-container comment-info">
+            <div class="f-container comment-info border-top">
                     <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
                     <div class="f-item float-right">{{ $post->name }}</div>
                     <div class="f-item float-right ">{{ $post->subject }}学年</div>

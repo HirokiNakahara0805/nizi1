@@ -33,13 +33,13 @@
 <div class="all-index">
 
 
-    <div class="container mt-4 rounded">
-        <div class=" p-2 rounded comment-box">
+    <div class="container mt-4 ">
+        <div class=" p-2  comment-box">
 
             <form method="POST" action="{{ route('bbs.store') }}" >
                 @csrf
 
-                <fieldset class="rounded">
+                <fieldset class="">
                     <div class="row text-center">
                         <div class="form-group col-sm-6">
                             
@@ -141,7 +141,7 @@
             <div id="tbl">
             @foreach ($posts as $post)
 
-                <div class="comment-box rounded">
+                <div class="comment-box">
                     <div class="comment-text">{!! nl2br(e(Str::limit($post->message, 100))) !!}
                         @if ($post->comments->count() >= 1)
                             <p><span class="badge badge-primary">コメント：{{ $post->comments->count() }}件</span></p>
