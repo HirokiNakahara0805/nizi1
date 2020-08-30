@@ -28,42 +28,42 @@
 		<div class="container text-center fluid">
 		 	<!-- 学科表示(スライダー) -->
 			<div class="row your-class">
-				<div class=" img-sophia border border-secondary  m-2">
+				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in">
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
 						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
 
-				<div class=" img-sophia border border-secondary  m-2">
+				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in">
-						<h1 class="your-class">一般教養</h1>
-						</a>
-				</div>
-				<div class=" img-sophia border border-secondary  m-2">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in">
-						<h1 class="your-class">一般教養</h1>
-						</a>
-				</div>
-
-				<div class=" img-sophia border border-secondary  m-2">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in">
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
 						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
 				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in">
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
 						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
 
-				<div class=" img-sophia border border-secondary  m-2">
+				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in">
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
+						<h1 class="your-class">一般教養</h1>
+						</a>
+				</div>
+				<div class=" img-sophia border border-secondary  m-2 rounded">
+						<a href="{{ url('/general') }}" >
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
+						<h1 class="your-class">一般教養</h1>
+						</a>
+				</div>
+
+				<div class=" img-sophia border border-secondary  m-2 rounded">
+						<a href="{{ url('/general') }}" >
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
 						<h1 class="your-class">一般教養</h1>
 						</a>
 				</div>
