@@ -24,4 +24,10 @@ class Category extends Model
         // カテゴリは複数のポスト2を持つ
         return $this->hasMany('App\Post2');
     }
+
+    public function syllabuses()
+    {
+        // カテゴリは複数のシラバスを持つ
+        return $this->hasMany('App\Syllabus');
+    }
 }
