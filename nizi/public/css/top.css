@@ -62,3 +62,13 @@ h1.your-class{
     border-radius: 20px;
     transition: 0.7s ease-in-out;
 }
+
+.header {
+    width: 100%;
+    min-width: 960px;
+   height: 100px;
+  position: fixed;
+    left:0;
+ top:0;
+  z-index: 10;
+}
