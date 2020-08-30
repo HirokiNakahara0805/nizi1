@@ -49,3 +49,8 @@ h1.your-class{
     padding:10px;
     margin:10px;
 }
+
+.img-sophia:hover {
+    transform: scale(0.8,0.8); /*画像の拡大*/
+    cursor: pointer; /*カーソルをポインターにする*/
+    }

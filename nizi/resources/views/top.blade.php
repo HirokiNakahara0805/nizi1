@@ -17,7 +17,7 @@
 
 <main>
 	<!-- 画像挿入-->
-	<div class="img-sophia">
+	<div class="">
 		<img src="{{ asset('img/sophia.jpg') }}" class="img-fluid h-75 w-100">
 	</div>
 
