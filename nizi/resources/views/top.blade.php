@@ -23,7 +23,7 @@
 
 	<!-- 科目一覧表示 -->
 	<div class="to-class">
-		<h1	class="text-center p-3 m-3">~授業情報~</h1>
+		<h1	class="text-center p-3 m-3">Class subject</h1>
 
 		<div class="container text-center fluid">
 		 	<!-- 学科表示(スライダー) -->
@@ -31,40 +31,40 @@
 				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
-						<h1 class="your-class">一般教養</h1>
+						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
 
 				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
-						<h1 class="your-class">一般教養</h1>
+						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
 				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
-						<h1 class="your-class">一般教養</h1>
-						</a>
-				</div>
-
-				<div class=" img-sophia border border-secondary  m-2 rounded">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
-						<h1 class="your-class">一般教養</h1>
-						</a>
-				</div>
-				<div class=" img-sophia border border-secondary  m-2 rounded">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
-						<h1 class="your-class">一般教養</h1>
+						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
 
 				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
-						<h1 class="your-class">一般教養</h1>
+						<h1 class="your-class">General education</h1>
+						</a>
+				</div>
+				<div class=" img-sophia border border-secondary  m-2 rounded">
+						<a href="{{ url('/general') }}" >
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
+						<h1 class="your-class">General education</h1>
+						</a>
+				</div>
+
+				<div class=" img-sophia border border-secondary  m-2 rounded">
+						<a href="{{ url('/general') }}" >
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
+						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
 
@@ -84,12 +84,14 @@
 			</ul>
 	</div>
 
-
+	<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
 </main>
 @include("parts.footer")
         <!--JS(slick用)読み込み-->
         
 		<script type="text/javascript" src="js/top.js"></script>
 		<script type="text/javascript" src="js/slick.min.js"></script>
+
+
 </body>
 </html>

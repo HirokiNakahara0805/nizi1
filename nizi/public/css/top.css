@@ -10,8 +10,8 @@ a:hover {
   }
 
 .header-color{
-    background-color: black;
-    height: 40px;
+    background-color: rgba(112, 45, 35, 0.719);
+    height: 50px;
 }
 .img-sophia{
     height: auto;
@@ -36,7 +36,7 @@ a.class-list{
     border-right-color: grey;
 }
 .all-class-info{
-    background-color: rgba(224, 224, 224, 0.356);
+    background-color: rgba(224, 224, 224, 0.521);
 
     padding:40px;
 }
@@ -65,10 +65,35 @@ h1.your-class{
 
 .header {
     width: 100%;
-    min-width: 960px;
-   height: 100px;
+    min-width: 960px; 
   position: fixed;
     left:0;
  top:0;
   z-index: 10;
 }
+
+/*トップ戻るボタン設定*/
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 99;
+  }
+  #page-top a {
+    background: #6e6e6e;
+    text-decoration: none;
+    color: #fff;
+    width: 60px;
+    padding: 28px 5px;
+    text-align: center;
+    display: block;
+    border-radius: 90px;
+    opacity: 0.9;
+    transition: all .3s ease;
+  }
+  #page-top a:hover {
+    text-decoration: none;
+    opacity: .5;
+  }
