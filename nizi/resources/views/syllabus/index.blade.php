@@ -17,7 +17,7 @@
             <th>内容</th>
         </thead>
         <tbody id="tbl">
-        @foreach ($syllabuses as $syllabus)
+        @foreach ($syllabi as $syllabus)
             <tr>
                 <td>{{ $syllabus->category_id }}</td>
                 <td>{{ $syllabus->name }}</td>

@@ -25,7 +25,7 @@ class Category extends Model
         return $this->hasMany('App\Post2');
     }
 
-    public function syllabuses()
+    public function syllabi()
     {
         // カテゴリは複数のシラバスを持つ
         return $this->hasMany('App\Syllabus');
