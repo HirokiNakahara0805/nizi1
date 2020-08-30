@@ -53,4 +53,12 @@ h1.your-class{
 .img-sophia:hover {
     transform: scale(0.8,0.8); /*画像の拡大*/
     cursor: pointer; /*カーソルをポインターにする*/
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
     }
+.img-sophia-in:hover{
+    transform: scale(0.8,0.8); /*画像の拡大*/
+    cursor: pointer; /*カーソルをポインターにする*/
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
