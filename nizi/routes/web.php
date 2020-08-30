@@ -30,5 +30,3 @@ Route::get('/bbskari', function () {
 //評価投稿テストページ
 Route::resource('evaluation', 'Post2sController', ['only' => ['index','create', 'store']]);
 
-//シラバステストページ
-Route::get('syllabus', 'SyllabusesController@index');
