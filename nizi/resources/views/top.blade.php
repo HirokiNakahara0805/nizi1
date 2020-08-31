@@ -22,8 +22,8 @@
 	</div>
 
 	<!-- 科目一覧表示 -->
-	<div class="to-class">
-		<h1	class="text-center p-3 m-3">Class subject</h1>
+	<div class="to-class" id="class-sub">
+		<h1	class="text-center p-3 m-3" >Class subject</h1>
 
 		<div class="container text-center fluid">
 		 	<!-- 学科表示(スライダー) -->
@@ -73,7 +73,7 @@
 	</div>
 
 	<!-- 掲示板一覧 -->
-	<div class="all-class-info text-center">
+	<div class="all-class-info text-center" id="all-bbs">
 			
 				<a><p>経営学入門掲示板</p></a>
 				<a><p>経営学入門掲示板</p></a>
