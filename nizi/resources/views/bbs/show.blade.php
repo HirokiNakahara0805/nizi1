@@ -1,3 +1,5 @@
+
+
 @extends('layout.bbslayout')
  
 @section('title', '8pilotis BBS 投稿の詳細ページ')
@@ -7,64 +9,79 @@
 <link href="/css/bbs/style.css" rel="stylesheet">
 @endsection
 
+<!-- header追加 -->
+@section('header')
+
+<link rel="stylesheet" href="{{ asset('/css/top.css') }}">
+
+<header>
+	<div class="header-color">
+		<nav class="a">
+			<li><a href="/">Sophia univ.</a></li>
+		</nav>
+	</div>
+</header>
+@endsection
+
 @section('content')
 <div class="container mt-4">
     <div class="border p-4">
-        <!-- ニックネーム -->
-        <h1 class="h4 mb-4">
-            {{ $post->name }}
-        </h1>
- 
-        <!-- 投稿情報 -->
-        <div class="summary">
-            <p><span>{{ $post->subject }}</span> / <time>{{ $post->updated_at->format('Y.m.d H:i') }}</time> / </p>
+
+        <div class="comment-box">
+            <!-- 本文 -->
+            <p class="mb-5">
+                {!! nl2br(e($post->message)) !!}
+            </p>
+
+            <div class="f-container comment-info border-top">
+                    <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
+                    <div class="f-item float-right">{{ $post->name }}</div>
+                    <div class="f-item float-right ">{{ $post->subject }}学年</div>
+             </div>
         </div>
  
-        <!-- 本文 -->
-        <p class="mb-5">
-            {!! nl2br(e($post->message)) !!}
-        </p>
+        
  
         <section>
             
             <form class="mb-4" method="POST" action="{{ route('comment.store') }}">
     @csrf
- 
-    <input
-        name="post_id"
-        type="hidden"
-        value="{{ $post->id }}"
-    >
- 
-    <div class="form-group">
-        <label for="subject">
-        ニックネーム
-        </label>
- 
- <input
-            id="name"
-            name="name"
-            class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
-            value="{{ old('name') }}"
-            type="text"
+    <div class="reply-form-box">
+        <input
+            name="post_id"
+            type="hidden"
+            value="{{ $post->id }}"
         >
-        @if ($errors->has('name'))
-         <div class="invalid-feedback">
-         {{ $errors->first('name') }}
-         </div>
-        @endif
+    
+        <div class="form-group">
+            <label for="subject">
+            ニックネーム
+            </label>
+    
+            <input
+                id="name"
+                name="name"
+                class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
+                value="{{ old('name') }}"
+                type="text"
+            >
+            @if ($errors->has('name'))
+            <div class="invalid-feedback">
+            {{ $errors->first('name') }}
+            </div>
+            @endif
+        </div>
+    
+        <div class="form-group">
+        <label for="body">
+        reply
+        </label>
     </div>
- 
-    <div class="form-group">
-     <label for="body">
-     本文
-     </label>
- 
         <textarea
             id="comment"
             name="comment"
             class="form-control {{ $errors->has('comment') ? 'is-invalid' : '' }}"
-            rows="4"
+            rows="2"
         >{{ old('comment') }}</textarea>
         @if ($errors->has('comment'))
          <div class="invalid-feedback">
@@ -74,15 +91,12 @@
     </div>
  
     <div class="mt-4">
-     <button type="submit" class="btn btn-primary">
-     コメントする
-     </button>
+        <button type="submit" class="btn btn-primary float-right">
+        コメントする
+        </button>
     </div>
 </form>
-
-<h2 class="h5 mb-4">
-                コメント
-            </h2>
+       
  
 @if (session('commentstatus'))
     <div class="alert alert-success mt-4 mb-4">
@@ -91,13 +105,13 @@
 @endif
  
             @forelse($post->comments as $comment)
-                <div class="border-top p-4">
+                <div class="m-2 p-3 reply-box">
                     <time class="text-secondary">
-                        {{ $comment->name }} / 
+                        {{ $comment->name }} さん　/　
                         {{ $comment->created_at->format('Y.m.d H:i') }} 
                         <!-- コメントid消した -->
                     </time>
-                    <p class="mt-2">
+                    <p class="mt-2 comment-text">
                         {!! nl2br(e($comment->comment)) !!}
                     </p>
                 </div>
@@ -109,10 +123,49 @@
 </div>
 
 
-<div class="mt-4 mb-4">
+<div class="mt-4 mb-4 text-center">
     <a href="{{ route('bbs.index') }}" class="btn btn-info">
         一覧に戻る
     </a>
 </div>
 
+
+@endsection
+
+
+@section('footer')
+<footer>
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
+        <!-- SNS連携 -->
+        <div class="footer-contents .align-middle">
+            <a class="footer-logo">Sophia univ.</a>
+            <div class="footer-sns d-flex justify-content-around" style="width: 200px;">
+                <ul class="sns-lists .text-center	">
+
+                    <li class="sns-item twitter list-inline-item">
+                        <a target="_blank" href="https://mobile.twitter.com/8pilotis">
+
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+
+
+                    <li class="sns-item youtube list-inline-item">
+                        <a target="_blank" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="sns-item instagram list-inline-item">
+                        <a target="_blank" href="https://www.instagram.com/8pilotis">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+	
+
+    </footer>
 @endsection

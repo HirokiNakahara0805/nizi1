@@ -1,7 +1,12 @@
 @section('header')
-<header class="navbar navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="{{ url('/bbs/') }}">8pilotis BBS</a>
-    </div>
+
+<link rel="stylesheet" href="{{ asset('/css/top.css') }}">
+
+<header>
+	<div class="header-color">
+		<nav class="a">
+			<li><a href="/">Sophia univ.</a></li>
+		</nav>
+	</div>
 </header>
 @endsection

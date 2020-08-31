@@ -1,0 +1,79 @@
+.comment-info{
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top-color: #e7bf8bee;
+    font-size: 12px;
+    color: #666;
+    
+    
+}
+.comment-text{
+    font-size:20px;
+    margin:6px;
+    padding:6px;
+   
+
+}
+.comment-box{
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px 15px 5px 15px;
+    margin:15px 15px 5px 15px;
+    background-color:white;
+}
+.f-container {
+    display: flex;
+    justify-content: flex-end;
+}
+.f-item{
+    margin:0px 5px;
+    padding:0px 5px;
+}
+.class-list{
+    font-size: 12px;
+    color: #666;
+
+}
+h3 {
+    display: flex;
+    align-items: center;/* 縦位置の調整 */
+    justify-content: center;/* 横位置の調整 */
+  }
+  
+  h3::before,
+  h3::after {
+    content: '';
+    flex-grow: 0.05;/* 少数にする */
+    height: 3px;
+    background: black;
+  }
+  
+  /* 見出しの文字と横棒の間隔を開ける */
+  h3::before {
+    margin-right: 20px;
+  }
+  
+  h3::after {
+    margin-left: 20px;
+  }
+
+.reply-block{
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  padding: 15px 15px 10px 15px;
+  margin:15px 15px 10px 15px;
+}
+.reply-form-box{
+  margin:10px;
+  padding:10px;
+}
+
+body{
+  background-color:rgba(224, 224, 224, 0.356);
+}
+
+.reply-box{
+  background-color:white;
+  border-radius:10px;
+  
+}

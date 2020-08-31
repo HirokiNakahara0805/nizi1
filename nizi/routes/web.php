@@ -22,5 +22,8 @@ Route::get('/general', 'GeneralPageController@show');
 Route::resource('bbs', 'PostsController', ['only' => ['index', 'show', 'create', 'store']]);
 Route::resource('comment', 'CommentsController', ['only' => ['store']]);
 
-
+//掲示板テストページ
+Route::get('/bbskari', function () {
+    return view('bbskari');
+});
 //経営学　カテゴリーid1

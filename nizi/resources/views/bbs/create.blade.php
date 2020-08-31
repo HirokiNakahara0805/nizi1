@@ -1,3 +1,7 @@
+
+
+
+
 @extends('layout.bbslayout')
  
 @section('title', 'LaravelPjt BBS 投稿ページ')
@@ -106,3 +110,4 @@
 </div>
 @endsection
  
+@include("parts.footer")
