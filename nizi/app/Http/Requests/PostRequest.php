@@ -25,7 +25,7 @@ class PostRequest extends FormRequest
     {
         return [
             'name' => 'required|max:40',
-            'subject' => 'required|integer|max:3',
+            'subject' =>  'required|integer|numeric|min:1|max:4',
             'message' => 'required|max:350',
             'category_id' => 'required|integer',
         ];
@@ -40,9 +40,10 @@ class PostRequest extends FormRequest
         return [
             'name.required' => 'ニックネームを入力してください',
             'name.max' => 'ニックネームは40文字以内で入力してください',
-            'subject.required' => '学年を入力してください',
-            'subject.integer'=>'学年は半角数字１文字で入力してください',
-            'subject.max' => '学年は半角数字１文字で入力してください',
+            'subject.required' => '学年を半角数字で入力してください',
+            'subject.min' => '学年は1～4の数字を半角で入力してください',
+            'subject.max' => '学年は1～4の数字を半角で入力してください',
+            'subject.integer' => '学年は1～4の数字を半角で入力してください',
             'message.required' => 'メッセージを入力してください',
             'message.max' => 'メッセージは350文字以内で入力してください',
             'category_id.required' => 'カテゴリーを選択してください',

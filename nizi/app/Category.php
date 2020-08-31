@@ -18,4 +18,16 @@ class Category extends Model
  
     return $categories;
     }
+
+    public function post2s()
+    {
+        // カテゴリは複数のポスト2を持つ
+        return $this->hasMany('App\Post2');
+    }
+
+    public function syllabi()
+    {
+        // カテゴリは複数のシラバスを持つ
+        return $this->hasMany('App\Syllabus');
+    }
 }

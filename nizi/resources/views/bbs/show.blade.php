@@ -120,11 +120,12 @@
             @endforelse
         </section>
     </div>
-</div>
 
 
-<div class="mt-4 mb-4 text-center">
-    <a href="{{ route('bbs.index') }}" class="btn btn-info">
+
+<div class="mt-4 mb-4">
+<a href="{{ route('bbs.index', ['category_id'=>$post->category_id]) }}" class="btn btn-info">
+
         一覧に戻る
     </a>
 </div>
