@@ -15,10 +15,15 @@
 @include("parts.common")
 @include("parts.header")
 
+<body id="vw vh">
+
 <main>
+
 	<!-- 画像挿入-->
-	<div class="">
-		<img src="{{ asset('img/sophia.jpg') }}" class="img-fluid h-75 w-100">
+	<div class='header-img-frame'>
+		<div class='header-img-in'>
+			<img src="{{ asset('img/sophia.jpg') }}" class="img-fluid h-100 w-100" >
+		</div>
 	</div>
 
 	<!-- 科目一覧表示 -->
@@ -28,7 +33,7 @@
 		<div class="container text-center fluid">
 		 	<!-- 学科表示(スライダー) -->
 			<div class="row your-class">
-				<div class=" img-sophia border border-secondary  m-2 rounded">
+				<div class=" img-sophia border border-secondary  m-2 rounded" >
 						<a href="{{ url('/general') }}" >
 						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
 						<h1 class="your-class">General education</h1>

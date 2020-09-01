@@ -1,6 +1,40 @@
+main{
+  margin:100px;
+}
 ul.week{
   font-size: 100px;
 }
 .section{
   color: black;
+}
+.title-class{
+  margin:30px;
+  padding:10px;
+}
+.day{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding:5px 20px;
+  margin:30 10 40 10;
+}
+.day:hover{
+  border:2px solid #e95014;
+
+}
+.period-frame{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding:5px 20px;
+  margin:30 10 10 10;
+}
+.period-frame:hover{
+  border:2px solid #1458e9;
+}
+
+
+
+
+.period:hover{
+  border:2px solid #e95014;
+
 }
