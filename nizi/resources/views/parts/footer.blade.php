@@ -7,7 +7,7 @@
             <a class="footer-logo">∞pilotis</a>
 
             <div class="footer-sns justify-content-around footer-logo" >
-                <div class="sns-lists　">
+                <div class="sns-lists">
 
                     <div class="sns-item twitter list-inline-item">
                         <a target="_blank" href="https://mobile.twitter.com/8pilotis">
@@ -29,8 +29,7 @@
 
                 </div>
             </div>
-            <p>Nakayama Koki / Nakahara Hiroki / Ueno Yuki</p>
-	
+            
         </div>
 
       
