@@ -9,10 +9,6 @@ a:hover {
     
   }
 
-.header-color{
-    background-color: rgba(112, 45, 35, 0.719);
-    height: 50px;
-}
 .img-sophia{
     height: auto;
     color: black;
@@ -63,13 +59,14 @@ h1.your-class{
     transition: 0.7s ease-in-out;
 }
 
-.header {
+header {
     width: 100%;
-    min-width: 960px; 
-  position: fixed;
+    min-width: 960px;
     left:0;
- top:0;
+    top:0;
   z-index: 10;
+  background-color:white;
+
 }
 
 /*トップ戻るボタン設定*/
@@ -131,3 +128,61 @@ nav{display: block;}
     font-size:30px;
 }
 
+.u2-global-navbar {
+    min-width: 1167px;
+    background: #333;
+    height: 50px;
+    border-top: 1px solid #e95014;
+    border-bottom: 1px solid #e95014;
+}
+.u2-header{
+    background-color: white;
+    padding: 15px 40px;
+    height: 66px;
+}
+.u2-header__container-inner {
+    position: relative;
+    line-height: 1;
+    color:black;
+}
+.u2-header-logo{
+    color:black;
+}
+
+.u2-global-navbar ul {
+    margin: 0;
+}
+.u2-global-navbar__links {
+    border-top: 1px solid #002549;
+}
+.u2-global-navbar__link {
+    display: block;
+    color: #ffffff;
+    font-size: 8px;
+    padding: 8 20 6 ;
+}
+.u2-global-navbar__link a{
+    color: white;
+    text-decoration:none;
+    font-size: 20px;
+}
+.nav-arrows{
+    padding:0 10px;
+}
+.header-img-in{
+
+    width: 970px;
+    height: 250px;
+    margin: 0 auto;
+}
+.header-img-frame{
+    display:block;
+    height:200px;
+    width:100%;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 40%;
+}

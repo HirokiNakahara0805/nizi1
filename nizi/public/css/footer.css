@@ -1,7 +1,7 @@
 .footer-contents{
-    background-color: rgba(0, 0, 0, 0.904);
+    background-color: #333;
     text-align: center;
-    
+    border-top: 1px solid #e95014;
 }
 .footer-logo{
 
