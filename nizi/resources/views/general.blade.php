@@ -43,120 +43,209 @@
 			<!-- Sections -->
 			<div class="jugyou container">
 				<div class="row">
-					<div id="mon" class="section ">
-						<div>
+						<!-- 月曜日時間割出力 -->
+					<div id="mon" class="section">
+						<div class="period-frame">
 							<a href="#mon1" class="periodList">1st period</h2>
-							<P id="mon1" class="mon12345">1111ｍ</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#mon2" class="periodList">2nd period</h2>
-							<P id="mon2" class="mon12345">2222</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#mon3" class="periodList">3rd period</h2>
-							<P id="mon3" class="mon12345">333</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#mon4" class="periodList">4th period</h2>
-							<p id="mon4" class="mon12345">4444</p>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#mon5" class="periodList">5th period</h2>
-							<p id="mon5" class="mon12345">5555</p>
 						</div>
 					</div>
-
+						<div>
+							<div id="mon1" class="mon12345">
+								<P>1111ｍ</P>
+								<P>1111ｍ</P>
+							</div>
+							<div id="mon2" class="mon12345">
+								<P>2222ｍ</P>
+								<P>2222ｍ</P>
+							</div>
+							<div id="mon3" class="mon12345">
+								<P>3333ｍ</P>
+								<P>3333ｍ</P>
+							</div>
+							<div id="mon4" class="mon12345">
+								<P>4444ｍ</P>
+								<P>4444ｍ</P>
+							</div>
+							<div id="mon5" class="mon12345">
+								<P>5555ｍ</P>
+								<P>5555ｍ</P>
+							</div>
+						</div>
+						<!-- 火曜日時間割出力 -->
 					<div id="tue" class="section">
-						<div>
+						<div class="period-frame">
 							<a href="#tue1" class="periodList">1st period</h2>
-							<P id="tue1" class="tue12345">1111ｔ</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#tue2" class="periodList">2nd period</h2>
-							<P id="tue2" class="tue12345">2222</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#tue3" class="periodList">3rd period</h2>
-							<P id="tue3" class="tue12345">333</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#tue4" class="periodList">4th period</h2>
-							<p id="tue4" class="tue12345">4444</p>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#tue5" class="periodList">5th period</h2>
-							<p id="tue5" class="tue12345">5555</p>
 						</div>
 					</div>
-
+						<div>
+							<div id="tue1" class="tue12345">
+								<P>1111tue</P>
+								<P>1111tue</P>
+							</div>
+							<div id="tue2" class="tue12345">
+								<P>2222ｍ</P>
+								<P>2222ｍ</P>
+							</div>
+							<div id="tue3" class="tue12345">
+								<P>3333ｍ</P>
+								<P>3333ｍ</P>
+							</div>
+							<div id="tue4" class="tue12345">
+								<P>4444ｍ</P>
+								<P>4444ｍ</P>
+							</div>
+							<div id="tue5" class="tue12345">
+								<P>5555ｍ</P>
+								<P>5555ｍ</P>
+							</div>
+						</div>
+					<!--水曜日時間割出力-->
 					<div id="wed" class="section">
-						<div>
+						<div class="period-frame">
 							<a href="#wed1" class="periodList">1st period</h2>
-							<P id="wed1" class="wed12345">1111ｗ</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#wed2" class="periodList">2nd period</h2>
-							<P id="wed2" class="wed12345">2222</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#wed3" class="periodList">3rd period</h2>
-							<P id="wed3" class="wed12345">333</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#wed4" class="periodList">4th period</h2>
-							<p id="wed4" class="wed12345">4444</p>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#wed5" class="periodList">5th period</h2>
-							<p id="wed5" class="wed12345">5555</p>
 						</div>
 					</div>
+						<div>
+							<div id="wed1" class="wed12345">
+								<div>
+									<P>1111wer</P>
+									<P>1111we</P>
+								</div>
+							</div>
+							<div id="wed2" class="wed12345">
+								<P>2222we</P>
+								<P>2222we</P>
+							</div>
+							<div id="wed3" class="wed12345">
+								<P>3333ｍ</P>
+								<P>3333we</P>
+							</div>
+							<div id="wed4" class="wed12345">
+								<P>4444we</P>
+								<P>4444we</P>
+							</div>
+							<div id="wed5" class="wed12345">
+								<P>5555we</P>
+								<P>5555we</P>
+							</div>
+						</div>
 
-					<div id="thu" class="section">
-						<div>
-							<a href="#thu1" class="periodList">1st period</h2>
-							<P id="thu1" class="thu12345">1111ｔ</P>
+						<div id="thu" class="section">
+							<div class="period-frame">
+								<a href="#thu1" class="periodList">1st period</h2>
+							</div>
+							<div class="period-frame">
+								<a href="#thu2" class="periodList">2nd period</h2>
+							</div>
+							<div class="period-frame">
+								<a href="#thu3" class="periodList">3rd period</h2>
+							</div>
+							<div class="period-frame">
+								<a href="#thu4" class="periodList">4th period</h2>
+							</div>
+							<div class="period-frame">
+								<a href="#thu5" class="periodList">5th period</h2>
+							</div>
 						</div>
-						<div>
-							<a href="#thu2" class="periodList">2nd period</h2>
-							<P id="thu2" class="thu12345">2222</P>
-						</div>
-						<div>
-							<a href="#thu3" class="periodList">3rd period</h2>
-							<P id="thu3" class="thu12345">333</P>
-						</div>
-						<div>
-							<a href="#thu4" class="periodList">4th period</h2>
-							<p id="thu4" class="thu12345">4444</p>
-						</div>
-						<div>
-							<a href="#thu5" class="periodList">5th period</h2>
-							<p id="thu5" class="thu12345">5555</p>
-						</div>
-					</div>
+							<div>
+								<div id="thu1" class="thu12345">
+									<P>1111thu</P>
+									<P>1111we</P>
+								</div>
+								<div id="thu2" class="thu12345">
+									<P>2222th</P>
+									<P>2222we</P>
+								</div>
+								<div id="thu3" class="thu12345">
+									<P>3333thi</P>
+									<P>3333we</P>
+								</div>
+								<div id="thu4" class="thu12345">
+									<P>4444thi</P>
+									<P>4444we</P>
+								</div>
+								<div id="thu5" class="thu12345">
+									<P>555thi</P>
+									<P>5555we</P>
+								</div>
+							</div>
 
 					<div id="fri" class="section">
-						<div>
+						<div class="period-frame">
 							<a href="#fri1" class="periodList">1st period</h2>
-							<P id="fri1" class="fri12345">1111ｆ</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#fri2" class="periodList">2nd period</h2>
-							<P id="fri2" class="fri12345">2222</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#fri3" class="periodList">3rd period</h2>
-							<P id="fri3" class="fri12345">333</P>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#fri4" class="periodList">4th period</h2>
-							<p id="fri4" class="fri12345">4444</p>
 						</div>
-						<div>
+						<div class="period-frame">
 							<a href="#fri5" class="periodList">5th period</h2>
-							<p id="fri5" class="fri12345">5555</p>
 						</div>
 					</div>
+
+					<div>
+								<div id="fri1" class="fri12345">
+									<P>1111fri</P>
+									<P>1111fri</P>
+								</div>
+								<div id="fri2" class="fri12345">
+									<P>2222fri</P>
+									<P>2222we</P>
+								</div>
+								<div id="fri3" class="fri12345">
+									<P>33frihi</P>
+									<P>3333we</P>
+								</div>
+								<div id="fri4" class="fri12345">
+									<P>fri</P>
+									<P>4444we</P>
+								</div>
+								<div id="fri5" class="fri12345">
+									<P>fri</P>
+									<P>5555we</P>
+								</div>
+							</div>
 
 				</div>
 
