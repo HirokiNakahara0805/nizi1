@@ -63,8 +63,8 @@
 					</div>
 						<div>
 							<div id="mon1" class="mon12345">
-								<P>1111ｍ</P>
-								<P>1111ｍ</P>
+								<a><p>1111ｍ</p></a>
+								<a>1111ｍ</a>
 							</div>
 							<div id="mon2" class="mon12345">
 								<P>2222ｍ</P>
@@ -103,8 +103,8 @@
 					</div>
 						<div>
 							<div id="tue1" class="tue12345">
-								<P>1111tue</P>
-								<P>1111tue</P>
+								<a>1111tue</a>
+								<a>1111tue</a>
 							</div>
 							<div id="tue2" class="tue12345">
 								<P>2222ｍ</P>
