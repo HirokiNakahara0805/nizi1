@@ -46,19 +46,19 @@
 						<!-- 月曜日時間割出力 -->
 					<div id="mon" class="section">
 						<div class="period-frame">
-							<a href="#mon1" class="periodList">1st period</h2>
+							<a href="#mon1" class="periodList">1st period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#mon2" class="periodList">2nd period</h2>
+							<a href="#mon2" class="periodList">2nd period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#mon3" class="periodList">3rd period</h2>
+							<a href="#mon3" class="periodList">3rd period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#mon4" class="periodList">4th period</h2>
+							<a href="#mon4" class="periodList">4th period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#mon5" class="periodList">5th period</h2>
+							<a href="#mon5" class="periodList">5th period</a>
 						</div>
 					</div>
 						<div>
@@ -86,19 +86,19 @@
 						<!-- 火曜日時間割出力 -->
 					<div id="tue" class="section">
 						<div class="period-frame">
-							<a href="#tue1" class="periodList">1st period</h2>
+							<a href="#tue1" class="periodList">1st period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#tue2" class="periodList">2nd period</h2>
+							<a href="#tue2" class="periodList">2nd period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#tue3" class="periodList">3rd period</h2>
+							<a href="#tue3" class="periodList">3rd period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#tue4" class="periodList">4th period</h2>
+							<a href="#tue4" class="periodList">4th period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#tue5" class="periodList">5th period</h2>
+							<a href="#tue5" class="periodList">5th period</a>
 						</div>
 					</div>
 						<div>
@@ -126,19 +126,19 @@
 					<!--水曜日時間割出力-->
 					<div id="wed" class="section">
 						<div class="period-frame">
-							<a href="#wed1" class="periodList">1st period</h2>
+							<a href="#wed1" class="periodList">1st period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#wed2" class="periodList">2nd period</h2>
+							<a href="#wed2" class="periodList">2nd period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#wed3" class="periodList">3rd period</h2>
+							<a href="#wed3" class="periodList">3rd period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#wed4" class="periodList">4th period</h2>
+							<a href="#wed4" class="periodList">4th period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#wed5" class="periodList">5th period</h2>
+							<a href="#wed5" class="periodList">5th period</a>
 						</div>
 					</div>
 						<div>
@@ -168,19 +168,19 @@
 
 						<div id="thu" class="section">
 							<div class="period-frame">
-								<a href="#thu1" class="periodList">1st period</h2>
+								<a href="#thu1" class="periodList">1st period</a>
 							</div>
 							<div class="period-frame">
-								<a href="#thu2" class="periodList">2nd period</h2>
+								<a href="#thu2" class="periodList">2nd period</a>
 							</div>
 							<div class="period-frame">
-								<a href="#thu3" class="periodList">3rd period</h2>
+								<a href="#thu3" class="periodList">3rd period</a>
 							</div>
 							<div class="period-frame">
-								<a href="#thu4" class="periodList">4th period</h2>
+								<a href="#thu4" class="periodList">4th period</a>
 							</div>
 							<div class="period-frame">
-								<a href="#thu5" class="periodList">5th period</h2>
+								<a href="#thu5" class="periodList">5th period</a>
 							</div>
 						</div>
 							<div>
@@ -208,23 +208,23 @@
 
 					<div id="fri" class="section">
 						<div class="period-frame">
-							<a href="#fri1" class="periodList">1st period</h2>
+							<a href="#fri1" class="periodList">1st period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#fri2" class="periodList">2nd period</h2>
+							<a href="#fri2" class="periodList">2nd period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#fri3" class="periodList">3rd period</h2>
+							<a href="#fri3" class="periodList">3rd period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#fri4" class="periodList">4th period</h2>
+							<a href="#fri4" class="periodList">4th period</a>
 						</div>
 						<div class="period-frame">
-							<a href="#fri5" class="periodList">5th period</h2>
+							<a href="#fri5" class="periodList">5th period</a>
 						</div>
 					</div>
 
-					<div>
+							<div>
 								<div id="fri1" class="fri12345">
 									<P>1111fri</P>
 									<P>1111fri</P>
