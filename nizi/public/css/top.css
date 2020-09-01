@@ -177,8 +177,9 @@ nav{display: block;}
 }
 .header-img-frame{
     display:block;
-    height:200px;
+    height:250px;
     width:100%;
+    background-color:#e6e6e6;
 }
 
 html {
