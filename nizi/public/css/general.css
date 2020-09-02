@@ -42,9 +42,9 @@ ul.week{
 .subjectname{
   padding:5px;
   margin:10px;
-  border-radius: 10px;
-  border-bottom:2px solid #e95014;
-  background-color:rgb(204, 204, 204);
+  border-radius: 1px;
+  border-left:2px solid #e95014;
+  background-color:white;
 }
 
 /*曜日を真ん中に*/
