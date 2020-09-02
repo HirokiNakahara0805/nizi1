@@ -83,12 +83,61 @@
 		<div class="row">
 
 			<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
+				<div class="comment-box-border">
+					<div class="comment-box">
+						<div class="comment-text">
+								<p　class="badge badge-primary">掲示板のタイトル</p>
+						</div>
+						<div class="">
+							<div class="f-container comment-info border-top">
+								<div class="f-item float-right">コメント数</div>
+								<div class="f-item float-right ">2019:3:29</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="comment-box-border">
+					<div class="comment-box">
+						<div class="comment-text">
+								<p　class="badge badge-primary">掲示板のタイトル</p>
+						</div>
+						<div class="">
+							<div class="f-container comment-info border-top">
+								<div class="f-item float-right">コメント数</div>
+								<div class="f-item float-right ">2019:3:29</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="comment-box-border">
+					<div class="comment-box">
+						<div class="comment-text">
+								<p　class="badge badge-primary">掲示板のタイトル</p>
+						</div>
+						<div class="">
+							<div class="f-container comment-info border-top">
+								<div class="f-item float-right">コメント数</div>
+								<div class="f-item float-right ">2019:3:29</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="comment-box-border">
+					<div class="comment-box">
+						<div class="comment-text">
+								<p　class="badge badge-primary">掲示板のタイトル</p>
+						</div>
+						<div class="">
+							<div class="f-container comment-info border-top">
+								<div class="f-item float-right">コメント数</div>
+								<div class="f-item float-right ">2019:3:29</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-md-4 ">

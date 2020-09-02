@@ -194,3 +194,9 @@ html {
     padding-bottom:10px;
     border: 1px solid #002549;
 }
+
+.comment-box-border{
+    border-bottom: 1px solid #002549;
+    padding:30px 0px 20px 0px;
+    margin:10px 0px 10px 0px;
+}
