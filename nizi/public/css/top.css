@@ -31,9 +31,8 @@ a.class-list{
     color:black;
     border-right-color: grey;
 }
-.all-class-info{
-    background-color: rgba(224, 224, 224, 0.521);
-
+.top-all-bbs-backgroundcolor{
+    background-color:rgba(224, 224, 224, 0.356);
     padding:40px;
 }
 .to-class{
@@ -179,7 +178,7 @@ nav{display: block;}
     display:block;
     height:250px;
     width:100%;
-    background-color:#e6e6e6;
+    background-color:rgba(224, 224, 224, 0.356);
 }
 
 html {
@@ -188,3 +187,10 @@ html {
     font-size: 40%;
 }
 
+.koukoku-box{
+    margin-right:30px;
+    margin-left:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border: 1px solid #002549;
+}

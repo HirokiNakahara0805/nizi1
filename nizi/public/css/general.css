@@ -51,4 +51,6 @@ ul.week{
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  padding:0 0 30 0 ;
+  margin:0 0 30 0 ;
 }

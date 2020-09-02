@@ -78,15 +78,35 @@
 	</div>
 
 	<!-- 掲示板一覧 -->
-	<div class="all-class-info text-center" id="all-bbs">
-			
+	<div class="container" id="all-bbs">
+
+		<div class="row">
+
+			<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
 				<a><p>経営学入門掲示板</p></a>
 				<a><p>経営学入門掲示板</p></a>
 				<a><p>経営学入門掲示板</p></a>
 				<a><p>経営学入門掲示板</p></a>
 				<a><p>経営学入門掲示板</p></a>
 				<a><p>経営学入門掲示板</p></a>
-			</ul>
+			</div>
+
+			<div class="col-md-4 ">
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+			</div>
+
+
+			</div>
+
+		</div>
+
 	</div>
 
 	<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
