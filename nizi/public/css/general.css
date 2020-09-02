@@ -6,6 +6,7 @@ ul.week{
 }
 .section{
   color: black;
+  background-color: rgba(224, 224, 224, 0.356);
 }
 .title-class{
   margin:30px;
