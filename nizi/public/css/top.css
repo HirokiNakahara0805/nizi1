@@ -196,7 +196,9 @@ html {
 }
 
 .comment-box-border{
-    border-bottom: 1px solid #002549;
-    padding:30px 0px 20px 0px;
-    margin:10px 0px 10px 0px;
+    border-bottom: 2px solid #e95014;
+    border-top: 1px solid #002549;
+    padding:40px 0px 30px 0px;
+    margin:15px 0px 15px 0px;
+    background-color:white;
 }
