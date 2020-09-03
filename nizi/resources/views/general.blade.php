@@ -54,6 +54,9 @@
 					<div id="mon" class="section  row">
 						<!-- 月曜日時間割出力 -->
 						<div  class="col-md-4">
+							<div class="period-frame-youbi">
+									<a class="periodList">Monday</a>
+								</div>
 							<div class="period-frame">
 								<a href="#mon1" class="periodList">1st period</a>
 							</div>
@@ -73,22 +76,27 @@
 
 						<div class="classboard col-md-8">
 							<div id="mon1" class="mon12345">
+								<a><p class="period-frame-youbi-period">1st period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 							</div>
 							<div id="mon2" class="mon12345">
+								<a><p class="period-frame-youbi-period">2nd period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 							</div>
 							<div id="mon3" class="mon12345">
+								<a><p class="period-frame-youbi-period">3rd period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 							</div>
 							<div id="mon4" class="mon12345">
+								<a><p class="period-frame-youbi-period">4th period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 							</div>
 							<div id="mon5" class="mon12345">
+								<a><p class="period-frame-youbi-period">5th period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 							</div>
@@ -98,6 +106,9 @@
 					<div id="tue" class="section  row">
 
 						<div  class="col-md-4">
+							<div class="period-frame-youbi">
+									<a class="periodList">Tuesday</a>
+								</div>
 							<div class="period-frame">
 								<a href="#tue1" class="periodList">1st period</a>
 							</div>
@@ -117,22 +128,28 @@
 
 						<div class="classboard col-md-8">
 							<div id="tue1" class="tue12345">
+								<a><p class="period-frame-youbi-period">1st period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 							</div>
 							<div id="tue2" class="tue12345">
+								<a><p class="period-frame-youbi-period">2nd period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 							</div>
 							<div id="tue3" class="tue12345">
+								<a><p class="period-frame-youbi-period">3rd period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 							</div>
 							<div id="tue4" class="tue12345">
+								<a><p class="period-frame-youbi-period">4th period</p></a>
+								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 							</div>
 							<div id="tue5" class="tue12345">
+								<a><p class="period-frame-youbi-period">5th period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 							</div>
@@ -141,6 +158,9 @@
 					<!--水曜日時間割出力-->
 					<div id="wed" class="section  row">
 						<div class="col-md-4">
+							<div class="period-frame-youbi">
+									<a class="periodList">Wednesday</a>
+								</div>
 							<div class="period-frame">
 								<a href="#wed1" class="periodList">1st period</a>
 							</div>
@@ -160,22 +180,27 @@
 
 						<div class="classboard col-md-8">
 							<div id="wed1" class="wed12345">
+								<a><p class="period-frame-youbi-period">1st period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">111wednesday1tue</p></a>
 							</div>
 							<div id="wed2" class="wed12345">
+								<a><p class="period-frame-youbi-period">2nd period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111wednesdaytue</p></a>
 							</div>
 							<div id="wed3" class="wed12345">
+								<a><p class="period-frame-youbi-period">3rd period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111wednesdaytue</p></a>
 							</div>
 							<div id="wed4" class="wed12345">
+								<a><p class="period-frame-youbi-period">4th period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">111wednesday1tue</p></a>
 							</div>
 							<div id="wed5" class="wed12345">
+								<a><p class="period-frame-youbi-period">5th period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111wednesday</p></a>
 							</div>
@@ -184,6 +209,9 @@
 						<!--木曜日時間割出力-->
 					<div id="thu" class="section  row">
 						<div class="col-md-4">
+							<div class="period-frame-youbi">
+									<a class="periodList">Thursday</a>
+								</div>
 							<div class="period-frame">
 								<a href="#thu1" class="periodList">1st period</a>
 							</div>
@@ -202,22 +230,27 @@
 						</div>
 							<div class="classboard col-md-8">
 								<div id="thu1" class="thu12345">
+									<a><p class="period-frame-youbi-period">1st period</p></a>
 									<a><p class="subjectname">111thursday1tue</p></a>
 									<a><p class="subjectname">111thursday1tue</p></a>
 								</div>
 								<div id="thu2" class="thu12345">
+									<a><p class="period-frame-youbi-period">2nd period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">1111thursdaytue</p></a>
 								</div>
 								<div id="thu3" class="thu12345">
+									<a><p class="period-frame-youbi-period">3rd period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">111thursday1tue</p></a>
 								</div>
 								<div id="thu4" class="thu12345">
+									<a><p class="period-frame-youbi-period">4th period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">111thursday1tue</p></a>
 								</div>
 								<div id="thu5" class="thu12345">
+									<a><p class="period-frame-youbi-period">5th period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">1111thursday</p></a>
 								</div>
@@ -226,6 +259,9 @@
 					<!--金曜日時間割出力-->
 						<div id="fri" class="section  row">
 							<div class="col-md-4">
+								<div class="period-frame-youbi">
+									<a class="periodList">Friday</a>
+								</div>
 								<div class="period-frame">
 									<a href="#fri1" class="periodList">1st period</a>
 								</div>
@@ -245,22 +281,27 @@
 
 							<div class="classboard col-md-8">
 								<div id="fri1" class="fri12345">
+									<a><p class="period-frame-youbi-period">1st period</p></a>
 									<a><p class="subjectname">111friday1tue</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 								</div>
 								<div id="fri2" class="fri12345">
+									<a><p class="period-frame-youbi-period">2nd period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">1111fridaytue</p></a>
 								</div>
 								<div id="fri3" class="fri12345">
+									<a><p class="period-frame-youbi-period">3rd period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">1fridaytue</p></a>
 								</div>
 								<div id="fri4" class="fri12345">
+									<a><p class="period-frame-youbi-period">4th period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">1fridaytue</p></a>
 								</div>
 								<div id="fri5" class="fri12345">
+									<a><p class="period-frame-youbi-period">5th period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">friday</p></a>
 								</div>
