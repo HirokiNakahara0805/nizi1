@@ -26,9 +26,10 @@
 		</div>
 	</div>
 
+
 	<!-- 科目一覧表示 -->
 	<div class="to-class" id="class-sub">
-		<h1	class="text-center p-3 m-3" >Class subject</h1>
+		<h1	class="text-center p-3 m-3" >Classsss subject</h1>
 
 		<div class="container text-center fluid">
 		 	<!-- 学科表示(スライダー) -->
