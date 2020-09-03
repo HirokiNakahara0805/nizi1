@@ -28,6 +28,19 @@ ul.week{
   padding:5px 20px;
   margin:30 10 10 10;
 }
+.period-frame-youbi{
+  border-bottom: 2px solid #e95014;;
+  padding:5px 20px;
+  margin:30 10 10 10;
+ 
+}
+
+.period-frame-youbi-period{
+  border-bottom: 2px solid #1458e9;;
+  padding:5px 20px;
+  margin:30 10 10 10;
+ 
+}
 .period-frame:hover{
   border:2px solid #1458e9;
 }
@@ -41,7 +54,7 @@ ul.week{
 }
 .subjectname{
   padding:5px;
-  margin:10px;
+  margin:30px;
   border-radius: 1px;
   border-left:2px solid #e95014;
   background-color:white;
@@ -54,4 +67,7 @@ ul.week{
   margin-left: -15px;
   padding:0 0 30 0 ;
   margin:0 0 30 0 ;
+}
+.general{
+  size:20px
 }

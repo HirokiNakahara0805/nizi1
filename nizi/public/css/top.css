@@ -198,7 +198,17 @@ html {
 .comment-box-border{
     border-bottom: 2px solid #e95014;
     border-top: 1px solid #002549;
-    padding:50px 0px 20px 0px;
+    padding:20px 0px 20px 0px;
     margin:15px 0px 15px 0px;
     background-color:white;
+}
+
+.top-bbs-item{
+    margin:0px 5px;
+    padding:0px 5px;
+    font-size: 15px;
+}
+
+.youbi{
+    font-size:15px;
 }

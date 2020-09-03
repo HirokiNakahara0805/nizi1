@@ -84,74 +84,85 @@
 
 			<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
 				<div class="comment-box-border">
+					<a>
 					<div class="comment-box">
 						<div class="comment-text">
 								<p　class="badge badge-primary">掲示板のタイトル</p>
 						</div>
 						<div class="">
 							<div class="f-container comment-info border-top">
-								<div class="f-item float-right">コメント数</div>
-								<div class="f-item float-right ">2019:3:29</div>
+								<div class="top-bbs-item float-right">コメント数</div>
+								<div class="top-bbs-item float-right ">2019:3:29</div>
 							</div>
 						</div>
 					</div>
+					</a>
 				</div>
 
 				<div class="comment-box-border">
+					<a>
 					<div class="comment-box">
 						<div class="comment-text">
 								<p　class="badge badge-primary">掲示板のタイトル</p>
 						</div>
 						<div class="">
 							<div class="f-container comment-info border-top">
-								<div class="f-item float-right">コメント数</div>
-								<div class="f-item float-right ">2019:3:29</div>
+								<div class="top-bbs-item float-right">コメント数</div>
+								<div class="top-bbs-item float-right ">2019:3:29</div>
 							</div>
 						</div>
 					</div>
+					</a>
 				</div>
 
 				<div class="comment-box-border">
+					<a>
 					<div class="comment-box">
 						<div class="comment-text">
 								<p　class="badge badge-primary">掲示板のタイトル</p>
 						</div>
 						<div class="">
 							<div class="f-container comment-info border-top">
-								<div class="f-item float-right">コメント数</div>
-								<div class="f-item float-right ">2019:3:29</div>
+								<div class="top-bbs-item float-right">コメント数</div>
+								<div class="top-bbs-item float-right ">2019:3:29</div>
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="comment-box-border">
-					<div class="comment-box">
-						<div class="comment-text">
-								<p　class="badge badge-primary">掲示板のタイトル</p>
-						</div>
-						<div class="">
-							<div class="f-container comment-info border-top">
-								<div class="f-item float-right">コメント数</div>
-								<div class="f-item float-right ">2019:3:29</div>
-							</div>
-						</div>
-					</div>
+					</a>
 				</div>
 				
 				<div class="comment-box-border">
+					<a>
 					<div class="comment-box">
 						<div class="comment-text">
 								<p　class="badge badge-primary">掲示板のタイトル</p>
 						</div>
 						<div class="">
 							<div class="f-container comment-info border-top">
-								<div class="f-item float-right">コメント数</div>
-								<div class="f-item float-right ">2019:3:29</div>
+								<div class="top-bbs-item float-right">コメント数</div>
+								<div class="top-bbs-item float-right ">2019:3:29</div>
 							</div>
 						</div>
 					</div>
+					</a>
 				</div>
+
+				<div class="comment-box-border">
+					<a>
+					<div class="comment-box">
+						<div class="comment-text">
+								<p　class="badge badge-primary">掲示板のタイトル</p>
+						</div>
+						<div class="">
+							<div class="f-container comment-info border-top">
+								<div class="top-bbs-item float-right">コメント数</div>
+								<div class="top-bbs-item float-right ">2019:3:29</div>
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+				
 			</div>
 
 			<div class="col-md-4 ">
