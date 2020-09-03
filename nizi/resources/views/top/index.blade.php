@@ -78,6 +78,16 @@
 	</div>
 
 	<!-- 掲示板一覧 -->
+
+<!--	<div class="all-class-info text-center" id="all-bbs">
+			
+	@foreach($categories as $id => $name)
+        <li class="btn"><a class="class-list" href="{{ route('bbs.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
+        @endforeach
+			</ul>
+	
+    </div> -->
+
 	<div class="container" id="all-bbs">
 
 		<div class="row">
