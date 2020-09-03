@@ -78,15 +78,109 @@
 	</div>
 
 	<!-- 掲示板一覧 -->
-	<div class="all-class-info text-center" id="all-bbs">
-			
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-			</ul>
+	<div class="container" id="all-bbs">
+
+		<div class="row">
+
+			<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
+				<div class="comment-box-border">
+					<a>
+					<div class="comment-box">
+						<div class="comment-text">
+								<p　class="badge badge-primary">掲示板のタイトル</p>
+						</div>
+						<div class="">
+							<div class="f-container comment-info border-top">
+								<div class="top-bbs-item float-right">コメント数</div>
+								<div class="top-bbs-item float-right ">2019:3:29</div>
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="comment-box-border">
+					<a>
+					<div class="comment-box">
+						<div class="comment-text">
+								<p　class="badge badge-primary">掲示板のタイトル</p>
+						</div>
+						<div class="">
+							<div class="f-container comment-info border-top">
+								<div class="top-bbs-item float-right">コメント数</div>
+								<div class="top-bbs-item float-right ">2019:3:29</div>
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="comment-box-border">
+					<a>
+					<div class="comment-box">
+						<div class="comment-text">
+								<p　class="badge badge-primary">掲示板のタイトル</p>
+						</div>
+						<div class="">
+							<div class="f-container comment-info border-top">
+								<div class="top-bbs-item float-right">コメント数</div>
+								<div class="top-bbs-item float-right ">2019:3:29</div>
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+				
+				<div class="comment-box-border">
+					<a>
+					<div class="comment-box">
+						<div class="comment-text">
+								<p　class="badge badge-primary">掲示板のタイトル</p>
+						</div>
+						<div class="">
+							<div class="f-container comment-info border-top">
+								<div class="top-bbs-item float-right">コメント数</div>
+								<div class="top-bbs-item float-right ">2019:3:29</div>
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="comment-box-border">
+					<a>
+					<div class="comment-box">
+						<div class="comment-text">
+								<p　class="badge badge-primary">掲示板のタイトル</p>
+						</div>
+						<div class="">
+							<div class="f-container comment-info border-top">
+								<div class="top-bbs-item float-right">コメント数</div>
+								<div class="top-bbs-item float-right ">2019:3:29</div>
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+				
+			</div>
+
+			<div class="col-md-4 ">
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+				<a><p class="koukoku-box">広告</p></a>
+			</div>
+
+
+			</div>
+
+		</div>
+
 	</div>
 
 	<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
