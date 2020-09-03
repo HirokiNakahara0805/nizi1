@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //トップページ
-Route::get('/', 'TopPageController@show');
+Route::resource('/', 'TopPageController', ['only' => ['index']]);
 
 //一般教養ページ
 Route::get('/general', 'GeneralPageController@show');

@@ -80,14 +80,12 @@
 	<!-- 掲示板一覧 -->
 	<div class="all-class-info text-center" id="all-bbs">
 			
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
-				<a><p>経営学入門掲示板</p></a>
+	@foreach($categories as $id => $name)
+        <li class="btn"><a class="class-list" href="{{ route('bbs.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
+        @endforeach
 			</ul>
-	</div>
+	
+    </div>
 
 	<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
 </main>
