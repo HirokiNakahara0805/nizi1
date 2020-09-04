@@ -31,4 +31,10 @@ class Category extends Model
         // カテゴリは複数のシラバスを持つ
         return $this->hasMany('App\Syllabus');
     }
+
+    public function generaltops()
+    {
+        // カテゴリは複数のポストを持つ
+        return $this->hasMany('App\Post');
+    }
 }
