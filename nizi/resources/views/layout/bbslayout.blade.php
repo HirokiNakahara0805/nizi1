@@ -34,6 +34,11 @@
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+        <!-- view point 読み込み-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
 
     @yield('pageCss')
     </head>

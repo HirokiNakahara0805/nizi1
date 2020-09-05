@@ -79,3 +79,12 @@ a.periodList{
   background-color:white;
 }
 
+
+
+@media screen and (min-width: 0px) and (max-width: 420px) {
+
+  main{
+      margin:0px;
+  }
+
+}

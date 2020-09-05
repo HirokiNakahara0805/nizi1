@@ -1,7 +1,9 @@
 
 /* TOPページ用CSS（TOPページのみで使いたい時に使用）*/
 
-
+/*************
+通常記述の場所
+*************/
 
 /*---------------------------学科科目のスライダーの設定*/
 .img-sophia{
@@ -136,4 +138,19 @@ a.class-list{
 	display: none;
 	z-index: 1999;
 	width: 280px;
+}
+ 
+/*************************
+メディアクエリ設定 0〜420
+*************************/
+@media screen and (min-width: 0px) and (max-width: 420px) {
+ 
+    /*授業スライドの科目名の位置を設定*/
+    h1.your-class {
+        color: black;
+        padding: 5px;
+        margin: 5px 5px 5px 2px;
+        font-size: 4px;
+    }
+ 
 }
