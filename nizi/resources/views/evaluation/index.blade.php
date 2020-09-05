@@ -1,10 +1,29 @@
 @extends('layout.bbslayout')
- 
+  
+@section('header')
+
+
+
+<header class="u2-header">
+    <div class="u2-header__container-inner">
+        <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+    </div>
+</header>
+
+<div class="u2-global-navbar">
+    <ul class="reset-ul row v2-global-navbar__links">
+        <li class="u2-global-navbar__link"><a href="#class-sub">classc subject</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+        <li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+        <li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+        <li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+    </ul>
+</div>
+@endsection
 @section('title', 'LaravelPjt BBS 投稿の一覧ページ')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿一覧ページの説明文')
 @section('pageCss')
-<link href="/css/bbs/style.css" rel="stylesheet">
+<!-- <link href="/css/bbs/style.css" rel="stylesheet">  -->
 @endsection
 
 
@@ -252,4 +271,41 @@
 </div>
 
 @endsection
+
+
+@section('footer')
+<footer>
+        <!-- SNS連携 -->
+        <div class="footer-contents .align-middle">
+            <a class="footer-logo">Sophia univ.</a>
+            <div class="footer-sns d-flex justify-content-around" style="width: 200px;">
+                <ul class="sns-lists .text-center	">
+
+                    <li class="sns-item twitter list-inline-item">
+                        <a target="_blank" href="https://mobile.twitter.com/8pilotis">
+
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+
+
+                    <li class="sns-item youtube list-inline-item">
+                        <a target="_blank" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="sns-item instagram list-inline-item">
+                        <a target="_blank" href="https://www.instagram.com/8pilotis">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+	
+
+    </footer>
+@endsection
+
  

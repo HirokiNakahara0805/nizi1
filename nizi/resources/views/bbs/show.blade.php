@@ -1,26 +1,32 @@
 
 
 @extends('layout.bbslayout')
- 
 @section('title', '8pilotis BBS 投稿の詳細ページ')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿詳細ページの説明文')
 @section('pageCss')
-<link href="/css/bbs/style.css" rel="stylesheet">
+<!-- <link href="/css/bbs/style.css" rel="stylesheet"> -->
 @endsection
 
 <!-- header追加 -->
 @section('header')
 
-<link rel="stylesheet" href="{{ asset('/css/top.css') }}">
 
-<header>
-	<div class="header-color">
-		<nav class="a">
-			<li><a href="/">Sophia univ.</a></li>
-		</nav>
+
+    <header class="u2-header">
+		<div class="u2-header__container-inner">
+			<a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+		</div>
+	</header>
+
+	<div class="u2-global-navbar">
+		<ul class="reset-ul row v2-global-navbar__links">
+			<li class="u2-global-navbar__link"><a href="#class-sub">classc subject</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+		</ul>
 	</div>
-</header>
 @endsection
 
 @section('content')
@@ -103,6 +109,8 @@
      {{ session('commentstatus') }}
     </div>
 @endif
+
+
  
             @forelse($post->comments as $comment)
                 <div class="m-2 p-3 reply-box">
@@ -136,8 +144,6 @@
 
 @section('footer')
 <footer>
-    <!-- CSS読み込み -->
-    <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
         <!-- SNS連携 -->
         <div class="footer-contents .align-middle">
             <a class="footer-logo">Sophia univ.</a>
