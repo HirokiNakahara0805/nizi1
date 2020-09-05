@@ -26,7 +26,7 @@ class Post2sController extends Controller
 
         
         
-        //いいねについて
+        //いいね平均について
         $goodpost2s = Post2::where('category_id',$category_id)->get();
         
         

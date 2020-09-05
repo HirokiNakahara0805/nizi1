@@ -18,9 +18,8 @@
 @endif
 
 
-
+<!--いいね平均-->
 <?php
-
     $goodss = 0;
 
     foreach ($goodpost2s as $goodpost2){
