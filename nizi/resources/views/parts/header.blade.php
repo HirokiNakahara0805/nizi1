@@ -1,5 +1,4 @@
 
-<link rel="stylesheet" href="{{ asset('/css/top.css') }}">
 
 	<header class="u2-header">
 		<div class="u2-header__container-inner">

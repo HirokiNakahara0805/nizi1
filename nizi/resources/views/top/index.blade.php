@@ -5,10 +5,8 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		 <!--CSS (slick用読み込)-->
-		<link href="{{ asset('css/slick.css') }}" rel="stylesheet">
-		<link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet">
 
+		
 
 </head>
 
@@ -16,7 +14,10 @@
 @include("parts.header")
 
 <body id="vw vh">
-
+	<!-- トップページ最初に開いた時のアニメーション-->
+	<div class="start">
+   				 <p><img src="{{ asset('img/sophia.jpg') }}" alt=""></p>
+			</div>
 <main>
 
 	<!-- 画像挿入-->
@@ -35,40 +36,40 @@
 			<div class="row your-class">
 				<div class=" img-sophia border border-secondary  m-2 rounded" >
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
 						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
 
 				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
 						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
 				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
-						<h1 class="your-class">General education</h1>
-						</a>
-				</div>
-
-				<div class=" img-sophia border border-secondary  m-2 rounded">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
-						<h1 class="your-class">General education</h1>
-						</a>
-				</div>
-				<div class=" img-sophia border border-secondary  m-2 rounded">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
 						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
 
 				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in img-sophia">
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
+						<h1 class="your-class">General education</h1>
+						</a>
+				</div>
+				<div class=" img-sophia border border-secondary  m-2 rounded">
+						<a href="{{ url('/general') }}" >
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
+						<h1 class="your-class">General education</h1>
+						</a>
+				</div>
+
+				<div class=" img-sophia border border-secondary  m-2 rounded">
+						<a href="{{ url('/general') }}" >
+						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
 						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
@@ -79,112 +80,57 @@
 
 	<!-- 掲示板一覧 -->
 
-	<div class="all-class-info text-center" id="all-bbs">
-			
-	@foreach($categories as $id => $name)
-        <li class="btn"><a class="class-list" href="{{ route('bbs.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
-        @endforeach
-			</ul>
-	
-    </div> 
 
-	<div class="container" id="all-bbs">
 
-		<div class="row">
 
-			<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
-				<div class="comment-box-border">
-					<a>
-					<div class="comment-box">
-						<div class="comment-text">
-								<p　class="badge badge-primary">掲示板のタイトル</p>
-						</div>
-						<div class="">
-							<div class="f-container comment-info border-top">
-								<div class="top-bbs-item float-right">コメント数</div>
-								<div class="top-bbs-item float-right ">2019:3:29</div>
+		<div class="container" id="all-bbs">
+
+			<div class="row">
+
+				<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
+
+					@foreach($categories as $id => $name)
+					<div class="top-bbs-box">
+						<a href="{{ route('bbs.index', ['category_id'=>$id]) }}" title="{{ $name }}">
+							<div class="">
+								<div class="">
+										<p class="bbs-name" >{{ $name }}</p>
+								</div>
+								<div class="">
+									<div class="f-container  border-top">
+										<div class="top-bbs-item float-right">コメント数</div>
+										<div class="top-bbs-item float-right ">2019:3:29</div>
+									</div>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-					</a>
+					@endforeach
 				</div>
 
-				<div class="comment-box-border">
-					<a>
-					<div class="comment-box">
-						<div class="comment-text">
-								<p　class="badge badge-primary">掲示板のタイトル</p>
-						</div>
-						<div class="">
-							<div class="f-container comment-info border-top">
-								<div class="top-bbs-item float-right">コメント数</div>
-								<div class="top-bbs-item float-right ">2019:3:29</div>
-							</div>
-						</div>
-					</div>
-					</a>
+				<div class="col-md-4">
+						<a><p class="koukoku-box">広告</p></a>
+						<a><p class="koukoku-box">広告</p></a>
+						<a><p class="koukoku-box">広告</p></a>
+						<a><p class="koukoku-box">広告</p></a>
+						<a><p class="koukoku-box">広告</p></a>
+						<a><p class="koukoku-box">広告</p></a>
+						<a><p class="koukoku-box">広告</p></a>
+						<a><p class="koukoku-box">広告</p></a>
 				</div>
 
-				<div class="comment-box-border">
-					<a>
-					<div class="comment-box">
-						<div class="comment-text">
-								<p　class="badge badge-primary">掲示板のタイトル</p>
-						</div>
-						<div class="">
-							<div class="f-container comment-info border-top">
-								<div class="top-bbs-item float-right">コメント数</div>
-								<div class="top-bbs-item float-right ">2019:3:29</div>
-							</div>
-						</div>
-					</div>
-					</a>
-				</div>
-				
-				<div class="comment-box-border">
-					<a>
-					<div class="comment-box">
-						<div class="comment-text">
-								<p　class="badge badge-primary">掲示板のタイトル</p>
-						</div>
-						<div class="">
-							<div class="f-container comment-info border-top">
-								<div class="top-bbs-item float-right">コメント数</div>
-								<div class="top-bbs-item float-right ">2019:3:29</div>
-							</div>
-						</div>
-					</div>
-					</a>
-				</div>
-
-				<div class="comment-box-border">
-					<a>
-					<div class="comment-box">
-						<div class="comment-text">
-								<p　class="badge badge-primary">掲示板のタイトル</p>
-						</div>
-						<div class="">
-							<div class="f-container comment-info border-top">
-								<div class="top-bbs-item float-right">コメント数</div>
-								<div class="top-bbs-item float-right ">2019:3:29</div>
-							</div>
-						</div>
-					</div>
-					</a>
-				</div>
-				
 			</div>
 
-			<div class="col-md-4 ">
-				<a><p class="koukoku-box">広告</p></a>
-				<a><p class="koukoku-box">広告</p></a>
-				<a><p class="koukoku-box">広告</p></a>
-				<a><p class="koukoku-box">広告</p></a>
-				<a><p class="koukoku-box">広告</p></a>
-				<a><p class="koukoku-box">広告</p></a>
-				<a><p class="koukoku-box">広告</p></a>
-				<a><p class="koukoku-box">広告</p></a>
-			</div>
+		</div>
+
+
+
+
+
+
+
+
+
 
 
 			</div>
@@ -196,11 +142,16 @@
 	<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
 </main>
 @include("parts.footer")
+
+		 <!--CSS (top用読み込)-->
+		<link rel="stylesheet" href="{{ asset('/css/top.css') }}">
         <!--JS(slick用)読み込み-->
-        
 		<script type="text/javascript" src="js/top.js"></script>
 		<script type="text/javascript" src="js/slick.min.js"></script>
 
 
+	
 </body>
-</html>
+
+</html> 
+

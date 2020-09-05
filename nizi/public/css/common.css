@@ -1,0 +1,178 @@
+/*----------------------------------------------全画面で使っているCSS------------------------------------------------------*/
+
+/*-----------------------------html全体の設定*/
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 40%;
+}
+
+ 
+/*--------------------------一番上の余白の設定*/
+header {
+    width: 100%;
+    left:0;
+    top:0;
+  z-index: 10;
+  background-color:white;
+
+}
+
+  /*--------------------------------header設定*/
+  .header-logo {
+    margin: 0;
+    float: left;
+    padding-left: 15px;
+    margin-top: 5px;
+    letter-spacing: 0.1em;
+    font-size:30px;
+}
+.nav ul {
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+    font-size: 0;
+    position: relative;
+    z-index: 100;
+}
+.nav ul li {
+    text-align: center;
+    display: inline-block;
+}
+nav{display: block;}
+
+.nav-item{
+    margin: 0;
+    float: left;
+    padding-left: 15px;
+    margin-top: 5px;
+    letter-spacing: 0.1em;
+    font-size:30px;
+}
+
+.u2-global-navbar {
+    min-width: 100%;
+    background: #333;
+    height: 50px;
+    border-top: 1px solid #e95014;
+    border-bottom: 1px solid #e95014;
+}
+.u2-header{
+    background-color: white;
+    padding: 15px 40px;
+    height: 66px;
+}
+.u2-header__container-inner {
+    position: relative;
+    line-height: 1;
+    color:black;
+}
+a .u2-header-logo {
+    color:black;
+    font-size:30px;
+}
+
+.u2-global-navbar ul {
+    margin: 0;
+}
+.u2-global-navbar__links {
+    border-top: 1px solid #002549;
+}
+.u2-global-navbar__link {
+    display: block;
+    color: #ffffff;
+    font-size: 8px;
+    padding: 8 20 6 ;
+}
+.u2-global-navbar__link a{
+    color: white;
+    text-decoration:none;
+    font-size: 20px;
+}
+.nav-arrows{
+    padding:0 10px;
+}
+.header-img-in{
+
+    width: 970px;
+    height: 250px;
+    margin: 0 auto;
+}
+.header-img-frame{
+    display:block;
+    height:250px;
+    width:100%;
+    background-color:rgba(224, 224, 224, 0.356);
+}
+/*--------------------------------aタグの設定*/
+a{
+    color: white;
+    text-decoration:none;
+    font-size: 30px;
+}
+a:hover {
+    color:white;
+    text-decoration: none;
+  }
+
+
+/*--------------------------------フッターの設定*/
+.footer-contents{
+    background-color: #333;
+    text-align: center;
+    border-top: 1px solid #e95014;
+}
+
+.footer-logo{
+
+    text-align: center;
+}
+/*----------テキストエリアリサイズ禁止--------------*/
+textarea {
+    resize: none;
+ 
+  }
+
+/*************************
+メディアクエリ設定 420~1024
+*************************/
+@media screen and (min-width: 420px) and (max-width: 1024px) {
+
+
+    
+    .header-img-in {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .header-img-frame {
+      
+        height: 200px;
+    }
+
+}
+
+/*************************
+メディアクエリ設定 0〜420
+*************************/
+@media screen and (min-width: 0px) and (max-width: 420px) {
+
+   
+    /*ヘッダー下の画像サイズ調整*/
+    .header-img-in {
+        width: 100%;
+        height: 200px;
+    }
+
+    .header-img-frame {
+      
+        height: 200px;
+    }
+    }
+    a {
+        font-size: 15px;
+    }
+
+}

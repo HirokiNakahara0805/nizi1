@@ -4,7 +4,7 @@
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿一覧ページの説明文')
 @section('pageCss')
-<link href="/css/bbs/style.css" rel="stylesheet">
+<!--<link href="/css/bbs/style.css" rel="stylesheet">-->
 @endsection
 
 @section('content')

@@ -1,17 +1,34 @@
+
+/* generalページ用CSS（TOPページのみで使いたい時に使用）*/
+
+
+/*---------------mainの設定*/
 main{
   margin:100;
 }
-ul.week{
-  font-size: 100px;
+
+/*---------------科目と時限の色設定*/
+a.secList{
+  color: black;
 }
+a.periodList{
+  color: black;
+}
+
+
+/*---------------時間割の背景設定*/
 .section{
   color: black;
   background-color: rgba(224, 224, 224, 0.356);
 }
-.title-class{
+
+/*------------学科名のタイトル設定*/
+.subject-title{
   margin:30px;
   padding:10px;
 }
+
+/*------------曜日ボックスの設定*/
 .day{
   border: 2px solid black;
   border-radius: 10px;
@@ -22,12 +39,21 @@ ul.week{
   border:2px solid #e95014;
 
 }
+
+
+/*------------periodのフレーム設定*/
 .period-frame{
   border: 2px solid black;
   border-radius: 10px;
   padding:5px 20px;
   margin:30 10 10 10;
 }
+.period-frame:hover{
+  border:2px solid #1458e9;
+}
+
+
+/*------------時限(period)の上に表示される曜日の設定*/
 .period-frame-youbi{
   border-bottom: 2px solid #e95014;;
   padding:5px 20px;
@@ -35,23 +61,16 @@ ul.week{
  
 }
 
-.period-frame-youbi-period{
+/*------------授業タイトルの上に表示される時限(period)の設定*/
+.subject-name-top-period{
   border-bottom: 2px solid #1458e9;;
   padding:5px 20px;
   margin:30 10 10 10;
  
 }
-.period-frame:hover{
-  border:2px solid #1458e9;
-}
 
 
-
-
-.period:hover{
-  border:2px solid #e95014;
-
-}
+/*------------授業タイトルの設定*/
 .subjectname{
   padding:5px;
   margin:30px;
@@ -60,14 +79,12 @@ ul.week{
   background-color:white;
 }
 
-/*曜日を真ん中に*/
-.row1 {
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-  padding:0 0 30 0 ;
-  margin:0 0 30 0 ;
-}
-.general{
-  size:20px
+
+
+@media screen and (min-width: 0px) and (max-width: 420px) {
+
+  main{
+      margin:0px;
+  }
+
 }

@@ -9,10 +9,23 @@
 
 
 @include("parts.common", [ "title" => "一般教養" ])
-@include("parts.header")
 
-<!-- CSS読み込み -->
-<link href="{{ asset('css/general.css') }}" rel="stylesheet">
+
+
+	<header class="u2-header">
+		<div class="u2-header__container-inner">
+			<a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+		</div>
+	</header>
+
+	<div class="u2-global-navbar">
+		<ul class="reset-ul row v2-global-navbar__links">
+			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+		</ul>
+	</div>
+
+
 
 		<!-- 画像挿入-->
 	<div class='header-img-frame'>
@@ -23,9 +36,9 @@
 <main>
 
 
-	<h1 class="text-center title-class">一般教養</h1>
+	<h1 class="text-center subject-title">一般教養</h1>
 	<div class="text-center container">
-		<div class="row1 mx-auto">
+		<div class="mx-auto">
 
 			<div class="et_pb_module list-inline-item day col-md-2">
 				<a href="#mon" class='secList'>Mon</a>
@@ -56,7 +69,7 @@
 						<div  class="col-md-4">
 							<div class="period-frame-youbi">
 									<a class="periodList">Monday</a>
-								</div>
+							</div>
 							<div class="period-frame">
 								<a href="#mon1" class="periodList">1st period</a>
 							</div>
@@ -76,27 +89,27 @@
 
 						<div class="classboard col-md-8">
 							<div id="mon1" class="mon12345">
-								<a><p class="period-frame-youbi-period">1st period</p></a>
+								<a><p class="subject-name-top-period">1st period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 							</div>
 							<div id="mon2" class="mon12345">
-								<a><p class="period-frame-youbi-period">2nd period</p></a>
+								<a><p class="subject-name-top-period">2nd period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 							</div>
 							<div id="mon3" class="mon12345">
-								<a><p class="period-frame-youbi-period">3rd period</p></a>
+								<a><p class="subject-name-top-period">3rd period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 							</div>
 							<div id="mon4" class="mon12345">
-								<a><p class="period-frame-youbi-period">4th period</p></a>
+								<a><p class="subject-name-top-period">4th period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 							</div>
 							<div id="mon5" class="mon12345">
-								<a><p class="period-frame-youbi-period">5th period</p></a>
+								<a><p class="subject-name-top-period">5th period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
 							</div>
@@ -128,28 +141,28 @@
 
 						<div class="classboard col-md-8">
 							<div id="tue1" class="tue12345">
-								<a><p class="period-frame-youbi-period">1st period</p></a>
+								<a><p class="subject-name-top-period">1st period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 							</div>
 							<div id="tue2" class="tue12345">
-								<a><p class="period-frame-youbi-period">2nd period</p></a>
+								<a><p class="subject-name-top-period">2nd period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 							</div>
 							<div id="tue3" class="tue12345">
-								<a><p class="period-frame-youbi-period">3rd period</p></a>
+								<a><p class="subject-name-top-period">3rd period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 							</div>
 							<div id="tue4" class="tue12345">
-								<a><p class="period-frame-youbi-period">4th period</p></a>
+								<a><p class="subject-name-top-period">4th period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 							</div>
 							<div id="tue5" class="tue12345">
-								<a><p class="period-frame-youbi-period">5th period</p></a>
+								<a><p class="subject-name-top-period">5th period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 							</div>
@@ -180,27 +193,27 @@
 
 						<div class="classboard col-md-8">
 							<div id="wed1" class="wed12345">
-								<a><p class="period-frame-youbi-period">1st period</p></a>
+								<a><p class="subject-name-top-period">1st period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">111wednesday1tue</p></a>
 							</div>
 							<div id="wed2" class="wed12345">
-								<a><p class="period-frame-youbi-period">2nd period</p></a>
+								<a><p class="subject-name-top-period">2nd period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111wednesdaytue</p></a>
 							</div>
 							<div id="wed3" class="wed12345">
-								<a><p class="period-frame-youbi-period">3rd period</p></a>
+								<a><p class="subject-name-top-period">3rd period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111wednesdaytue</p></a>
 							</div>
 							<div id="wed4" class="wed12345">
-								<a><p class="period-frame-youbi-period">4th period</p></a>
+								<a><p class="subject-name-top-period">4th period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">111wednesday1tue</p></a>
 							</div>
 							<div id="wed5" class="wed12345">
-								<a><p class="period-frame-youbi-period">5th period</p></a>
+								<a><p class="subject-name-top-period">5th period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
 								<a><p class="subjectname">1111wednesday</p></a>
 							</div>
@@ -230,27 +243,27 @@
 						</div>
 							<div class="classboard col-md-8">
 								<div id="thu1" class="thu12345">
-									<a><p class="period-frame-youbi-period">1st period</p></a>
-									<a><p class="subjectname">111thursday1tue</p></a>
+									<a><p class="subject-name-top-period">1st period</p></a>
+									<a><p class="subjectname">111thurs1tue</p></a>
 									<a><p class="subjectname">111thursday1tue</p></a>
 								</div>
 								<div id="thu2" class="thu12345">
-									<a><p class="period-frame-youbi-period">2nd period</p></a>
+									<a><p class="subject-name-top-period">2nd period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">1111thursdaytue</p></a>
 								</div>
 								<div id="thu3" class="thu12345">
-									<a><p class="period-frame-youbi-period">3rd period</p></a>
+									<a><p class="subject-name-top-period">3rd period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">111thursday1tue</p></a>
 								</div>
 								<div id="thu4" class="thu12345">
-									<a><p class="period-frame-youbi-period">4th period</p></a>
+									<a><p class="subject-name-top-period">4th period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">111thursday1tue</p></a>
 								</div>
 								<div id="thu5" class="thu12345">
-									<a><p class="period-frame-youbi-period">5th period</p></a>
+									<a><p class="subject-name-top-period">5th period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">1111thursday</p></a>
 								</div>
@@ -281,27 +294,27 @@
 
 							<div class="classboard col-md-8">
 								<div id="fri1" class="fri12345">
-									<a><p class="period-frame-youbi-period">1st period</p></a>
+									<a><p class="subject-name-top-period">1st period</p></a>
 									<a><p class="subjectname">111friday1tue</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 								</div>
 								<div id="fri2" class="fri12345">
-									<a><p class="period-frame-youbi-period">2nd period</p></a>
+									<a><p class="subject-name-top-period">2nd period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">1111fridaytue</p></a>
 								</div>
 								<div id="fri3" class="fri12345">
-									<a><p class="period-frame-youbi-period">3rd period</p></a>
+									<a><p class="subject-name-top-period">3rd period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">1fridaytue</p></a>
 								</div>
 								<div id="fri4" class="fri12345">
-									<a><p class="period-frame-youbi-period">4th period</p></a>
+									<a><p class="subject-name-top-period">4th period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">1fridaytue</p></a>
 								</div>
 								<div id="fri5" class="fri12345">
-									<a><p class="period-frame-youbi-period">5th period</p></a>
+									<a><p class="subject-name-top-period">5th period</p></a>
 									<a><p class="subjectname">1111tue</p></a>
 									<a><p class="subjectname">friday</p></a>
 								</div>
@@ -314,9 +327,11 @@
 	</div>
 </main>
 @include("parts.footer")
+		<!-- CSS読み込み -->
+		<link href="{{ asset('css/general.css') }}" rel="stylesheet">
         <!-- javascript (general) 読み込み-->
 		<script type="text/javascript" src="js/general.js"></script>
-		
+
 </body>
 </html>
 

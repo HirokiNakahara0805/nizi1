@@ -3,22 +3,29 @@
  
 @section('header')
 
-<link rel="stylesheet" href="{{ asset('/css/top.css') }}">
 
-<header>
-	<div class="header-color">
-		<nav class="a">
-			<li><a href="/">Sophia univ.</a></li>
-		</nav>
+
+    <header class="u2-header">
+		<div class="u2-header__container-inner">
+			<a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+		</div>
+	</header>
+
+	<div class="u2-global-navbar">
+		<ul class="reset-ul row v2-global-navbar__links">
+			<li class="u2-global-navbar__link"><a href="#class-sub">classc subject</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+		</ul>
 	</div>
-</header>
 @endsection
 
 @section('title', '8pilotis BBS 投稿の一覧ページ')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿一覧ページの説明文')
 @section('pageCss')
-<link href="/css/bbs/style.css" rel="stylesheet">
+<!-- <link href="/css/bbs/style.css" rel="stylesheet"> -->
 @endsection
 
  
@@ -28,10 +35,16 @@
         {{ session('poststatus') }}
     </div>
 @endif
-<span class="btn"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></span>
-<span class="btn"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></span>
-<span class="btn"><a href="{{ route('syllabus.index', ['category_id'=>$category_id]) }}" >シラバス</a></span>
-<span class="btn"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></span>
+
+
+
+<div>
+    <ul class="reset-ul row feature-title-box">
+        <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
+        <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
+    </ul>
+</div>
+
 
 
 
@@ -39,7 +52,7 @@
 
 
     <div class="container mt-4 ">
-        <div class=" p-2  comment-box">
+        <div class="  comment-box">
 
             <form method="POST" action="{{ route('bbs.store') }}" >
                 @csrf
@@ -92,7 +105,7 @@
                             id="message"
                             name="message"
                             class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
-                            rows="1"
+                            cols="20" rows="2"
                         >{{ old('message') }}</textarea>
                         @if ($errors->has('message'))
                             <div class="invalid-feedback">
@@ -157,7 +170,7 @@
                             <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
                             <div class="f-item float-right">{{ $post->name }}</div>
                             <div class="f-item float-right ">{{ $post->subject }}学年</div>
-                            <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class="btn btn-primary btn-sm">reply</a></div>
+                            <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class=""><i class="far fa-comment-dots reply-icon"> reply</i></a></div>
 
                             
                         </div>
@@ -183,8 +196,6 @@
 
 @section('footer')
 <footer>
-    <!-- CSS読み込み -->
-    <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
         <!-- SNS連携 -->
         <div class="footer-contents .align-middle">
             <a class="footer-logo">Sophia univ.</a>
