@@ -51,7 +51,7 @@
 
 
     <div class="container mt-4 ">
-        <div class=" p-2  comment-box">
+        <div class="  comment-box">
 
             <form method="POST" action="{{ route('bbs.store') }}" >
                 @csrf
@@ -104,7 +104,7 @@
                             id="message"
                             name="message"
                             class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
-                            rows="1"
+                            cols="20" rows="2"
                         >{{ old('message') }}</textarea>
                         @if ($errors->has('message'))
                             <div class="invalid-feedback">

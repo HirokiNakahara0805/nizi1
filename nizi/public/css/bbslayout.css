@@ -50,13 +50,21 @@ h3::after {
    
 
 }
+/*--------------------------------コメントボックスの設定(コメントの部分)------*/
+.comment-text-show{
+  border-top:1px solid rgba(224, 224, 224, 0.356);
+  font-size:20px;
+  margin:6px;
+  padding:6px;
+ 
+}
 /*--------------------------------コメントボックスの設定(大枠)------*/
 .comment-box{
    
     border-radius: 10px;
     border: 1px solid #333333;
     border-bottom: 2px solid #e95014;
-    padding: 5px 0px 5px 0px;
+    padding: 10px 10px 10px 10px;
     margin: 15px 0px 15px 0px;
     background-color: white;
 } 
@@ -82,10 +90,11 @@ h3::after {
 
 /*------------------コメント画面の返信一覧の設定-------*/
 .reply-box{
-  border: 1px solid #e0e0e0;
+  border: 1px solid #333333;
+  border-bottom: 2px solid #e95014;
   border-radius:10px;
   background-color:white;
-  padding: 15px 15px 10px 15px;
+  padding: 15px 15px 20px 15px;
   margin:15px 15px 10px 15px;
  
   
@@ -93,7 +102,8 @@ h3::after {
 /*------------------コメント画面の返信ボックス（INPUTボックス）の設定-------*/
 .reply-form-box{
   margin:10px;
-  padding:10px;
+  padding:50px;
+  background-color:#bebebe98;
 }
 
 
@@ -143,4 +153,17 @@ padding: 40px 50px 20px 40px;
 }
 .list-inline-item a{
   color:black;
+}
+
+/*------------------コメントアイコンの設定-------*/
+.comment-icon{
+  background-color:white;
+  color: #000000;
+  font-size:15px;
+  padding:5px;
+  margin-top:10px;
+}
+.comment-icon:hover{
+  background-color:#e95014;
+  color: white;
 }
