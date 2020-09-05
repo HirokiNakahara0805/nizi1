@@ -10,6 +10,9 @@ class Post2sController extends Controller
 {
         public function index(Request $request)
     {
+        
+
+
         // カテゴリ取得
         $category = new Category;
         $categories = $category->getLists();
@@ -20,11 +23,20 @@ class Post2sController extends Controller
         } else {
             $post2s = Post2::orderBy('created_at', 'desc')->paginate(10);
         }
+
+        
+        
+        //いいね平均について
+        $goodpost2s = Post2::where('category_id',$category_id)->get();
+        
+        
     
         return view('evaluation.index', [
             'post2s' => $post2s, 
             'categories' => $categories, 
-            'category_id'=>$category_id
+            'category_id'=>$category_id,
+            'goodpost2s' => $goodpost2s
+            
         ]);
     }
 

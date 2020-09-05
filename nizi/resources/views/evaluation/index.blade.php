@@ -37,12 +37,27 @@
 @endif
 
 
+<!--いいね平均-->
+<?php
+    $goodss = 0;
+
+    foreach ($goodpost2s as $goodpost2){
+        $goodss +=$goodpost2->good;
+        }
+
+    $average = round($goodss/$post2s->total(),2);
+?>
+ {{$average}}
+
+
+
 <div>
     <ul class="reset-ul row feature-title-box">
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
         <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
     </ul>
 </div>
+
 <div class="container mt-4">
     <div class="border p-4">
         <h1 class="h4 mb-4 font-weight-bold">

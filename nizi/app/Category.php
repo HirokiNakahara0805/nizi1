@@ -12,6 +12,7 @@ class Category extends Model
         // カテゴリは複数のポストを持つ
         return $this->hasMany('App\Post');
     }
+       //カテゴリーの一覧を取得
     public function getLists()
     {
     $categories = Category::orderBy('id','asc')->pluck('name', 'id');
@@ -29,5 +30,11 @@ class Category extends Model
     {
         // カテゴリは複数のシラバスを持つ
         return $this->hasMany('App\Syllabus');
+    }
+
+    public function generaltops()
+    {
+        // カテゴリは複数のポストを持つ
+        return $this->hasMany('App\Post');
     }
 }

@@ -37,6 +37,7 @@
 @endif
 
 
+
 <div>
     <ul class="reset-ul row feature-title-box">
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>

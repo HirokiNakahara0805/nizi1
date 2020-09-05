@@ -32,3 +32,6 @@ Route::resource('evaluation', 'Post2sController', ['only' => ['index','create', 
 
 //シラバステストページ
 Route::resource('syllabus', 'SyllabiController', ['only' => ['index']]);
+
+//般教Top画面テストページ
+Route::resource('generaltop', 'GeneraltopController', ['only' => ['index']]);
