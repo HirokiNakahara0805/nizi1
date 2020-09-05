@@ -1,8 +1,11 @@
 /*----------------------------BBSのレイアウト用CSS----------*
 
 
+/*----BODY背景--------*/
+body{
 
-
+background-color: rgba(224, 224, 224, 0.356);
+}
 /*--------------------------------h3タグの設定*/
 h3 {
   display: flex;
@@ -49,12 +52,14 @@ h3::after {
 }
 /*--------------------------------コメントボックスの設定(大枠)------*/
 .comment-box{
-    border: 2px solid #e0e0e0;
+   
     border-radius: 10px;
-    padding: 15px 15px 5px 15px;
-    margin:15px 15px 5px 15px;
-    background-color:white;
-}
+    border: 1px solid #333333;
+    border-bottom: 2px solid #e95014;
+    padding: 5px 0px 5px 0px;
+    margin: 15px 0px 15px 0px;
+    background-color: white;
+} 
 
 /*---------------------------------formのコンテイナーの設定--------*/
 .f-container {
@@ -89,4 +94,53 @@ h3::after {
 .reply-form-box{
   margin:10px;
   padding:10px;
+}
+
+
+/*------------------リプライアイコンの設定-------*/
+.reply-icon{
+  color: #333333;
+}
+.reply-icon:hover{
+  color: #3490dc;
+}
+
+
+/*------------------機能タイトルのところの設定-------*/
+.feature-title{
+
+    min-width: 100%;
+    height: 40px;
+    margin: 20px;
+    padding:20px;
+}
+.feature-title-1{
+  background-color:white;
+  display: inline-block;
+  color: black;
+  font-size: 8px;
+  padding: 8 20 6;
+  border-left: 3px solid #e95014;
+
+
+
+}
+.feature-title-2{
+  background-color:white;
+  display: inline-block;
+  color: black;
+  font-size: 8px;
+  padding: 8 20 6;
+  border-left: 3px solid #e95014;
+
+
+}
+
+.feature-title-box{
+padding: 40px 50px 20px 40px;
+
+
+}
+.list-inline-item a{
+  color:black;
 }
