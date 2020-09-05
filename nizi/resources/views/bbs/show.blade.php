@@ -129,10 +129,10 @@
         </section>
     </div>
 
-
+</div>
 
 <div class="mt-4 mb-4">
-<a href="{{ route('bbs.index', ['category_id'=>$post->category_id]) }}" class="btn btn-info">
+    <a href="{{ route('bbs.index', ['category_id'=>$post->category_id]) }}" class="btn btn-info">
 
         一覧に戻る
     </a>
