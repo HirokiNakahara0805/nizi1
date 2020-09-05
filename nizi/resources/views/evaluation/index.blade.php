@@ -17,6 +17,21 @@
     </div>
 @endif
 
+
+
+<?php
+
+    $goodss = 0;
+
+    foreach ($goodpost2s as $goodpost2){
+        $goodss +=$goodpost2->good;
+        }
+
+    $average = round($goodss/$post2s->total(),2);
+?>
+ {{$average}}
+
+
 <span class="btn"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></span>
 <span class="btn"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></span>
 <span class="btn"><a href="{{ route('syllabus.index', ['category_id'=>$category_id]) }}" >シラバス</a></span>
