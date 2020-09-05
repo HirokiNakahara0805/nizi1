@@ -1,12 +1,171 @@
+/*----------------------------BBSのレイアウト用CSS----------*
+
+
+/*-----------------------------html全体の設定*/
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 40%;
+}
+
+
+/*--------------------------一番上の余白の設定*/
+header {
+  width: 100%;
+  min-width: 960px;
+  left:0;
+  top:0;
+z-index: 10;
+background-color:white;
+
+}
+
+/*--------------------------------header設定*/
+.header-logo {
+  margin: 0;
+  float: left;
+  padding-left: 15px;
+  margin-top: 5px;
+  letter-spacing: 0.1em;
+  font-size:30px;
+}
+.nav ul {
+  display: block;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+  font-size: 0;
+  position: relative;
+  z-index: 100;
+}
+.nav ul li {
+  text-align: center;
+  display: inline-block;
+}
+nav{display: block;}
+
+.nav-item{
+  margin: 0;
+  float: left;
+  padding-left: 15px;
+  margin-top: 5px;
+  letter-spacing: 0.1em;
+  font-size:30px;
+}
+
+.u2-global-navbar {
+  min-width: 1167px;
+  background: #333;
+  height: 50px;
+  border-top: 1px solid #e95014;
+  border-bottom: 1px solid #e95014;
+}
+.u2-header{
+  background-color: white;
+  padding: 15px 40px;
+  height: 66px;
+}
+.u2-header__container-inner {
+  position: relative;
+  line-height: 1;
+  color:black;
+}
+.u2-header-logo{
+  color:black;
+}
+
+.u2-global-navbar ul {
+  margin: 0;
+}
+.u2-global-navbar__links {
+  border-top: 1px solid #002549;
+}
+.u2-global-navbar__link {
+  display: block;
+  color: #ffffff;
+  font-size: 8px;
+  padding: 8 20 6 ;
+}
+.u2-global-navbar__link a{
+  color: white;
+  text-decoration:none;
+  font-size: 20px;
+}
+.nav-arrows{
+  padding:0 10px;
+}
+.header-img-in{
+
+  width: 970px;
+  height: 250px;
+  margin: 0 auto;
+}
+.header-img-frame{
+  display:block;
+  height:250px;
+  width:100%;
+  background-color:rgba(224, 224, 224, 0.356);
+}
+
+
+
+
+body{
+  background-color:rgba(224, 224, 224, 0.356);
+}
+
+
+/*--------------------------------aタグの設定*/
+a{
+  color: white;
+  text-decoration:none;
+  font-size: 30px;
+}
+a:hover {
+  color:white;
+  text-decoration: none;
+}
+
+
+
+
+/*--------------------------------h3タグの設定*/
+h3 {
+  display: flex;
+  align-items: center;/* 縦位置の調整 */
+  justify-content: center;/* 横位置の調整 */
+}
+
+h3::before,
+h3::after {
+  content: '';
+  flex-grow: 0.05;/* 少数にする */
+  height: 3px;
+  background: black;
+}
+
+/* 見出しの文字と横棒の間隔を開ける */
+h3::before {
+  margin-right: 20px;
+}
+
+h3::after {
+  margin-left: 20px;
+}
+
+
+
+/*--------------------------------コメントボックスの詳細情報の設定(時間、学年)------*/
 .comment-info{
     margin-top: 5px;
     padding-top: 5px;
     border-top-color: #e7bf8bee;
     font-size: 12px;
     color: #666;
-    
-    
+
 }
+
+/*--------------------------------コメントボックスの設定(コメントの部分)------*/
 .comment-text{
     font-size:20px;
     margin:6px;
@@ -14,6 +173,7 @@
    
 
 }
+/*--------------------------------コメントボックスの設定(大枠)------*/
 .comment-box{
     border: 2px solid #e0e0e0;
     border-radius: 10px;
@@ -21,59 +181,38 @@
     margin:15px 15px 5px 15px;
     background-color:white;
 }
+
+/*---------------------------------formのコンテイナーの設定--------*/
 .f-container {
     display: flex;
     justify-content: flex-end;
 }
+/*---------------------------------form-itemの設定--------*/
 .f-item{
     margin:0px 5px;
     padding:0px 5px;
 }
+/*------------------------------画面下部の授業一覧の設定---------------*/
 .class-list{
     font-size: 12px;
     color: #666;
 
 }
-h3 {
-    display: flex;
-    align-items: center;/* 縦位置の調整 */
-    justify-content: center;/* 横位置の調整 */
-  }
-  
-  h3::before,
-  h3::after {
-    content: '';
-    flex-grow: 0.05;/* 少数にする */
-    height: 3px;
-    background: black;
-  }
-  
-  /* 見出しの文字と横棒の間隔を開ける */
-  h3::before {
-    margin-right: 20px;
-  }
-  
-  h3::after {
-    margin-left: 20px;
-  }
 
-.reply-block{
+
+
+/*------------------コメント画面の返信一覧の設定-------*/
+.reply-box{
   border: 1px solid #e0e0e0;
-  border-radius: 3px;
+  border-radius:10px;
+  background-color:white;
   padding: 15px 15px 10px 15px;
   margin:15px 15px 10px 15px;
+ 
+  
 }
+/*------------------コメント画面の返信ボックス（INPUTボックス）の設定-------*/
 .reply-form-box{
   margin:10px;
   padding:10px;
-}
-
-body{
-  background-color:rgba(224, 224, 224, 0.356);
-}
-
-.reply-box{
-  background-color:white;
-  border-radius:10px;
-  
 }
