@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
+		
 
 </head>
 
@@ -14,7 +14,10 @@
 @include("parts.header")
 
 <body id="vw vh">
-
+	<!-- トップページ最初に開いた時のアニメーション-->
+	<div class="start">
+   				 <p><img src="{{ asset('img/sophia.jpg') }}" alt=""></p>
+			</div>
 <main>
 
 	<!-- 画像挿入-->
@@ -147,5 +150,6 @@
 		<script type="text/javascript" src="js/slick.min.js"></script>
 
 
+	
 </body>
 </html> 
