@@ -57,7 +57,7 @@
         <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
     </ul>
 </div>
-
+<!--投稿画面-->
 <div class="container mt-4">
     <div class="border p-4">
         <h1 class="h4 mb-4 font-weight-bold">
