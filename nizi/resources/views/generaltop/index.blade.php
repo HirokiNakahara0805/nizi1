@@ -37,8 +37,8 @@
                 <div>
 
                 @foreach ($evaluations as $evaluation)
+                    @if($loop->iteration < 6) 
 
-       
 
                     <div class="comment-box">
 
@@ -69,7 +69,7 @@
                             <div class="f-item float-right">name{{ $evaluation->name }}</div>
                         </div>
                     </div>
-
+                        @endif
                     @endforeach
                 </div>
 
@@ -92,7 +92,7 @@
             </thead> -->
             <div id="tbl">
             @foreach ($bbss as $bbs)
-
+                @if($loop->iteration < 6) 
                 <div class="comment-box">
                     <div class="comment-text">{!! nl2br(e(Str::limit($bbs->message, 100))) !!}
                     </div>
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-
+                @endif
             @endforeach
             </div>
         </div>
