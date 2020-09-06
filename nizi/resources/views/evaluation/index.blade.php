@@ -47,7 +47,7 @@
 
     $average = round($goodss/$post2s->total(),2);
 ?>
- {{$average}}
+
 
 
 
@@ -240,48 +240,52 @@
 
 
  
-<div class="mt-4 mb-4">
-    @foreach($categories as $id => $name)
-    <span class="btn"><a href="{{ route('evaluation.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
-    @endforeach
-</div>
 
-<div class="mt-4 mb-4">
+
+<div class="mt-4 mb-4 text-center">
     <p>{{ $post2s->total() }}件が見つかりました。</p>
 </div>
 
-<div class="table-responsive">
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>ニックネーム</th>
-            <th>年度</th>
-            <th>作成日時</th>
-            <th>いいね</th>
-            <th>単位取得難易度</th>
-            <th>忙しさ</th>
-            <th>授業の雰囲気</th>
-            <th>フリーコメント</th>
-        </tr>
-        </thead>
-        <tbody id="tbl">
-        @foreach ($post2s as $post2)
-            <tr>
-                <td>{{ $post2->name }}</td>
-                <td>{{ $post2->year }}</td>
-                <td>{{ $post2->created_at->format('Y.m.d .H:i') }}</td>
-                <td>{{ $post2->good }}</td>
-                <td>{{ $post2->difficulty }}</td>
-                <td>{{ $post2->busyness }}</td>
-                <td>{{ $post2->atmosphere }}</td>
-                <td>{{ $post2->message }}</td>  
-               
-             
-            </tr>
-        @endforeach
-        </tbody>
-    </table>
-</div>
+
+        <div class="container">
+            <div class="table table-hover">
+
+                <div>
+            
+
+                    <div class="comment-box">
+
+                        <div class="evaluation-text">
+
+                                <div><p> 年度</p></div>
+                                <div><p> < 授業名 > </p></div>
+                                <div> <p>星{{$average}}</p></div>
+
+                        </div>
+
+                        <div class="evaluation-container  border-top border-bottom">
+                             <div class="evaluation-item ">テスト難易度</div>
+                             <div class="evaluation-item ">レポート難易度</div>
+                             <div class="evaluation-item ">しらん</div>
+
+                        </div>
+                        
+                        <div>
+                            <div class="evaluation-message">
+                                <p>message</p>
+                            </div>
+
+                        </div>
+                        <div class="f-container comment-info border-top">
+                            <div class="f-item float-right">投稿日時</div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
 
 <div class="d-flex justify-content-center mb-5">
     {{ $post2s->appends(['category_id' => $category_id])->links() }}

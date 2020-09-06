@@ -167,3 +167,31 @@ padding: 40px 50px 20px 40px;
   background-color:#e95014;
   color: white;
 }
+
+/*******************************************------------------評価の設定-------*/
+/*------------------コンテイナー横並びの設定-------*/
+.evaluation-container{
+  display: flex;
+
+}
+
+/*------------------アイテム間の間隔設定-------*/
+.evaluation-item{
+  margin:0px 50px;
+  padding:25px 25px;
+}
+/*------------------授業名とオススメ度の星横並びの設定-------*/
+.evaluation-text{
+display: flex;
+}
+/*------------------授業名とオススメ度の星の大きさ設定-------*/
+.evaluation-text p{
+  margin:0px 50px;
+  font-size:30px;
+  }
+
+  /*------------------授業名とオススメ度の星の大きさ設定-------*/
+  .evaluation-message{
+    font-size:30px;
+
+  }
