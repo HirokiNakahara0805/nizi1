@@ -205,3 +205,9 @@ display: flex;
   color: #3490dc;
 }
 
+
+
+  /*------------------コメント件数アイコンの設定-------*/
+.comment-number{
+  background-color:#81bdf5e3;
+  border:1px solid #81bdf5e3;}

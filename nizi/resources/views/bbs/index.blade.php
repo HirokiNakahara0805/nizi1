@@ -162,7 +162,7 @@
                 <div class="comment-box">
                     <div class="comment-text">{!! nl2br(e(Str::limit($post->message, 100))) !!}
                         @if ($post->comments->count() >= 1)
-                            <p><span class="badge badge-primary">コメント：{{ $post->comments->count() }}件</span></p>
+                            <p><span class="comment-number">コメント：{{ $post->comments->count() }}件</span></p>
                         @endif
                     </div>
                     <div class="">
