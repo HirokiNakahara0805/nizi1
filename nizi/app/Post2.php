@@ -25,9 +25,6 @@ class Post2 extends Model
                'message', 
                'category_id',
                'good',
-               'difficulty',
-               'atmosphere',
-               'busyness'
 
            ];
         

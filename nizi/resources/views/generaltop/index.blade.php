@@ -50,13 +50,7 @@
 
                         </div>
 
-                        <div class="evaluation-container  border-top border-bottom">
-                             <div class="evaluation-item ">難しさ{{ $evaluation->difficulty }}</div>
-                             <div class="evaluation-item ">雰囲気{{ $evaluation->atmosphere }}</div>
-                             <div class="evaluation-item ">忙しさ{{ $evaluation->busyness }}</div>
-                             
-
-                        </div>
+                        
                         
                         <div>
                             <div class="evaluation-message">

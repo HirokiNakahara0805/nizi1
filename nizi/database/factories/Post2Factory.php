@@ -14,8 +14,5 @@ $factory->define(Post2::class, function (Faker $faker) {
         'name' => $faker->name,    // 氏名
         'category_id' => $faker->numberBetween(1,5),    // 1〜5のランダムな整数
         'good' => $faker->numberBetween(1,5),    // 1〜5のランダムな整数
-        'difficulty' => $faker->numberBetween(1,5),    // 1〜5のランダムな整数
-        'atmosphere' => $faker->numberBetween(1,5),    // 1〜5のランダムな整数
-        'busyness' => $faker->numberBetween(1,5),    // 1〜5のランダムな整数
     ];
 });

@@ -22,9 +22,6 @@ class CreatePost2sTable extends Migration
             $table->text('message');
             $table->string('name');
             $table->integer('good');
-            $table->integer('difficulty');
-            $table->integer('atmosphere');
-            $table->integer('busyness');
         });
     }
 

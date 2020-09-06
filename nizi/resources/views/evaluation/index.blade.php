@@ -151,60 +151,7 @@
                             {{ $errors->first('good') }}
                         </div>
                     @endif
-                </div>
-                <div class="form-group">
-                    <label for="difficulty">
-                        単位取得難易度
-                    </label>
-                    <input
-                        id="difficulty"
-                        name="difficulty"
-                        class="form-control {{ $errors->has('difficulty') ? 'is-invalid' : '' }}"
-                        value="{{ old('difficulty') }}"
-                        type="text"
-                    >
-                    @if ($errors->has('difficulty'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('difficulty') }}
-                        </div>
-                    @endif
-                </div>
-               
-                <div class="form-group">
-                    <label for="busyness">
-                        忙しさ
-                    </label>
-                    <input
-                        id="busyness"
-                        name="busyness"
-                        class="form-control {{ $errors->has('busyness') ? 'is-invalid' : '' }}"
-                        value="{{ old('busyness') }}"
-                        type="text"
-                    >
-                    @if ($errors->has('busyness'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('busyness') }}
-                        </div>
-                    @endif
-                </div>
-
-                <div class="form-group">
-                    <label for="atmosphere">
-                        雰囲気
-                    </label>
-                    <input
-                        id="atmosphere"
-                        name="atmosphere"
-                        class="form-control {{ $errors->has('atmosphere') ? 'is-invalid' : '' }}"
-                        value="{{ old('atmosphere') }}"
-                        type="text"
-                    >
-                    @if ($errors->has('atmosphere'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('atmosphere') }}
-                        </div>
-                    @endif
-                </div>
+                
  
                 <div class="form-group">
                     <label for="message">
@@ -263,14 +210,6 @@
                                 <div><p> 学年{{ $post2->year }}</p></div>
                                 <div><p> < 授業名 > </p></div>
                                 <div> <p>いいね{{ $post2->good }}</p></div>
-
-                        </div>
-
-                        <div class="evaluation-container  border-top border-bottom">
-                             <div class="evaluation-item ">難しさ{{ $post2->difficulty }}</div>
-                             <div class="evaluation-item ">雰囲気{{ $post2->atmosphere }}</div>
-                             <div class="evaluation-item ">忙しさ{{ $post2->busyness }}</div>
-                             
 
                         </div>
                         
