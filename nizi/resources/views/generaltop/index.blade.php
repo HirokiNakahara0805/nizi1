@@ -22,7 +22,7 @@
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿一覧ページの説明文')
 @section('pageCss')
-<link href="/css/bbs/style.css" rel="stylesheet">
+
 @endsection
  
  
@@ -45,7 +45,7 @@
     <ul class="reset-ul row feature-title-box">
         <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
-        <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
+        <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
     </ul>
 </div>
 <div>
@@ -61,12 +61,16 @@
 
 				<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
 
+                    <div>
+                        <div class="text-left">
+                            <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿</a></li>
+                        </div>
+
+                        <div class="newtopic-evaluation"><p>新着投稿</p></div>
+                    </div>
 
 
-
-
-
-                        <div class="comment-box">
+                        <div class="comment-box"> <!--ここにURLはる-->
 
                             <div class="evaluation-text">
 
@@ -100,14 +104,15 @@
 				</div>
 
 				<div class="col-md-4">
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
+						<a><p class="koukoku-box">教授名</p></a>
+						<a><p class="koukoku-box">時限</p></a>
+						<a><p class="koukoku-box">参考書リンク</p></a>
+						<a><p class="koukoku-box">教授名</p></a>
+						<a><p class="koukoku-box">時限</p></a>
+                        <a><p class="koukoku-box">参考書リンク</p></a>
+                        <a><p class="koukoku-box">教授名</p></a>
+						<a><p class="koukoku-box">時限</p></a>
+						<a><p class="koukoku-box">参考書リンク</p></a>
 				</div>
 
 			</div>
@@ -116,14 +121,18 @@
         
 <div class="container" id="all-bbs">
 
-			<div class="row">
+			<div class="row top-all-bbs-backgroundcolor2-bottom">
 
-				<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
+				<div class="col-md-8 text-center top-all-bbs-backgroundcolor2">
 
-
+                <div class="text-left">
+                     <li class="feature-title-2 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
+                </div>
+                    <div class="newtopic-evaluation"><p>新着投稿</p></div>
+                
 
                 <div class="comment-box">
-                    <div class="comment-text">
+                    <div class="comment-text"><!--ここにURLはる-->
                     </div>
                     <div class="">
                         <div class="f-container comment-info border-top">
