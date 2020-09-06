@@ -18,6 +18,7 @@ class CreateCategoriesTable extends Migration
             $table->string('is_deleted', 4)->default('0');
             $table->string('name');
             $table->string('teacher');
+            $table->string('date');
             $table->string('period');
         });
     }

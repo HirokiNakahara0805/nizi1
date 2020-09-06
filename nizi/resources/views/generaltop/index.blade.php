@@ -31,4 +31,50 @@
 @endforeach
 </div>
 
+        <div class="container">
+            <div class="table table-hover">
+
+                <div>
+
+                @foreach ($evaluations as $evaluation)
+
+       
+
+                    <div class="comment-box">
+
+                        <div class="evaluation-text">
+
+                                <div><p> 学年{{ $evaluation->year }}</p></div>
+                                <div><p> < 授業名 > </p></div>
+                                <div> <p>いいね{{ $evaluation->good }}</p></div>
+
+                        </div>
+
+                        <div class="evaluation-container  border-top border-bottom">
+                             <div class="evaluation-item ">難しさ{{ $evaluation->difficulty }}</div>
+                             <div class="evaluation-item ">雰囲気{{ $evaluation->atmosphere }}</div>
+                             <div class="evaluation-item ">忙しさ{{ $evaluation->busyness }}</div>
+                             
+
+                        </div>
+                        
+                        <div>
+                            <div class="evaluation-message">
+                                <p>コメント：{{ $evaluation->message }}</p>
+                            </div>
+
+                        </div>
+                        <div class="f-container comment-info border-top">
+                            <div class="f-item float-right">投稿日時　{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
+                            <div class="f-item float-right">name{{ $evaluation->name }}</div>
+                        </div>
+                    </div>
+
+                    @endforeach
+                </div>
+
+            </div>
+        </div>
+
+
 @endsection
