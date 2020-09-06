@@ -158,7 +158,9 @@
 
 			</div>
 
-		</div>
+        </div>
+        
+        <p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
 
         <!--CSS読み込み-->
         <link href="{{ asset('css/generaltop.css') }}" rel="stylesheet">

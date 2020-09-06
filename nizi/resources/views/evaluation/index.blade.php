@@ -298,6 +298,8 @@
     {{ $post2s->appends(['category_id' => $category_id])->links() }}
 </div>
 
+<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
+
 @endsection
 
 

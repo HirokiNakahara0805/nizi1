@@ -193,6 +193,7 @@
     </div>
 
 </div>
+<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
 @endsection
 
 @section('footer')

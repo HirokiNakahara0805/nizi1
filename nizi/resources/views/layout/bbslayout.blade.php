@@ -29,7 +29,8 @@
         <!--  <link rel="stylesheet" href="{{  asset('css/style.css') }}" /> -->
         <!-- jQuery読み込み-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
+        <!-- javascript  読み込み-->
+		<script type="text/javascript" src="js/common.js"></script>
          <!-- jquery slick -->
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
