@@ -77,4 +77,39 @@
         </div>
 
 
+
+
+        <div class="container">
+        <div class="table table-hover">
+            <!-- <thead>
+                <tr>
+
+                    <th>投稿時間</th>
+                    <th>ニックネーム</th>
+                    <th>学年</th>
+                    <th>メイン内容</th>
+                </tr>
+            </thead> -->
+            <div id="tbl">
+            @foreach ($bbss as $bbs)
+
+                <div class="comment-box">
+                    <div class="comment-text">{!! nl2br(e(Str::limit($bbs->message, 100))) !!}
+                    </div>
+                    <div class="">
+                        <div class="f-container comment-info border-top">
+                            <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
+                            <div class="f-item float-right">{{ $bbs->name }}</div>
+                            <div class="f-item float-right ">{{ $bbs->subject }}学年</div>
+
+                        </div>
+                    </div>
+                </div>
+
+            @endforeach
+            </div>
+        </div>
+    </div>
+
+
 @endsection
