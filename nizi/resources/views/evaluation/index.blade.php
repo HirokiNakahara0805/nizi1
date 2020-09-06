@@ -229,8 +229,8 @@
                         キャンセル
                     </a>                -->
  
-                    <button type="submit" class="btn btn-primary">
-                        投稿する
+                    <button type="submit" class="">
+                      <i class="fas fa-paper-plane post-icon">POST</i>
                     </button>
                 </div>
             </fieldset>

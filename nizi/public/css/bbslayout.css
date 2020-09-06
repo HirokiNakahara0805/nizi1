@@ -195,3 +195,13 @@ display: flex;
     font-size:30px;
 
   }
+
+
+  /*------------------postアイコンの設定-------*/
+.post-icon{
+  color: #333333;
+}
+.post-icon:hover{
+  color: #3490dc;
+}
+
