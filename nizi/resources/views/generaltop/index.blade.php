@@ -64,7 +64,7 @@
                     <div>
                         <div class="common-btn list-inline-item text-left"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >授業評価</a></div>
 
-                        <div class="newtopic-evaluation"><p>新着投稿</p></div>
+                        <div class="newtopic-evaluation"><p>New post</p></div>
                     </div>
 
 
@@ -126,7 +126,7 @@
                 <div>
                     <div class="common-btn list-inline-item text-left"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></div>
 
-                    <div class="newtopic-evaluation"><p>新着投稿</p></div>
+                    <div class="newtopic-evaluation"><p>New post</p></div>
                 </div>
                 
 
