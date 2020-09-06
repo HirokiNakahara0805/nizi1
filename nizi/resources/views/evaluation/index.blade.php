@@ -278,6 +278,7 @@
                         </div>
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">投稿日時</div>
+                            <div class="f-item float-right">名前</div>
                         </div>
                     </div>
 

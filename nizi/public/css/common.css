@@ -122,11 +122,15 @@ a:hover {
     background-color: #333;
     text-align: center;
     border-top: 1px solid #e95014;
+    height:100px;
 }
 
 .footer-logo{
 
     text-align: center;
+}
+.footer-contents a{
+    font-size:30px;
 }
 /*----------テキストエリアリサイズ禁止--------------*/
 textarea {
