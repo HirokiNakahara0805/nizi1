@@ -49,7 +49,7 @@
 ?>
 
 
-
+{{$average}}
 
 <div>
     <ul class="reset-ul row feature-title-box">
@@ -251,38 +251,42 @@
             <div class="table table-hover">
 
                 <div>
-            
+
+                @foreach ($post2s as $post2)
+
+       
 
                     <div class="comment-box">
 
                         <div class="evaluation-text">
 
-                                <div><p> 年度</p></div>
+                                <div><p> 学年{{ $post2->year }}</p></div>
                                 <div><p> < 授業名 > </p></div>
-                                <div> <p>星{{$average}}</p></div>
+                                <div> <p>いいね{{ $post2->good }}</p></div>
 
                         </div>
 
                         <div class="evaluation-container  border-top border-bottom">
-                             <div class="evaluation-item ">テスト難易度</div>
-                             <div class="evaluation-item ">レポート難易度</div>
-                             <div class="evaluation-item ">しらん</div>
+                             <div class="evaluation-item ">難しさ{{ $post2->difficulty }}</div>
+                             <div class="evaluation-item ">雰囲気{{ $post2->atmosphere }}</div>
+                             <div class="evaluation-item ">忙しさ{{ $post2->busyness }}</div>
+                             
 
                         </div>
                         
                         <div>
                             <div class="evaluation-message">
-                                <p>message</p>
+                                <p>コメント：{{ $post2->message }}</p>
                             </div>
 
                         </div>
                         <div class="f-container comment-info border-top">
-                            <div class="f-item float-right">投稿日時</div>
-                            <div class="f-item float-right">名前</div>
+                            <div class="f-item float-right">投稿日時　{{ $post2->created_at->format('Y.m.d .H:i') }}</div>
+                            <div class="f-item float-right">name{{ $post2->name }}</div>
                         </div>
                     </div>
 
-
+                    @endforeach
                 </div>
 
             </div>
