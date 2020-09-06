@@ -138,8 +138,8 @@
 
 </div>
 
-<div class="mt-4 mb-4 text-center">
-    <a href="{{ route('bbs.index', ['category_id'=>$post->category_id]) }}" class="btn btn-info">
+<div class="text-center common-btn-ikkoue ">
+    <a href="{{ route('bbs.index', ['category_id'=>$post->category_id]) }}" class="common-btn">
 
         一覧に戻る
     </a>

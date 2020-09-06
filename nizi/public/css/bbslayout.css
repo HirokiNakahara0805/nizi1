@@ -211,3 +211,20 @@ display: flex;
 .comment-number{
   background-color:#81bdf5e3;
   border:1px solid #81bdf5e3;}
+
+    /*-----------------ボタンアイコンの設定-------*/
+    .common-btn-ikkoue{
+      margin:50px;
+    }
+  .common-btn{
+    background-color:white;
+    border:3px solid #e95014;
+    padding:8px 40px;
+    margin:5px 10px;
+    color:black;
+    border-radius: 20px;
+  }
+
+  .common-btn:hover{
+    background-color:#e95014;
+  }

@@ -62,9 +62,7 @@
 				<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
 
                     <div>
-                        <div class="text-left">
-                            <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿</a></li>
-                        </div>
+                        <div class="common-btn list-inline-item text-left"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >授業評価</a></div>
 
                         <div class="newtopic-evaluation"><p>新着投稿</p></div>
                     </div>
@@ -125,10 +123,11 @@
 
 				<div class="col-md-8 text-center top-all-bbs-backgroundcolor2">
 
-                <div class="text-left">
-                     <li class="feature-title-2 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
-                </div>
+                <div>
+                    <div class="common-btn list-inline-item text-left"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></div>
+
                     <div class="newtopic-evaluation"><p>新着投稿</p></div>
+                </div>
                 
 
                 <div class="comment-box">
