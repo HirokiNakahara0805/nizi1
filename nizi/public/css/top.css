@@ -139,12 +139,12 @@ a.class-list{
 	z-index: 1999;
 	width: 280px;
 }
- 
+
 /*************************
 メディアクエリ設定 0〜420
 *************************/
 @media screen and (min-width: 0px) and (max-width: 420px) {
- 
+
     /*授業スライドの科目名の位置を設定*/
     h1.your-class {
         color: black;
@@ -152,5 +152,5 @@ a.class-list{
         margin: 5px 5px 5px 2px;
         font-size: 4px;
     }
- 
+
 }
