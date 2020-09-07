@@ -250,3 +250,9 @@ textarea {
     opacity: .5;
   }
 
+
+
+/*----postアイコンの位置--*/
+  .post-position{ margin:10px 0px;
+                  padding:10px;
+}
