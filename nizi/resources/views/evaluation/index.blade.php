@@ -133,6 +133,7 @@
                         maxlength="3" 
                         style="width: 50px; margin-right: 20px; text-align: right;"
                     >
+                    <!--単位取得難易度、雰囲気、忙しさ削除済み-->
                         <div class="ui-spinner ui-widget">
                             <div class="ui-spinner-buttons" style="height: 31px; left: -16px; top: 0px; width: 16px;">
                                 <div class="ui-spinner-up ui-spinner-button ui-state-default ui-corner-tr" style="width: 16px; height: 15.5px;">
