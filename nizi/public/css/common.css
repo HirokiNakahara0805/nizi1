@@ -130,7 +130,10 @@ a:hover {
     text-align: center;
 }
 .footer-contents a{
-    font-size:30px;
+    
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
 }
 /*----------テキストエリアリサイズ禁止--------------*/
 textarea {

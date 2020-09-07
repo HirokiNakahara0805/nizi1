@@ -200,33 +200,36 @@
 <footer>
         <!-- SNS連携 -->
         <div class="footer-contents .align-middle">
-            <a class="footer-logo">Sophia univ.</a>
-            <div class="footer-sns d-flex justify-content-around" style="width: 200px;">
-                <ul class="sns-lists .text-center	">
 
-                    <li class="sns-item twitter list-inline-item">
+            <a class="footer-logo" href="">∞pilotis</a>
+
+            <div class="footer-sns justify-content-around footer-logo" >
+                <div class="sns-lists">
+
+                    <div class="sns-item twitter list-inline-item">
                         <a target="_blank" href="https://mobile.twitter.com/8pilotis">
-
                             <i class="fab fa-twitter-square"></i>
                         </a>
-                    </li>
+                    </div>
 
-
-                    <li class="sns-item youtube list-inline-item">
+                    <div class="sns-item youtube list-inline-item">
                         <a target="_blank" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
-                    </li>
-                    <li class="sns-item instagram list-inline-item">
+                    </div>
+
+                    <div class="sns-item instagram list-inline-item">
                         <a target="_blank" href="https://www.instagram.com/8pilotis">
                             <i class="fab fa-instagram"></i>
                         </a>
-                    </li>
-                </ul>
-            </div>
+                    </div>
 
+                </div>
+            </div>
+            
         </div>
-	
+
+      
 
     </footer>
 @endsection
