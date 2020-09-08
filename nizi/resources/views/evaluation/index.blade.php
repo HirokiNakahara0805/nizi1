@@ -4,10 +4,12 @@
 
 
 
-        $title=''{{$name}}'の評価投稿';
+       // $title=''{{$name}}'の評価投稿';
+    
+        //<title>{{ $title }} - ∞pilotis</title>
+
 ?>
 
-<title>{{ $title }} - ∞pilotis</title>
 @extends('layout.bbslayout')
   
 @section('header')

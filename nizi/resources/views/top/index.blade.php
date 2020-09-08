@@ -91,7 +91,7 @@
 
 					@foreach($categories as $id => $name)
 					<div class="top-bbs-box">
-						<a href="{{ route('bbs.index', ['category_id'=>$id]) }}" title="{{ $name }}">
+						<a href="{{ route('generaltop.index', ['category_id'=>$id]) }}" title="{{ $name }}">
 							<div class="">
 								<div class="">
 										<p class="bbs-name" >{{ $name }}</p>
