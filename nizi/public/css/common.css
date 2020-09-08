@@ -253,6 +253,6 @@ textarea {
 
 
 /*----postアイコンの位置--*/
-  .post-position{ margin:10px 0px;
-                  padding:10px;
+  .post-position{ margin: 14px 0px 0px 0px;
+              padding: 10px;
 }
