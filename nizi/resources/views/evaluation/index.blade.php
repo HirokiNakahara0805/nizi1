@@ -61,7 +61,8 @@
 <div class="container mt-4">
 <!--クラスを"border p-4”から”pー4 comment-boxに変更-->
     <div class="p-4 comment-box">
-        <h1 class="h4 mb-4 font-weight-bold">
+<!--クラスfont-sizeの追加-->
+        <h1 class="h4 mb-4 font-weight-bold font-size">
             評価投稿の新規作成
         </h1>
  
