@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Generaltop,App\Category;
+use App\Generaltop,App\Category,App\Post2,App\Post;
 
 class GeneraltopController extends Controller
 {
@@ -20,11 +20,19 @@ class GeneraltopController extends Controller
     } else {
         $generaltops = Generaltop::orderBy('created_at', 'desc')->paginate(10);
     }
- 
+    //評価投稿をカテゴリーごとにランダムで採取
+    $evaluations=Post2::where('category_id',$category_id)
+                    ->inRandomOrder()->get();
+    //掲示板投稿をカテゴリーごとに最新で採取
+    $bbss=Post::where('category_id',$category_id)
+                    ->orderBy('created_at', 'desc')->get();
+
     return view('generaltop.index', [
         'generaltops' => $generaltops, 
         'categories' => $categories, 
-        'category_id'=>$category_id
+        'category_id'=>$category_id,
+        'evaluations'=>$evaluations,
+        'bbss'=>$bbss
     ]);
 }
 }

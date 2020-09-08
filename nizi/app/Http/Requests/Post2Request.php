@@ -29,10 +29,6 @@ class Post2Request extends FormRequest
             'message' => 'required|max:500',
             'category_id' => 'required|integer',
             'good' => 'required|integer|numeric|min:1|max:5',
-            'difficulty' => 'required|integer|numeric|min:1|max:5',
-            'busyness' => 'required|integer|numeric|min:1|max:5',
-            'atmosphere' => 'required|integer|numeric|min:1|max:5',
-
             //
         ];
     }
@@ -57,18 +53,6 @@ class Post2Request extends FormRequest
             'good.min' => 'いいね数は1～5の数字を半角で入力してください',
             'good.max' => 'いいね数は1～5の数字を半角で入力してください',
             'good.integer' => 'いいね数は1～5の数字を半角で入力してください',
-            'difficulty.required' => '単位取得難易度を半角数字で入力してください',
-            'difficulty.min' => '単位取得難易度は1～5の数字を半角で入力してください',
-            'difficulty.max' => '単位取得難易度は1～5の数字を半角で入力してください',
-            'difficulty.integer' => '単位取得難易度は1～5の数字を半角で入力してください',
-            'busyness.required' => '忙しさを半角数字で入力してください',
-            'busyness.min' => '忙しさは1～5の数字を半角で入力してください',
-            'busyness.max' => '忙しさは1～5の数字を半角で入力してください',
-            'busyness.integer' => '忙しさは1～5の数字を半角で入力してください',
-            'atmosphere.required' => '雰囲気を半角数字で入力してください',
-            'atmosphere.min' => '雰囲気は1～5の数字を半角で入力してください',
-            'atmosphere.max' => '雰囲気は1～5の数字を半角で入力してください',
-            'atmosphere.integer' => '雰囲気は1～5の数字を半角で入力してください',
         ];
     }
 

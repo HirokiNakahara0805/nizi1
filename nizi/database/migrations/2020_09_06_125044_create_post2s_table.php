@@ -1,9 +1,10 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
- 
-class CreateCategoriesTable extends Migration
+
+class CreatePost2sTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +13,18 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('post2s', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->timestamps();   // created_at, updated_atが自動設定されるとのこと
             $table->string('is_deleted', 4)->default('0');
+            $table->integer('category_id');
+            $table->integer('year');
+            $table->text('message');
             $table->string('name');
+            $table->integer('good');
         });
     }
- 
+
     /**
      * Reverse the migrations.
      *
@@ -27,6 +32,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('post2s');
     }
 }

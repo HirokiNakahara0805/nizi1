@@ -54,10 +54,11 @@
 
 <div>
     <ul class="reset-ul row feature-title-box">
+
         <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
-        <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
-    </ul>
+        <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>    </ul>
 </div>
 <!--投稿画面-->
 <div class="container mt-4">
@@ -159,9 +160,9 @@
                             {{ $errors->first('good') }}
                         </div>
                     @endif
-                </div>
-               
- 
+
+           <!--     </div> -->
+
                 <div class="form-group">
                     <label for="message">
                         コメント
@@ -220,14 +221,6 @@
                                 <div><p> 学年{{ $post2->year }}</p></div>
                                 <div><p> < 授業名 > </p></div>
                                 <div> <p>いいね{{ $post2->good }}</p></div>
-
-                        </div>
-
-                        <div class="evaluation-container  border-top border-bottom">
-                             <div class="evaluation-item ">難しさ{{ $post2->difficulty }}</div>
-                             <div class="evaluation-item ">雰囲気{{ $post2->atmosphere }}</div>
-                             <div class="evaluation-item ">忙しさ{{ $post2->busyness }}</div>
-                             
 
                         </div>
                         
