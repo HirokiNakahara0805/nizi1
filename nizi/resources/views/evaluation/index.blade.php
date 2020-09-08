@@ -68,8 +68,8 @@
             @csrf
  
             <fieldset class="mb-4">
- 
-                <div class="form-group">
+                <div class="row">
+                <div class="form-group col-sm-7">
                     <label for="name">
                         ニックネーム
                     </label>
@@ -87,7 +87,7 @@
                     @endif
                 </div>
  
-                <div class="form-group">
+                <div class="form-group col-sm-1">
                 <input
                     id="category_id"
                     name="category_id"
@@ -98,7 +98,7 @@
                 >
                 </div>
  
-                <div class="form-group">
+                <div class="form-group col-sm-2">
                     <label for="year">
                         学年
                     </label>
@@ -116,7 +116,7 @@
                     @endif
                 </div>
 
-                <div class="p-modal-bkm__fav-spinner">
+                <div class="p-modal-bkm__fav-spinner col-sm-2">
         <label for="good">
                 いいね
         </label>
@@ -133,6 +133,8 @@
                         maxlength="3" 
                         style="width: 50px; margin-right: 20px; text-align: right;"
                     >
+                </div>
+
                     <!--単位取得難易度、雰囲気、忙しさ削除済み-->
                         <div class="ui-spinner ui-widget">
                             <div class="ui-spinner-buttons" style="height: 31px; left: -16px; top: 0px; width: 16px;">
@@ -177,10 +179,11 @@
                     <a class="btn btn-secondary" href="{{ route('bbs.index') }}">
                         キャンセル
                     </a>                -->
- 
+                  <div class="mt-2 text-right">
                     <button type="submit" class="">
                       <i class="fas fa-paper-plane post-icon">POST</i>
                     </button>
+                  </div>
                 </div>
             </fieldset>
         </form>
