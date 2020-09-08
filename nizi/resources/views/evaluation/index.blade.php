@@ -59,10 +59,12 @@
         <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
     </ul>
 </div>
-
+<!--投稿画面-->
 <div class="container mt-4">
-    <div class="border p-4">
-        <h1 class="h4 mb-4 font-weight-bold">
+<!--クラスを"border p-4”から”pー4 comment-boxに変更-->
+    <div class="p-4 comment-box">
+<!--クラスfont-sizeの追加-->
+        <h1 class="h4 mb-4 font-weight-bold font-size">
             評価投稿の新規作成
         </h1>
  
@@ -70,8 +72,9 @@
             @csrf
  
             <fieldset class="mb-4">
- 
-                <div class="form-group">
+                <div class="row">
+<!--クラスにcol-sm-7を追加-->
+                <div class="form-group col-sm-7">
                     <label for="name">
                         ニックネーム
                     </label>
@@ -88,8 +91,8 @@
                         </div>
                     @endif
                 </div>
- 
-                <div class="form-group">
+<!--クラスにcol-sm-1を追加-->
+                <div class="form-group col-sm-1">
                 <input
                     id="category_id"
                     name="category_id"
@@ -99,8 +102,8 @@
                     type="hidden"
                 >
                 </div>
- 
-                <div class="form-group">
+<!--クラスにcol-sm-2を追加-->
+                <div class="form-group col-sm-2">
                     <label for="year">
                         学年
                     </label>
@@ -117,8 +120,8 @@
                         </div>
                     @endif
                 </div>
-
-                <div class="p-modal-bkm__fav-spinner">
+<!--クラスにcol-sm-2を追加-->
+                <div class="p-modal-bkm__fav-spinner col-sm-2">
         <label for="good">
                 いいね
         </label>
@@ -135,6 +138,9 @@
                         maxlength="3" 
                         style="width: 50px; margin-right: 20px; text-align: right;"
                     >
+                </div>
+
+                    <!--単位取得難易度、雰囲気、忙しさ削除済み-->
                         <div class="ui-spinner ui-widget">
                             <div class="ui-spinner-buttons" style="height: 31px; left: -16px; top: 0px; width: 16px;">
                                 <div class="ui-spinner-up ui-spinner-button ui-state-default ui-corner-tr" style="width: 16px; height: 15.5px;">
@@ -154,59 +160,7 @@
                         </div>
                     @endif
                 </div>
-                <div class="form-group">
-                    <label for="difficulty">
-                        単位取得難易度
-                    </label>
-                    <input
-                        id="difficulty"
-                        name="difficulty"
-                        class="form-control {{ $errors->has('difficulty') ? 'is-invalid' : '' }}"
-                        value="{{ old('difficulty') }}"
-                        type="text"
-                    >
-                    @if ($errors->has('difficulty'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('difficulty') }}
-                        </div>
-                    @endif
-                </div>
                
-                <div class="form-group">
-                    <label for="busyness">
-                        忙しさ
-                    </label>
-                    <input
-                        id="busyness"
-                        name="busyness"
-                        class="form-control {{ $errors->has('busyness') ? 'is-invalid' : '' }}"
-                        value="{{ old('busyness') }}"
-                        type="text"
-                    >
-                    @if ($errors->has('busyness'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('busyness') }}
-                        </div>
-                    @endif
-                </div>
-
-                <div class="form-group">
-                    <label for="atmosphere">
-                        雰囲気
-                    </label>
-                    <input
-                        id="atmosphere"
-                        name="atmosphere"
-                        class="form-control {{ $errors->has('atmosphere') ? 'is-invalid' : '' }}"
-                        value="{{ old('atmosphere') }}"
-                        type="text"
-                    >
-                    @if ($errors->has('atmosphere'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('atmosphere') }}
-                        </div>
-                    @endif
-                </div>
  
                 <div class="form-group">
                     <label for="message">
@@ -230,10 +184,11 @@
                     <a class="btn btn-secondary" href="{{ route('bbs.index') }}">
                         キャンセル
                     </a>                -->
- 
+                  <div class="mt-2 text-right">
                     <button type="submit" class="">
                       <i class="fas fa-paper-plane post-icon">POST</i>
                     </button>
+                  </div>
                 </div>
             </fieldset>
         </form>

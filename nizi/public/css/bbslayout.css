@@ -213,6 +213,13 @@ display: flex;
   background-color:#81bdf5e3;
   border:1px solid #81bdf5e3;}
 
+
+
+/*------------------”評価投稿の新規作成”のフォントサイズの設定-------*/
+.font-size{
+  font-size:15px;
+}
+
     /*-----------------ボタンアイコンの設定-------*/
     .common-btn-ikkoue{
       margin:50px;
@@ -267,3 +274,4 @@ display: flex;
 
   }
 }
+
