@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 
-<title>8pilotis</title>
+<title>∞pilotis</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">

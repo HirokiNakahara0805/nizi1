@@ -1,14 +1,9 @@
-<?php
+
+@foreach($category2s as $category2)
+<title>{{ $category2->name }}の評価投稿 - ∞pilotis</title>
+@endforeach
 
 
-
-
-
-       // $title=''{{$name}}'の評価投稿';
-    
-        //<title>{{ $title }} - ∞pilotis</title>
-
-?>
 
 @extends('layout.bbslayout')
   

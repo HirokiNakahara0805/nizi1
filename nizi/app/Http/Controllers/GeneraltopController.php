@@ -26,13 +26,17 @@ class GeneraltopController extends Controller
     //掲示板投稿をカテゴリーごとに最新で採取
     $bbss=Post::where('category_id',$category_id)
                     ->orderBy('created_at', 'desc')->get();
+    //カテゴリーネームを取得するときに使うもの
+    $category2s=Category::where('id',$category_id)->get();
 
     return view('generaltop.index', [
         'generaltops' => $generaltops, 
         'categories' => $categories, 
         'category_id'=>$category_id,
         'evaluations'=>$evaluations,
-        'bbss'=>$bbss
+        'bbss'=>$bbss,
+        'category2s'=>$category2s
+
     ]);
 }
 }

@@ -19,11 +19,16 @@ class PostsController extends Controller
     } else {
         $posts = Post::orderBy('created_at', 'desc')->paginate(10);
     }
+
+    //カテゴリーネームを取得するときに使うもの
+    $category2s=Category::where('id',$category_id)->get();
+
  
     return view('bbs.index', [
         'posts' => $posts, 
         'categories' => $categories, 
-        'category_id'=>$category_id
+        'category_id'=>$category_id,
+        'category2s'=>$category2s
     ]);
 }
     public function show($id) {
