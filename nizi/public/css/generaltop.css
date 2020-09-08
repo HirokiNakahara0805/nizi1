@@ -1,0 +1,46 @@
+/*-----------------------------generaltops-----------------------------*/
+.bbs-name-generaltop{
+        border-bottom:1px solid rgba(224, 224, 224, 0.356);
+}
+/*-----------------------------------広告用設定*/
+.koukoku-box{
+    margin-right:30px;
+    margin-left:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border: 1px solid #002549;
+}
+
+.newtopic-evaluation {
+    display: inline-block;
+    padding:25px;
+    margin: 0px 50px;
+    font-size:25px;
+    width:260px;
+}
+.newtopic-evaluation p{
+   background-color:#e78a66;
+   border: 2px solid #e78a66;
+}
+.top-all-bbs-backgroundcolor2{
+    border-top:2px solid #9c9c9c;
+    background-color:rgba(224, 224, 224, 0.356);
+    padding:40px;
+}
+.top-all-bbs-backgroundcolor2-bottom{
+    margin-bottom:40px;
+}
+.newtopic-title h1{
+    font-size:25px;
+}
+
+.feature-title-2{
+    background-color:white;
+    display: inline-block;
+    color: black;
+    font-size: 8px;
+    padding: 8 20 6;
+    border: 2px solid #9c9c9c;
+    border-radius:10px;
+  
+}

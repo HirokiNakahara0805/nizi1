@@ -16,8 +16,7 @@
         <link href="{{ asset('css/common.css') }}" rel="stylesheet">
          <!--CSS (slick用)読み込み-->
 	 <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet">
-
+        <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet">
         <!-- fontawesome 読み込み -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
         <link rel="stylesheet" href="{{  asset('css/style.css') }}" />
@@ -29,6 +28,8 @@
         <!-- view point 読み込み-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- javascript  読み込み-->
+	<script type="text/javascript" src="js/common.js"></script>
 
 
 </head>

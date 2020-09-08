@@ -38,8 +38,10 @@
 
 
 
+
 <div>
     <ul class="reset-ul row feature-title-box">
+        <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
         <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
     </ul>
@@ -59,7 +61,7 @@
 
                 <fieldset class="">
                     <div class="row text-center">
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-5">
                             
                             <input
                                 id="name"
@@ -77,7 +79,7 @@
                       </div>
         
                     
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-5">
                             
                             <input
                                 id="subject"
@@ -95,25 +97,6 @@
                         </div>
 
                     </div>
-    
-                    <div class="form-group">
-                        <label for="message">
-                            メイン内容
-                        </label>
-    
-                        <textarea
-                            id="message"
-                            name="message"
-                            class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
-                            cols="20" rows="2"
-                        >{{ old('message') }}</textarea>
-                        @if ($errors->has('message'))
-                            <div class="invalid-feedback">
-                                {{ $errors->first('message') }}
-                            </div>
-                        @endif
-                    </div>
-
                     <div class="form-group">
                     
                     <input
@@ -125,13 +108,37 @@
                         type="hidden"
                     >
                     </div>
-    
-    
-                    <div class="mt-2 text-right">
-    
-                        <button type="submit" class="">
-                            <i class="fas fa-paper-plane post-icon">POST</i>
-                        </button>
+                    
+                    <div class="row text-center">
+
+                        <div class="form-group col-sm-9">
+                            <label for="message">
+                                メイン内容
+                            </label>
+        
+                            <textarea
+                                id="message"
+                                name="message"
+                                class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
+                                cols="20" rows="2"　 wrap="hard" 
+                            >{{ old('message') }}</textarea>
+                            @if ($errors->has('message'))
+                                <div class="invalid-feedback">
+                                    {{ $errors->first('message') }}
+                                </div>
+                            @endif
+                        </div>
+
+                        
+        
+        
+                        <div class="post-position col-sm-3">
+        
+                            <button type="submit" class="post-botton" >
+                                <i class="fas fa-paper-plane post-icon">POST</i>
+                            </button>
+                        </div>
+
                     </div>
                 </fieldset>
             </form>
@@ -191,39 +198,43 @@
     </div>
 
 </div>
+<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
 @endsection
 
 @section('footer')
 <footer>
         <!-- SNS連携 -->
         <div class="footer-contents .align-middle">
-            <a class="footer-logo">Sophia univ.</a>
-            <div class="footer-sns d-flex justify-content-around" style="width: 200px;">
-                <ul class="sns-lists .text-center	">
 
-                    <li class="sns-item twitter list-inline-item">
+            <a class="footer-logo" href="">∞pilotis</a>
+
+            <div class="footer-sns justify-content-around footer-logo" >
+                <div class="sns-lists">
+
+                    <div class="sns-item twitter list-inline-item">
                         <a target="_blank" href="https://mobile.twitter.com/8pilotis">
-
                             <i class="fab fa-twitter-square"></i>
                         </a>
-                    </li>
+                    </div>
 
-
-                    <li class="sns-item youtube list-inline-item">
+                    <div class="sns-item youtube list-inline-item">
                         <a target="_blank" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
-                    </li>
-                    <li class="sns-item instagram list-inline-item">
+                    </div>
+
+                    <div class="sns-item instagram list-inline-item">
                         <a target="_blank" href="https://www.instagram.com/8pilotis">
                             <i class="fab fa-instagram"></i>
                         </a>
-                    </li>
-                </ul>
-            </div>
+                    </div>
 
+                </div>
+            </div>
+            
         </div>
-	
+
+      
 
     </footer>
 @endsection
