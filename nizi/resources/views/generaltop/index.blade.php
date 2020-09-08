@@ -159,7 +159,60 @@
 			</div>
 
         </div>
-        
+
+        @foreach ($bbss as $bbs)
+                @if($loop->iteration < 6) 
+                <div class="comment-box">
+                    <div class="comment-text">{!! nl2br(e(Str::limit($bbs->message, 100))) !!}
+                    </div>
+                    <div class="">
+                        <div class="f-container comment-info border-top">
+                            <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
+                            <div class="f-item float-right">{{ $bbs->name }}</div>
+                            <div class="f-item float-right ">{{ $bbs->subject }}学年</div>
+
+                        </div>
+                    </div>
+                </div>
+                @endif
+            @endforeach
+
+            @foreach ($evaluations as $evaluation)
+                    @if($loop->iteration < 6) 
+
+
+                    <div class="comment-box">
+
+                        <div class="evaluation-text">
+
+                                <div><p> 学年{{ $evaluation->year }}</p></div>
+                                <div><p> < 授業名 > </p></div>
+                                <div> <p>いいね{{ $evaluation->good }}</p></div>
+
+                        </div>
+
+                        <div class="evaluation-container  border-top border-bottom">
+                             <div class="evaluation-item ">難しさ{{ $evaluation->difficulty }}</div>
+                             <div class="evaluation-item ">雰囲気{{ $evaluation->atmosphere }}</div>
+                             <div class="evaluation-item ">忙しさ{{ $evaluation->busyness }}</div>
+
+
+                        </div>
+
+                        <div>
+                            <div class="evaluation-message">
+                                <p>コメント：{{ $evaluation->message }}</p>
+                            </div>
+
+                        </div>
+                        <div class="f-container comment-info border-top">
+                            <div class="f-item float-right">投稿日時　{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
+                            <div class="f-item float-right">name{{ $evaluation->name }}</div>
+                        </div>
+                    </div>
+                    @endif
+            @endforeach
+
         <p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
 
         <!--CSS読み込み-->
