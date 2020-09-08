@@ -16,9 +16,9 @@ class GeneraltopController extends Controller
  
     $category_id = $request->category_id;
     if (!is_null($category_id)) {
-        $generaltops = Generaltop::where('category_id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
+        $generaltops = Category::where('id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
     } else {
-        $generaltops = Generaltop::orderBy('created_at', 'desc')->paginate(10);
+        $generaltops = Category::orderBy('created_at', 'desc')->paginate(10);
     }
     //評価投稿をカテゴリーごとにランダムで採取
     $evaluations=Post2::where('category_id',$category_id)
