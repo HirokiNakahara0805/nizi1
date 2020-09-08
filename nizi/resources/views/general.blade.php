@@ -325,6 +325,7 @@
 
 			</div>
 	</div>
+	<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
 </main>
 @include("parts.footer")
 		<!-- CSS読み込み -->

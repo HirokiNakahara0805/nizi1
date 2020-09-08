@@ -15,9 +15,9 @@
 
 <body id="vw vh">
 	<!-- トップページ最初に開いた時のアニメーション-->
-	<div class="start">
-   				 <p><img src="{{ asset('img/sophia.jpg') }}" alt=""></p>
-			</div>
+	
+   				 <div class="start"><img src="{{ asset('img/8pilotis.1.jpg') }}" alt=""></div>
+		
 <main>
 
 	<!-- 画像挿入-->

@@ -199,10 +199,11 @@ display: flex;
 
   /*------------------postアイコンの設定-------*/
 .post-icon{
-  color: #333333;
+  color: white;
+  font-size:15px;
 }
 .post-icon:hover{
-  color: #3490dc;
+  color:white;
 }
 
 
@@ -211,3 +212,58 @@ display: flex;
 .comment-number{
   background-color:#81bdf5e3;
   border:1px solid #81bdf5e3;}
+
+    /*-----------------ボタンアイコンの設定-------*/
+    .common-btn-ikkoue{
+      margin:50px;
+    }
+  .common-btn{
+    background-color:white;
+    border:3px solid #e95014;
+    padding:8px 40px;
+    margin:5px 10px;
+    color:black;
+    border-radius: 20px;
+  }
+
+  .common-btn:hover{
+    background-color:#e95014;
+  }
+
+
+   /*-----------------POSTアイコンの設定-------*/
+.post-botton{
+  background-color:#e95014;
+  border:1px solid #e95014;
+  color:grey;
+  width:150px;
+  height:35px;
+  border-radius: 10px;
+  padding:0px 10px;
+  margin:0 0 0 0;
+
+}
+.post-botton:hover{
+ 
+  background-color:white;
+}
+.post-botton:hover .post-icon{
+  color:black;
+
+}
+
+
+/* 画面サイズ小さくしたらPOSTボタンがはみでたので修正　
+    簡易的な修正　他にも修正する時に一気に変更してください*/
+/*************************
+メディアクエリ設定 420~1024
+*************************/
+@media screen and (min-width: 570px) and (max-width: 770px) {
+
+  .post-botton{
+    width:100px;
+    padding:0px 0px;
+    margin:0 0 0 0;
+
+  }
+}
