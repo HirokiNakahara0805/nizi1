@@ -134,7 +134,7 @@
         
                         <div class="post-position col-sm-3">
         
-                            <button type="submit" class="">
+                            <button type="submit" class="post-botton" >
                                 <i class="fas fa-paper-plane post-icon">POST</i>
                             </button>
                         </div>
