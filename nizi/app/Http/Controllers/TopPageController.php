@@ -12,12 +12,11 @@ class TopPageController extends Controller {
         $category = new Category;
         $categories = $category->getLists();
      
-        
-     
+    
         return view('top.index', [
-            
+
             'categories' => $categories, 
-            
+
         ]);
     }
 	

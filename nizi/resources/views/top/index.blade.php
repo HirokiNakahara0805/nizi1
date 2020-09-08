@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-		
+
 
 </head>
 
@@ -15,15 +15,15 @@
 
 <body id="vw vh">
 	<!-- トップページ最初に開いた時のアニメーション-->
-	
+
    				 <div class="start"><img src="{{ asset('img/8pilotis.1.jpg') }}" alt=""></div>
-		
+
 <main>
 
 	<!-- 画像挿入-->
 	<div class='header-img-frame'>
 		<div class='header-img-in'>
-			<img src="{{ asset('img/sophia.jpg') }}" class="img-fluid h-100 w-100" >
+			<img src="{{ asset('img/IMG_9584.JPG') }}" class="img-fluid h-100 w-100" >
 		</div>
 	</div>
 
@@ -36,14 +36,14 @@
 			<div class="row your-class">
 				<div class=" img-sophia border border-secondary  m-2 rounded" >
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
+
 						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
 
 				<div class=" img-sophia border border-secondary  m-2 rounded">
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
+						<img src="{{ asset('img/red.jpg') }}" class="img-fluid center img-sophia-in ">
 						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
