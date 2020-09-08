@@ -51,16 +51,21 @@
 
 {{$average}}
 
+
 <div>
     <ul class="reset-ul row feature-title-box">
-    <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+
+        <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
         <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>    </ul>
 </div>
-
+<!--投稿画面-->
 <div class="container mt-4">
-    <div class="border p-4">
-        <h1 class="h4 mb-4 font-weight-bold">
+<!--クラスを"border p-4”から”pー4 comment-boxに変更-->
+    <div class="p-4 comment-box">
+<!--クラスfont-sizeの追加-->
+        <h1 class="h4 mb-4 font-weight-bold font-size">
             評価投稿の新規作成
         </h1>
  
@@ -68,8 +73,9 @@
             @csrf
  
             <fieldset class="mb-4">
- 
-                <div class="form-group">
+                <div class="row">
+<!--クラスにcol-sm-7を追加-->
+                <div class="form-group col-sm-7">
                     <label for="name">
                         ニックネーム
                     </label>
@@ -86,8 +92,8 @@
                         </div>
                     @endif
                 </div>
- 
-                <div class="form-group">
+<!--クラスにcol-sm-1を追加-->
+                <div class="form-group col-sm-1">
                 <input
                     id="category_id"
                     name="category_id"
@@ -97,8 +103,8 @@
                     type="hidden"
                 >
                 </div>
- 
-                <div class="form-group">
+<!--クラスにcol-sm-2を追加-->
+                <div class="form-group col-sm-2">
                     <label for="year">
                         学年
                     </label>
@@ -115,8 +121,8 @@
                         </div>
                     @endif
                 </div>
-
-                <div class="p-modal-bkm__fav-spinner">
+<!--クラスにcol-sm-2を追加-->
+                <div class="p-modal-bkm__fav-spinner col-sm-2">
         <label for="good">
                 いいね
         </label>
@@ -133,6 +139,9 @@
                         maxlength="3" 
                         style="width: 50px; margin-right: 20px; text-align: right;"
                     >
+                </div>
+
+                    <!--単位取得難易度、雰囲気、忙しさ削除済み-->
                         <div class="ui-spinner ui-widget">
                             <div class="ui-spinner-buttons" style="height: 31px; left: -16px; top: 0px; width: 16px;">
                                 <div class="ui-spinner-up ui-spinner-button ui-state-default ui-corner-tr" style="width: 16px; height: 15.5px;">
@@ -151,8 +160,9 @@
                             {{ $errors->first('good') }}
                         </div>
                     @endif
-                
- 
+
+           <!--     </div> -->
+
                 <div class="form-group">
                     <label for="message">
                         コメント
@@ -175,10 +185,11 @@
                     <a class="btn btn-secondary" href="{{ route('bbs.index') }}">
                         キャンセル
                     </a>                -->
- 
+                  <div class="mt-2 text-right">
                     <button type="submit" class="">
                       <i class="fas fa-paper-plane post-icon">POST</i>
                     </button>
+                  </div>
                 </div>
             </fieldset>
         </form>
@@ -235,6 +246,8 @@
     {{ $post2s->appends(['category_id' => $category_id])->links() }}
 </div>
 
+<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
+
 @endsection
 
 
@@ -242,33 +255,36 @@
 <footer>
         <!-- SNS連携 -->
         <div class="footer-contents .align-middle">
-            <a class="footer-logo">Sophia univ.</a>
-            <div class="footer-sns d-flex justify-content-around" style="width: 200px;">
-                <ul class="sns-lists .text-center	">
 
-                    <li class="sns-item twitter list-inline-item">
+            <a class="footer-logo" href="">∞pilotis</a>
+
+            <div class="footer-sns justify-content-around footer-logo" >
+                <div class="sns-lists">
+
+                    <div class="sns-item twitter list-inline-item">
                         <a target="_blank" href="https://mobile.twitter.com/8pilotis">
-
                             <i class="fab fa-twitter-square"></i>
                         </a>
-                    </li>
+                    </div>
 
-
-                    <li class="sns-item youtube list-inline-item">
+                    <div class="sns-item youtube list-inline-item">
                         <a target="_blank" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
-                    </li>
-                    <li class="sns-item instagram list-inline-item">
+                    </div>
+
+                    <div class="sns-item instagram list-inline-item">
                         <a target="_blank" href="https://www.instagram.com/8pilotis">
                             <i class="fab fa-instagram"></i>
                         </a>
-                    </li>
-                </ul>
-            </div>
+                    </div>
 
+                </div>
+            </div>
+            
         </div>
-	
+
+      
 
     </footer>
 @endsection

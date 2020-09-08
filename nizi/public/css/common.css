@@ -130,7 +130,10 @@ a:hover {
     text-align: center;
 }
 .footer-contents a{
-    font-size:30px;
+    
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
 }
 /*----------テキストエリアリサイズ禁止--------------*/
 textarea {
@@ -163,7 +166,7 @@ textarea {
 *************************/
 @media screen and (min-width: 0px) and (max-width: 420px) {
 
-   
+
     /*ヘッダー下の画像サイズ調整*/
     .header-img-in {
         width: 100%;
@@ -171,7 +174,7 @@ textarea {
     }
 
     .header-img-frame {
-      
+
         height: 200px;
     }
     }
@@ -179,4 +182,77 @@ textarea {
         font-size: 15px;
     }
 
+}
+
+
+
+/*-----------------------------------広告用設定*/
+.koukoku-box{
+    margin-right:30px;
+    margin-left:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border: 1px solid #002549;
+}
+
+/*-----------------------------------TOP掲示板の欄設定*/
+.top-bbs-box{
+    border-bottom: 2px solid #e95014;
+    border-top: 1px solid #002549;
+    padding:20px 0px 20px 0px;
+    margin:15px 0px 15px 0px;
+    background-color:white;
+}
+
+.top-bbs-item{
+    margin:0px 5px;
+    padding:0px 5px;
+    font-size: 15px;
+}
+/*-----------------TOPページ掲示板欄の背景設定*/
+.top-all-bbs-backgroundcolor{
+    background-color:rgba(224, 224, 224, 0.356);
+    padding:40px;
+}
+
+
+/*------------------TOPページ掲示板欄のタイトルに関する設定*/
+.bbs-name{
+    color:black;
+}
+.bbs-name:hover{
+    color:grey;
+}
+
+/*---------------------------ページの一番上に戻るボタン設定*/
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 99;
+  }
+  #page-top a {
+    background: #6e6e6e;
+    text-decoration: none;
+    color: #fff;
+    width: 60px;
+    padding: 28px 5px;
+    text-align: center;
+    display: block;
+    border-radius: 90px;
+    opacity: 0.9;
+    transition: all .3s ease;
+  }
+  #page-top a:hover {
+    text-decoration: none;
+    opacity: .5;
+  }
+
+
+
+/*----postアイコンの位置--*/
+  .post-position{ margin: 14px 0px 0px 0px;
+              padding: 10px;
 }
