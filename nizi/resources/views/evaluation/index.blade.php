@@ -59,7 +59,8 @@
 </div>
 <!--投稿画面-->
 <div class="container mt-4">
-    <div class="border p-4">
+<!--クラスを"border p-4”から”pー4 comment-boxに変更-->
+    <div class="p-4 comment-box">
         <h1 class="h4 mb-4 font-weight-bold">
             評価投稿の新規作成
         </h1>
@@ -69,6 +70,7 @@
  
             <fieldset class="mb-4">
                 <div class="row">
+<!--クラスにcol-sm-7を追加-->
                 <div class="form-group col-sm-7">
                     <label for="name">
                         ニックネーム
@@ -86,7 +88,7 @@
                         </div>
                     @endif
                 </div>
- 
+<!--クラスにcol-sm-1を追加-->
                 <div class="form-group col-sm-1">
                 <input
                     id="category_id"
@@ -97,7 +99,7 @@
                     type="hidden"
                 >
                 </div>
- 
+<!--クラスにcol-sm-2を追加-->
                 <div class="form-group col-sm-2">
                     <label for="year">
                         学年
@@ -115,7 +117,7 @@
                         </div>
                     @endif
                 </div>
-
+<!--クラスにcol-sm-2を追加-->
                 <div class="p-modal-bkm__fav-spinner col-sm-2">
         <label for="good">
                 いいね
