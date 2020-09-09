@@ -80,69 +80,70 @@
                                     {{ $errors->first('name') }}
                                 </div>
                             @endif
-                      </div>
+                        </div>
  
-                            <div class="form-group col-sm-2">
-                                <select id="subject"
-                                        name="subject"
-                                        class="form-control {{ $errors->has('subject') ? 'is-invalid' : '' }}"
-                                        value="{{ old('subject') }}"
-                                        type="text"
-                                        placeholder="学年">
-                                    <option value="0"selected disabled>学年</option>
-        　　　　　　　　　　　　　　　　　<option value="1">１</option>
-        　　　　　　　　　　　　　　　　　<option value="2">２</option>
-        　　　　　　　　　　　　　　　　　<option value="3">３</option>
-        　　　　　　　　　　　　　　　　　<option value="4">４</option>
-        　　　　　　　　　　　　　　　　</select>
+                        <div class="form-group col-sm-2">
+                            <select id="subject"
+                                    name="subject"
+                                    class="form-control {{ $errors->has('subject') ? 'is-invalid' : '' }}"
+                                    value="{{ old('subject') }}"
+                                    type="text"
+                                    placeholder="学年">
+                                <option value="0"selected disabled>学年</option>
+        　　　　　　　　　　　　　　 <option value="1">１</option>
+        　　　　　　　　　　　　　　 <option value="2">２</option>
+        　　　　　　　　　　　　　　 <option value="3">３</option>
+        　　　　　　　　　　　　　　 <option value="4">４</option>
+        　　　　　　　　　　　　</select>
                                 @if ($errors->has('subject'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('subject') }}
                                     </div>
                                 @endif
-                            </div>
+                        </div>
 
                     
-                    <div class="form-group">
+                        <div class="form-group">
                     
-                    <input
-                        id="category_id"
-                        name="category_id"
-                        value = "{{ $category_id }}"
-                        class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
-                        text="text"
-                        type="hidden"
-                    >
-                    </div>
+                            <input id="category_id"
+                                   name="category_id"
+                                   value = "{{ $category_id }}"
+                                   class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
+                                   text="text"
+                                   type="hidden"
+                            >
+                        </div>
+                                                                        
                     
-                    <div class="row text-center">
+                        <div class="row text-center">
 
-                        <div class="form-group col-sm-6">
-                            <label for="message">
+                            <div class="form-group col-sm-6">
+                                <label for="message">
                                 メイン内容
-                            </label>
+                                </label>
         
-                            <textarea
-                                id="message"
-                                name="message"
-                                class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
-                                cols="20" rows="2"  wrap="hard" 
-                            >{{ old('message') }}</textarea>
-                            @if ($errors->has('message'))
+                                <textarea id="message"
+                                          name="message"
+                                          class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
+                                          cols="20" rows="2"  wrap="hard" 
+                                >{{ old('message') }}
+                                </textarea>
+                              @if ($errors->has('message'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('message') }}
                                 </div>
-                            @endif
-                        </div>
+                              @endif
+                            </div>
 
                         
         
         
-                        <div class="post-position col-sm-3">
+                            <div class="post-position col-sm-3">
         
-                            <button type="submit" class="post-botton" >
-                                <i class="fas fa-paper-plane post-icon">POST</i>
-                            </button>
+                                <button type="submit" class="post-botton" >
+                                    <i class="fas fa-paper-plane post-icon">POST</i>
+                                </button>
+                            </div>
                         </div>
 
                     </div>
