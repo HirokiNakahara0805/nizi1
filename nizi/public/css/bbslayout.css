@@ -195,6 +195,7 @@ display: flex;
   /*------------------授業名とオススメ度の星の大きさ設定-------*/
   .evaluation-message{
     font-size:20px;
+    word-break: break-all;
 
   }
 

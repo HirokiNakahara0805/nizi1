@@ -50,21 +50,20 @@
     @endforeach
 
     </div>
-
+    
+    @foreach ($category2s as $category2)
     <div>
         <div class="row">
-            <p class="col-md-2 subject-info-top">一般教養</p>
-            <p class="col-md-2 subject-info-top">月曜</p>
-            <p class="col-md-2 subject-info-top">1st period</p>
+            <p class="col-md-2 subject-info-top"> {{ $category2->department }}</p>
+            <p class="col-md-2 subject-info-top"> {{ $category2->time }}</p>
         </div>
         <div class="row subject-info-comment-frame">
             <p class="col-md-6 subject-info-comment-top">
-                軽いコメントあああああああああああああああああ軽いコメントあああああああああああああああああ<br>
-                あああああああああああああああああああああああ軽いコメントあああああああああああああああああ<br>
-                あああああああああああああああああああああああ軽いコメントあああああああああああああああああ<br>
+            {{ $category2->content }}
             </p>
         </div>
     </div>
+    @endforeach
 </div>
 
 

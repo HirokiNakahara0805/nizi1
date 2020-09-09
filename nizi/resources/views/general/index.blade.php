@@ -88,11 +88,18 @@
 						</div>
 
 						<div class="classboard col-md-8">
-							<div id="mon1" class="mon12345">
-								<a><p class="subject-name-top-period">1st period</p></a>
-								<a><p class="subjectname">1111ｍ</p></a>
-								<a><p class="subjectname">1111ｍ</p></a>
-							</div>
+							
+								
+
+								<div id="mon1" class="mon12345">
+									<!--月曜日1限だけ出力-->
+									<a><p class="subject-name-top-period">1st period</p></a>
+									@foreach($categorym1s as $categorym1)
+									<a href="{{ route('generaltop.index', ['category_id'=>$categorym1->id]) }}" title="{{ $categorym1->name }}"><p class="subjectname">{{ $categorym1->name }}</p></a>
+									@endforeach
+								</div>
+								
+							
 							<div id="mon2" class="mon12345">
 								<a><p class="subject-name-top-period">2nd period</p></a>
 								<a><p class="subjectname">1111ｍ</p></a>
@@ -328,12 +335,7 @@
 	<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 </main>
 
-<div>
-<!--月曜日1限だけ出力-->
-@foreach($categorym1s as $categorym1)
-<span><a href="{{ route('generaltop.index', ['category_id'=>$categorym1->id]) }}" title="{{ $categorym1->name }}">{{ $categorym1->name }}</a></span>
-@endforeach
-</div>
+
 
 <!--火曜日2限だけ出力-->
 <div>
