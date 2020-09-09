@@ -64,6 +64,7 @@
                 @csrf
 
                 <fieldset class="">
+                <!--メイン内容の前でrow text-centerクラスをdivで分けた-->
                     <div class="row text-center">
                         <div class="form-group col-sm-3">
                             
@@ -82,8 +83,8 @@
                             @endif
                         </div>
  
-                        <div class="form-group col-sm-2">
-                            <select id="subject"
+                        <div class="form-group col-sm-1">
+                            <select id="subject"
                                     name="subject"
                                     class="form-control {{ $errors->has('subject') ? 'is-invalid' : '' }}"
                                     value="{{ old('subject') }}"
@@ -113,11 +114,12 @@
                                    type="hidden"
                             >
                         </div>
-                                                                        
-                    
+　　　　　
+                    </div>
+
                         <div class="row text-center">
 
-                            <div class="form-group col-sm-6">
+                            <div class="form-group col-sm-8">
                                 <label for="message">
                                 メイン内容
                                 </label>
