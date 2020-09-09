@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
-use App\Post, App\Category; 
+use App\Post, App\Category,App\Post2; 
 use App\Http\Requests\PostRequest;
  
 class PostsController extends Controller
@@ -22,13 +22,22 @@ class PostsController extends Controller
 
     //カテゴリーネームを取得するときに使うもの
     $category2s=Category::where('id',$category_id)->get();
+    //いいね平均について
+    $goodpost2s = Post2::where('category_id',$category_id)->get();
+        if (!is_null($category_id)) {
+            $post2s = Post2::where('category_id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
+        } else {
+            $post2s = Post2::orderBy('created_at', 'desc')->paginate(10);
+        }
 
  
     return view('bbs.index', [
         'posts' => $posts, 
         'categories' => $categories, 
         'category_id'=>$category_id,
-        'category2s'=>$category2s
+        'category2s'=>$category2s,
+        'goodpost2s' => $goodpost2s,
+        'post2s' => $post2s, 
     ]);
 }
     public function show($id) {

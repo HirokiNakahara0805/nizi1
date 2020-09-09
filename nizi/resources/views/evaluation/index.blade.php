@@ -54,8 +54,6 @@
 
     $average = round($goodss/$post2s->total(),2);
 ?>
-
-
 {{$average}}
 
 

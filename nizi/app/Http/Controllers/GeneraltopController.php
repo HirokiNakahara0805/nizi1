@@ -28,6 +28,13 @@ class GeneraltopController extends Controller
                     ->orderBy('created_at', 'desc')->get();
     //カテゴリーネームを取得するときに使うもの
     $category2s=Category::where('id',$category_id)->get();
+    //いいね平均について
+    $goodpost2s = Post2::where('category_id',$category_id)->get();
+    if (!is_null($category_id)) {
+        $post2s = Post2::where('category_id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
+    } else {
+        $post2s = Post2::orderBy('created_at', 'desc')->paginate(10);
+    }
 
     return view('generaltop.index', [
         'generaltops' => $generaltops, 
@@ -35,7 +42,9 @@ class GeneraltopController extends Controller
         'category_id'=>$category_id,
         'evaluations'=>$evaluations,
         'bbss'=>$bbss,
-        'category2s'=>$category2s
+        'category2s'=>$category2s,
+        'goodpost2s' => $goodpost2s,
+        'post2s' => $post2s, 
 
     ]);
 }
