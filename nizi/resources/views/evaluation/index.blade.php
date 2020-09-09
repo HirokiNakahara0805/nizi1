@@ -58,7 +58,7 @@
         <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
 
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
-        <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>    </ul>
+        <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>    </ul>
 </div>
 <!--投稿画面-->
 <div class="container mt-4">
@@ -216,7 +216,7 @@
 
                     <div class="comment-box">
 
-                        <div class="evaluation-text">
+                        <div class="evaluation-text border-bottom mb-5 p-2">
 
                                 <div><p> 学年{{ $post2->year }}</p></div>
                                 <div><p> < 授業名 > </p></div>
@@ -225,7 +225,7 @@
                         </div>
                         
                         <div>
-                            <div class="evaluation-message">
+                            <div class="evaluation-message mb-5 p-2">
                                 <p>コメント：{{ $post2->message }}</p>
                             </div>
 
@@ -246,7 +246,7 @@
     {{ $post2s->appends(['category_id' => $category_id])->links() }}
 </div>
 
-<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
+<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 
 @endsection
 
