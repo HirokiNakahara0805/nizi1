@@ -64,10 +64,12 @@ h3::after {
     border-radius: 10px;
     border: 1px solid #333333;
     border-bottom: 2px solid #e95014;
+    box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
     padding: 10px 10px 10px 10px;
     margin: 15px 0px 15px 0px;
     background-color: white;
 } 
+
 
 /*---------------------------------formのコンテイナーの設定--------*/
 .f-container {
@@ -110,6 +112,7 @@ h3::after {
 /*------------------リプライアイコンの設定-------*/
 .reply-icon{
   color: #333333;
+  font-size:15px;
 }
 .reply-icon:hover{
   color: #3490dc;
@@ -135,16 +138,15 @@ h3::after {
 
 
 }
-.feature-title-2{
-  background-color:white;
-  display: inline-block;
-  color: black;
-  font-size: 8px;
-  padding: 8 20 6;
-  border-left: 3px solid #e95014;
 
-
+.feature-title-1 a{
+  font-size:20px;
 }
+
+.feature-title-1 a:hover{
+  color: grey;
+}
+
 
 .feature-title-box{
 padding: 40px 50px 20px 40px;
@@ -192,7 +194,7 @@ display: flex;
 
   /*------------------授業名とオススメ度の星の大きさ設定-------*/
   .evaluation-message{
-    font-size:30px;
+    font-size:20px;
 
   }
 

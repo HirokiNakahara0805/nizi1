@@ -15,6 +15,11 @@ $('.your-class').slick({
     autoplay: true,
     autoplaySpeed: 100000000000000,
     arrows:true,
+    responsive: [{
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+      }
+    }]
   });  });
 
-      

@@ -47,7 +47,7 @@
     <ul class="reset-ul row feature-title-box">
         <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
-        <li class="feature-title-2 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
+        <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
     </ul>
 </div>
 
@@ -65,7 +65,7 @@
 
                 <fieldset class="">
                     <div class="row text-center">
-                        <div class="form-group col-sm-5">
+                        <div class="form-group col-sm-3">
                             
                             <input
                                 id="name"
@@ -83,7 +83,7 @@
                       </div>
         
                     
-                        <div class="form-group col-sm-5">
+                        <div class="form-group col-sm-3">
                             
                             <input
                                 id="subject"
@@ -115,7 +115,7 @@
                     
                     <div class="row text-center">
 
-                        <div class="form-group col-sm-9">
+                        <div class="form-group col-sm-6">
                             <label for="message">
                                 メイン内容
                             </label>
@@ -202,7 +202,7 @@
     </div>
 
 </div>
-<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
+<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 @endsection
 
 @section('footer')
