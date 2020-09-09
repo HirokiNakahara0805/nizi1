@@ -261,7 +261,46 @@ display: flex;
 
 }
 
+/*--------------------------------------ジェネラルトップ-----------------*/
 
+
+/*ジェネラルトップの科目タイトル設定*/
+.general-top-title-frame{
+  background-color:white;
+}
+.general-top-title{
+      font-size:40px;
+      margin:50px 0px 20px 0px;
+      border-bottom:1px solid #e95014;
+}
+
+.subject-info-top{
+  margin:5px 5px 5px 15px;
+  padding:5px;
+  font-size:15px;
+  border-bottom:1px solid rgb(212, 212, 212);
+}
+
+/*ジェネラルトップの科目タイトル設定*/
+.subject-info-top-bbs{
+  margin:5px 5px 15px 15px;
+  padding:5px;
+  font-size:15px;
+  border-bottom:1px solid rgb(212, 212, 212);
+}
+
+/*ジェネラルトップの科目ごとコメントの設定*/
+.subject-info-comment-top{
+  font-size: 15px;
+  border-left:5px solid #e95014;
+}
+.subject-info-comment-frame{
+  padding:20px 0px;
+  margin:20px 0px;
+ 
+  
+  
+}
 /* 画面サイズ小さくしたらPOSTボタンがはみでたので修正　
     簡易的な修正　他にも修正する時に一気に変更してください*/
 /*************************

@@ -28,27 +28,28 @@
  
  
 @section('content')
-
-<div>
-@foreach ($generaltops as $generaltop)
-            <tr>
-                {{ $generaltop->name }}
-            </tr>
-@endforeach
-</div>
-
-<div>
-    <div>
-            <p>一般教養</p>
-            <p>月曜</p>
-            <p>1st period</p>
+<div class="container general-top-title-frame">
+    <div  class="general-top-title">
+    @foreach ($generaltops as $generaltop)
+                <tr>
+                    {{ $generaltop->name }}
+                </tr>
+    @endforeach
     </div>
+
     <div>
-        <p>
-            軽いコメントあああああああああああああああああ軽いコメントあああああああああああああああああ<br>
-            あああああああああああああああああああああああ軽いコメントあああああああああああああああああ<br>
-            あああああああああああああああああああああああ軽いコメントあああああああああああああああああ<br>
-        </p>
+        <div class="row">
+            <p class="col-md-2 subject-info-top">一般教養</p>
+            <p class="col-md-2 subject-info-top">月曜</p>
+            <p class="col-md-2 subject-info-top">1st period</p>
+        </div>
+        <div class="row subject-info-comment-frame">
+            <p class="col-md-6 subject-info-comment-top">
+                軽いコメントあああああああああああああああああ軽いコメントあああああああああああああああああ<br>
+                あああああああああああああああああああああああ軽いコメントあああああああああああああああああ<br>
+                あああああああああああああああああああああああ軽いコメントあああああああああああああああああ<br>
+            </p>
+        </div>
     </div>
 </div>
 
@@ -60,11 +61,7 @@
         <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
     </ul>
 </div>
-<div>
-@foreach($categories as $id => $name)
-<span class="btn"><a href="{{ route('generaltop.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
-@endforeach
-</div>
+
 
 
         <div class="container" id="all-bbs">
@@ -81,20 +78,23 @@
 
 
                     @foreach ($evaluations as $evaluation)
-                    @if($loop->iteration < 6) 
+                    @if($loop->iteration < 6)
 
 
                     <div class="comment-box">
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
+                            @foreach ($generaltops as $generaltop)
+                                <div>
+                                    <p>{{ $generaltop->name }}</p>
+                                </div>
+                            @endforeach
 
-                                <div><p> 学年{{ $evaluation->year }}</p></div>
-                                <div><p> < 授業名 > </p></div>
                                 <div> <p>いいね{{ $evaluation->good }}</p></div>
 
                         </div>
 
-                        
+
                         <div>
                             <div class="evaluation-message mb-5 p-2">
                                 <p>コメント：{{ $evaluation->message }}</p>
@@ -102,13 +102,15 @@
 
                         </div>
                         <div class="f-container comment-info border-top">
+
                             <div class="f-item float-right">投稿日時　{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
+                            <div class="f-item float-right">学年{{ $evaluation->year }}</div>
                             <div class="f-item float-right">name{{ $evaluation->name }}</div>
                         </div>
                     </div>
                     @endif
                      @endforeach
-                        
+
 
 
 				</div>
@@ -225,3 +227,8 @@
 @endsection
 
  
+<div>
+@foreach($categories as $id => $name)
+<span class="btn"><a href="{{ route('generaltop.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
+@endforeach
+</div>
