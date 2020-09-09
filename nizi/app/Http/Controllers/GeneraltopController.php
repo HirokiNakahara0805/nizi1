@@ -16,9 +16,9 @@ class GeneraltopController extends Controller
  
     $category_id = $request->category_id;
     if (!is_null($category_id)) {
-        $generaltops = Generaltop::where('category_id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
+        $generaltops = Category::where('id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
     } else {
-        $generaltops = Generaltop::orderBy('created_at', 'desc')->paginate(10);
+        $generaltops = Category::orderBy('created_at', 'desc')->paginate(10);
     }
     //評価投稿をカテゴリーごとにランダムで採取
     $evaluations=Post2::where('category_id',$category_id)
@@ -26,13 +26,17 @@ class GeneraltopController extends Controller
     //掲示板投稿をカテゴリーごとに最新で採取
     $bbss=Post::where('category_id',$category_id)
                     ->orderBy('created_at', 'desc')->get();
+    //カテゴリーネームを取得するときに使うもの
+    $category2s=Category::where('id',$category_id)->get();
 
     return view('generaltop.index', [
         'generaltops' => $generaltops, 
         'categories' => $categories, 
         'category_id'=>$category_id,
         'evaluations'=>$evaluations,
-        'bbss'=>$bbss
+        'bbss'=>$bbss,
+        'category2s'=>$category2s
+
     ]);
 }
 }

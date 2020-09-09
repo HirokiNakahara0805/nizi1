@@ -1,6 +1,9 @@
 @extends('layout.bbslayout')
 @section('header')
 
+@foreach($category2s as $category2)
+<title>{{ $category2->name }}のTOP - ∞pilotis</title>
+@endforeach
 
 
 <header class="u2-header">

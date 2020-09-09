@@ -2,11 +2,7 @@
 <html lang="ja">
 <head>
 
-@isset($title)
-<title>{{ $title }} - Sophia</title>
-@else
-<title>Top Sophia</title>
-@endisset
+<title>∞pilotis</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">

@@ -28,6 +28,9 @@ class Post2sController extends Controller
         
         //いいね平均について
         $goodpost2s = Post2::where('category_id',$category_id)->get();
+
+        //カテゴリーネームを取得するときに使うもの
+        $category2s=Category::where('id',$category_id)->get();
         
         
     
@@ -35,7 +38,8 @@ class Post2sController extends Controller
             'post2s' => $post2s, 
             'categories' => $categories, 
             'category_id'=>$category_id,
-            'goodpost2s' => $goodpost2s
+            'goodpost2s' => $goodpost2s,
+            'category2s'=>$category2s
             
         ]);
     }

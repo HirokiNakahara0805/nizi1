@@ -1,3 +1,10 @@
+
+@foreach($category2s as $category2)
+<title>{{ $category2->name }}の評価投稿 - ∞pilotis</title>
+@endforeach
+
+
+
 @extends('layout.bbslayout')
   
 @section('header')

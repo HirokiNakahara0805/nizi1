@@ -35,3 +35,39 @@ Route::resource('syllabus', 'SyllabiController', ['only' => ['index']]);
 
 //般教Top画面テストページ
 Route::resource('generaltop', 'GeneraltopController', ['only' => ['index']]);
+
+//初めての方へページ
+Route::get('/beginnersguide', function () {
+    return view('footer.beginnersguide');
+});
+
+//運営組織ページ
+Route::get('/organization', function () {
+    return view('footer.organization');
+});
+
+//利用規約ページ
+Route::get('/terms', function () {
+    return view('footer.terms');
+});
+
+//プライバシーポリシーページ
+Route::get('/privacypolicy', function () {
+    return view('footer.privacypolicy');
+});
+
+//コンテンツポリシーページ
+Route::get('/contentpolicy', function () {
+    return view('footer.contentpolicy');
+});
+
+//よくあるご質問ページ
+Route::get('/faq', function () {
+    return view('footer.faq');
+});
+
+//お問い合わせページ
+Route::get('/inquiry', function () {
+    return view('footer.inquiry');
+});
+
