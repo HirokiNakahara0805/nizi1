@@ -84,9 +84,9 @@
 				<div class="col-md-8  top-all-bbs-backgroundcolor">
 
                     <div>
-                        <div class="common-btn list-inline-item text-left"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >授業評価</a></div>
+                        <div class="common-btn list-inline-item text-left"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >授業評価</a></div>
 
-                        <div class="newtopic-evaluation"><p>New post</p></div>
+                        <div class="newtopic-evaluation"><p class="text-center">New post</p></div>
                     </div>
 
 
@@ -124,6 +124,13 @@
                     @endif
                      @endforeach
 
+                     <div class="text-center common-btn-ikkoue ">
+                         <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" class="common-btn">
+
+                                All post
+                          </a>
+                    </div>
+
 
 
 				</div>
@@ -153,7 +160,7 @@
                     <div>
                         <div class="common-btn list-inline-item text-left"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></div>
 
-                        <div class="newtopic-evaluation"><p>New post</p></div>
+                        <div class="newtopic-evaluation "><p class="text-center">New post</p></div>
                     </div>
                     
                     @foreach ($bbss as $bbs)
@@ -172,6 +179,13 @@
                     </div>
                     @endif
                     @endforeach
+
+                    <div class="text-center common-btn-ikkoue ">
+                         <a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" class="common-btn">
+
+                                All post
+                          </a>
+                    </div>
 
 
 				</div>
