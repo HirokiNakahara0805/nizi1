@@ -34,42 +34,42 @@
 		<div class="container text-center fluid">
 		 	<!-- 学科表示(スライダー) -->
 			<div class="row your-class">
-				<div class=" img-sophia border border-secondary  m-2 rounded" >
+				<div class=" img-sophia col-md-2" >
 						<a href="{{ url('/general') }}" >
 
 						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
 
-				<div class=" img-sophia border border-secondary  m-2 rounded">
+				<div class=" img-sophia col-md-2" >
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/red.jpg') }}" class="img-fluid center img-sophia-in ">
+						
 						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
-				<div class=" img-sophia border border-secondary  m-2 rounded">
+				<div class=" img-sophia col-md-2" >
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
-						<h1 class="your-class">General education</h1>
-						</a>
-				</div>
-
-				<div class=" img-sophia border border-secondary  m-2 rounded">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
-						<h1 class="your-class">General education</h1>
-						</a>
-				</div>
-				<div class=" img-sophia border border-secondary  m-2 rounded">
-						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
+						
 						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
 
-				<div class=" img-sophia border border-secondary  m-2 rounded">
+				<div class=" img-sophia col-md-2" >
 						<a href="{{ url('/general') }}" >
-						<img src="{{ asset('img/pankyo.jpg') }}" class="img-fluid center img-sophia-in ">
+						
+						<h1 class="your-class">General education</h1>
+						</a>
+				</div>
+				<div class=" img-sophia col-md-2" >
+						<a href="{{ url('/general') }}" >
+					
+						<h1 class="your-class">General education</h1>
+						</a>
+				</div>
+
+				<div class=" img-sophia col-md-2" >
+						<a href="{{ url('/general') }}" >
+						
 						<h1 class="your-class">General education</h1>
 						</a>
 				</div>
@@ -139,7 +139,7 @@
 
 	</div>
 
-	<p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
+	<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 </main>
 @include("parts.footer")
 

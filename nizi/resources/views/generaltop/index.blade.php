@@ -13,8 +13,6 @@
     <ul class="reset-ul row v2-global-navbar__links">
         <li class="u2-global-navbar__link"><a href="#class-sub">classc subject</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
         <li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-        <li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-        <li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
     </ul>
 </div>
 @endsection
@@ -36,9 +34,20 @@
 @endforeach
 </div>
 
-
-
-<span class="btn"></span>
+<div>
+    <div>
+            <p>一般教養</p>
+            <p>月曜</p>
+            <p>1st period</p>
+    </div>
+    <div>
+        <p>
+            軽いコメントあああああああああああああああああ軽いコメントあああああああああああああああああ<br>
+            あああああああああああああああああああああああ軽いコメントあああああああああああああああああ<br>
+            あああああああああああああああああああああああ軽いコメントあああああああああああああああああ<br>
+        </p>
+    </div>
+</div>
 
 
 <div>
@@ -55,7 +64,7 @@
 </div>
 
 
-<div class="container" id="all-bbs">
+        <div class="container" id="all-bbs">
 
 			<div class="row">
 
@@ -68,35 +77,35 @@
                     </div>
 
 
-                        <div class="comment-box"> <!--ここにURLはる-->
-
-                            <div class="evaluation-text">
-
-                                    <div><p> 学年</p></div>
-                                    <div><p> < 授業名 > </p></div>
-                                    <div> <p>いいね</p></div>
-
-                            </div>
-
-                            <div class="evaluation-container  border-top border-bottom">
-                                <div class="evaluation-item ">難しさ</div>
-                                <div class="evaluation-item ">雰囲気</div>
-                                <div class="evaluation-item ">忙しさ</div>
+                    @foreach ($evaluations as $evaluation)
+                    @if($loop->iteration < 6) 
 
 
-                            </div>
+                    <div class="comment-box">
 
-                            <div>
-                                <div class="evaluation-message">
-                                    <p>コメント：</p>
-                                </div>
+                        <div class="evaluation-text border-bottom mb-5 p-2">
 
-                            </div>
-                            <div class="f-container comment-info border-top">
-                                <div class="f-item float-right">投稿日時</div>
-                                <div class="f-item float-right">name</div>
-                            </div>
+                                <div><p> 学年{{ $evaluation->year }}</p></div>
+                                <div><p> < 授業名 > </p></div>
+                                <div> <p>いいね{{ $evaluation->good }}</p></div>
+
                         </div>
+
+                        
+                        <div>
+                            <div class="evaluation-message mb-5 p-2">
+                                <p>コメント：{{ $evaluation->message }}</p>
+                            </div>
+
+                        </div>
+                        <div class="f-container comment-info border-top">
+                            <div class="f-item float-right">投稿日時　{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
+                            <div class="f-item float-right">name{{ $evaluation->name }}</div>
+                        </div>
+                    </div>
+                    @endif
+                     @endforeach
+                        
 
 
 				</div>
@@ -123,25 +132,29 @@
 
 				<div class="col-md-8 text-center top-all-bbs-backgroundcolor2">
 
-                <div>
-                    <div class="common-btn list-inline-item text-left"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></div>
+                    <div>
+                        <div class="common-btn list-inline-item text-left"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></div>
 
-                    <div class="newtopic-evaluation"><p>New post</p></div>
-                </div>
-                
-
-                <div class="comment-box">
-                    <div class="comment-text"><!--ここにURLはる-->
+                        <div class="newtopic-evaluation"><p>New post</p></div>
                     </div>
-                    <div class="">
-                        <div class="f-container comment-info border-top">
-                            <div class="f-item float-right">投稿年月</div>
-                            <div class="f-item float-right">なまえ</div>
-                            <div class="f-item float-right ">学年</div>
+                    
+                    @foreach ($bbss as $bbs)
+                    @if($loop->iteration < 6) 
+                    <div class="comment-box">
+                        <div class="comment-text">{!! nl2br(e(Str::limit($bbs->message, 100))) !!}
+                        </div>
+                        <div class="">
+                            <div class="f-container comment-info border-top">
+                                <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
+                                <div class="f-item float-right">{{ $bbs->name }}</div>
+                                <div class="f-item float-right ">{{ $bbs->subject }}学年</div>
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                    @endif
+                    @endforeach
+
 
 				</div>
 
@@ -160,60 +173,10 @@
 
         </div>
 
-        @foreach ($bbss as $bbs)
-                @if($loop->iteration < 6) 
-                <div class="comment-box">
-                    <div class="comment-text">{!! nl2br(e(Str::limit($bbs->message, 100))) !!}
-                    </div>
-                    <div class="">
-                        <div class="f-container comment-info border-top">
-                            <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
-                            <div class="f-item float-right">{{ $bbs->name }}</div>
-                            <div class="f-item float-right ">{{ $bbs->subject }}学年</div>
+        
 
-                        </div>
-                    </div>
-                </div>
-                @endif
-            @endforeach
-
-            @foreach ($evaluations as $evaluation)
-                    @if($loop->iteration < 6) 
-
-
-                    <div class="comment-box">
-
-                        <div class="evaluation-text">
-
-                                <div><p> 学年{{ $evaluation->year }}</p></div>
-                                <div><p> < 授業名 > </p></div>
-                                <div> <p>いいね{{ $evaluation->good }}</p></div>
-
-                        </div>
-
-                        <div class="evaluation-container  border-top border-bottom">
-                             <div class="evaluation-item ">難しさ{{ $evaluation->difficulty }}</div>
-                             <div class="evaluation-item ">雰囲気{{ $evaluation->atmosphere }}</div>
-                             <div class="evaluation-item ">忙しさ{{ $evaluation->busyness }}</div>
-
-
-                        </div>
-
-                        <div>
-                            <div class="evaluation-message">
-                                <p>コメント：{{ $evaluation->message }}</p>
-                            </div>
-
-                        </div>
-                        <div class="f-container comment-info border-top">
-                            <div class="f-item float-right">投稿日時　{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
-                            <div class="f-item float-right">name{{ $evaluation->name }}</div>
-                        </div>
-                    </div>
-                    @endif
-            @endforeach
-
-        <p id="page-top" ><a href="#"><i class="fas fa-arrow-up"></i></a></p>
+            
+            <p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 
         <!--CSS読み込み-->
         <link href="{{ asset('css/generaltop.css') }}" rel="stylesheet">
