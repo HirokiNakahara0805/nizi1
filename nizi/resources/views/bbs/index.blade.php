@@ -85,14 +85,19 @@
                     
                         <div class="form-group col-sm-3">
                             
-                            <input
-                                id="subject"
+                        <div class="form-group col-sm-2">
+                          <select id="subject"
                                 name="subject"
                                 class="form-control {{ $errors->has('subject') ? 'is-invalid' : '' }}"
                                 value="{{ old('subject') }}"
                                 type="text"
-                                placeholder="学年"
-                            >
+                                placeholder="学年">
+                            <option value="0"selected disabled>学年</option>
+　　　　　　　　　　　　　　　　　<option value="1">１</option>
+　　　　　　　　　　　　　　　　　<option value="2">２</option>
+　　　　　　　　　　　　　　　　　<option value="3">３</option>
+　　　　　　　　　　　　　　　　　<option value="4">４</option>
+　　　　　　　　　　　　　　　　</select>
                             @if ($errors->has('subject'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('subject') }}
