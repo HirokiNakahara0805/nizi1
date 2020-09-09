@@ -40,7 +40,24 @@
     </div>
 @endif
 
+<div class="container general-top-title-frame">
+    <div  class="general-top-title">
+    @foreach ($category2s as $category2s)
+                <tr>
+                    {{ $category2s->name }}
+                </tr>
+    @endforeach
+    </div>
 
+    <div>
+        <div class="row">
+            <p class="col-md-2 subject-info-top-bbs">一般教養</p>
+            <p class="col-md-2 subject-info-top-bbs">月曜</p>
+            <p class="col-md-2 subject-info-top-bbs">1st period</p>
+        </div>
+
+    </div>
+</div>
 
 
 <div>
