@@ -28,6 +28,19 @@
  
  
 @section('content')
+
+<!--いいね平均-->
+<?php
+    $goodss = 0;
+
+    foreach ($goodpost2s as $goodpost2){
+        $goodss +=$goodpost2->good;
+        }
+
+    $average = round($goodss/$post2s->total(),2);
+?>
+{{$average}}
+
 <div class="container general-top-title-frame">
     <div  class="general-top-title">
     @foreach ($generaltops as $generaltop)
@@ -35,6 +48,7 @@
                     {{ $generaltop->name }}
                 </tr>
     @endforeach
+
     </div>
 
     <div>

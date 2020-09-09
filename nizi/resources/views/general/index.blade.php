@@ -327,6 +327,23 @@
 	</div>
 	<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 </main>
+
+<div>
+<!--月曜日1限だけ出力-->
+@foreach($categorym1s as $categorym1)
+<span><a href="{{ route('generaltop.index', ['category_id'=>$categorym1->id]) }}" title="{{ $categorym1->name }}">{{ $categorym1->name }}</a></span>
+@endforeach
+</div>
+
+<!--火曜日2限だけ出力-->
+<div>
+@foreach($categoryt2s as $categoryt2)
+<span><a href="{{ route('generaltop.index', ['category_id'=>$categoryt2->id]) }}" title="{{ $categoryt2->name }}">{{ $categoryt2->name }}</a></span>
+@endforeach
+</div>
+
+
+
 @include("parts.footer")
 		<!-- CSS読み込み -->
 		<link href="{{ asset('css/general.css') }}" rel="stylesheet">

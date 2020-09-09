@@ -68,6 +68,18 @@
     </ul>
 </div>
 
+<!--いいね平均-->
+<?php
+    $goodss = 0;
+
+    foreach ($goodpost2s as $goodpost2){
+        $goodss +=$goodpost2->good;
+        }
+
+    $average = round($goodss/$post2s->total(),2);
+?>
+{{$average}}
+
 
 
 

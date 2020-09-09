@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/', 'TopPageController', ['only' => ['index']]);
 
 //一般教養ページ
-Route::get('/general', 'GeneralPageController@show');
+Route::resource('general', 'GeneralPageController', ['only' => ['index']]);
 
 //掲示板テストページ
 Route::resource('bbs', 'PostsController', ['only' => ['index', 'show', 'create', 'store']]);
