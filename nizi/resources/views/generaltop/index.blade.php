@@ -31,10 +31,11 @@
  
 @section('content')
 
+
 <div>
-@foreach ($generaltops as $generaltop)
+@foreach ($category2s as $category2)
             <tr>
-                {{ $generaltop->name }}
+                {{ $category2->name }}
             </tr>
 @endforeach
 </div>
