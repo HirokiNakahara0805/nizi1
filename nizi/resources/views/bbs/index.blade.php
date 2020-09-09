@@ -228,6 +228,7 @@
     <div class="d-flex justify-content-center mb-5">
         {{ $posts->appends(['category_id' => $category_id])->links() }}
     </div>
+    
     <h3 class="text-center">授業科目</h3>
     <div class="mt-4 mb-4 text-center underlist">
         @foreach($categories as $id => $name)

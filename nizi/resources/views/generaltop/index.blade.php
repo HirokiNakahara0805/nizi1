@@ -91,7 +91,7 @@
 
 
                     @foreach ($evaluations as $evaluation)
-                    @if($loop->iteration < 6)
+                    @if($loop->iteration < 4)
 
 
                     <div class="comment-box">
@@ -110,7 +110,7 @@
 
                         <div>
                             <div class="evaluation-message mb-5 p-2">
-                                <p>コメント：{{ $evaluation->message }}</p>
+                                <p>{{ $evaluation->message }}</p>
                             </div>
 
                         </div>

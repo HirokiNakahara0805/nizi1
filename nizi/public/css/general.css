@@ -53,7 +53,7 @@ a.periodList{
   box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
   border-radius: 10px;
   padding:5px 20px;
-  margin:30 10 10 10;
+  margin:30px 10px 10px 10px;
 }
 .period-frame:hover{
   border:2px solid #1458e9;
