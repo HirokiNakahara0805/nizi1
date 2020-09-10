@@ -285,7 +285,8 @@
 <div class="d-flex justify-content-center mb-5">
                    {{ $post2s->appends(['category_id' => $category_id])->links() }}
         </div>
-
+  <!-- javascript  読み込み-->
+  <script type="text/javascript" src="js/bbs_post.js"></script>
 @endsection
 
 
