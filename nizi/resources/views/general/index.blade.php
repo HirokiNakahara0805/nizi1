@@ -49,10 +49,11 @@
 
 
 
-		<!-- 画像挿入-->
+		
+	<!-- 画像挿入-->
 	<div class='header-img-frame'>
 		<div class='header-img-in'>
-			<img src="{{ asset('img/sophia.jpg') }}" class="img-fluid h-100 w-100" >
+			<img src="{{ asset('img/IMG_9584.JPG') }}" class="img-fluid h-100 w-100" >
 		</div>
 	</div>
 <main class="general-page">

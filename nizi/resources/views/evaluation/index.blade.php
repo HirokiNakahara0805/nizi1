@@ -53,24 +53,28 @@
     $average = round($goodss/$post2s->total(),2);
 ?>
 {{$average}}
-<div class="container general-top-title-frame">
-    <div  class="general-top-title">
-    @foreach ($category2s as $category2s)
-                <tr>
-                    {{ $category2s->name }}
-                </tr>
-    @endforeach
-    </div>
 
-    <div>
-        <div class="row">
-            <p class="col-md-2 subject-info-top-bbs">一般教養</p>
-            <p class="col-md-2 subject-info-top-bbs">月曜</p>
-            <p class="col-md-2 subject-info-top-bbs">1st period</p>
+    <div class="container general-top-title-frame">
+        <div  class="general-top-title">
+        @foreach ($category2s as $category2)
+                    <tr>
+                        {{ $category2->name }}
+                    </tr>
+
         </div>
 
+
+        <div>
+            <div class="row">
+                <p class="col-md-2 subject-info-top"> {{ $category2->department }}</p>
+                <p class="col-md-2 subject-info-top"> {{ $category2->time }}</p>
+            </div>
+        </div>
+         @endforeach
     </div>
-</div>
+
+   
+
 
 
 <div>
