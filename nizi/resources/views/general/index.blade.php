@@ -55,7 +55,7 @@
 			<img src="{{ asset('img/sophia.jpg') }}" class="img-fluid h-100 w-100" >
 		</div>
 	</div>
-<main>
+<main class="general-page">
 
 
 	<h1 class="text-center subject-title">一般教養</h1>

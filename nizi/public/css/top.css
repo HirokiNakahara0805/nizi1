@@ -118,6 +118,7 @@ a.class-list{
 /*------------------TOPページ掲示板欄のタイトルに関する設定*/
 .bbs-name{
     color:black;
+    font-size:25px;
 }
 .bbs-name:hover{
     color:grey;

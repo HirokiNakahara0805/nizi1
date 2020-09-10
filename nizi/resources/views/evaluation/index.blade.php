@@ -19,8 +19,6 @@
 
 <div class="u2-global-navbar">
     <ul class="reset-ul row v2-global-navbar__links">
-        <li class="u2-global-navbar__link"><a href="#class-sub">classc subject</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-        <li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
         <li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
         <li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
     </ul>
@@ -55,6 +53,24 @@
     $average = round($goodss/$post2s->total(),2);
 ?>
 {{$average}}
+<div class="container general-top-title-frame">
+    <div  class="general-top-title">
+    @foreach ($category2s as $category2s)
+                <tr>
+                    {{ $category2s->name }}
+                </tr>
+    @endforeach
+    </div>
+
+    <div>
+        <div class="row">
+            <p class="col-md-2 subject-info-top-bbs">一般教養</p>
+            <p class="col-md-2 subject-info-top-bbs">月曜</p>
+            <p class="col-md-2 subject-info-top-bbs">1st period</p>
+        </div>
+
+    </div>
+</div>
 
 
 <div>
@@ -208,12 +224,15 @@
 <div class="mt-4 mb-4 text-center">
     <p>{{ $post2s->total() }}件が見つかりました。</p>
 </div>
+<div class="d-flex justify-content-center mb-5">
+                   {{ $post2s->appends(['category_id' => $category_id])->links() }}
+</div>
 
 
         <div class="container">
-            <div class="table table-hover">
+            <div class="row">
 
-                <div>
+                <div class="table table-hover col-md-8">
 
                 @foreach ($post2s as $post2)
 
@@ -242,16 +261,25 @@
                     </div>
 
                     @endforeach
+                    
                 </div>
+                
+           
 
+              <!--投稿の横の空白部分-->
+                <div class="col-md-4">
+
+                </div>
             </div>
         </div>
 
-<div class="d-flex justify-content-center mb-5">
-    {{ $post2s->appends(['category_id' => $category_id])->links() }}
-</div>
+        
 
 <p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
+
+<div class="d-flex justify-content-center mb-5">
+                   {{ $post2s->appends(['category_id' => $category_id])->links() }}
+        </div>
 
 @endsection
 

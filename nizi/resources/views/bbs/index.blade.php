@@ -17,8 +17,6 @@
 
 	<div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
-			<li class="u2-global-navbar__link"><a href="#class-sub">classc subject</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-			<li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
@@ -191,7 +189,7 @@
 
 
     <div class="container">
-        <div class="table table-hover">
+        <div class="row">
             <!-- <thead>
                 <tr>
 
@@ -201,7 +199,7 @@
                     <th>メイン内容</th>
                 </tr>
             </thead> -->
-            <div id="tbl">
+            <div class="col-md-8">
             @foreach ($posts as $post)
 
                 <div class="comment-box">
@@ -223,6 +221,11 @@
 
             @endforeach
             </div>
+            <!--投稿の横の空白部分-->
+            <div class="col-md-4">
+
+            </div>
+
         </div>
     </div>
     <div class="d-flex justify-content-center mb-5">
