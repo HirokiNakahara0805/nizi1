@@ -5231,7 +5231,7 @@ input[type=button].btn-block {
   color: #e95014;
   background-color: #fff;
   border: 1px solid #dee2e6;
-  border-radius:100px;
+  border-radius:10px;
   font-size:25px;
 }
 /*元のBOOTSTRAP
@@ -5274,6 +5274,17 @@ input[type=button].btn-block {
 
 .page-item:first-child .page-link {
   margin-left: 0;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+/*元のBOOTSTRAP
+.page-item:first-child .page-link {
+  margin-left: 0;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
@@ -5282,6 +5293,7 @@ input[type=button].btn-block {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
+*/
 
 .page-item.active .page-link {
   z-index: 3;
