@@ -156,7 +156,7 @@
                                 id="message"
                                 name="message"
                                 class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
-                                cols="20" rows="2"　 wrap="hard" 
+                                cols="20" rows="2"　 wrap="hard" 　
                             >{{ old('message') }}</textarea>
                             @if ($errors->has('message'))
                                 <div class="invalid-feedback">
@@ -205,7 +205,7 @@
                 <div class="comment-box">
                     <div class="comment-text">{!! nl2br(e(Str::limit($post->message, 100))) !!}
                         @if ($post->comments->count() >= 1)
-                            <p><span class="comment-number">コメント：{{ $post->comments->count() }}件</span></p>
+                            <p><span class="comment-number">{{ $post->comments->count() }}件</span></p>
                         @endif
                     </div>
                     <div class="">

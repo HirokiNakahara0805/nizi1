@@ -197,7 +197,7 @@
                         id="message"
                         name="message"
                         class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
-                        rows="4"
+                        cols="20" rows="4"　 wrap="hard"  
                     >{{ old('message') }}</textarea>
                     @if ($errors->has('message'))
                         <div class="invalid-feedback">
@@ -205,6 +205,7 @@
                         </div>
                     @endif
                 </div>
+
  <!--
                 <div class="mt-5">
                     <a class="btn btn-secondary" href="{{ route('bbs.index') }}">
@@ -254,7 +255,7 @@
                         
                         <div>
                             <div class="evaluation-message mb-5 p-2">
-                                <p>コメント：{{ $post2->message }}</p>
+                                <p>{!! nl2br(e(Str::limit($post2->message, 100))) !!}</p>
                             </div>
 
                         </div>
