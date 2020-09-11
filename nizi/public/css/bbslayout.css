@@ -425,9 +425,9 @@ display: flex;
     margin:0 0 0 0;
 
   }
-  
- 
+
 }
+
 @media screen and (min-width: 0px) and (max-width: 770px) {
 
   .feature-title-1 a{
@@ -437,8 +437,7 @@ display: flex;
   .comment-info{
     font-size:8px;
   }
-  
- 
+
 }
 
 

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 
-<title>∞pilotis</title>
+                <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>∞pilotis</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -23,7 +27,6 @@
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <!-- view point 読み込み-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!-- javascript  読み込み-->
 	<script type="text/javascript" src="js/common.js"></script>
 

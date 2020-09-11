@@ -8,6 +8,7 @@ $(function() {
 });
 
 
+//スライダー設定
 $(function(){
 $('.your-class').slick({
     slidesToShow: 4,
@@ -16,9 +17,9 @@ $('.your-class').slick({
     autoplaySpeed: 100000000000000,
     arrows:true,
     responsive: [{
-      breakpoint: 640,
+      breakpoint: 640,　//width:640px以下になったら
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 1,//１つのスクロールになる
       }
     }]
   });  });
