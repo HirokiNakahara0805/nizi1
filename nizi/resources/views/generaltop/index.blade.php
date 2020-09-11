@@ -1,3 +1,5 @@
+<!---------------------------GENERAL TOPのページ------------------------------>
+
 @extends('layout.bbslayout')
 @section('header')
 
@@ -14,7 +16,7 @@
 
 <div class="u2-global-navbar">
     <ul class="reset-ul row v2-global-navbar__links">
-        <li class="u2-global-navbar__link"><a href="#class-sub">classc subject</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+        <li class="u2-global-navbar__link"><a href="#evaluation">evaluation</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
         <li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
     </ul>
 </div>
@@ -77,11 +79,11 @@
 
 
 
-        <div class="container" id="all-bbs">
+        <div class="container">
 
 			<div class="row">
 
-				<div class="col-md-8  top-all-bbs-backgroundcolor">
+				<div class="col-md-8  top-all-bbs-backgroundcolor"  id="evaluation">
 
                     <div class="row">
                         <div class="common-btn list-inline-item text-center col-md-3"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p class="mt-2">評価投稿</p></a></div>
@@ -94,7 +96,7 @@
                     @if($loop->iteration < 4)
 
 
-                    <div class="comment-box">
+                    <div class="comment-box" >
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
                             @foreach ($generaltops as $generaltop)
@@ -151,13 +153,13 @@
 
         </div>
         
-<div class="container" id="all-bbs">
+<div class="container" >
 
 			<div class="row top-all-bbs-backgroundcolor2-bottom">
 
-				<div class="col-md-8 top-all-bbs-backgroundcolor2">
+				<div class="col-md-8 top-all-bbs-backgroundcolor2" id="all-bbs">
 
-                    <div class="row mx-auto">
+                    <div class="row mx-auto" >
                         <div class="common-btn list-inline-item text-center col-md-3"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" ><p class="mt-2">掲示板</p></a></div>
 
                         <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>

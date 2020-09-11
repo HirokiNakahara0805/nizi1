@@ -90,16 +90,16 @@
 
 				<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
 
-					@foreach($categories as $id => $name)
+					@foreach($category2s as $category2)
 					<div class="top-bbs-box">
 							<div class="border-bottom top-bbs-item-frame">
-									<div class="top-bbs-item "><p>火１</p></div>
-									<div class="top-bbs-item "><p>中原教授</p></div>
+									<div class="top-bbs-item "><p>{{ $category2->time }}</p></div>
+									<div class="top-bbs-item "><p>{{ $category2->teacher }}</p></div>
 							</div>
-						<a href="{{ route('generaltop.index', ['category_id'=>$id]) }}" title="{{ $name }}">
+						<a href="{{ route('generaltop.index', ['category_id'=>$category2->id ]) }}" title="{{ $category2->name }}">
 
 							<div class="">
-									<p class="bbs-name text-center" >{{ $name }}</p>
+									<p class="bbs-name text-center" >{{ $category2->name }}</p>
 							</div>
 
 						</a>

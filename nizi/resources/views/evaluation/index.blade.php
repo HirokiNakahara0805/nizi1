@@ -294,7 +294,7 @@
 @section('footer')
 <footer>
         <!-- SNS連携 -->
-        <div class="footer-contents .align-middle">
+        <div class="footer-contents .align-middle" id="all-bbs">
 
             <a class="footer-logo" href="">∞pilotis</a>
 
