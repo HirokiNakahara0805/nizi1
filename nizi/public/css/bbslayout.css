@@ -190,7 +190,7 @@ display: flex;
 }
 /*------------------授業名とオススメ度の星の大きさ設定-------*/
 .evaluation-text p{
-  margin:0px 50px;
+  margin:10px 15px;
   font-size:18px;
   }
 
@@ -201,6 +201,15 @@ display: flex;
 
   }
 
+   /*------------------コンテンツの題目のフレーム設定-------*/
+  .comment-box .title{
+    background-color:rgba(224, 224, 224, 0.356);
+    border-left:1px solid #e95014;
+    margin:0px 20px;
+    text-align: left;
+    width:65px;
+    font-size:15px;
+  }
 
   /*------------------postアイコンの設定-------*/
 .post-icon{
@@ -270,6 +279,7 @@ display: flex;
 /*ジェネラルトップの科目タイトル設定*/
 .general-top-title-frame{
   background-color:white;
+  padding:5px 10px;
 }
 .general-top-title{
       font-size:40px;
@@ -278,7 +288,7 @@ display: flex;
 }
 
 .subject-info-top{
-  margin:10px 2px 2px 15px;
+  margin:px 2px 2px 15px;
   font-size:2px;
   border-left:3px solid #e95014;
   background-color:white;
@@ -290,6 +300,9 @@ display: flex;
   border-bottom:1px solid rgb(212, 212, 212);
 }
 
+.subject-info-top-frame{
+  margin:0px 5px 3px 0px;
+}
 /*ジェネラルトップの科目タイトル設定*/
 .subject-info-top-bbs{
   margin:5px 5px 15px 15px;
@@ -322,6 +335,10 @@ display: flex;
 }
   .comment-box p{
     font-size:4px;
+  }
+  .comment-box .title{
+    width:45px;
+    font-size:10px;
   }
   
 }

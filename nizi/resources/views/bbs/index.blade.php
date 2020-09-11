@@ -38,23 +38,24 @@
     </div>
 @endif
 
-    <!-- トップのタイトル　評価画面と共通-->
+    <!-- トップのタイトル　掲示板と共通-->
     <div class="container general-top-title-frame pb-3 mt-5">
     
-        @foreach ($category2s as $category2)
-        <div  class="general-top-title">
-            <div class="row　mb-3">
-                <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
-                <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
-                <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
-            </div>
-            <tr>
-                {{ $category2->name }}
-            </tr>
-
+    @foreach ($category2s as $category2)
+    <div  class="general-top-title">
+        <div class="row subject-info-top-frame ">
+            <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
+            <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
+            <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
         </div>
-        @endforeach
+        <tr>
+            {{ $category2->name }}
+        </tr>
+
     </div>
+    @endforeach
+    </div>
+
 
       <!-- -->
     <div>
