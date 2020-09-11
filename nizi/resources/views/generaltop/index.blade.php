@@ -40,6 +40,9 @@
         }
 
     $average = round($goodss/$post2s->total(),2);
+
+     //全体星表示用数値
+     $stars = $average*20;
 ?>
 {{$average}}
 
@@ -52,14 +55,12 @@
             <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
     </div>
 
-    <div  class="general-top-title">
-    @foreach ($generaltops as $generaltop)
-                <tr>
-                    {{ $generaltop->name }}
-                </tr>
-    @endforeach
-
-    </div>
+                <div class="general-top-title title-star"> 
+                    <tr>
+                        {{ $category2->name }}
+                    </tr>
+                    <p><div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
+                </div>
     
     
     <div>
@@ -133,7 +134,8 @@
                         @foreach ($generaltops as $generaltop)
                                 <div><p> {{ $generaltop->name }}</p></div>
                         @endforeach
-                                <div> <p>いいね{{ $evaluation->good }}</p></div>
+
+                        <p><div class="star-ratings-sprite"><span style="width: {{  $evaluation->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
 
                         </div>
 

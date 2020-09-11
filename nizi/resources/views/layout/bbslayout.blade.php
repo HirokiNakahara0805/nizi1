@@ -6,7 +6,6 @@
         <meta name="description" itemprop="description" content="@yield('description')">
         <meta name="keywords" itemprop="keywords" content="@yield('keywords')">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -36,11 +35,10 @@
 
         <!-- view point 読み込み-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!-- javascript  読み込み-->
 		<script type="text/javascript" src="js/common.js"></script>
-
-
+        <!--　font awesome　CSS指定よう-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     @yield('pageCss')
     </head>
