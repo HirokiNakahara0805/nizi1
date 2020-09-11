@@ -9,12 +9,12 @@ class TopPageController extends Controller {
 
     public function index()
     {
-        // カテゴリ取得
+        // カテゴリ全取得
         $category = new Category;
         $categories = $category->getLists();
         
 
-        //カテゴリーネームを取得するときに使うもの
+        //カテゴリー
         $category2s=Category::get();
      
     
