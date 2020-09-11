@@ -1,14 +1,36 @@
-
-
-
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-		<meta charset="UTF-8">
+<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>全学共通科目の時間割-∞pilotis</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+         <!-- CSS(Bootstrap用)読み込み -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <!-- CSS(common用)読み込み -->
+        <link href="{{ asset('css/common.css') }}" rel="stylesheet">
+         <!--CSS (slick用)読み込み-->
+	 <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet">
+        <!-- fontawesome 読み込み -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="{{  asset('css/style.css') }}" />
+        <!-- jQuery読み込み-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+         <!-- jquery slick -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <!-- view point 読み込み-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- javascript  読み込み-->
+	<script type="text/javascript" src="js/common.js"></script>
+
+
 </head>
-
-
-@include("parts.common", [ "title" => "一般教養" ])
 
 
 
@@ -20,25 +42,26 @@
 
 	<div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
-			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+		<!--	<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs"> </a><i class="fas fa-angle-double-down nav-arrows"></i></li> -->
 		</ul>
 	</div>
 
 
 
-		<!-- 画像挿入-->
+		
+	<!-- 画像挿入-->
 	<div class='header-img-frame'>
 		<div class='header-img-in'>
-			<img src="{{ asset('img/sophia.jpg') }}" class="img-fluid h-100 w-100" >
+			<img src="{{ asset('img/IMG_9584.JPG') }}" class="img-fluid h-100 w-100" >
 		</div>
 	</div>
-<main>
+<main class="general-page">
 
 
 	<h1 class="text-center subject-title">一般教養</h1>
 	<div class="text-center container">
-		<div class="mx-auto">
+		<div class="mx-auto mb-5">
 
 			<div class="et_pb_module list-inline-item day col-md-2">
 				<a href="#mon" class='secList'>Mon</a>
@@ -92,8 +115,8 @@
 								
 
 								<div id="mon1" class="mon12345">
-									<!--月曜日1限だけ出力-->
 									<a><p class="subject-name-top-period">1st period</p></a>
+									<!--月曜日1限だけ出力-->
 									@foreach($categorym1s as $categorym1)
 									<a href="{{ route('generaltop.index', ['category_id'=>$categorym1->id]) }}" title="{{ $categorym1->name }}"><p class="subjectname">{{ $categorym1->name }}</p></a>
 									@endforeach
@@ -154,9 +177,13 @@
 							</div>
 							<div id="tue2" class="tue12345">
 								<a><p class="subject-name-top-period">2nd period</p></a>
-								<a><p class="subjectname">1111tue</p></a>
-								<a><p class="subjectname">1111tue</p></a>
+									<!--火曜日2限だけ出力-->
+								@foreach($categoryt2s as $categoryt2)
+								<a href="{{ route('generaltop.index', ['category_id'=>$categoryt2->id]) }}" title="{{ $categoryt2->name }}"><p class="subjectname">{{ $categoryt2->name }}</p></a>
+								@endforeach
 							</div>
+
+
 							<div id="tue3" class="tue12345">
 								<a><p class="subject-name-top-period">3rd period</p></a>
 								<a><p class="subjectname">1111tue</p></a>
@@ -337,12 +364,7 @@
 
 
 
-<!--火曜日2限だけ出力-->
-<div>
-@foreach($categoryt2s as $categoryt2)
-<span><a href="{{ route('generaltop.index', ['category_id'=>$categoryt2->id]) }}" title="{{ $categoryt2->name }}">{{ $categoryt2->name }}</a></span>
-@endforeach
-</div>
+
 
 
 

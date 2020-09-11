@@ -90,20 +90,18 @@
 
 				<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
 
-					@foreach($categories as $id => $name)
+					@foreach($category2s as $category2)
 					<div class="top-bbs-box">
-						<a href="{{ route('generaltop.index', ['category_id'=>$id]) }}" title="{{ $name }}">
-							<div class="">
-								<div class="">
-										<p class="bbs-name" >{{ $name }}</p>
-								</div>
-								<div class="">
-									<div class="f-container  border-top">
-										<div class="top-bbs-item float-right">コメント数</div>
-										<div class="top-bbs-item float-right ">2019:3:29</div>
-									</div>
-								</div>
+							<div class="border-bottom top-bbs-item-frame">
+									<div class="top-bbs-item "><p>{{ $category2->time }}</p></div>
+									<div class="top-bbs-item "><p>{{ $category2->teacher }}</p></div>
 							</div>
+						<a href="{{ route('generaltop.index', ['category_id'=>$category2->id ]) }}" title="{{ $category2->name }}">
+
+							<div class="">
+									<p class="bbs-name text-center" >{{ $category2->name }}</p>
+							</div>
+
 						</a>
 					</div>
 					@endforeach
@@ -127,18 +125,6 @@
 
 
 
-
-
-
-
-
-
-
-			</div>
-
-		</div>
-
-	</div>
 
 	<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 </main>

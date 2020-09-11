@@ -97,7 +97,7 @@ a.class-list{
 .top-bbs-box{
     border-bottom: 2px solid #e95014;
     border-top: 1px solid #002549;
-    padding:20px 0px 20px 0px;
+    padding: 0px 0px 10px 0px;
     margin:15px 0px 15px 0px;
     background-color:white;
     box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
@@ -107,6 +107,11 @@ a.class-list{
     margin:0px 5px;
     padding:0px 5px;
     font-size: 15px;
+}
+
+.top-bbs-item p {
+    margin-top: 0;
+    margin-bottom: 0px;
 }
 /*-----------------TOPページ掲示板欄の背景設定*/
 .top-all-bbs-backgroundcolor{
@@ -118,9 +123,18 @@ a.class-list{
 /*------------------TOPページ掲示板欄のタイトルに関する設定*/
 .bbs-name{
     color:black;
+    font-size:25px;
 }
 .bbs-name:hover{
     color:grey;
+}
+
+/*------------------TOPページ掲示板欄のタイトルの教授と曜日設定*/
+
+.top-bbs-item-frame{
+    display: flex;
+    padding: 5px 20px 0px 10px;
+
 }
 
 
@@ -150,6 +164,15 @@ a.class-list{
         padding: 50px 5px;
         margin: 5px 5px 5px 2px;
         font-size: 4px;
+    }
+
+    .bbs-name{
+        font-size:15px;
+        padding-top:5px;
+        margin:0px;
+    }
+    .top-bbs-item{
+        font-size:10px;
     }
 
 }

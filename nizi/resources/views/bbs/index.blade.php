@@ -17,8 +17,6 @@
 
 	<div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
-			<li class="u2-global-navbar__link"><a href="#class-sub">classc subject</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-			<li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
@@ -42,21 +40,21 @@
 
 <div class="container general-top-title-frame">
     <div  class="general-top-title">
-    @foreach ($category2s as $category2s)
+    @foreach ($category2s as $category2)
                 <tr>
-                    {{ $category2s->name }}
+                    {{ $category2->name }}
                 </tr>
-    @endforeach
+
     </div>
+
 
     <div>
         <div class="row">
-            <p class="col-md-2 subject-info-top-bbs">一般教養</p>
-            <p class="col-md-2 subject-info-top-bbs">月曜</p>
-            <p class="col-md-2 subject-info-top-bbs">1st period</p>
+            <p class="col-md-2 subject-info-top"> {{ $category2->department }}</p>
+            <p class="col-md-2 subject-info-top"> {{ $category2->time }}</p>
         </div>
-
     </div>
+    @endforeach
 </div>
 
 
@@ -158,7 +156,7 @@
                                 id="message"
                                 name="message"
                                 class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
-                                cols="20" rows="2"　 wrap="hard" 
+                                cols="20" rows="2"　 wrap="hard" 　
                             >{{ old('message') }}</textarea>
                             @if ($errors->has('message'))
                                 <div class="invalid-feedback">
@@ -191,7 +189,7 @@
 
 
     <div class="container">
-        <div class="table table-hover">
+        <div class="row">
             <!-- <thead>
                 <tr>
 
@@ -201,20 +199,20 @@
                     <th>メイン内容</th>
                 </tr>
             </thead> -->
-            <div id="tbl">
+            <div class="col-md-8">
             @foreach ($posts as $post)
 
                 <div class="comment-box">
                     <div class="comment-text">{!! nl2br(e(Str::limit($post->message, 100))) !!}
                         @if ($post->comments->count() >= 1)
-                            <p><span class="comment-number">コメント：{{ $post->comments->count() }}件</span></p>
+                            <p><span class="comment-number">{{ $post->comments->count() }}件</span></p>
                         @endif
                     </div>
                     <div class="">
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
                             <div class="f-item float-right">{{ $post->name }}</div>
-                            <div class="f-item float-right ">{{ $post->subject }}学年</div>
+                            <div class="f-item float-right ">{{ $post->subject }}年</div>
                             <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class=""><i class="far fa-comment-dots reply-icon"> reply</i></a></div>
 
                         </div>
@@ -223,11 +221,17 @@
 
             @endforeach
             </div>
+            <!--投稿の横の空白部分-->
+            <div class="col-md-4">
+
+            </div>
+
         </div>
     </div>
     <div class="d-flex justify-content-center mb-5">
         {{ $posts->appends(['category_id' => $category_id])->links() }}
     </div>
+    
     <h3 class="text-center">授業科目</h3>
     <div class="mt-4 mb-4 text-center underlist">
         @foreach($categories as $id => $name)
@@ -237,6 +241,9 @@
 
 </div>
 <p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
+
+      <!-- javascript  読み込み-->
+      <script type="text/javascript" src="js/bbs_post.js"></script>
 @endsection
 
 @section('footer')

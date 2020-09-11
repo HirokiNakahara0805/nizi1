@@ -19,8 +19,6 @@
 
 <div class="u2-global-navbar">
     <ul class="reset-ul row v2-global-navbar__links">
-        <li class="u2-global-navbar__link"><a href="#class-sub">classc subject</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-        <li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
         <li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
         <li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
     </ul>
@@ -55,6 +53,28 @@
     $average = round($goodss/$post2s->total(),2);
 ?>
 {{$average}}
+
+    <div class="container general-top-title-frame">
+        <div  class="general-top-title">
+        @foreach ($category2s as $category2)
+                    <tr>
+                        {{ $category2->name }}
+                    </tr>
+
+        </div>
+
+
+        <div>
+            <div class="row">
+                <p class="col-md-2 subject-info-top"> {{ $category2->department }}</p>
+                <p class="col-md-2 subject-info-top"> {{ $category2->time }}</p>
+            </div>
+        </div>
+         @endforeach
+    </div>
+
+   
+
 
 
 <div>
@@ -177,7 +197,7 @@
                         id="message"
                         name="message"
                         class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
-                        rows="4"
+                        cols="20" rows="4"　 wrap="hard"  
                     >{{ old('message') }}</textarea>
                     @if ($errors->has('message'))
                         <div class="invalid-feedback">
@@ -185,6 +205,7 @@
                         </div>
                     @endif
                 </div>
+
  <!--
                 <div class="mt-5">
                     <a class="btn btn-secondary" href="{{ route('bbs.index') }}">
@@ -208,12 +229,15 @@
 <div class="mt-4 mb-4 text-center">
     <p>{{ $post2s->total() }}件が見つかりました。</p>
 </div>
+<div class="d-flex justify-content-center mb-5">
+                   {{ $post2s->appends(['category_id' => $category_id])->links() }}
+</div>
 
 
         <div class="container">
-            <div class="table table-hover">
+            <div class="row">
 
-                <div>
+                <div class="table table-hover col-md-8">
 
                 @foreach ($post2s as $post2)
 
@@ -223,7 +247,7 @@
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
 
-                                <div><p> 学年{{ $post2->year }}</p></div>
+                                
                                 <div><p> < 授業名 > </p></div>
                                 <div> <p>いいね{{ $post2->good }}</p></div>
 
@@ -231,35 +255,46 @@
                         
                         <div>
                             <div class="evaluation-message mb-5 p-2">
-                                <p>コメント：{{ $post2->message }}</p>
+                                <p>{!! nl2br(e(Str::limit($post2->message, 100))) !!}</p>
                             </div>
 
                         </div>
                         <div class="f-container comment-info border-top">
-                            <div class="f-item float-right">投稿日時　{{ $post2->created_at->format('Y.m.d .H:i') }}</div>
-                            <div class="f-item float-right">name{{ $post2->name }}</div>
+                            <div class="f-item float-right">{{ $post2->created_at->format('Y.m.d .H:i') }}</div>
+                            <div class="f-item float-right">{{ $post2->year }}年</div>
+                            <div class="f-item float-right">{{ $post2->name }}</div>
                         </div>
                     </div>
 
                     @endforeach
+                    
                 </div>
+                
+           
 
+              <!--投稿の横の空白部分-->
+                <div class="col-md-4">
+
+                </div>
             </div>
         </div>
 
-<div class="d-flex justify-content-center mb-5">
-    {{ $post2s->appends(['category_id' => $category_id])->links() }}
-</div>
+        
 
 <p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 
+<div class="d-flex justify-content-center mb-5">
+                   {{ $post2s->appends(['category_id' => $category_id])->links() }}
+        </div>
+  <!-- javascript  読み込み-->
+  <script type="text/javascript" src="js/bbs_post.js"></script>
 @endsection
 
 
 @section('footer')
 <footer>
         <!-- SNS連携 -->
-        <div class="footer-contents .align-middle">
+        <div class="footer-contents .align-middle" id="all-bbs">
 
             <a class="footer-logo" href="">∞pilotis</a>
 

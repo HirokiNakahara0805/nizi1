@@ -29,8 +29,10 @@ h3::before {
 h3::after {
   margin-left: 20px;
 }
-
-
+/* pサイズ設定投稿のとこ */
+p{
+  font-size:15px;
+}
 
 /*--------------------------------コメントボックスの詳細情報の設定(時間、学年)------*/
 .comment-info{
@@ -44,7 +46,7 @@ h3::after {
 
 /*--------------------------------コメントボックスの設定(コメントの部分)------*/
 .comment-text{
-    font-size:20px;
+    font-size:15px;
     margin:6px;
     padding:6px;
    
@@ -189,7 +191,7 @@ display: flex;
 /*------------------授業名とオススメ度の星の大きさ設定-------*/
 .evaluation-text p{
   margin:0px 50px;
-  font-size:30px;
+  font-size:18px;
   }
 
   /*------------------授業名とオススメ度の星の大きさ設定-------*/
@@ -231,7 +233,7 @@ display: flex;
     background-color:white;
     border:3px solid #e95014;
     padding:8px 40px;
-    margin:5px 10px;
+    margin:25px 10px;
     color:black;
     border-radius: 20px;
   }
@@ -304,8 +306,21 @@ display: flex;
 }
 /* 画面サイズ小さくしたらPOSTボタンがはみでたので修正　
     簡易的な修正　他にも修正する時に一気に変更してください*/
-/*************************
+    /*************************
 メディアクエリ設定 420~1024
+*************************/
+@media screen and (min-width: 0px) and (max-width: 990px) {
+
+  .evaluation-text p {
+    margin: 0px 10px;
+}
+  .comment-box p{
+    font-size:4px;
+  }
+  
+}
+/*************************
+メディアクエリ設定 570~770
 *************************/
 @media screen and (min-width: 570px) and (max-width: 770px) {
 
@@ -315,5 +330,21 @@ display: flex;
     margin:0 0 0 0;
 
   }
+  
+ 
 }
+@media screen and (min-width: 0px) and (max-width: 770px) {
+
+  .feature-title-1 a{
+    font-size:12px;
+  }
+
+  .comment-info{
+    font-size:8px;
+  }
+  
+ 
+}
+
+
 

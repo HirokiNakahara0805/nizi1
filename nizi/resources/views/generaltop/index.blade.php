@@ -1,3 +1,5 @@
+<!---------------------------GENERAL TOPのページ------------------------------>
+
 @extends('layout.bbslayout')
 @section('header')
 
@@ -14,7 +16,7 @@
 
 <div class="u2-global-navbar">
     <ul class="reset-ul row v2-global-navbar__links">
-        <li class="u2-global-navbar__link"><a href="#class-sub">classc subject</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+        <li class="u2-global-navbar__link"><a href="#evaluation">evaluation</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
         <li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
     </ul>
 </div>
@@ -77,24 +79,24 @@
 
 
 
-        <div class="container" id="all-bbs">
+        <div class="container">
 
 			<div class="row">
 
-				<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
+				<div class="col-md-8  top-all-bbs-backgroundcolor"  id="evaluation">
 
-                    <div>
-                        <div class="common-btn list-inline-item text-left"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >授業評価</a></div>
+                    <div class="row">
+                        <div class="common-btn list-inline-item text-center col-md-3"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p class="mt-2">評価投稿</p></a></div>
 
-                        <div class="newtopic-evaluation"><p>New post</p></div>
+                        <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>
                     </div>
 
 
                     @foreach ($evaluations as $evaluation)
-                    @if($loop->iteration < 6)
+                    @if($loop->iteration < 4)
 
 
-                    <div class="comment-box">
+                    <div class="comment-box" >
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
                             @foreach ($generaltops as $generaltop)
@@ -110,19 +112,26 @@
 
                         <div>
                             <div class="evaluation-message mb-5 p-2">
-                                <p>コメント：{{ $evaluation->message }}</p>
+                                <p>{{ $evaluation->message }}</p>
                             </div>
 
                         </div>
                         <div class="f-container comment-info border-top">
 
-                            <div class="f-item float-right">投稿日時　{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
-                            <div class="f-item float-right">学年{{ $evaluation->year }}</div>
-                            <div class="f-item float-right">name{{ $evaluation->name }}</div>
+                            <div class="f-item float-right">{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
+                            <div class="f-item float-right">{{ $evaluation->year }}年</div>
+                            <div class="f-item float-right">{{ $evaluation->name }}</div>
                         </div>
                     </div>
                     @endif
                      @endforeach
+
+                     <div class="text-center common-btn-ikkoue ">
+                         <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" class="common-btn">
+
+                                All post
+                          </a>
+                    </div>
 
 
 
@@ -144,16 +153,16 @@
 
         </div>
         
-<div class="container" id="all-bbs">
+<div class="container" >
 
 			<div class="row top-all-bbs-backgroundcolor2-bottom">
 
-				<div class="col-md-8 text-center top-all-bbs-backgroundcolor2">
+				<div class="col-md-8 top-all-bbs-backgroundcolor2" id="all-bbs">
 
-                    <div>
-                        <div class="common-btn list-inline-item text-left"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></div>
+                    <div class="row mx-auto" >
+                        <div class="common-btn list-inline-item text-center col-md-3"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" ><p class="mt-2">掲示板</p></a></div>
 
-                        <div class="newtopic-evaluation"><p>New post</p></div>
+                        <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>
                     </div>
                     
                     @foreach ($bbss as $bbs)
@@ -165,13 +174,20 @@
                             <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
                                 <div class="f-item float-right">{{ $bbs->name }}</div>
-                                <div class="f-item float-right ">{{ $bbs->subject }}学年</div>
+                                <div class="f-item float-right ">{{ $bbs->subject }}年</div>
 
                             </div>
                         </div>
                     </div>
                     @endif
                     @endforeach
+
+                    <div class="text-center common-btn-ikkoue ">
+                         <a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" class="common-btn">
+
+                                All post
+                          </a>
+                    </div>
 
 
 				</div>

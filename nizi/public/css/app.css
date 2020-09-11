@@ -5214,7 +5214,7 @@ input[type=button].btn-block {
 .breadcrumb-item.active {
   color: #6c757d;
 }
-
+/*--------------------------------------------------------------ページネーション系オレンジ色に変更、マージン、ボーダーラディウス追加などしてます---------------------------------*/
 .pagination {
   display: flex;
   padding-left: 0;
@@ -5226,13 +5226,35 @@ input[type=button].btn-block {
   position: relative;
   display: block;
   padding: 0.5rem 0.75rem;
+  margin:5px;
+  line-height: 1.25;
+  color: #e95014;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius:10px;
+  font-size:25px;
+}
+/*元のBOOTSTRAP
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
   color: #3490dc;
   background-color: #fff;
   border: 1px solid #dee2e6;
 }
+*/
 
+.page-link:hover {
+  z-index: 2;
+  color: #e95014;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #e95014;
+}
+/*元のBOOTSTRAP
 .page-link:hover {
   z-index: 2;
   color: #1d68a7;
@@ -5241,12 +5263,26 @@ input[type=button].btn-block {
   border-color: #dee2e6;
 }
 
+
+*/
+
 .page-link:focus {
   z-index: 3;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
+.page-item:first-child .page-link {
+  margin-left: 0;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+/*元のBOOTSTRAP
 .page-item:first-child .page-link {
   margin-left: 0;
   border-top-left-radius: 0.25rem;
@@ -5257,13 +5293,24 @@ input[type=button].btn-block {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
+*/
 
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #e95014;
+  border-color: #e95014;
+}
+
+
+/*元のBOOTSTRAP
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
   background-color: #3490dc;
   border-color: #3490dc;
 }
+*/
 
 .page-item.disabled .page-link {
   color: #6c757d;
