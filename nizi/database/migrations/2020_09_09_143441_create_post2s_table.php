@@ -22,16 +22,9 @@ class CreatePost2sTable extends Migration
             $table->text('message');
             $table->string('name');
             $table->integer('good');
+            $table->integer('difficulty');
+            $table->text('report');
+            $table->text('test');
         });
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('post2s');
     }
 }
