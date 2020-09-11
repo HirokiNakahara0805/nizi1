@@ -26,12 +26,13 @@ $(function() {
 
     });
 
+         // 評価投稿の星
     $(function() {
       $('.range-group').each(function() {
         for (var i = 0; i < 5; i ++) {
           $(this).append('<a>');
         }
-      }); 
+      });
       $('.range-group>a').on('click', function() {
          var index = $(this).index();
         $(this).siblings().removeClass('on');
@@ -42,6 +43,8 @@ $(function() {
       });
     });
 
+    
+     // 評価投稿の難しさ
     $(function() {
       $('.range-group-d').each(function() {
         for (var i = 0; i < 5; i ++) {

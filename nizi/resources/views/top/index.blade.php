@@ -2,11 +2,7 @@
 
 
 
-<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-</head>
+
 
 	<!-- -------------------COMMONPARTS読み込み-->
 @include("parts.common")
@@ -136,8 +132,8 @@
 		<script type="text/javascript" src="js/slick.min.js"></script>
 
 
-	
+
 </body>
 
-
+</html>
 

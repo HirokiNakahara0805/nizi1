@@ -134,7 +134,8 @@
                         @foreach ($generaltops as $generaltop)
                                 <div><p> {{ $generaltop->name }}</p></div>
                         @endforeach
-                                <div> いいね<p><div class="star-ratings-sprite"><span style="width: {{ $evaluation->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p></div>
+
+                        <p><div class="star-ratings-sprite"><span style="width: {{  $evaluation->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
 
                         </div>
 
