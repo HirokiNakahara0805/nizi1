@@ -92,18 +92,16 @@
 
 					@foreach($categories as $id => $name)
 					<div class="top-bbs-box">
-						<a href="{{ route('generaltop.index', ['category_id'=>$id]) }}" title="{{ $name }}">
-							<div class="">
-								<div class="">
-										<p class="bbs-name" >{{ $name }}</p>
-								</div>
-								<div class="">
-									<div class="f-container  border-top">
-										<div class="top-bbs-item float-right">コメント数</div>
-										<div class="top-bbs-item float-right ">2019:3:29</div>
-									</div>
-								</div>
+							<div class="border-bottom top-bbs-item-frame">
+									<div class="top-bbs-item "><p>火１</p></div>
+									<div class="top-bbs-item "><p>中原教授</p></div>
 							</div>
+						<a href="{{ route('generaltop.index', ['category_id'=>$id]) }}" title="{{ $name }}">
+
+							<div class="">
+									<p class="bbs-name text-center" >{{ $name }}</p>
+							</div>
+
 						</a>
 					</div>
 					@endforeach
@@ -127,18 +125,6 @@
 
 
 
-
-
-
-
-
-
-
-			</div>
-
-		</div>
-
-	</div>
 
 	<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 </main>
