@@ -43,7 +43,7 @@
 @endsection
 
 
- 
+
 @section('content')
 
 @if (session('poststatus'))
@@ -67,8 +67,6 @@
     $stars = $average*20;
 
 
-
-
 ?>
 
 
@@ -84,7 +82,7 @@
                     <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
                     <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
                 </div>
-                <div class="title-star"> 
+                <div class="title-star">
                     <tr>
                         {{ $category2->name }}
                     </tr>
@@ -107,21 +105,21 @@
     </div>
 
 
-<!----------------------------------------------------投稿フォーム設定-->
+<!----------------------------------------------------投稿フォーム設定------------------------------------------------->
 <div class="container mt-4">
-
+            <!--------formフレーム-->
     <div class="p-4 comment-box">
-
+            <!-----------------------投稿フォームタイトル開始-->
         <h2 class="h4 mb-4 font-weight-bold font-size">
             評価投稿の新規作成
         </h2>
- 
+                <!---------------------------------------POSTメソッド開始-->
         <form method="POST" action="{{ route('evaluation.store') }}">
             @csrf
- 
+
             <fieldset class="mb-4">
                 <div class="row">
-
+                     <!------------------------------------------ニックネームインプット------------>
                     <div class="form-group col-sm-7">
                         <label for="name">
                             ニックネーム
@@ -139,7 +137,7 @@
                             </div>
                         @endif
                     </div>
-
+                    <!-----------------------------------------カテゴリーIDインプット（隠されてます)------------->
                     <div class="form-group col-sm-1">
                     <input
                         id="category_id"
@@ -150,7 +148,7 @@
                         type="hidden"
                     >
                     </div>
-
+                            <!-----------------------------------------学年インプット------------->
                     <div class="form-group col-sm-2">
                         <label for="year">
                             学年
@@ -169,7 +167,7 @@
                         @endif
                     </div>
                 </div>
-<!------------------------------------------------------ 星インプット-->
+                        <!------------------------------------------------------------------------ 星インプット-->
 　　　　　　　　　 <div class="row">
 
                     <div class="p-modal-bkm__fav-spinner col-sm-2">
@@ -198,13 +196,14 @@
                             </div>
                     @endif
 
-<!------------------------------------------------------ 難しさインプット-->
+                            <!----------------------------------------------------------------------- 難しさインプット-->
                     <div class="p-modal-bkm__fav-spinner col-sm-2">
                         <label for="difficulty">
                                 難しさ
                         </label>
 
                         <div class="range-group-d">
+
                             <input
                                         id="difficulty"
                                         name="difficulty"
@@ -215,12 +214,13 @@
                                         value="{{ old('difficulty') }}"
                                         class=" form-control {{ $errors->has('difficulty') ? 'is-invalid' : '' }} input-range-d"
 
-                                        >
+                            >
+
                         </div>
                     </div>
                 </div>
 
-<!------------------------------------------------------ レポートインプット-->
+                    <!---------------------------------------------------------------------- レポートインプット-->
                 <div class="form-group">
                     <label for="report">
                         レポートについて
@@ -240,7 +240,7 @@
                 </div>
 
 
-<!------------------------------------------------------ テストインプット-->
+                    <!---------------------------------------------------------------------------------- テストインプット-->
                 <div class="form-group">
                     <label for="test">
                         テストについて
@@ -260,7 +260,7 @@
                 </div>
 
 
-<!------------------------------------------------------ コメントインプット-->
+<!-------------------------------------------------------------------------------------- コメントインプット-->
                 <div class="form-group">
                     <label for="message">
                         コメント
@@ -279,7 +279,7 @@
                     @endif
                 </div>
 
-
+<!----------------------------------------------------------------------------POSTボタン設定-->
                     <div class="mt-2 text-right">
                         <button type="submit" class="">
                             <i class="fas fa-paper-plane post-icon">POST</i>
@@ -293,33 +293,34 @@
 
 
  
-
-
+<!----------------------------------------------------------------投稿件数表示設定-->
 <div class="mt-4 mb-4 text-center">
     <p>{{ $post2s->total() }}件が見つかりました。</p>
 </div>
+<!----------------------------------------------------------------ページネーション(投稿件数表示)設定-->
 <div class="d-flex justify-content-center mb-5">
                    {{ $post2s->appends(['category_id' => $category_id])->links() }}
 </div>
 
-
+<!-----------------------------------------------------------------評価投稿表示デザイン------------->
         <div class="container">
+
             <div class="row">
 
                 <div class="table table-hover col-md-8">
-
+<!---------------------------post2sを$post2とする（変数)------------->
                 @foreach ($post2s as $post2)
-                
+
 
                     <div class="comment-box">
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
-
+<!---------------------------category2sを$categorys2とする（変数)------------->
                                 @foreach ($category2s as $category2)
                                 <div><p> {{ $category2->name }}</p></div>
                                 @endforeach
+<!--------------------------------星のカラーにwidthで色づけしてます   いいねの平均値を を*100/5して100パーセント表示にしています--->
                                 <p><div class="star-ratings-sprite"><span style="width: {{  $post2->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
-
 
                         </div>
 
@@ -341,7 +342,7 @@
 
                             <div class="title text-center">コメント</div>
                             <div class="evaluation-message evaluation-text mb-5 p-2">
-                                
+
                                 <p>{{ $post2->message }}</p>
                             </div>
 
@@ -354,53 +355,56 @@
                     </div>
 
                     @endforeach
-                    
-                </div>
-                
-           
 
-              <!--投稿の横の空白部分-->
+                </div>
+
+                    <!-----------------------------------------------投稿の横の空白部分--------------------------------------------------->
                 <div class="col-md-4">
 
                 </div>
+
             </div>
+
         </div>
 
-        
 
+<!-----------------------------------------------スクロール設定(jQuery)--------------------------------------------------->
 <p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 
+
+                <!-----------------------------------------------ページネーション設定--------------------------------------------------->
 <div class="d-flex justify-content-center mb-5">
                    {{ $post2s->appends(['category_id' => $category_id])->links() }}
         </div>
-  <!-- javascript  読み込み-->
+        <!-- javascript  読み込み-->
   <script type="text/javascript" src="js/bbs_post.js"></script>
 @endsection
 
 
 @section('footer')
 <footer>
-        <!-- SNS連携 -->
+        <!------------------------------------------------------------------------------------ SNS連携 -->
         <div class="footer-contents .align-middle" id="all-bbs">
 
             <a class="footer-logo" href="">∞pilotis</a>
 
+               <!-- SNSリスト-->
             <div class="footer-sns justify-content-around footer-logo" >
                 <div class="sns-lists">
-
+                     <!-- TWITTER　(fontawesomeでアイコン読み込み)-->
                     <div class="sns-item twitter list-inline-item">
                         <a target="_blank" href="https://mobile.twitter.com/8pilotis">
                             <i class="fab fa-twitter-square"></i>
                         </a>
                     </div>
-
+                     <!-- youtube　(fontawesomeでアイコン読み込み)-->
                     <div class="sns-item youtube list-inline-item">
                         <a target="_blank" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
-
-                    <div class="sns-item instagram list-inline-item">
+                   <!-- facebook　(fontawesomeでアイコン読み込み)-->
+                   <div class="sns-item instagram list-inline-item">
                         <a target="_blank" href="https://www.instagram.com/8pilotis">
                             <i class="fab fa-instagram"></i>
                         </a>
@@ -408,12 +412,10 @@
 
                 </div>
             </div>
-            
+
         </div>
 
-      
-
-    </footer>
+</footer>
 @endsection
 
  
