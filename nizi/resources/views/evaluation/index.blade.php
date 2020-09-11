@@ -148,22 +148,23 @@
                 </div>
 <!--クラスにcol-sm-2を追加-->
                 <div class="p-modal-bkm__fav-spinner col-sm-2">
-        <label for="good">
-                いいね
-        </label>
-                    <input 
-                        id="good"
-                        type="number" 
-                        step="1" 
-                        min="1.0" 
-                        max="5.0" 
-                        name="good"
-                        class="form-control {{ $errors->has('good') ? 'is-invalid' : '' }}"
-                        value="{{ old('good') }}"
-                        placeholder="-" 
-                        maxlength="3" 
-                        style="width: 50px; margin-right: 20px; text-align: right;"
-                    >
+                    <label for="good">
+                            いいね
+                    </label>
+
+                     <div class="range-group">
+                        <input
+                                    id="good"
+                                    name="good"
+                                    step="1" 
+                                    type="range" 
+                                    min="1" 
+                                    max="5" 
+                                    value="{{ old('good') }}"
+                                    class=" form-control {{ $errors->has('good') ? 'is-invalid' : '' }} input-range"
+
+                                    >
+                    </div>
                 </div>
 
                     <!--単位取得難易度、雰囲気、忙しさ削除済み-->

@@ -323,6 +323,28 @@ display: flex;
   
   
 }
+/*フォームタグ星の設定*/
+.input-range {
+  display: none;
+}
+.range-group {
+  position: relative;
+}
+.range-group > a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.range-group > a:before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  color: #aaa;
+}
+.range-group > a.on:before {
+  content: "\f005";
+  color: #fc3;
+}
 /* 画面サイズ小さくしたらPOSTボタンがはみでたので修正　
     簡易的な修正　他にも修正する時に一気に変更してください*/
     /*************************
