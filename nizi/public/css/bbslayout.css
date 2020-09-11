@@ -323,7 +323,7 @@ display: flex;
   
   
 }
-/*フォームタグ星の設定*/
+/*いいねフォームタグ星の設定*/
 .input-range {
   display: none;
 }
@@ -345,6 +345,56 @@ display: flex;
   content: "\f005";
   color: #fc3;
 }
+
+/*難しさフォームタグ星の設定*/
+.input-range-d {
+  display: none;
+}
+.range-group-d {
+  position: relative;
+}
+.range-group-d > a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.range-group-d > a:before {
+  content: "\f567";
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  color: #aaa;
+}
+.range-group-d > a.on:before {
+  content: "\f567";
+  color: rgb(51, 54, 255);
+
+}
+
+
+
+/*いいねを星で表示する設定*/
+.star-ratings-sprite {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin:  auto;
+  }
+  .star-ratings-sprite-rating {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  background-position: 0 100%;
+  float: left;
+  height: 21px;
+  display: block;
+  }
+/*タイトルと横の星表示する設定*/
+  .title-star{
+    display: flex;
+  }
+
 /* 画面サイズ小さくしたらPOSTボタンがはみでたので修正　
     簡易的な修正　他にも修正する時に一気に変更してください*/
     /*************************
