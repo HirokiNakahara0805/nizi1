@@ -65,8 +65,9 @@ class Post2sController extends Controller
             'category_id' => $request->category_id,
             'good' => $request->good,
             'difficulty' => $request->difficulty,
-            'atmosphere' => $request->atmosphere,
-            'busyness' => $request->busyness,
+            'report' => $request->report,
+            'test' => $request->test,
+            
         ];
     
         $post2 = new Post2;
