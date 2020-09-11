@@ -1,0 +1,178 @@
+
+/* TOPページ用CSS（TOPページのみで使いたい時に使用）*/
+
+/*************
+通常記述の場所
+*************/
+
+/*---------------------------学科科目のスライダーの設定*/
+.img-sophia{
+    height: auto;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #333;
+    border-bottom: 1px solid #e95014;
+    box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+    margin:10px;
+    padding:5px 5px;
+}
+
+/*--------------スライダーにカーソル合わせた時のアニメーション設定*/
+.img-sophia:hover {
+    transform: scale(0.8,0.8); /*画像の拡大*/
+    cursor: pointer; /*カーソルをポインターにする*/
+    border-radius: 20px;
+    transition: 0.7s ease-in-out;
+    
+    }
+
+
+/*------------------------学科科目スライダーのタイトルに関する設定*/
+h1.your-class{
+    color:black;
+    padding:60px 10px;
+    
+}
+
+
+/*-----------slick setting*/
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+/*------------------------------------*/
+a.class-list{
+    color:black;
+    border-right-color: grey;
+}
+/*-----------------Subjectのタイトル設定*/
+.to-class{
+    margin:20px;
+    padding:20px;
+}
+
+
+
+
+
+/*---------------------------ページの一番上に戻るボタン設定*/
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 99;
+  }
+  #page-top a {
+    background: #6e6e6e;
+    text-decoration: none;
+    color: #fff;
+    width: 60px;
+    padding: 28px 5px;
+    text-align: center;
+    display: block;
+    border-radius: 90px;
+    opacity: 0.9;
+    transition: all .3s ease;
+  }
+  #page-top a:hover {
+    text-decoration: none;
+    opacity: .5;
+  }
+
+
+
+/*-----------------------------------広告用設定*/
+.koukoku-box{
+    margin-right:30px;
+    margin-left:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border: 1px solid #002549;
+}
+
+/*-----------------------------------TOP掲示板の欄設定*/
+.top-bbs-box{
+    border-bottom: 2px solid #e95014;
+    border-top: 1px solid #002549;
+    padding: 0px 0px 10px 0px;
+    margin:15px 0px 15px 0px;
+    background-color:white;
+    box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+}
+
+.top-bbs-item{
+    margin:0px 5px;
+    padding:0px 5px;
+    font-size: 15px;
+}
+
+.top-bbs-item p {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+/*-----------------TOPページ掲示板欄の背景設定*/
+.top-all-bbs-backgroundcolor{
+    background-color:rgba(224, 224, 224, 0.356);
+    padding:40px;
+}
+
+
+/*------------------TOPページ掲示板欄のタイトルに関する設定*/
+.bbs-name{
+    color:black;
+    font-size:25px;
+}
+.bbs-name:hover{
+    color:grey;
+}
+
+/*------------------TOPページ掲示板欄のタイトルの教授と曜日設定*/
+
+.top-bbs-item-frame{
+    display: flex;
+    padding: 5px 20px 0px 10px;
+
+}
+
+
+/*------------------トップページ初めて開いた時のアニメーション設定*/
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9000;
+}
+.start img  {
+    width:100%;
+    height: 100%;
+}
+
+/*************************
+メディアクエリ設定 0〜420
+*************************/
+@media screen and (min-width: 0px) and (max-width: 420px) {
+
+    /*授業スライドの科目名の位置を設定*/
+    h1.your-class {
+        color: black;
+        padding: 50px 5px;
+        margin: 5px 5px 5px 2px;
+        font-size: 4px;
+    }
+
+    .bbs-name{
+        font-size:15px;
+        padding-top:5px;
+        margin:0px;
+    }
+    .top-bbs-item{
+        font-size:10px;
+    }
+
+}

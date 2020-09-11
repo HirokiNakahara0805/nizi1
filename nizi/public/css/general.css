@@ -1,0 +1,116 @@
+
+/* generalページ用CSS（TOPページのみで使いたい時に使用）*/
+
+
+/*---------------mainの設定*/
+main{
+  margin:100;
+}
+
+/*---------------科目と時限の色設定*/
+a.secList{
+  color: black;
+}
+a.periodList{
+  color: black;
+}
+
+/*---------------generalページのaタブサイズ*/
+.general-page a{
+  font-size:30px;
+}
+
+
+/*---------------時間割の背景設定*/
+.section{
+  color: black;
+  background-color: rgba(224, 224, 224, 0.356);
+}
+
+/*------------学科名のタイトル設定*/
+.subject-title{
+  margin:30px;
+  padding:10px;
+}
+
+/*------------曜日ボックスの設定*/
+.day{
+  
+  background-color: white;
+  border: 1px solid #333;
+  border-bottom: 1px solid #e95014;
+  box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+  border-radius: 10px;
+  padding:5px 20px;
+  margin:10px 10px 10px 10px;
+}
+.day:hover{
+  border:2px solid #e95014;
+
+}
+
+
+/*------------periodのフレーム設定*/
+.period-frame{
+  background-color: white;
+  border: 1px solid #333;
+  border-bottom: 1px solid #1458e9;
+  box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+  border-radius: 10px;
+  padding:5px 20px;
+  margin:30px 10px 10px 10px;
+}
+.period-frame:hover{
+  border:2px solid #1458e9;
+}
+
+
+/*------------時限(period)の上に表示される曜日の設定*/
+.period-frame-youbi{
+  border-bottom: 2px solid #e95014;;
+  padding:5px 20px;
+  margin:30 10 10 10;
+ 
+}
+
+/*------------授業タイトルの上に表示される時限(period)の設定*/
+.subject-name-top-period{
+  border-bottom: 2px solid #1458e9;;
+  padding:5px 20px;
+  margin:30 10 10 10;
+ 
+}
+
+
+/*------------授業タイトルの設定*/
+.subjectname{
+  padding:5px;
+  margin:30px;
+  border-radius: 1px;
+  border-left:2px solid #e95014;
+  background-color:white;
+  box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+}
+
+@media screen and (min-width: 0px) and (max-width: 990px) {
+
+  .period-frame a{
+    font-size:15px;
+  }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 420px) {
+
+  main{
+      margin:0px;
+  }
+  .day{
+  margin:10px 10px 10px 0px;}
+
+  .subjectname {
+
+    font-size: 18px;}
+    
+
+}
