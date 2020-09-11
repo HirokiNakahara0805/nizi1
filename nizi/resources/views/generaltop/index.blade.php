@@ -44,6 +44,14 @@
 {{$average}}
 
 <div class="container general-top-title-frame">
+
+@foreach ($category2s as $category2)
+    <div class="row">
+            <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
+            <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
+            <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
+    </div>
+
     <div  class="general-top-title">
     @foreach ($generaltops as $generaltop)
                 <tr>
@@ -53,11 +61,34 @@
 
     </div>
     
-    @foreach ($category2s as $category2)
+    
     <div>
-        <div class="row">
-            <p class="col-md-2 subject-info-top"> {{ $category2->department }}</p>
-            <p class="col-md-2 subject-info-top"> {{ $category2->time }}</p>
+        <div class="row mb-5">
+            <p class="col-md-2 subject-info-contents"> {{ $category2->department }}</p>
+            <p class="col-md-2 subject-info-contents"> {{ $category2->period }}</p>
+            <p class="col-md-2 subject-info-contents"> {{ $category2->time }}</p>
+            <p class="col-md-2 subject-info-contents"> {{ $category2->code }}</p>
+            <p class="col-md-2 subject-info-contents"> {{ $category2->teacher }}</p>
+
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-md-2">
+                <p class="subject-info-contents"> {{ $category2->book1 }}</p>
+                <p class="subject-info-contents"> {{ $category2->link1 }}</p>
+            </div>
+            <div class="col-md-2">
+                <p class="subject-info-contents"> {{ $category2->book2 }}</p>
+                <p class="subject-info-contents"> {{ $category2->link2 }}</p>
+            </div>
+            <div class="col-md-2">
+                <p class="subject-info-contents"> {{ $category2->book2 }}</p>
+                <p class="subject-info-contents"> {{ $category2->link2 }}</p>
+            </div>
+            
+           
+
         </div>
         <div class="row subject-info-comment-frame">
             <p class="col-md-6 subject-info-comment-top">

@@ -54,23 +54,23 @@
 ?>
 {{$average}}
 
-    <div class="container general-top-title-frame">
-        <div  class="general-top-title">
+
+    <!-- トップのタイトル　掲示板と共通-->
+    <div class="container general-top-title-frame pb-3 mt-5">
+   
         @foreach ($category2s as $category2)
-                    <tr>
-                        {{ $category2->name }}
-                    </tr>
-
-        </div>
-
-
-        <div>
-            <div class="row">
-                <p class="col-md-2 subject-info-top"> {{ $category2->department }}</p>
-                <p class="col-md-2 subject-info-top"> {{ $category2->time }}</p>
+        <div  class="general-top-title">
+            <div class="row mb-3">
+                <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
+                <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
+                <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
             </div>
+            <tr>
+                {{ $category2->name }}
+            </tr>
+
         </div>
-         @endforeach
+        @endforeach
     </div>
 
    

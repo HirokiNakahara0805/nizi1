@@ -273,11 +273,17 @@ display: flex;
 }
 .general-top-title{
       font-size:40px;
-      margin:50px 0px 20px 0px;
+      margin:5px 0px 20px 0px;
       border-bottom:1px solid #e95014;
 }
 
 .subject-info-top{
+  margin:10px 2px 2px 15px;
+  font-size:2px;
+  border-left:3px solid #e95014;
+  background-color:white;
+}
+.subject-info-contents{
   margin:5px 5px 5px 15px;
   padding:5px;
   font-size:15px;
