@@ -247,7 +247,7 @@
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
 
-                                <div><p> 学年{{ $post2->year }}</p></div>
+                                
                                 <div><p> < 授業名 > </p></div>
                                 <div> <p>いいね{{ $post2->good }}</p></div>
 
@@ -260,8 +260,9 @@
 
                         </div>
                         <div class="f-container comment-info border-top">
-                            <div class="f-item float-right">投稿日時　{{ $post2->created_at->format('Y.m.d .H:i') }}</div>
-                            <div class="f-item float-right">name{{ $post2->name }}</div>
+                            <div class="f-item float-right">{{ $post2->created_at->format('Y.m.d .H:i') }}</div>
+                            <div class="f-item float-right">{{ $post2->year }}年</div>
+                            <div class="f-item float-right">{{ $post2->name }}</div>
                         </div>
                     </div>
 

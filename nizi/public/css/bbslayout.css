@@ -338,6 +338,10 @@ display: flex;
   .feature-title-1 a{
     font-size:12px;
   }
+
+  .comment-info{
+    font-size:8px;
+  }
   
  
 }
