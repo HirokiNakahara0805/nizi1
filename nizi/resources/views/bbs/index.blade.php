@@ -1,4 +1,4 @@
-
+<!-- +++++++++++++++++++++++++++++++++++++++++++++掲示板だけの画面-->
 @extends('layout.bbslayout')
  
 @section('header')
@@ -38,33 +38,33 @@
     </div>
 @endif
 
-<div class="container general-top-title-frame">
-    <div  class="general-top-title">
+    <!-- トップのタイトル　掲示板と共通-->
+    <div class="container general-top-title-frame pb-3 mt-5">
+    
     @foreach ($category2s as $category2)
-                <tr>
-                    {{ $category2->name }}
-                </tr>
-
-    </div>
-
-
-    <div>
-        <div class="row">
-            <p class="col-md-2 subject-info-top"> {{ $category2->department }}</p>
-            <p class="col-md-2 subject-info-top"> {{ $category2->time }}</p>
+    <div  class="general-top-title">
+        <div class="row subject-info-top-frame ">
+            <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
+            <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
+            <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
         </div>
+        <tr>
+            {{ $category2->name }}
+        </tr>
+
     </div>
     @endforeach
-</div>
+    </div>
 
 
-<div>
-    <ul class="reset-ul row feature-title-box">
-        <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
-        <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
-        <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
-    </ul>
-</div>
+      <!-- -->
+    <div>
+        <ul class="reset-ul row feature-title-box">
+            <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+            <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
+            <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
+        </ul>
+    </div>
 
 <!--いいね平均-->
 <?php

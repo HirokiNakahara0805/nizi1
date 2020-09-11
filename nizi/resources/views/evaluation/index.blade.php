@@ -54,23 +54,23 @@
 ?>
 {{$average}}
 
-    <div class="container general-top-title-frame">
-        <div  class="general-top-title">
+
+    <!-- トップのタイトル　掲示板と共通-->
+    <div class="container general-top-title-frame pb-3 mt-5">
+   
         @foreach ($category2s as $category2)
-                    <tr>
-                        {{ $category2->name }}
-                    </tr>
-
-        </div>
-
-
-        <div>
-            <div class="row">
-                <p class="col-md-2 subject-info-top"> {{ $category2->department }}</p>
-                <p class="col-md-2 subject-info-top"> {{ $category2->time }}</p>
+        <div  class="general-top-title">
+            <div class="row subject-info-top-frame ">
+                <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
+                <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
+                <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
             </div>
+            <tr>
+                {{ $category2->name }}
+            </tr>
+
         </div>
-         @endforeach
+        @endforeach
     </div>
 
    
@@ -90,9 +90,9 @@
 <!--クラスを"border p-4”から”pー4 comment-boxに変更-->
     <div class="p-4 comment-box">
 <!--クラスfont-sizeの追加-->
-        <h1 class="h4 mb-4 font-weight-bold font-size">
+        <h2 class="h4 mb-4 font-weight-bold font-size">
             評価投稿の新規作成
-        </h1>
+        </h2>
  
         <form method="POST" action="{{ route('evaluation.store') }}">
             @csrf
@@ -247,15 +247,33 @@
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
 
-                                
-                                <div><p> < 授業名 > </p></div>
+                                @foreach ($category2s as $category2)
+                                <div><p> {{ $category2->name }}</p></div>
+                                @endforeach
                                 <div> <p>いいね{{ $post2->good }}</p></div>
 
                         </div>
-                        
+
+                        <div class="evaluation-text border-bottom mb-5 p-2">
+
+                                <div>
+
+                                    <div> <p>難しさ{{ $post2->difficulty }}</p></div>
+
+                                    <div class="title text-center">レポート</div> <div class=""> <p>{{ $post2->report }}</p></div>
+                                    <div class="title text-center">テスト</div> <div class=""><p>{{ $post2->test }}</p></div>
+
+
+                                </div>
+
+                        </div>
+
                         <div>
-                            <div class="evaluation-message mb-5 p-2">
-                                <p>{!! nl2br(e(Str::limit($post2->message, 100))) !!}</p>
+
+                            <div class="title text-center">コメント</div>
+                            <div class="evaluation-message evaluation-text mb-5 p-2">
+                                
+                                <p>{{ $post2->message }}</p>
                             </div>
 
                         </div>

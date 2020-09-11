@@ -44,6 +44,14 @@
 {{$average}}
 
 <div class="container general-top-title-frame">
+
+@foreach ($category2s as $category2)
+        <div class="row subject-info-top-frame ">
+            <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
+            <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
+            <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
+    </div>
+
     <div  class="general-top-title">
     @foreach ($generaltops as $generaltop)
                 <tr>
@@ -53,11 +61,34 @@
 
     </div>
     
-    @foreach ($category2s as $category2)
+    
     <div>
-        <div class="row">
-            <p class="col-md-2 subject-info-top"> {{ $category2->department }}</p>
-            <p class="col-md-2 subject-info-top"> {{ $category2->time }}</p>
+        <div class="row mb-5">
+            <p class="col-md-2 subject-info-contents"> {{ $category2->department }}</p>
+            <p class="col-md-2 subject-info-contents"> {{ $category2->period }}</p>
+            <p class="col-md-2 subject-info-contents"> {{ $category2->time }}</p>
+            <p class="col-md-2 subject-info-contents"> {{ $category2->code }}</p>
+            <p class="col-md-2 subject-info-contents"> {{ $category2->teacher }}</p>
+
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-md-2">
+                <p class="subject-info-contents"> {{ $category2->book1 }}</p>
+                <p class="subject-info-contents"> {{ $category2->link1 }}</p>
+            </div>
+            <div class="col-md-2">
+                <p class="subject-info-contents"> {{ $category2->book2 }}</p>
+                <p class="subject-info-contents"> {{ $category2->link2 }}</p>
+            </div>
+            <div class="col-md-2">
+                <p class="subject-info-contents"> {{ $category2->book2 }}</p>
+                <p class="subject-info-contents"> {{ $category2->link2 }}</p>
+            </div>
+            
+           
+
         </div>
         <div class="row subject-info-comment-frame">
             <p class="col-md-6 subject-info-comment-top">
@@ -96,35 +127,48 @@
                     @if($loop->iteration < 4)
 
 
-                    <div class="comment-box" >
+                    <div class="comment-box">
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
-                            @foreach ($generaltops as $generaltop)
-                                <div>
-                                    <p>{{ $generaltop->name }}</p>
-                                </div>
-                            @endforeach
-
+                        @foreach ($generaltops as $generaltop)
+                                <div><p> {{ $generaltop->name }}</p></div>
+                        @endforeach
                                 <div> <p>いいね{{ $evaluation->good }}</p></div>
 
                         </div>
 
+                        <div class="evaluation-text border-bottom mb-5 p-2">
+
+                                <div>
+
+                                    <div> <p>難しさ{{ $evaluation->difficulty }}</p></div>
+
+                                    <div class="title text-center">レポート</div> <div class=""> <p>{{ $evaluation->report }}</p></div>
+                                    <div class="title text-center">テスト</div> <div class=""><p>{{ $evaluation->test }}</p></div>
+
+
+                                </div>
+
+                        </div>
 
                         <div>
-                            <div class="evaluation-message mb-5 p-2">
+
+                            <div class="title text-center">コメント</div>
+                            <div class="evaluation-message evaluation-text mb-5 p-2">
+                                        
                                 <p>{{ $evaluation->message }}</p>
                             </div>
 
                         </div>
                         <div class="f-container comment-info border-top">
-
-                            <div class="f-item float-right">{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
-                            <div class="f-item float-right">{{ $evaluation->year }}年</div>
-                            <div class="f-item float-right">{{ $evaluation->name }}</div>
+                                <div class="f-item float-right">{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
+                                <div class="f-item float-right">{{ $evaluation->year }}年</div>
+                                <div class="f-item float-right">{{ $evaluation->name }}</div>
                         </div>
-                    </div>
+                                </div>
                     @endif
-                     @endforeach
+                    @endforeach
+
 
                      <div class="text-center common-btn-ikkoue ">
                          <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" class="common-btn">
