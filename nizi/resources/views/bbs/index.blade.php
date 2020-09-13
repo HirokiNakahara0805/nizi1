@@ -7,6 +7,20 @@
 <title>{{ $category2->name }}の掲示板 - ∞pilotis</title>
 @endforeach
 
+<!--いいね平均-->
+<?php
+    $goodss = 0;
+
+    foreach ($goodpost2s as $goodpost2){
+        $goodss +=$goodpost2->good;
+        }
+
+    $average = round($goodss/$post2s->total(),2);
+
+
+    //全体星表示用数値
+    $stars = $average*20;
+?>
 
 
     <header class="u2-header">
@@ -51,7 +65,8 @@
         <tr>
             {{ $category2->name }}
         </tr>
-
+        <p>{{$average}}<div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
+        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >{{$post2s->total()}}</a>
     </div>
     @endforeach
     </div>
@@ -66,17 +81,7 @@
         </ul>
     </div>
 
-<!--いいね平均-->
-<?php
-    $goodss = 0;
 
-    foreach ($goodpost2s as $goodpost2){
-        $goodss +=$goodpost2->good;
-        }
-
-    $average = round($goodss/$post2s->total(),2);
-?>
-{{$average}}
 
 
 
@@ -85,14 +90,14 @@
 
 
     <div class="container mt-4 ">
-        <div class="  comment-box">
+        <div class="comment-box-form">
 
             <form method="POST" action="{{ route('bbs.store') }}" >
                 @csrf
 
                 <fieldset class="">
-                    <div class="row text-center">
-                        <div class="form-group col-sm-3">
+                    <div class="row">
+                        <div class="form-group col-sm-2">
                             
                             <input
                                 id="name"
@@ -110,13 +115,13 @@
                       </div>
         
                     
-                        <div class="form-group col-sm-3">
+            
                             
                         <div class="form-group col-sm-2">
-                          <select id="subject"
-                                name="subject"
-                                class="form-control {{ $errors->has('subject') ? 'is-invalid' : '' }}"
-                                value="{{ old('subject') }}"
+                          <select id="year"
+                                name="year"
+                                class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
+                                value="{{ old('year') }}"
                                 type="text"
                                 placeholder="学年">
                             <option value="0"selected disabled>学年</option>
@@ -125,9 +130,9 @@
 　　　　　　　　　　　　　　　　　<option value="3">３</option>
 　　　　　　　　　　　　　　　　　<option value="4">４</option>
 　　　　　　　　　　　　　　　　</select>
-                            @if ($errors->has('subject'))
+                            @if ($errors->has('year'))
                                 <div class="invalid-feedback">
-                                    {{ $errors->first('subject') }}
+                                    {{ $errors->first('year') }}
                                 </div>
                             @endif
                         </div>
@@ -212,7 +217,7 @@
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
                             <div class="f-item float-right">{{ $post->name }}</div>
-                            <div class="f-item float-right ">{{ $post->subject }}年</div>
+                            <div class="f-item float-right ">{{ $post->year }}年</div>
                             <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class=""><i class="far fa-comment-dots reply-icon"> reply</i></a></div>
 
                         </div>

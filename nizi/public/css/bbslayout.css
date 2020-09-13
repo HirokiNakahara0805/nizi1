@@ -329,6 +329,7 @@ display: flex;
 }
 .range-group {
   position: relative;
+  margin-bottom: 7px;
 }
 .range-group > a {
   display: inline-block;
@@ -352,6 +353,7 @@ display: flex;
 }
 .range-group-d {
   position: relative;
+  margin-bottom: 7px;
 }
 .range-group-d > a {
   display: inline-block;
@@ -394,6 +396,18 @@ display: flex;
   .title-star{
     display: flex;
   }
+
+  .comment-box-form{
+   
+    border-radius: 10px;
+    border: 1px solid #333333;
+    border-bottom: 2px solid #e95014;
+    box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+    padding: 10px 10px 10px 10px;
+    margin: 15px 0px 15px 0px;
+    background-color: #f8c3ae15;
+} 
+
 
 /* 画面サイズ小さくしたらPOSTボタンがはみでたので修正　
     簡易的な修正　他にも修正する時に一気に変更してください*/

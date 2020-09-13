@@ -44,7 +44,7 @@
      //全体星表示用数値
      $stars = $average*20;
 ?>
-{{$average}}
+
 
 <div class="container general-top-title-frame">
 
@@ -59,7 +59,8 @@
                     <tr>
                         {{ $category2->name }}
                     </tr>
-                    <p><div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
+                    <p>{{$average}}<div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
+                    <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >{{$post2s->total()}}</a>
                 </div>
     
     
@@ -220,7 +221,7 @@
                             <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
                                 <div class="f-item float-right">{{ $bbs->name }}</div>
-                                <div class="f-item float-right ">{{ $bbs->subject }}年</div>
+                                <div class="f-item float-right ">{{ $bbs->year }}年</div>
 
                             </div>
                         </div>

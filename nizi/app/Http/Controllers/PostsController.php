@@ -64,7 +64,7 @@ class PostsController extends Controller
     {
         $savedata = [
         'name' => $request->name,
-        'subject' => $request->subject,
+        'year' => $request->year,
         'message' => $request->message,
         'category_id' => $request->category_id,
     ];

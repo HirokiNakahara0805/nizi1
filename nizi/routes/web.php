@@ -16,22 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/', 'TopPageController', ['only' => ['index']]);
 
 //一般教養ページ
-Route::resource('general', 'GeneralPageController', ['only' => ['index']]);
+Route::resource('subject', 'SubjectController', ['only' => ['index']]);
 
-//掲示板テストページ
+//掲示板ページ
 Route::resource('bbs', 'PostsController', ['only' => ['index', 'show', 'create', 'store']]);
 Route::resource('comment', 'CommentsController', ['only' => ['store']]);
 
-//掲示板テストページ
-Route::get('/bbskari', function () {
-    return view('bbskari');
-});
 
-//評価投稿テストページ
+//評価投稿ページ
 Route::resource('evaluation', 'Post2sController', ['only' => ['index','create', 'store']]);
 
-//シラバステストページ
-Route::resource('syllabus', 'SyllabiController', ['only' => ['index']]);
 
 //般教Top画面テストページ
 Route::resource('generaltop', 'GeneraltopController', ['only' => ['index']]);
