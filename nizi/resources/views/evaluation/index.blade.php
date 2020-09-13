@@ -108,7 +108,7 @@
 <!----------------------------------------------------投稿フォーム設定------------------------------------------------->
 <div class="container mt-4">
             <!--------formフレーム-->
-    <div class="p-4 comment-box">
+    <div class="p-4 comment-box-form">
             <!-----------------------投稿フォームタイトル開始-->
         <h2 class="h4 mb-4 font-weight-bold font-size">
             評価投稿の新規作成
@@ -120,7 +120,7 @@
             <fieldset class="mb-4">
                 <div class="row">
                      <!------------------------------------------ニックネームインプット------------>
-                    <div class="form-group col-sm-7">
+                    <div class="form-group col-sm-5">
                         <label for="name">
                             ニックネーム
                         </label>
@@ -168,9 +168,9 @@
                     </div>
                 </div>
                         <!------------------------------------------------------------------------ 星インプット-->
-　　　　　　　　　 <div class="row">
+　　　　　　　　　 <div class="row pb-3">
 
-                    <div class="p-modal-bkm__fav-spinner col-sm-2">
+                    <div class="p-modal-bkm__fav-spinner col-sm-2 mb-5">
                         <label for="good">
                                 いいね
                         </label>
@@ -184,7 +184,7 @@
                                         min="1" 
                                         max="5" 
                                         value="{{ old('good') }}"
-                                        class=" form-control {{ $errors->has('good') ? 'is-invalid' : '' }} input-range"
+                                        class="input-range  {{ $errors->has('good') ? 'is-invalid' : '' }} "
 
                                         >
                         </div>
@@ -197,7 +197,7 @@
                     @endif
 
                             <!----------------------------------------------------------------------- 難しさインプット-->
-                    <div class="p-modal-bkm__fav-spinner col-sm-2">
+                    <div class="p-modal-bkm__fav-spinner col-sm-2 mb-3">
                         <label for="difficulty">
                                 難しさ
                         </label>
@@ -212,7 +212,7 @@
                                         min="1" 
                                         max="5" 
                                         value="{{ old('difficulty') }}"
-                                        class=" form-control {{ $errors->has('difficulty') ? 'is-invalid' : '' }} input-range-d"
+                                        class="input-range-d  {{ $errors->has('difficulty') ? 'is-invalid' : '' }} "
 
                             >
 
@@ -221,45 +221,46 @@
                 </div>
 
                     <!---------------------------------------------------------------------- レポートインプット-->
-                <div class="form-group">
-                    <label for="report">
-                        レポートについて
-                    </label>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="report">
+                            レポートについて
+                        </label>
 
-                    <textarea
-                        id="report"
-                        name="report"
-                        class="form-control {{ $errors->has('report') ? 'is-invalid' : '' }}"
-                        cols="20" rows="4"　 wrap="hard"
-                    >{{ old('report') }}</textarea>
-                    @if ($errors->has('report'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('report') }}
-                        </div>
-                    @endif
+                        <textarea
+                            id="report"
+                            name="report"
+                            class="form-control {{ $errors->has('report') ? 'is-invalid' : '' }}"
+                            cols="20" rows="4"　 wrap="hard"
+                        >{{ old('report') }}</textarea>
+                        @if ($errors->has('report'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('report') }}
+                            </div>
+                        @endif
+                    </div>
+
+
+                        <!---------------------------------------------------------------------------------- テストインプット-->
+                    <div class="form-group col-md-6">
+                        <label for="test">
+                            テストについて
+                        </label>
+
+                        <textarea
+                            id="test"
+                            name="test"
+                            class="form-control {{ $errors->has('test') ? 'is-invalid' : '' }}"
+                            cols="20" rows="4"　 wrap="hard"
+                        >{{ old('test') }}</textarea>
+                        @if ($errors->has('test'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('test') }}
+                            </div>
+                        @endif
+                    </div>
+
                 </div>
-
-
-                    <!---------------------------------------------------------------------------------- テストインプット-->
-                <div class="form-group">
-                    <label for="test">
-                        テストについて
-                    </label>
-
-                    <textarea
-                        id="test"
-                        name="test"
-                        class="form-control {{ $errors->has('test') ? 'is-invalid' : '' }}"
-                        cols="20" rows="4"　 wrap="hard"
-                    >{{ old('test') }}</textarea>
-                    @if ($errors->has('test'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('test') }}
-                        </div>
-                    @endif
-                </div>
-
-
 <!-------------------------------------------------------------------------------------- コメントインプット-->
                 <div class="form-group">
                     <label for="message">
@@ -280,11 +281,12 @@
                 </div>
 
 <!----------------------------------------------------------------------------POSTボタン設定-->
-                    <div class="mt-2 text-right">
-                        <button type="submit" class="">
-                            <i class="fas fa-paper-plane post-icon">POST</i>
-                        </button>
-                    </div>
+                <div class="text-right post-position mr-5">
+                        
+                    <button type="submit" class="post-botton" >
+                       <i class="fas fa-paper-plane post-icon">POST</i>
+                   </button>
+                </div>
 
             </fieldset>
         </form>

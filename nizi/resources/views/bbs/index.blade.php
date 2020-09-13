@@ -85,14 +85,14 @@
 
 
     <div class="container mt-4 ">
-        <div class="  comment-box">
+        <div class="comment-box-form">
 
             <form method="POST" action="{{ route('bbs.store') }}" >
                 @csrf
 
                 <fieldset class="">
-                    <div class="row text-center">
-                        <div class="form-group col-sm-3">
+                    <div class="row">
+                        <div class="form-group col-sm-2">
                             
                             <input
                                 id="name"
@@ -110,7 +110,7 @@
                       </div>
         
                     
-                        <div class="form-group col-sm-3">
+            
                             
                         <div class="form-group col-sm-2">
                           <select id="subject"
