@@ -118,10 +118,10 @@
             
                             
                         <div class="form-group col-sm-2">
-                          <select id="subject"
-                                name="subject"
-                                class="form-control {{ $errors->has('subject') ? 'is-invalid' : '' }}"
-                                value="{{ old('subject') }}"
+                          <select id="year"
+                                name="year"
+                                class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
+                                value="{{ old('year') }}"
                                 type="text"
                                 placeholder="学年">
                             <option value="0"selected disabled>学年</option>
@@ -130,9 +130,9 @@
 　　　　　　　　　　　　　　　　　<option value="3">３</option>
 　　　　　　　　　　　　　　　　　<option value="4">４</option>
 　　　　　　　　　　　　　　　　</select>
-                            @if ($errors->has('subject'))
+                            @if ($errors->has('year'))
                                 <div class="invalid-feedback">
-                                    {{ $errors->first('subject') }}
+                                    {{ $errors->first('year') }}
                                 </div>
                             @endif
                         </div>
@@ -217,7 +217,7 @@
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
                             <div class="f-item float-right">{{ $post->name }}</div>
-                            <div class="f-item float-right ">{{ $post->subject }}年</div>
+                            <div class="f-item float-right ">{{ $post->year }}年</div>
                             <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class=""><i class="far fa-comment-dots reply-icon"> reply</i></a></div>
 
                         </div>
