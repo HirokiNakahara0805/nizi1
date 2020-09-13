@@ -221,7 +221,7 @@
                             <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
                                 <div class="f-item float-right">{{ $bbs->name }}</div>
-                                <div class="f-item float-right ">{{ $bbs->subject }}年</div>
+                                <div class="f-item float-right ">{{ $bbs->year }}年</div>
 
                             </div>
                         </div>
