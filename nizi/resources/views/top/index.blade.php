@@ -34,37 +34,37 @@
 
 					<!-- 学科表示スライダーの中身-->
 					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/general') }}" >
+							<a href="{{ url('/subject') }}" >
 								<h1 class="your-class">General education</h1>
 							</a>
 					</div>
 
 					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/general') }}" >
+							<a href="{{ url('/subject') }}" >
 								<h1 class="your-class">General education</h1>
 							</a>
 					</div>
 
 					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/general') }}" >
+							<a href="{{ url('/subject') }}" >
 								<h1 class="your-class">General education</h1>
 							</a>
 					</div>
 
 					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/general') }}" >
+							<a href="{{ url('/subject') }}" >
 								<h1 class="your-class">General education</h1>
 							</a>
 					</div>
 
 					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/general') }}" >
+							<a href="{{ url('/subject') }}" >
 								<h1 class="your-class">General education</h1>
 							</a>
 					</div>
 
 					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/general') }}" >
+							<a href="{{ url('/subject') }}" >
 								<h1 class="your-class">General education</h1>
 							</a>
 					</div>

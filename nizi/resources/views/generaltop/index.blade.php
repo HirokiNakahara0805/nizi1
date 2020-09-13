@@ -44,7 +44,7 @@
      //全体星表示用数値
      $stars = $average*20;
 ?>
-{{$average}}
+
 
 <div class="container general-top-title-frame">
 
@@ -59,7 +59,8 @@
                     <tr>
                         {{ $category2->name }}
                     </tr>
-                    <p><div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
+                    <p>{{$average}}<div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
+                    <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >{{$post2s->total()}}</a>
                 </div>
     
     

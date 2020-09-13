@@ -7,6 +7,20 @@
 <title>{{ $category2->name }}の掲示板 - ∞pilotis</title>
 @endforeach
 
+<!--いいね平均-->
+<?php
+    $goodss = 0;
+
+    foreach ($goodpost2s as $goodpost2){
+        $goodss +=$goodpost2->good;
+        }
+
+    $average = round($goodss/$post2s->total(),2);
+
+
+    //全体星表示用数値
+    $stars = $average*20;
+?>
 
 
     <header class="u2-header">
@@ -51,7 +65,8 @@
         <tr>
             {{ $category2->name }}
         </tr>
-
+        <p>{{$average}}<div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
+        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >{{$post2s->total()}}</a>
     </div>
     @endforeach
     </div>
@@ -66,17 +81,7 @@
         </ul>
     </div>
 
-<!--いいね平均-->
-<?php
-    $goodss = 0;
 
-    foreach ($goodpost2s as $goodpost2){
-        $goodss +=$goodpost2->good;
-        }
-
-    $average = round($goodss/$post2s->total(),2);
-?>
-{{$average}}
 
 
 
