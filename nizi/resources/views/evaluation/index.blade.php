@@ -87,6 +87,7 @@
                         {{ $category2->name }}
                     </tr>
                     <p><div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
+                    <p>{{$post2s->total()}}</p>{{$average}}
                 </div>
             </div>
         @endforeach
