@@ -154,13 +154,18 @@
                         <label for="year">
                             学年
                         </label>
-                        <input
-                            id="year"
-                            name="year"
-                            class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
-                            value="{{ old('year') }}"
-                            type="text"
-                        >
+                        <select id="year"
+                                name="year"
+                                class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
+                                value="{{ old('year') }}"
+                                type="number"
+                                placeholder="学年">
+                            <option value="0"selected disabled>学年</option>
+　　　　　　　　　　　　　　　　　<option value="1">１</option>
+　　　　　　　　　　　　　　　　　<option value="2">２</option>
+　　　　　　　　　　　　　　　　　<option value="3">３</option>
+　　　　　　　　　　　　　　　　　<option value="4">４</option>
+　　　　　　　　　　　　　　　　</select>
                         @if ($errors->has('year'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('year') }}
@@ -412,6 +417,18 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
+
+                </div>
+                <div class="link-list">
+                    <p>
+            　　         <a href="terms">利用規約</a>
+                        <a href="beginnersguide">初めての方へ</a>
+                        <a href="http://127.0.0.1:8000/beginnersguide#beginners-organization">運営組織</a>
+                        <a href="contentpolicy">コンテンツポリシー</a>
+                        <a href="privacypolicy">プライバシーポリシー</a>
+                        <a href="http://127.0.0.1:8000/beginnersguide#beginners-faq">よくある質問</a>
+                        <a href="http://127.0.0.1:8000/beginnersguide#beginners-inquiry">お問い合わせ</a>
+                    </p>
 
                 </div>
             </div>
