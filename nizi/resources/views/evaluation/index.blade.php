@@ -175,7 +175,7 @@
                         <label for="good">
                                 いいね
                         </label>
-
+　　　
                         <div class="range-group">
                             <input
                                         id="good"
