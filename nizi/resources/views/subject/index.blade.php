@@ -118,8 +118,8 @@
 										<div id="mon1" class="mon12345">
 											<a><p class="subject-name-top-period">1st period</p></a>
 											<!--月曜日1限だけ出力-->
-											@foreach($categorym1s as $categorym1)
-											<a href="{{ route('generaltop.index', ['category_id'=>$categorym1->id]) }}" title="{{ $categorym1->name }}"><p class="subjectname">{{ $categorym1->name }}</p></a>
+											@foreach($categorymo1s as $categorymo1)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categorymo1->id]) }}" title="{{ $categorymo1->name }}"><p class="subjectname">{{ $categorymo1->name }}</p></a>
 											@endforeach
 										</div>
 										
@@ -179,8 +179,8 @@
 									<div id="tue2" class="tue12345">
 										<a><p class="subject-name-top-period">2nd period</p></a>
 											<!--火曜日2限だけ出力-->
-										@foreach($categoryt2s as $categoryt2)
-										<a href="{{ route('generaltop.index', ['category_id'=>$categoryt2->id]) }}" title="{{ $categoryt2->name }}"><p class="subjectname">{{ $categoryt2->name }}</p></a>
+										@foreach($categorytu2s as $categorytu2)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categorytu2->id]) }}" title="{{ $categorytu2->name }}"><p class="subjectname">{{ $categorytu2->name }}</p></a>
 										@endforeach
 									</div>
 
