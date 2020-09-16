@@ -284,7 +284,7 @@ display: flex;
 .general-top-title{
       font-size:40px;
       margin:5px 0px 20px 0px;
-      border-bottom:1px solid #e95014;
+      /* border-bottom:1px solid #e95014; */
 }
 
 .subject-info-top{
@@ -391,12 +391,12 @@ display: flex;
   float: left;
   height: 21px;
   display: block;
+  margin:auto;
   }
 /*タイトルと横の星表示する設定*/
   .title-star{
     display: flex;
   }
-
   .comment-box-form{
    
     border-radius: 10px;
@@ -408,7 +408,26 @@ display: flex;
     background-color: #f8c3ae15;
 } 
 
+/*星の横の平均値設定*/
 
+.star-average{
+  font-size: 30px;
+  color:black;
+  margin:10px 0px 0px 10px;
+}
+
+.star-average-box{
+  display: flex;
+}
+/*コメント数設定*/
+.comment-kennsuu{
+  color:black;
+  font-size: 15px;
+  margin:20px 0px 0px 0px;
+}
+.comment-kensuu-box{
+
+}
 /* 画面サイズ小さくしたらPOSTボタンがはみでたので修正　
     簡易的な修正　他にも修正する時に一気に変更してください*/
     /*************************

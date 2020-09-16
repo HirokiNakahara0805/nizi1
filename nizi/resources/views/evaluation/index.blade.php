@@ -17,7 +17,7 @@
 
 <!-------------------------------------------------------ヘッダー挿入-->
 @section('header')
-
+ 
     <header class="u2-header">
         <div class="u2-header__container-inner">
             <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
@@ -82,12 +82,22 @@
                     <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
                     <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
                 </div>
-                <div class="title-star">
-                    <tr>
-                        {{ $category2->name }}
-                    </tr>
-                    <p><div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
-                    <p>{{$post2s->total()}}</p>{{$average}}
+
+                <div class="general-top-title title-star row "> 
+                    <div class="col-md-3 border-line-orange">
+                        <tr>{{ $category2->name }}</tr>
+                     </div>
+                    <div class="col-md-4 star-average-box border-line-orange">
+                       <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p class="star-average">Rate:{{ $average }}</p></a>
+                        <div class="star-ratings-sprite ">
+                            <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-3 comment-kensuu-box">
+                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
+                            <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
+                        </a>
+                    </div> -->
                 </div>
             </div>
         @endforeach

@@ -77,10 +77,13 @@
 
 			<div class="container" id="all-bbs">
 
+			
 				<div class="row">
+					
 
 					<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
 						<!-- カテゴリーテーブルを変数宣言してます -->
+						<h1	class="text-center m-2" >BBS title</h1>
 						@foreach($category2s as $category2)
 						<div class="top-bbs-box">
 								<div class="border-bottom top-bbs-item-frame">

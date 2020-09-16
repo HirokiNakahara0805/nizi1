@@ -47,21 +47,30 @@
 ?>
 
 
-<div class="container general-top-title-frame">
+<div class="container general-top-title-frame mt-5">
 
 @foreach ($category2s as $category2)
-        <div class="row subject-info-top-frame ">
+        <div class="row subject-info-top-frame">
             <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
             <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
             <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
-    </div>
-
-                <div class="general-top-title title-star"> 
-                    <tr>
-                        {{ $category2->name }}
-                    </tr>
-                    <p>{{$average}}<div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
-                    <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >{{$post2s->total()}}</a>
+          </div>
+            
+                <div class="general-top-title title-star row "> 
+                    <div class="col-md-3 border-line-orange">
+                        <tr>{{ $category2->name }}</tr>
+                     </div>
+                    <div class="col-md-4 star-average-box border-line-orange">
+                       <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p class="star-average">Rate:{{ $average }}</p></a>
+                        <div class="star-ratings-sprite ">
+                            <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-3 comment-kensuu-box">
+                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
+                            <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
+                        </a>
+                    </div> -->
                 </div>
     
     
@@ -74,7 +83,7 @@
             <p class="col-md-2 subject-info-contents"> {{ $category2->teacher }}</p>
 
         </div>
-
+ 
 
         <div class="row mt-5">
             <div class="col-md-2">
@@ -125,6 +134,9 @@
                         <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>
                     </div>
 
+                    <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
+                            <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
+                    </a>
 
                     @foreach ($evaluations as $evaluation)
                     @if($loop->iteration < 4)
@@ -315,9 +327,9 @@
     </footer>
 @endsection
 
- 
+<!--  
 <div>
 @foreach($categories as $id => $name)
 <span class="btn"><a href="{{ route('generaltop.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
 @endforeach
-</div>
+</div> -->
