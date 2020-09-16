@@ -30,6 +30,9 @@ Route::resource('evaluation', 'Post2sController', ['only' => ['index','create', 
 //般教Top画面テストページ
 Route::resource('generaltop', 'GeneraltopController', ['only' => ['index']]);
 
+//チャットテストページ
+Route::resource('chat', 'ChatsController', ['only' => ['index', 'store']]);
+
 //初めての方へページ
 Route::get('/beginnersguide', function () {
     return view('footer.beginnersguide');
