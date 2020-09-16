@@ -111,14 +111,14 @@
                     <div class="row">
                         <div class="form-group col-sm-2">
                             
-                            <input
+                            <textarea
                                 id="name"
                                 name="name"
                                 class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
                                 value="{{ old('name') }}"
                                 type="text"
-                                placeholder="ニックネーム"
-                            >
+                                rows="1"
+                            >ニックネーム</textarea>
                             @if ($errors->has('name'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('name') }}
@@ -135,7 +135,8 @@
                                 class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
                                 value="{{ old('year') }}"
                                 type="number"
-                                placeholder="学年">
+                                placeholder="学年"
+                                >
                             <option value="0"selected disabled>学年</option>
 　　　　　　　　　　　　　　　　　<option value="1">１</option>
 　　　　　　　　　　　　　　　　　<option value="2">２</option>

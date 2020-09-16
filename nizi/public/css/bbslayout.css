@@ -408,6 +408,18 @@ display: flex;
     background-color: #f8c3ae15;
 } 
 
+/*reply form 設定*/
+.reply-box-form{
+   
+  border-radius: 10px;
+  border: 1px solid #333333;
+  border-bottom: 2px solid #e95014;
+  box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+  padding: 10px 10px 50px 10px;
+  margin: 15px 0px 15px 0px;
+  background-color: #f8c3ae15;
+} 
+
 /*星の横の平均値設定*/
 
 .star-average{
