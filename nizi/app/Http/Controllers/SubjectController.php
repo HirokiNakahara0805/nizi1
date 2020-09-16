@@ -5,36 +5,36 @@ use App\Category;
 class SubjectController extends Controller{
    public function index(){
 
-    $categorymo1s=Category::where('time','月1')->get();
-    $categorymo2s=Category::where('time','月2')->get();
-    $categorymo3s=Category::where('time','月3')->get();
-    $categorymo4s=Category::where('time','月4')->get();
-    $categorymo5s=Category::where('time','月5')->get();
+    $categorymo1s=Category::where('time','like','%月1%')->get();
+    $categorymo2s=Category::where('time','like','%月2%')->get();
+    $categorymo3s=Category::where('time','like','%月3%')->get();
+    $categorymo4s=Category::where('time','like','%月4%')->get();
+    $categorymo5s=Category::where('time','like','%月5%')->get();
 
-    $categorytu1s=Category::where('time','火1')->get();
-    $categorytu2s=Category::where('time','火2')->get();
-    $categorytu3s=Category::where('time','火3')->get();
-    $categorytu4s=Category::where('time','火4')->get();
-    $categorytu5s=Category::where('time','火5')->get();
+    $categorytu1s=Category::where('time','like','%火1%')->get();
+    $categorytu2s=Category::where('time','like','%火2%')->get();
+    $categorytu3s=Category::where('time','like','%火3%')->get();
+    $categorytu4s=Category::where('time','like','%火4%')->get();
+    $categorytu5s=Category::where('time','like','%火5%')->get();
 
-    $categorywe1s=Category::where('time','水1')->get();
-    $categorywe2s=Category::where('time','水2')->get();
-    $categorywe3s=Category::where('time','水3')->get();
-    $categorywe4s=Category::where('time','水4')->get();
-    $categorywe5s=Category::where('time','水5')->get();
+    $categorywe1s=Category::where('time','like','%水1%')->get();
+    $categorywe2s=Category::where('time','like','%水2%')->get();
+    $categorywe3s=Category::where('time','like','%水3%')->get();
+    $categorywe4s=Category::where('time','like','%水4%')->get();
+    $categorywe5s=Category::where('time','like','%水5%')->get();
 
-    $categoryth1s=Category::where('time','木1')->get();
-    $categoryth2s=Category::where('time','木2')->get();
-    $categoryth3s=Category::where('time','木3')->get();
-    $categoryth4s=Category::where('time','木4')->get();
-    $categoryth5s=Category::where('time','木5')->get();
+    $categoryth1s=Category::where('time','like','%木1%')->get();
+    $categoryth2s=Category::where('time','like','%木2%')->get();
+    $categoryth3s=Category::where('time','like','%木3%')->get();
+    $categoryth4s=Category::where('time','like','%木4%')->get();
+    $categoryth5s=Category::where('time','like','%木5%')->get();
 
-    $categoryfr1s=Category::where('time','金1')->get();
-    $categoryfr2s=Category::where('time','金2')->get();
-    $categoryfr3s=Category::where('time','金3')->get();
-    $categoryfr4s=Category::where('time','金4')->get();
-    $categoryfr5s=Category::where('time','金5')->get();
-    $categoryfr6s=Category::where('time','金6')->get();
+    $categoryfr1s=Category::where('time','like','%金1%')->get();
+    $categoryfr2s=Category::where('time','like','%金2%')->get();
+    $categoryfr3s=Category::where('time','like','%金3%')->get();
+    $categoryfr4s=Category::where('time','like','%金4%')->get();
+    $categoryfr5s=Category::where('time','like','%金5%')->get();
+    $categoryfr6s=Category::where('time','like','%金6%')->get();
 
        return view('subject.index', [
 
@@ -62,12 +62,12 @@ class SubjectController extends Controller{
         'categoryth4s' => $categoryth4s,
         'categoryth5s' => $categoryth5s,
 
-        'categorytfr1' => $categoryfr1s,
-        'categorytfr2' => $categoryfr2s,
-        'categorytfr3' => $categoryfr3s,
-        'categorytfr4' => $categoryfr4s,
-        'categorytfr5' => $categoryfr5s,
-        'categorytfr6' => $categoryfr6s,
+        'categoryfr1s' => $categoryfr1s,
+        'categoryfr2s' => $categoryfr2s,
+        'categoryfr3s' => $categoryfr3s,
+        'categoryfr4s' => $categoryfr4s,
+        'categoryfr5s' => $categoryfr5s,
+        'categoryfr6s' => $categoryfr6s,
         
 
     ]);

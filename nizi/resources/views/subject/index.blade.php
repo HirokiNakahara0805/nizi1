@@ -126,23 +126,30 @@
 									
 									<div id="mon2" class="mon12345">
 										<a><p class="subject-name-top-period">2nd period</p></a>
-										<a><p class="subjectname">1111ｍ</p></a>
-										<a><p class="subjectname">1111ｍ</p></a>
+										<!--月曜日2限だけ出力-->
+										@foreach($categorymo2s as $categorymo2)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categorymo2->id]) }}" title="{{ $categorymo2->name }}"><p class="subjectname">{{ $categorymo2->name }}</p></a>
+										@endforeach
 									</div>
 									<div id="mon3" class="mon12345">
 										<a><p class="subject-name-top-period">3rd period</p></a>
-										<a><p class="subjectname">1111ｍ</p></a>
-										<a><p class="subjectname">1111ｍ</p></a>
+										@foreach($categorymo3s as $categorymo3)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categorymo3->id]) }}" title="{{ $categorymo3->name }}"><p class="subjectname">{{ $categorymo3->name }}</p></a>
+										@endforeach
 									</div>
 									<div id="mon4" class="mon12345">
 										<a><p class="subject-name-top-period">4th period</p></a>
-										<a><p class="subjectname">1111ｍ</p></a>
-										<a><p class="subjectname">1111ｍ</p></a>
+										<!--月曜日4限だけ出力-->
+										@foreach($categorymo4s as $categorymo4)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categorymo4->id]) }}" title="{{ $categorymo4->name }}"><p class="subjectname">{{ $categorymo4->name }}</p></a>
+										@endforeach
 									</div>
 									<div id="mon5" class="mon12345">
 										<a><p class="subject-name-top-period">5th period</p></a>
-										<a><p class="subjectname">1111ｍ</p></a>
-										<a><p class="subjectname">1111ｍ</p></a>
+										<!--月曜日5限だけ出力-->
+										@foreach($categorymo5s as $categorymo5)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categorymo5->id]) }}" title="{{ $categorymo5->name }}"><p class="subjectname">{{ $categorymo5->name }}</p></a>
+										@endforeach
 									</div>
 								</div>
 							</div>
@@ -173,8 +180,9 @@
 								<div class="classboard col-md-8">
 									<div id="tue1" class="tue12345">
 										<a><p class="subject-name-top-period">1st period</p></a>
-										<a><p class="subjectname">1111tue</p></a>
-										<a><p class="subjectname">1111tue</p></a>
+										@foreach($categorytu1s as $categorytu1)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categorytu1->id]) }}" title="{{ $categorytu1->name }}"><p class="subjectname">{{ $categorytu1->name }}</p></a>
+										@endforeach
 									</div>
 									<div id="tue2" class="tue12345">
 										<a><p class="subject-name-top-period">2nd period</p></a>
@@ -187,19 +195,24 @@
 
 									<div id="tue3" class="tue12345">
 										<a><p class="subject-name-top-period">3rd period</p></a>
-										<a><p class="subjectname">1111tue</p></a>
-										<a><p class="subjectname">1111tue</p></a>
+										<!--火曜日3限だけ出力-->
+										@foreach($categorytu3s as $categorytu3)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categorytu3->id]) }}" title="{{ $categorytu3->name }}"><p class="subjectname">{{ $categorytu3->name }}</p></a>
+										@endforeach
 									</div>
 									<div id="tue4" class="tue12345">
 										<a><p class="subject-name-top-period">4th period</p></a>
-										<a><p class="subjectname">1111tue</p></a>
-										<a><p class="subjectname">1111tue</p></a>
-										<a><p class="subjectname">1111tue</p></a>
+										<!--火曜日4限だけ出力-->
+										@foreach($categorytu4s as $categorytu4)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categorytu4->id]) }}" title="{{ $categorytu4->name }}"><p class="subjectname">{{ $categorytu4->name }}</p></a>
+										@endforeach
 									</div>
 									<div id="tue5" class="tue12345">
 										<a><p class="subject-name-top-period">5th period</p></a>
-										<a><p class="subjectname">1111tue</p></a>
-										<a><p class="subjectname">1111tue</p></a>
+										<!--火曜日5限だけ出力-->
+										@foreach($categorytu5s as $categorytu5)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categorytu5->id]) }}" title="{{ $categorytu5->name }}"><p class="subjectname">{{ $categorytu5->name }}</p></a>
+										@endforeach
 									</div>
 								</div>
 							</div>
@@ -229,28 +242,38 @@
 								<div class="classboard col-md-8">
 									<div id="wed1" class="wed12345">
 										<a><p class="subject-name-top-period">1st period</p></a>
-										<a><p class="subjectname">1111tue</p></a>
-										<a><p class="subjectname">111wednesday1tue</p></a>
+										<!--水曜日1限だけ出力-->
+										@foreach($categorywe1s as $categorywe1)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categorywe1->id]) }}" title="{{ $categorywe1->name }}"><p class="subjectname">{{ $categorywe1->name }}</p></a>
+										@endforeach
 									</div>
 									<div id="wed2" class="wed12345">
 										<a><p class="subject-name-top-period">2nd period</p></a>
-										<a><p class="subjectname">1111tue</p></a>
-										<a><p class="subjectname">1111wednesdaytue</p></a>
+										<!--水曜日2限だけ出力-->
+										@foreach($categorywe2s as $categorywe2)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categorywe2->id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										@endforeach
 									</div>
 									<div id="wed3" class="wed12345">
 										<a><p class="subject-name-top-period">3rd period</p></a>
-										<a><p class="subjectname">1111tue</p></a>
-										<a><p class="subjectname">1111wednesdaytue</p></a>
+										<!--水曜日3限だけ出力-->
+										@foreach($categorywe2s as $categorywe2)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categorywe2->id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										@endforeach
 									</div>
 									<div id="wed4" class="wed12345">
 										<a><p class="subject-name-top-period">4th period</p></a>
-										<a><p class="subjectname">1111tue</p></a>
-										<a><p class="subjectname">111wednesday1tue</p></a>
+										<!--水曜日4限だけ出力-->
+										@foreach($categorywe2s as $categorywe2)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categorywe2->id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										@endforeach
 									</div>
 									<div id="wed5" class="wed12345">
 										<a><p class="subject-name-top-period">5th period</p></a>
-										<a><p class="subjectname">1111tue</p></a>
-										<a><p class="subjectname">1111wednesday</p></a>
+										<!--水曜日5限だけ出力-->
+										@foreach($categorywe2s as $categorywe2)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categorywe2->id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										@endforeach
 									</div>
 								</div>
 							</div>
@@ -279,28 +302,38 @@
 									<div class="classboard col-md-8">
 										<div id="thu1" class="thu12345">
 											<a><p class="subject-name-top-period">1st period</p></a>
-											<a><p class="subjectname">111thurs1tue</p></a>
-											<a><p class="subjectname">111thursday1tue</p></a>
+											<!--木曜日1限だけ出力-->
+										@foreach($categoryth1s as $categoryth1)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categoryth1->id]) }}" title="{{ $categoryth1->name }}"><p class="subjectname">{{ $categoryth1->name }}</p></a>
+										@endforeach
 										</div>
 										<div id="thu2" class="thu12345">
 											<a><p class="subject-name-top-period">2nd period</p></a>
-											<a><p class="subjectname">1111tue</p></a>
-											<a><p class="subjectname">1111thursdaytue</p></a>
+											<!--木曜日2限だけ出力-->
+										@foreach($categoryth2s as $categoryth2)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categoryth2->id]) }}" title="{{ $categoryth2->name }}"><p class="subjectname">{{ $categoryth2->name }}</p></a>
+										@endforeach
 										</div>
 										<div id="thu3" class="thu12345">
 											<a><p class="subject-name-top-period">3rd period</p></a>
-											<a><p class="subjectname">1111tue</p></a>
-											<a><p class="subjectname">111thursday1tue</p></a>
+											<!--木曜日3限だけ出力-->
+										@foreach($categoryth3s as $categoryth3)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categoryth3->id]) }}" title="{{ $categoryth3->name }}"><p class="subjectname">{{ $categoryth3->name }}</p></a>
+										@endforeach
 										</div>
 										<div id="thu4" class="thu12345">
 											<a><p class="subject-name-top-period">4th period</p></a>
-											<a><p class="subjectname">1111tue</p></a>
-											<a><p class="subjectname">111thursday1tue</p></a>
+											<!--木曜日4限だけ出力-->
+										@foreach($categoryth4s as $categoryth4)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categoryth4->id]) }}" title="{{ $categoryth4->name }}"><p class="subjectname">{{ $categoryth4->name }}</p></a>
+										@endforeach
 										</div>
 										<div id="thu5" class="thu12345">
 											<a><p class="subject-name-top-period">5th period</p></a>
-											<a><p class="subjectname">1111tue</p></a>
-											<a><p class="subjectname">1111thursday</p></a>
+											<!--木曜日5限だけ出力-->
+										@foreach($categoryth5s as $categoryth5)
+										<a href="{{ route('generaltop.index', ['category_id'=>$categoryth5->id]) }}" title="{{ $categoryth5->name }}"><p class="subjectname">{{ $categoryth5->name }}</p></a>
+										@endforeach
 										</div>
 									</div>
 								</div>
@@ -325,33 +358,53 @@
 										<div class="period-frame">
 											<a href="#fri5" class="periodList">5th period</a>
 										</div>
+										<div class="period-frame">
+											<a href="#fri6" class="periodList">6th period</a>
+										</div>
 									</div>
 
 									<div class="classboard col-md-8">
 										<div id="fri1" class="fri12345">
 											<a><p class="subject-name-top-period">1st period</p></a>
-											<a><p class="subjectname">111friday1tue</p></a>
-											<a><p class="subjectname">1111tue</p></a>
+											<!--金曜日1限だけ出力-->
+											@foreach($categoryfr1s as $categoryfr1)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categoryfr1->id]) }}" title="{{ $categoryfr1->name }}"><p class="subjectname">{{ $categoryfr1->name }}</p></a>
+											@endforeach
 										</div>
 										<div id="fri2" class="fri12345">
 											<a><p class="subject-name-top-period">2nd period</p></a>
-											<a><p class="subjectname">1111tue</p></a>
-											<a><p class="subjectname">1111fridaytue</p></a>
+											<!--金曜日2限だけ出力-->
+											@foreach($categoryfr2s as $categoryfr2)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categoryfr2->id]) }}" title="{{ $categoryfr2->name }}"><p class="subjectname">{{ $categoryfr2->name }}</p></a>
+											@endforeach
 										</div>
 										<div id="fri3" class="fri12345">
 											<a><p class="subject-name-top-period">3rd period</p></a>
-											<a><p class="subjectname">1111tue</p></a>
-											<a><p class="subjectname">1fridaytue</p></a>
+											<!--金曜日3限だけ出力-->
+											@foreach($categoryfr3s as $categoryfr3)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categoryfr3->id]) }}" title="{{ $categoryfr3->name }}"><p class="subjectname">{{ $categoryfr3->name }}</p></a>
+											@endforeach
 										</div>
 										<div id="fri4" class="fri12345">
 											<a><p class="subject-name-top-period">4th period</p></a>
-											<a><p class="subjectname">1111tue</p></a>
-											<a><p class="subjectname">1fridaytue</p></a>
+											<!--金曜日4限だけ出力-->
+											@foreach($categoryfr4s as $categoryfr4)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categoryfr4->id]) }}" title="{{ $categoryfr4->name }}"><p class="subjectname">{{ $categoryfr4->name }}</p></a>
+											@endforeach
 										</div>
 										<div id="fri5" class="fri12345">
 											<a><p class="subject-name-top-period">5th period</p></a>
-											<a><p class="subjectname">1111tue</p></a>
-											<a><p class="subjectname">friday</p></a>
+											<!--金曜日5限だけ出力-->
+											@foreach($categoryfr5s as $categoryfr5)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categoryfr5->id]) }}" title="{{ $categoryfr5->name }}"><p class="subjectname">{{ $categoryfr5->name }}</p></a>
+											@endforeach
+										</div>
+										<div id="fri6" class="fri12345">
+											<a><p class="subject-name-top-period">6th period</p></a>
+											<!--金曜日6限だけ出力-->
+											@foreach($categoryfr6s as $categoryfr6)
+											<a href="{{ route('generaltop.index', ['category_id'=>$categoryfr6->id]) }}" title="{{ $categoryfr6->name }}"><p class="subjectname">{{ $categoryfr6->name }}</p></a>
+											@endforeach
 										</div>
 									</div>
 								</div>
