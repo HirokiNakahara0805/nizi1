@@ -54,6 +54,7 @@
 
 
 <!--いいね平均-->
+<!--いいね平均-->
 <?php
     $goodss = 0;
 
@@ -61,12 +62,15 @@
         $goodss +=$goodpost2->good;
         }
 
-    $average = round($goodss/$post2s->total(),2);
+        $totalpost2s=$post2s->total();
+        if($totalpost2s==0){
+            $totalpost2s=1;
+        }
 
-    //全体星表示用数値
-    $stars = $average*20;
+    $average = round($goodss/$totalpost2s,2);
 
-
+     //全体星表示用数値
+     $stars = $average*20;
 ?>
 
 
