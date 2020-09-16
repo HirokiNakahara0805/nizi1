@@ -17,7 +17,7 @@
     margin:10px;
     padding:5px 5px;
 }
-
+ 
 /*--------------スライダーにカーソル合わせた時のアニメーション設定*/
 .img-sophia:hover {
     transform: scale(0.8,0.8); /*画像の拡大*/
