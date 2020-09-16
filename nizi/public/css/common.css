@@ -99,6 +99,10 @@ a .u2-header-logo {
     height: 250px;
     margin: 0 auto;
 }
+.header-img-in img{
+    width:100%;
+    height: 250px;
+}
 .header-img-frame{
     display:block;
     height:250px;
@@ -195,86 +199,12 @@ a:hover {
     border-bottom:1px solid #e95014;
 }
 
-/**************************************
-フッターリンク先のメディアクエリ設定 ~420
-***************************************/
-@media only screen and (min-width: 420px){
-.terms-text,
-.beginners-text,
-.content-text,
-.privacy-text{
-    position: relative;
-    width: 1100px;
-    max-width: 95%;
-    margin: 0 auto;
-}
-/**************************************
-フッターリンク先のメディアクエリ設定 420~1024
-***************************************/
-@media screen and (min-width: 420px) and (max-width: 1024px){
-
-    .link-list a{
-        font-size: 13px;}
-
-}
-
-/**************************************
-フッターリンク先のメディアクエリ設定 420~1024
-***************************************/
-@media screen and (min-width: 1024px){
-
-    .link-list a{
-        font-size: 15px;
-    }
-
-}
 /*----------テキストエリアリサイズ禁止--------------*/
 
 textarea {
     resize: none;
   }
 
-/*************************
-メディアクエリ設定 420~1024
-*************************/
-@media screen and (min-width: 420px) and (max-width: 1024px) {
-
-
-    
-    .header-img-in {
-        width: 100%;
-        height: 200px;
-        margin: 0 auto;
-    }
-
-    .header-img-frame {
-      
-        height: 200px;
-    }
-
-}
-
-/*************************
-メディアクエリ設定 0〜420
-*************************/
-@media screen and (min-width: 0px) and (max-width: 420px) {
-
-
-    /*ヘッダー下の画像サイズ調整*/
-    .header-img-in {
-        width: 100%;
-        height: 200px;
-    }
-
-    .header-img-frame {
-
-        height: 200px;
-    }
-    a {
-        font-size: 15px;
-    }
-
-}
 
 
 
@@ -365,3 +295,63 @@ textarea {
     border-radius: 10px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+/*************************
+メディアクエリ設定 420~1024
+*************************/
+@media screen and (min-width: 420px) and (max-width: 1024px) {
+
+
+    
+    .header-img-in {
+        width: 100%;
+        height: 200px;
+       
+    }
+
+    .header-img-frame {
+
+        height: 200px;
+    }
+
+}
+
+/*************************
+メディアクエリ設定 0〜420
+*************************/
+@media screen and (min-width: 0px) and (max-width: 420px) {
+
+
+    /*ヘッダー下の画像サイズ調整*/
+    .header-img-in {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .header-img-frame {
+
+        height: 200px;
+    }
+    a {
+        font-size: 15px;
+    }
+
+}
+
+
+/**************************************
+フッターリンク先のメディアクエリ設定 ~420
+***************************************/
+@media only screen and (min-width: 420px){
+    .terms-text,
+    .beginners-text,
+    .content-text,
+    .privacy-text{
+        position: relative;
+        width: 1100px;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+  

@@ -90,6 +90,7 @@ a.periodList{
   border-left:2px solid #e95014;
   background-color:white;
   box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+  color:black;
 }
 
 @media screen and (min-width: 0px) and (max-width: 990px) {
@@ -110,7 +111,7 @@ a.periodList{
 
   .subjectname {
 
-    font-size: 18px;}
+    font-size: 12px;}
     
 
 }

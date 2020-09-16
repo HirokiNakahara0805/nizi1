@@ -289,7 +289,7 @@ display: flex;
 
 .subject-info-top{
   margin:px 2px 2px 15px;
-  font-size:2px;
+  font-size:12px;
   border-left:3px solid #e95014;
   background-color:white;
 }
@@ -425,11 +425,9 @@ display: flex;
   font-size: 15px;
   margin:20px 0px 0px 0px;
 }
-.comment-kensuu-box{
 
-}
-/* 画面サイズ小さくしたらPOSTボタンがはみでたので修正　
-    簡易的な修正　他にも修正する時に一気に変更してください*/
+/* 画面サイズ小さくしたらPOSTボタンがはみでたので修正
+    簡易的な修正他にも修正する時に一気に変更してください*/
     /*************************
 メディアクエリ設定 420~1024
 *************************/
@@ -439,7 +437,7 @@ display: flex;
     margin: 0px 10px;
 }
   .comment-box p{
-    font-size:4px;
+    font-size:14px;
   }
   .comment-box .title{
     width:45px;
