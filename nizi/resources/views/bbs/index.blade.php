@@ -252,9 +252,10 @@
     
     <h3 class="text-center">授業科目</h3>
     <div class="mt-4 mb-4 text-center underlist">
-        @foreach($categories as $id => $name)
+    <select>@foreach($categories as $id => $name)
         <li class="btn"><a class="class-list" href="{{ route('bbs.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
         @endforeach
+    </select>
     </div>
 
 </div>
