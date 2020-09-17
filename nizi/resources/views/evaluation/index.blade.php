@@ -136,16 +136,13 @@
                 <div class="row">
                      <!------------------------------------------ニックネームインプット------------>
                     <div class="form-group col-sm-5">
-                        <label for="name">
-                            ニックネーム
-                        </label>
-                        <input
+                        <textarea
                             id="name"
                             name="name"
                             class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
                             value="{{ old('name') }}"
                             type="text"
-                        >
+                        >ニックネーム</textarea>
                         @if ($errors->has('name'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('name') }}
@@ -165,15 +162,13 @@
                     </div>
                             <!-----------------------------------------学年インプット------------->
                     <div class="form-group col-sm-2">
-                        <label for="year">
-                            学年
-                        </label>
                         <select id="year"
                                 name="year"
                                 class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
                                 value="{{ old('year') }}"
                                 type="number"
-                                placeholder="学年">
+                                placeholder="学年"
+                                size="1">
                             <option value="0"selected disabled>学年</option>
 　　　　　　　　　　　　　　　　　<option value="1">１</option>
 　　　　　　　　　　　　　　　　　<option value="2">２</option>
