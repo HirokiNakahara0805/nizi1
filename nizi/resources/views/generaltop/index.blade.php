@@ -97,7 +97,9 @@
             </div>
             <div class="col-md-2">
                 <p class="subject-info-contents"> {{ $category2->book2 }}</p>
-                <p class="subject-info-contents"> {{ $category2->link2 }}</p>
+                <p class="subject-info-contents"><?= html_entity_decode($category2->link2); ?></p>
+             
+                
             </div>
             <div class="col-md-2">
                 <p class="subject-info-contents"> {{ $category2->book2 }}</p>
@@ -108,9 +110,9 @@
 
         </div>
         <div class="row subject-info-comment-frame">
-            <p class="col-md-6 subject-info-comment-top">
-            {{ $category2->content }}
-            </p>
+            <div class="col-md-6 subject-info-comment-top">
+                <?= html_entity_decode($category2->content ); ?>
+            </div>
         </div>
     </div>
     @endforeach
@@ -154,15 +156,27 @@
                                 <div><p> {{ $generaltop->name }}</p></div>
                         @endforeach
 
-                        <p><div class="star-ratings-sprite"><span style="width: {{  $evaluation->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
+                        
 
                         </div>
+
+                        <div class="evaluation-text border-bottom mb-5 p-2">
+                            <div><p>オススメ度</p></div>
+
+                            <p><div class="star-ratings-sprite"><span style="width: {{  $evaluation->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
+                        </div>
+
+                        <div class="evaluation-text border-bottom mb-5 p-2">
+                            <div><p> 授業難易度</p></div>
+
+                            <p><div class="dif-ratings-sprite"><span style="width:{{ $evaluation->difficulty*20 }}%" class="dif-ratings-sprite-rating"></span></div></p>
+                        </div>
+
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
 
                                 <div>
 
-                                    <div> <p>難しさ{{ $evaluation->difficulty }}</p></div>
 
                                     <div class="title text-center">レポート</div> <div class=""> <p>{{ $evaluation->report }}</p></div>
                                     <div class="title text-center">テスト</div> <div class=""><p>{{ $evaluation->test }}</p></div>

@@ -342,15 +342,27 @@
                                 <div><p> {{ $category2->name }}</p></div>
                                 @endforeach
 <!--------------------------------星のカラーにwidthで色づけしてます   いいねの平均値を を*100/5して100パーセント表示にしています--->
-                                <p><div class="star-ratings-sprite"><span style="width: {{  $post2->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
+                             
 
+                        </div>
+
+                        <div class="evaluation-text border-bottom mb-5 p-2">
+                            <div><p>オススメ度</p></div>
+
+                            <p><div class="star-ratings-sprite"><span style="width: {{  $post2->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
+                        </div>
+
+                        <div class="evaluation-text border-bottom mb-5 p-2">
+                            <div><p> 授業難易度</p></div>
+
+                            <p><div class="dif-ratings-sprite"><span style="width:{{ $post2->difficulty*20 }}%" class="dif-ratings-sprite-rating"></span></div></p>
                         </div>
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
 
                                 <div>
 
-                                    <div> <p>難しさ{{ $post2->difficulty }}</p></div>
+                  
 
                                     <div class="title text-center">レポート</div> <div class=""> <p>{{ $post2->report }}</p></div>
                                     <div class="title text-center">テスト</div> <div class=""><p>{{ $post2->test }}</p></div>

@@ -70,6 +70,7 @@ p{
     padding: 10px 10px 10px 10px;
     margin: 15px 0px 15px 0px;
     background-color: white;
+    word-break: break-word;
 } 
 
 
@@ -393,6 +394,28 @@ display: flex;
   height: 21px;
   display: block;
   margin:auto;
+  }
+
+  /*難易度表示する設定*/
+.dif-ratings-sprite {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin:  auto;
+  background-color: rgb(184, 186, 255);
+  }
+  .dif-ratings-sprite-rating {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  background-position: 0 100%;
+  float: left;
+  height: 21px;
+  display: block;
+  margin:auto;
+  background-color: rgb(184, 186, 255);
   }
 
 /*タイトルと横の星表示する設定*/

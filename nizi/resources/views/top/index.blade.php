@@ -103,14 +103,12 @@
 					</div>
 
 					<div class="col-md-4">
-							<a><p class="koukoku-box">広告</p></a>
-							<a><p class="koukoku-box">広告</p></a>
-							<a><p class="koukoku-box">広告</p></a>
-							<a><p class="koukoku-box">広告</p></a>
-							<a><p class="koukoku-box">広告</p></a>
-							<a><p class="koukoku-box">広告</p></a>
-							<a><p class="koukoku-box">広告</p></a>
-							<a><p class="koukoku-box">広告</p></a>
+							<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=6499a59af2a79013c26dfaa2dba3ee1d&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" class="m-5"></iframe>
+							<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=6499a59af2a79013c26dfaa2dba3ee1d&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" class="m-5"></iframe>
+							<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=6499a59af2a79013c26dfaa2dba3ee1d&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" class="m-5"></iframe>
+							<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=6499a59af2a79013c26dfaa2dba3ee1d&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" class="m-5"></iframe>
+							<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=6499a59af2a79013c26dfaa2dba3ee1d&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" class="m-5"></iframe>
+
 					</div>
 
 				</div>
