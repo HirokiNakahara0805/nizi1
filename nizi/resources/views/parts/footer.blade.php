@@ -3,7 +3,7 @@
         <!------------------------------------------------------------------------------------ SNS連携 -->
         <div class="footer-contents .align-middle" id="all-bbs">
 
-            <a class="footer-logo" href="">∞pilotis</a>
+            <a class="footer-logo" href="{{ url('/') }}">∞piotis</a>
 
                <!-- SNSリスト-->
             <div class="footer-sns justify-content-around footer-logo" >

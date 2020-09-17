@@ -40,8 +40,8 @@
 					</div>
 
 					<div class=" img-sophia col-md-2" >
-							<a href="/" >
-								<h1 class="your-class">COMING SOOM</h1>
+							<a href="{{ url('/chat') }}" >
+								<h1 class="your-class">Chat Room</h1>
 							</a>
 					</div>
 					<div class=" img-sophia col-md-2" >
