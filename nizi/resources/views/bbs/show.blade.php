@@ -51,7 +51,7 @@
                     
         <form class="mb-4" method="POST" action="{{ route('comment.store') }}">
             @csrf
-            <div class="reply-form-box">
+            <div class="reply-box-form">
                 <input
                     name="post_id"
                     type="hidden"

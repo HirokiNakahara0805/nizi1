@@ -241,10 +241,11 @@ display: flex;
   .common-btn{
     background-color:white;
     border:3px solid #e95014;
-    padding:8px 40px;
+    padding:8px 30px;
     margin:25px 10px;
     color:black;
     border-radius: 20px;
+    font-size:20px;
   }
 
   .common-btn:hover{
@@ -284,12 +285,12 @@ display: flex;
 .general-top-title{
       font-size:40px;
       margin:5px 0px 20px 0px;
-      border-bottom:1px solid #e95014;
+      /* border-bottom:1px solid #e95014; */
 }
 
 .subject-info-top{
   margin:px 2px 2px 15px;
-  font-size:2px;
+  font-size:12px;
   border-left:3px solid #e95014;
   background-color:white;
 }
@@ -391,14 +392,15 @@ display: flex;
   float: left;
   height: 21px;
   display: block;
+  margin:auto;
   }
+
 /*タイトルと横の星表示する設定*/
   .title-star{
     display: flex;
   }
-
   .comment-box-form{
-   
+
     border-radius: 10px;
     border: 1px solid #333333;
     border-bottom: 2px solid #e95014;
@@ -408,9 +410,38 @@ display: flex;
     background-color: #f8c3ae15;
 } 
 
+/*reply form 設定*/
+.reply-box-form{
+   
+  border-radius: 10px;
+  border: 1px solid #333333;
+  border-bottom: 2px solid #e95014;
+  box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+  padding: 10px 10px 50px 10px;
+  margin: 15px 0px 15px 0px;
+  background-color: #f8c3ae15;
+} 
 
-/* 画面サイズ小さくしたらPOSTボタンがはみでたので修正　
-    簡易的な修正　他にも修正する時に一気に変更してください*/
+/*星の横の平均値設定*/
+
+.star-average{
+  font-size: 30px;
+  color:black;
+  margin:10px 0px 0px 10px;
+}
+
+.star-average-box{
+  display: flex;
+}
+/*コメント数設定*/
+.comment-kennsuu{
+  color:black;
+  font-size: 15px;
+  margin:20px 0px 0px 0px;
+}
+
+/* 画面サイズ小さくしたらPOSTボタンがはみでたので修正
+    簡易的な修正他にも修正する時に一気に変更してください*/
     /*************************
 メディアクエリ設定 420~1024
 *************************/
@@ -420,7 +451,7 @@ display: flex;
     margin: 0px 10px;
 }
   .comment-box p{
-    font-size:4px;
+    font-size:14px;
   }
   .comment-box .title{
     width:45px;

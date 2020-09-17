@@ -30,5 +30,4 @@
         <!-- javascript  読み込み-->
 	<script type="text/javascript" src="js/common.js"></script>
 
-
 </head>

@@ -21,7 +21,7 @@
     //全体星表示用数値
     $stars = $average*20;
 ?>
-
+ 
 
     <header class="u2-header">
 		<div class="u2-header__container-inner">
@@ -54,21 +54,33 @@
 
     <!-- トップのタイトル　掲示板と共通-->
     <div class="container general-top-title-frame pb-3 mt-5">
-    
-    @foreach ($category2s as $category2)
-    <div  class="general-top-title">
-        <div class="row subject-info-top-frame ">
-            <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
-            <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
-            <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
+        
+        @foreach ($category2s as $category2)
+        <div  class="general-top-title">
+            <div class="row subject-info-top-frame ">
+                <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
+                <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
+                <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
+            </div>
+
+            <div class="general-top-title title-star row "> 
+                    <div class="col-md-3 border-line-orange">
+                        <tr>{{ $category2->name }}</tr>
+                     </div>
+                    <div class="col-md-4 star-average-box border-line-orange">
+                       <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p class="star-average">Rate:{{ $average }}</p></a>
+                        <div class="star-ratings-sprite ">
+                            <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-3 comment-kensuu-box">
+                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
+                            <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
+                        </a>
+                    </div> -->
+            </div>
         </div>
-        <tr>
-            {{ $category2->name }}
-        </tr>
-        <p>{{$average}}<div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
-        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >{{$post2s->total()}}</a>
-    </div>
-    @endforeach
+        @endforeach
     </div>
 
 
@@ -99,14 +111,14 @@
                     <div class="row">
                         <div class="form-group col-sm-2">
                             
-                            <input
+                            <textarea
                                 id="name"
                                 name="name"
                                 class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
                                 value="{{ old('name') }}"
                                 type="text"
-                                placeholder="ニックネーム"
-                            >
+                                rows="1"
+                            >ニックネーム</textarea>
                             @if ($errors->has('name'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('name') }}
@@ -123,7 +135,8 @@
                                 class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
                                 value="{{ old('year') }}"
                                 type="number"
-                                placeholder="学年">
+                                placeholder="学年"
+                                >
                             <option value="0"selected disabled>学年</option>
 　　　　　　　　　　　　　　　　　<option value="1">１</option>
 　　　　　　　　　　　　　　　　　<option value="2">２</option>

@@ -19,7 +19,7 @@
 		<!-- 画像挿入-->
 		<div class='header-img-frame'>
 			<div class='header-img-in'>
-				<img src="{{ asset('img/IMG_9584.JPG') }}" class="img-fluid h-100 w-100" >
+				<img src="{{ asset('img/IMG_9584.JPG') }}" class="" >
 			</div>
 		</div>
 
@@ -40,34 +40,26 @@
 					</div>
 
 					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/subject') }}" >
-								<h1 class="your-class">General education</h1>
+							<a href="/" >
+								<h1 class="your-class">COMING SOOM</h1>
+							</a>
+					</div>
+					<div class=" img-sophia col-md-2" >
+							<a href="/" >
+								<h1 class="your-class">COMING SOOM</h1>
+							</a>
+					</div>
+					<div class=" img-sophia col-md-2" >
+							<a href="/" >
+								<h1 class="your-class">COMING SOOM</h1>
+							</a>
+					</div>
+					<div class=" img-sophia col-md-2" >
+							<a href="/" >
+								<h1 class="your-class">COMING SOOM</h1>
 							</a>
 					</div>
 
-					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/subject') }}" >
-								<h1 class="your-class">General education</h1>
-							</a>
-					</div>
-
-					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/subject') }}" >
-								<h1 class="your-class">General education</h1>
-							</a>
-					</div>
-
-					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/subject') }}" >
-								<h1 class="your-class">General education</h1>
-							</a>
-					</div>
-
-					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/subject') }}" >
-								<h1 class="your-class">General education</h1>
-							</a>
-					</div>
 
 				</div>
 			</div>
@@ -77,10 +69,13 @@
 
 			<div class="container" id="all-bbs">
 
+			
 				<div class="row">
+					
 
 					<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
 						<!-- カテゴリーテーブルを変数宣言してます -->
+						<h1	class="text-center m-2" >BBS title</h1>
 						@foreach($category2s as $category2)
 						<div class="top-bbs-box">
 								<div class="border-bottom top-bbs-item-frame">
