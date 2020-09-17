@@ -13,9 +13,9 @@ class DepartmentpostRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
-
+ 
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,7 +24,25 @@ class DepartmentpostRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:40',
+            'message' => 'required|max:350',
+            'departmentcategory_id' => 'required|integer',
+        ];
+    }
+ 
+    /**
+     * エラーメッセージを日本語化
+     * 
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => '名前を入力してください',
+            'name.max' => '名前は40文字以内で入力してください',
+            'message.required' => 'メッセージを入力してください',
+            'message.max' => 'メッセージは350文字以内で入力してください',
+            'departmentcategory_id.required' => 'カテゴリーを選択してください',
+            'departmentcategory_id.integer' => 'カテゴリーの入力形式が不正です',
         ];
     }
 }

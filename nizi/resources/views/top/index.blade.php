@@ -22,7 +22,7 @@
 				<img src="{{ asset('img/IMG_9584.JPG') }}" class="" >
 			</div>
 		</div>
-
+	
 		<!-- 科目一覧表示 -->
 		<div class="to-class" id="class-sub">
 
@@ -64,6 +64,12 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class=" img-sophia col-md-2" >
+							<a href="{{ url('/chat') }}" >
+								<h1 class="your-class">Chat Room</h1>
+							</a>
+					</div>
 
 		<!-- 掲示板一覧 -->
 
@@ -91,6 +97,9 @@
 							</a>
 						</div>
 						@endforeach
+						<div class="d-flex justify-content-center mb-5">
+    							{{ $category2s->links() }}
+						</div>
 					</div>
 
 					<div class="col-md-4">

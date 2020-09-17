@@ -17,7 +17,7 @@ class CreateDepartmentpostsTable extends Migration
             $table->increments('id');
             $table->timestamps();   // created_at, updated_atが自動設定されるとのこと
             $table->string('is_deleted', 4)->default('0');
-            $table->integer('category_id');
+            $table->integer('departmentcategory_id');
             $table->text('message');
             $table->string('name');
         });

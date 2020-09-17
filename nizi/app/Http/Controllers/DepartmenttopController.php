@@ -1,49 +1,63 @@
 <?php
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Category;
 use App\Departmentpost;
+use App\Departmentcategory;
+use App\Http\Requests\DepartmentpostRequest;
 class DepartmenttopController extends Controller{
-   public function index(){
+   public function index(Request $request){
 
 
-    $departmentposts = Departmentpost::orderBy('created_at', 'desc')->get();
+    // カテゴリ取得
+    $departmentcategory = new Departmentcategory;
+    $departmentcategories = $departmentcategory->getLists();
+ 
+    $departmentcategory_id = $request->departmentcategory_id;
+    if (!is_null($departmentcategory_id)) {
+        $departmentposts = Departmentpost::where('departmentcategory_id', $departmentcategory_id)->orderBy('created_at', 'desc')->paginate(10);
+    } else {
+        $departmentposts = Departmentpost::orderBy('created_at', 'desc')->paginate(10);
+    }
 
 
-    $categorymo1s=Category::where('time','like','%月1%')->get();
-    $categorymo2s=Category::where('time','like','%月2%')->get();
-    $categorymo3s=Category::where('time','like','%月3%')->get();
-    $categorymo4s=Category::where('time','like','%月4%')->get();
-    $categorymo5s=Category::where('time','like','%月5%')->get();
+    $categorymo1s=Category::where('time','like','%月1%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorymo2s=Category::where('time','like','%月2%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorymo3s=Category::where('time','like','%月3%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorymo4s=Category::where('time','like','%月4%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorymo5s=Category::where('time','like','%月5%')->where('departmentcategory_id',$departmentcategory_id)->get();
 
-    $categorytu1s=Category::where('time','like','%火1%')->get();
-    $categorytu2s=Category::where('time','like','%火2%')->get();
-    $categorytu3s=Category::where('time','like','%火3%')->get();
-    $categorytu4s=Category::where('time','like','%火4%')->get();
-    $categorytu5s=Category::where('time','like','%火5%')->get();
+    $categorytu1s=Category::where('time','like','%火1%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorytu2s=Category::where('time','like','%火2%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorytu3s=Category::where('time','like','%火3%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorytu4s=Category::where('time','like','%火4%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorytu5s=Category::where('time','like','%火5%')->where('departmentcategory_id',$departmentcategory_id)->get();
 
-    $categorywe1s=Category::where('time','like','%水1%')->get();
-    $categorywe2s=Category::where('time','like','%水2%')->get();
-    $categorywe3s=Category::where('time','like','%水3%')->get();
-    $categorywe4s=Category::where('time','like','%水4%')->get();
-    $categorywe5s=Category::where('time','like','%水5%')->get();
+    $categorywe1s=Category::where('time','like','%水1%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorywe2s=Category::where('time','like','%水2%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorywe3s=Category::where('time','like','%水3%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorywe4s=Category::where('time','like','%水4%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categorywe5s=Category::where('time','like','%水5%')->where('departmentcategory_id',$departmentcategory_id)->get();
 
-    $categoryth1s=Category::where('time','like','%木1%')->get();
-    $categoryth2s=Category::where('time','like','%木2%')->get();
-    $categoryth3s=Category::where('time','like','%木3%')->get();
-    $categoryth4s=Category::where('time','like','%木4%')->get();
-    $categoryth5s=Category::where('time','like','%木5%')->get();
+    $categoryth1s=Category::where('time','like','%木1%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categoryth2s=Category::where('time','like','%木2%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categoryth3s=Category::where('time','like','%木3%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categoryth4s=Category::where('time','like','%木4%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categoryth5s=Category::where('time','like','%木5%')->where('departmentcategory_id',$departmentcategory_id)->get();
 
-    $categoryfr1s=Category::where('time','like','%金1%')->get();
-    $categoryfr2s=Category::where('time','like','%金2%')->get();
-    $categoryfr3s=Category::where('time','like','%金3%')->get();
-    $categoryfr4s=Category::where('time','like','%金4%')->get();
-    $categoryfr5s=Category::where('time','like','%金5%')->get();
-    $categoryfr6s=Category::where('time','like','%金6%')->get();
+    $categoryfr1s=Category::where('time','like','%金1%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categoryfr2s=Category::where('time','like','%金2%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categoryfr3s=Category::where('time','like','%金3%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categoryfr4s=Category::where('time','like','%金4%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categoryfr5s=Category::where('time','like','%金5%')->where('departmentcategory_id',$departmentcategory_id)->get();
+    $categoryfr6s=Category::where('time','like','%金6%')->where('departmentcategory_id',$departmentcategory_id)->get();
 
        return view('departmenttop.index', [
 
         'departmentposts' => $departmentposts,
+        'departmentcategories' => $departmentcategories, 
+        'departmentcategory_id'=>$departmentcategory_id,
 
 
         'categorymo1s' => $categorymo1s,
@@ -79,6 +93,20 @@ class DepartmenttopController extends Controller{
         
 
     ]);
-	}
+    }
+    
+    public function store(DepartmentpostRequest $request)
+{
+    $savedata = [
+        'name' => $request->name,
+        'message' => $request->message,
+        'departmentcategory_id' => $request->departmentcategory_id,
+    ];
+ 
+    $post = new Departmentpost();
+    $post->fill($savedata)->save();
+ 
+    return back()->with('poststatus', '新規投稿しました');
+}
 	
 }

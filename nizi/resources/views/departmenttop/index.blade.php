@@ -2,6 +2,13 @@
 
 <html lang="ja">
 
+ 
+<div class="mt-4 mb-4">
+    @foreach($departmentcategories as $id => $name)
+    <span class="btn"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
+    @endforeach
+</div>
+
 <head>
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -415,6 +422,94 @@
 			</div>
 			<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 		</main>
+
+		@if (session('poststatus'))
+				<div class="alert alert-success mt-4 mb-4">
+					{{ session('poststatus') }}
+				</div>
+		@endif
+
+		<div class="mt-4 mb-4">
+    <p>{{ $departmentposts->total() }}件が見つかりました。</p>
+</div>
+
+<div class="container mt-4">
+    <div class="border p-4">
+        <h1 class="h4 mb-4 font-weight-bold">
+            投稿の新規作成
+        </h1>
+ 
+        <form method="POST" action="{{ route('departmenttop.store') }}">
+            @csrf
+ 
+            <fieldset class="mb-4">
+ 
+                <div class="form-group">
+                    <label for="subject">
+                        名前
+                    </label>
+                    <input
+                        id="name"
+                        name="name"
+                        class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
+                        value="{{ old('name') }}"
+                        type="text"
+                    >
+                    @if ($errors->has('name'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('name') }}
+                        </div>
+                    @endif
+                </div>
+ 
+                <div class="form-group">
+                    <label for="subject">
+                        カテゴリー
+                    </label>
+                    <input
+                        id="departmentcategory_id"
+                        name="departmentcategory_id"
+                        class="form-control {{ $errors->has('departmentcategory_id') ? 'is-invalid' : '' }}"
+                        value="{{ old('departmentcategory_id') }}"
+                        type="text"
+                    >
+                    @if ($errors->has('departmentcategory_id'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('departmentcategory_id') }}
+                        </div>
+                    @endif
+                </div>
+ 
+                
+ 
+                <div class="form-group">
+                    <label for="message">
+                        メッセージ
+                    </label>
+ 
+                    <textarea
+                        id="message"
+                        name="message"
+                        class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
+                        rows="4"
+                    >{{ old('message') }}</textarea>
+                    @if ($errors->has('message'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('message') }}
+                        </div>
+                    @endif
+                </div>
+ 
+                    <button type="submit" class="btn btn-primary">
+                        投稿する
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+		
 
 		<div class="table-responsive">
     <table class="table table-hover">

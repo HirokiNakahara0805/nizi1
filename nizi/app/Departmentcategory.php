@@ -12,4 +12,11 @@ class Departmentcategory extends Model
         // カテゴリは複数のポストを持つ
         return $this->hasMany('App\Departmentpost');
     }
+
+    public function getLists()
+    {
+        $departmentcategories = Departmentcategory::orderBy('id','asc')->pluck('name', 'id');
+    
+        return $departmentcategories;
+    }
 }
