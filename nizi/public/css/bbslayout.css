@@ -159,6 +159,19 @@ padding: 40px 50px 20px 40px;
   color:black;
 }
 
+.topcolor {
+  background-color: #e95014;
+}
+
+.bbscolor {
+  background-color: #e95014;
+}
+
+.evaluationcolor  {
+  background-color: #e95014;
+}
+
+
 /*------------------コメントアイコンの設定-------*/
 .comment-icon{
   background-color:white;
