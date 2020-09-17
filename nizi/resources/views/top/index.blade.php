@@ -64,20 +64,15 @@
 				</div>
 			</div>
 		</div>
-		
-		<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/chat') }}" >
-								<h1 class="your-class">Chat Room</h1>
-							</a>
-					</div>
+
 
 		<!-- 掲示板一覧 -->
 
 			<div class="container" id="all-bbs">
 
-			
+
 				<div class="row">
-					
+
 
 					<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
 						<!-- カテゴリーテーブルを変数宣言してます -->
