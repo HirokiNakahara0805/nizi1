@@ -115,7 +115,7 @@
         <ul class="reset-ul row feature-title-box">
             <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
             <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
-            <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
+            <li class="evaluationcolor feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
         </ul>
     </div>
 
@@ -446,16 +446,15 @@
 
                 </div>
                 <div class="link-list">
-                    <p>
-            　　         <a href="terms">利用規約</a>
-                        <a href="beginnersguide">初めての方へ</a>
-                        <a href="http://127.0.0.1:8000/beginnersguide#beginners-organization">運営組織</a>
-                        <a href="contentpolicy">コンテンツポリシー</a>
-                        <a href="privacypolicy">プライバシーポリシー</a>
-                        <a href="http://127.0.0.1:8000/beginnersguide#beginners-faq">よくある質問</a>
-                        <a href="http://127.0.0.1:8000/beginnersguide#beginners-inquiry">お問い合わせ</a>
-                    </p>
-
+                　　<p>
+            　　    　　<a href="terms">利用規約</a>
+                   　　<a href="beginnersguide">初めての方へ</a>
+                   　　<a href="beginnersguide">運営組織</a>
+                  　　 <a href="contentpolicy">コンテンツポリシー</a>
+                   　　<a href="privacypolicy">プライバシーポリシー</a>
+                   　　<a href="beginnersguide">よくある質問</a>
+                   　　<a href="beginnersguide">お問い合わせ</a>
+                　　</p>
                 </div>
             </div>
 

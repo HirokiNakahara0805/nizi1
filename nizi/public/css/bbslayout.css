@@ -160,6 +160,32 @@ padding: 40px 50px 20px 40px;
   color:black;
 }
 
+.topcolor {
+  background-color: #e95014;
+}
+
+.topcolor a{
+  color: white!important;
+}
+
+.bbscolor {
+  color: white!important;
+  background-color: #e95014;
+}
+
+.bbscolor a{
+  color: white!important;
+}
+
+.evaluationcolor  {
+  color: white!important;
+  background-color: #e95014;
+}
+
+.evaluationcolor a {
+  color: white!important;
+}
+
 /*------------------コメントアイコンの設定-------*/
 .comment-icon{
   background-color:white;
@@ -347,6 +373,10 @@ display: flex;
 .range-group > a.on:before {
   content: "\f005";
   color: #fc3;
+}
+
+.on{
+  display: inline-block;
 }
 
 /*難しさフォームタグ星の設定*/

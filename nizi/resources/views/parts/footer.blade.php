@@ -29,17 +29,15 @@
                 </div>
 
             <div class="link-list">
-                <ul>
-                    <li><a href="terms">利用規約</a></li>
-                    <li><a href="beginnersguide">初めての方へ</a></li>
-                    <li><a href="#beginners-organization">運営組織</a></li>
-                    <li><a href="contentpolicy">コンテンツポリシー</a></li>
-                </ul>
-                <ul>
-                    <li><a href="privacypolicy">プライバシーポリシー</a></li>
-                    <li><a href="#beginners-faq">よくある質問</a></li>
-                    <li><a href="#beginners-inquiry">お問い合わせ</a></li>
-                </ul>
+            　　　<p>
+            　　    <a href="terms">利用規約</a>
+                   <a href="beginnersguide">初めての方へ</a>
+                   <a href="beginnersguide">運営組織</a>
+                   <a href="contentpolicy">コンテンツポリシー</a>
+                   <a href="privacypolicy">プライバシーポリシー</a>
+                   <a href="beginnersguide">よくある質問</a>
+                   <a href="beginnersguide">お問い合わせ</a>
+                </p>
             </div>
             </div>
 
