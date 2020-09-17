@@ -149,15 +149,27 @@
                                 <div><p> {{ $generaltop->name }}</p></div>
                         @endforeach
 
-                        <p><div class="star-ratings-sprite"><span style="width: {{  $evaluation->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
+                        
 
                         </div>
+
+                        <div class="evaluation-text border-bottom mb-5 p-2">
+                            <div><p>オススメ度</p></div>
+
+                            <p><div class="star-ratings-sprite"><span style="width: {{  $evaluation->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
+                        </div>
+
+                        <div class="evaluation-text border-bottom mb-5 p-2">
+                            <div><p> 授業難易度</p></div>
+
+                            <p><div class="dif-ratings-sprite"><span style="width:{{ $evaluation->difficulty*20 }}%" class="dif-ratings-sprite-rating"></span></div></p>
+                        </div>
+
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
 
                                 <div>
 
-                                    <div> <p>難しさ{{ $evaluation->difficulty }}</p></div>
 
                                     <div class="title text-center">レポート</div> <div class=""> <p>{{ $evaluation->report }}</p></div>
                                     <div class="title text-center">テスト</div> <div class=""><p>{{ $evaluation->test }}</p></div>
