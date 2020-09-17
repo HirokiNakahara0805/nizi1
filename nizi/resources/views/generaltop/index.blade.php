@@ -326,17 +326,14 @@
 
                 </div>
                 <div class="link-list">
-                <p>
-            　　    <a href="terms">利用規約</a>
-                   <a href="beginnersguide">初めての方へ</a>
-                   <a href="beginnersguide">運営組織</a>
-                   <a href="contentpolicy">コンテンツポリシー</a>
-                   <a href="privacypolicy">プライバシーポリシー</a>
-                   <a href="beginnersguide">よくある質問</a>
-                   <a href="beginnersguide">お問い合わせ</a>
-                </p>
-
-            </div>
+                　　　<div class="form-group col-sm-1"><a href="terms">利用規約</a></div>
+                    <div class="form-group col-sm-2"><a href="beginnersguide">初めての方へ</a></div>
+                    <div class="form-group col-sm-1"><a href="beginnersguide#organization">運営組織</a></div>
+                    <div class="form-group col-sm-2"><a href="contentpolicy">コンテンツポリシー</a></div>
+                    <div class="form-group col-sm-2"><a href="privacypolicy">プライバシーポリシー</a></div>
+                    <div class="form-group col-sm-2"><a href="beginnersguide#faq">よくある質問</a></div>
+                    <div class="form-group col-sm-2"><a href="beginnersguide#inquiry">お問い合わせ</a></div>
+            　　</div>
             </div>
             
         </div>

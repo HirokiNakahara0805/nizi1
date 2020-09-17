@@ -143,17 +143,17 @@ a:hover {
 .link-list{
     background-color: #333;
     display: flex;
+    flex-wrap: wrap;
     border-top: 1px solid #313130;
     border-left: 1px solid #313130;
     width: 100%;
     box-sizing: border-box;
-    display: list-item;
     list-style: none;
-    padding: 30px 10px 100px 0px;
+    padding: 30px 10px 120px 30px;
 }
+  
 .link-list a{
-    font-size: 3rem;
-    padding: 10px 10px 10px 0;
+    font-size: 15px;
     margin-top: 0;
 }
 
