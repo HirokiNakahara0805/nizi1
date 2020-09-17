@@ -129,7 +129,7 @@
 				<div class="col-md-8  top-all-bbs-backgroundcolor"  id="evaluation">
 
                     <div class="row">
-                        <div class="common-btn list-inline-item text-center col-md-3"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p class="mt-2">評価投稿</p></a></div>
+                        <div class="text-center col-md-4"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" class="common-btn list-inline-item">評価投稿</a></div>
 
                         <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>
                     </div>
@@ -220,7 +220,7 @@
 				<div class="col-md-8 top-all-bbs-backgroundcolor2" id="all-bbs">
 
                     <div class="row mx-auto" >
-                        <div class="common-btn list-inline-item text-center col-md-3"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" ><p class="mt-2">掲示板</p></a></div>
+                        <div class="text-center col-md-4"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}"  class=" common-btn list-inline-item">掲示板</a></div>
 
                         <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>
                     </div>
