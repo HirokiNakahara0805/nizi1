@@ -92,7 +92,9 @@
             </div>
             <div class="col-md-2">
                 <p class="subject-info-contents"> {{ $category2->book2 }}</p>
-                <p class="subject-info-contents"> {{ $category2->link2 }}</p>
+                <p class="subject-info-contents"><?= html_entity_decode($category2->link2); ?></p>
+             
+                
             </div>
             <div class="col-md-2">
                 <p class="subject-info-contents"> {{ $category2->book2 }}</p>
@@ -103,9 +105,9 @@
 
         </div>
         <div class="row subject-info-comment-frame">
-            <p class="col-md-6 subject-info-comment-top">
-            {{ $category2->content }}
-            </p>
+            <div class="col-md-6 subject-info-comment-top">
+                <?= html_entity_decode($category2->content ); ?>
+            </div>
         </div>
     </div>
     @endforeach
