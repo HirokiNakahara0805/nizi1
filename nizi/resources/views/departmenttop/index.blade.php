@@ -416,6 +416,29 @@
 			<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 		</main>
 
+		<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+
+            <th>作成日時</th>
+            <th>名前</th>
+            <th>メッセージ</th>
+        </tr>
+        </thead>
+        <tbody id="tbl">
+        @foreach ($departmentposts as $departmentpost)
+            <tr>
+                <td>{{ $departmentpost->created_at->format('Y.m.d') }}</td>
+                <td>{{ $departmentpost->name }}</td>
+                <td>{{ $departmentpost->message }}
+                </td>
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+</div>
+
 
 		<!--フッター読み込み-->
 		@include("parts.footer")

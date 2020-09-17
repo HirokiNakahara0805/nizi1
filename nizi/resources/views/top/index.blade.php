@@ -34,7 +34,7 @@
 
 					<!-- 学科表示スライダーの中身-->
 					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/subject') }}" >
+							<a href="{{ url('/departmenttop') }}" >
 								<h1 class="your-class">General education</h1>
 							</a>
 					</div>

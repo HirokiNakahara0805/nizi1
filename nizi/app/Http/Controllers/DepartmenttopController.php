@@ -2,8 +2,13 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Category;
-class SubjectController extends Controller{
+use App\Departmentpost;
+class DepartmenttopController extends Controller{
    public function index(){
+
+
+    $departmentposts = Departmentpost::orderBy('created_at', 'desc')->get();
+
 
     $categorymo1s=Category::where('time','like','%月1%')->get();
     $categorymo2s=Category::where('time','like','%月2%')->get();
@@ -36,7 +41,10 @@ class SubjectController extends Controller{
     $categoryfr5s=Category::where('time','like','%金5%')->get();
     $categoryfr6s=Category::where('time','like','%金6%')->get();
 
-       return view('subject.index', [
+       return view('departmenttop.index', [
+
+        'departmentposts' => $departmentposts,
+
 
         'categorymo1s' => $categorymo1s,
         'categorymo2s' => $categorymo2s,
