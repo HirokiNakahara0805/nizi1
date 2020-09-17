@@ -7,10 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Category' => $baseDir . '/app/Category.php',
+    'App\\Chat' => $baseDir . '/app/Chat.php',
     'App\\Comment' => $baseDir . '/app/Comment.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Generaltop' => $baseDir . '/app/Generaltop.php',
+    'App\\Http\\Controllers\\ChatsController' => $baseDir . '/app/Http/Controllers/ChatsController.php',
     'App\\Http\\Controllers\\CommentsController' => $baseDir . '/app/Http/Controllers/CommentsController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\GeneraltopController' => $baseDir . '/app/Http/Controllers/GeneraltopController.php',
@@ -130,6 +132,7 @@ return array(
     'Carbon\\Traits\\Units' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Units.php',
     'Carbon\\Traits\\Week' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Week.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
+    'ChatsTableSeeder' => $baseDir . '/database/seeds/ChatsTableSeeder.php',
     'Cron\\AbstractField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
     'Cron\\DayOfMonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',

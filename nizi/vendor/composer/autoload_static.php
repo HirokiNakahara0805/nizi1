@@ -497,10 +497,12 @@ class ComposerStaticInit10db34aa29e9235558b9284081249702
 
     public static $classMap = array (
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\Chat' => __DIR__ . '/../..' . '/app/Chat.php',
         'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Generaltop' => __DIR__ . '/../..' . '/app/Generaltop.php',
+        'App\\Http\\Controllers\\ChatsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ChatsController.php',
         'App\\Http\\Controllers\\CommentsController' => __DIR__ . '/../..' . '/app/Http/Controllers/CommentsController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\GeneraltopController' => __DIR__ . '/../..' . '/app/Http/Controllers/GeneraltopController.php',
@@ -620,6 +622,7 @@ class ComposerStaticInit10db34aa29e9235558b9284081249702
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'ChatsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ChatsTableSeeder.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
