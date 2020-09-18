@@ -581,11 +581,14 @@
 <div class="d-flex justify-content-center mb-5">
 	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
 </div>
-
-<div>
-	@foreach($departmentcategorie2s as $departmentcategorie2)
-    <a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie2->id]) }}" title="{{ $departmentcategorie2->name}}">{{ $departmentcategorie2->name }}</a>
+<h3 class="text-center">学部名</h3>
+<div class="mt-4 mb-4 text-center underlist">
+<select name="select" onChange="location.href=value;">@foreach($departmentcategorie2s as $departmentcategorie2)
+	<option value="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie2->id]) }}" title="{{ $departmentcategorie2->name}}">
+		<a>{{ $departmentcategorie2->name }}</a>
+	</option>
 @endforeach	
+</select>
 </div>	
 
 

@@ -194,7 +194,7 @@
                                         id="good"
                                         name="good"
                                         step="1" 
-                                        type="range" 
+                                        type="number" 
                                         min="1" 
                                         max="5" 
                                         value="{{ old('good') }}"
@@ -207,6 +207,10 @@
                     @if ($errors->has('good'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('good') }}
+                            </div>
+                            <div　class="invalid-feedback">
+                                <p class="non-star">オススメ度を入力してください</P>
+
                             </div>
                     @endif
 
@@ -222,7 +226,7 @@
                                         id="difficulty"
                                         name="difficulty"
                                         step="1" 
-                                        type="range" 
+                                        type="number" 
                                         min="1" 
                                         max="5" 
                                         value="{{ old('difficulty') }}"
