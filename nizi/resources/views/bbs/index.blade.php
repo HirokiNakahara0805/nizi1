@@ -68,22 +68,25 @@
                 <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
             </div>
 
-            <div class="general-top-title title-star row "> 
-                    <div class="col-md-3 border-line-orange">
-                        <tr>{{ $category2->name }}</tr>
-                     </div>
-                    <div class="col-md-4 star-average-box border-line-orange">
-                       <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p class="star-average">Rate:{{ $average }}</p></a>
-                        <div class="star-ratings-sprite ">
-                            <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span>
-                        </div>
+            <div class="row">
+                    <div class="subject-title-sets col-md-12 mt-5">
+                            <h1 class="border-line-orange">{{ $category2->name }}</h1>
                     </div>
-                    <!-- <div class="col-md-3 comment-kensuu-box">
-                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
-                            <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
-                        </a>
-                    </div> -->
-            </div>
+                </div>
+                <div class="general-top-title title-star row mt-5"> 
+                    
+                    <div class="star-average-box border-line-orange col-md-4">
+                        
+                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><h1 class="star-average">rate:{{ $average }}</h1></a>
+                            <div class="star-ratings-sprite-title ">
+                                <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating-title"></span>
+                            </div>
+                            <div class="toukou-kensu">
+                                <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p>{{$totalpost2s}}件</p></a>
+                            </div>
+                    </div>
+                    
+                </div>
         </div>
         @endforeach
     </div>
@@ -206,7 +209,11 @@
     </div>
 
     <div class="mt-4 mb-4 text-center">
+        @if ($posts->total()=== 0 )
+            <p>初めての投稿をしてみましょう！</p>
+        @else
         <p>{{ $posts->total() }}件が見つかりました。</p>
+        @endif
     </div>
 
 
@@ -235,8 +242,8 @@
                     <div class="">
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
-                            <div class="f-item float-right">{{ $post->name }}</div>
                             <div class="f-item float-right ">{{ $post->year }}年</div>
+                            <div class="f-item float-right">{{ $post->name }}さん</div>
                             <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class=""><i class="far fa-comment-dots reply-icon"> reply</i></a></div>
 
                         </div>

@@ -33,33 +33,11 @@
 				<div class="row your-class">
 
 					<!-- 学科表示スライダーの中身-->
+					@foreach($departmentcategories as $departmentcategorie)
 					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/departmenttop') }}" >
-								<h1 class="your-class">General education</h1>
-							</a>
+						<a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie->id]) }}" title="{{ $departmentcategorie->name}}"><h1 class="your-class">{{ $departmentcategorie->name }}</h1></a>
 					</div>
-
-					<div class=" img-sophia col-md-2" >
-							<a href="{{ url('/chat') }}" >
-								<h1 class="your-class">Chat Room</h1>
-							</a>
-					</div>
-					<div class=" img-sophia col-md-2" >
-							<a href="/" >
-								<h1 class="your-class">COMING SOOM</h1>
-							</a>
-					</div>
-					<div class=" img-sophia col-md-2" >
-							<a href="/" >
-								<h1 class="your-class">COMING SOOM</h1>
-							</a>
-					</div>
-					<div class=" img-sophia col-md-2" >
-							<a href="/" >
-								<h1 class="your-class">COMING SOOM</h1>
-							</a>
-					</div>
-
+					@endforeach
 
 				</div>
 			</div>
@@ -100,9 +78,9 @@
 					</div>
 
 					<div class="col-md-4 over-780ad ">
+
 							<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=6499a59af2a79013c26dfaa2dba3ee1d&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" class="m-5"></iframe>
-							<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=6499a59af2a79013c26dfaa2dba3ee1d&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" class="m-5"></iframe>
-							<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=6499a59af2a79013c26dfaa2dba3ee1d&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" class="m-5"></iframe>
+							
 
 					</div>
 

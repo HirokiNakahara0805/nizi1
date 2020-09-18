@@ -59,23 +59,27 @@
             <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
             <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
             <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
-          </div>
-            
-                <div class="general-top-title title-star row "> 
-                    <div class="col-md-3 border-line-orange">
-                        <tr>{{ $category2->name }}</tr>
-                     </div>
-                    <div class="col-md-4 star-average-box border-line-orange">
-                       <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p class="star-average">Rate:{{ $average }}</p></a>
-                        <div class="star-ratings-sprite ">
-                            <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span>
-                        </div>
+
+        </div>
+                <div class="row">
+                    <div class="subject-title-sets col-md-12 mt-5">
+                            <h1 class="border-line-orange">{{ $category2->name }}</h1>
                     </div>
-                    <!-- <div class="col-md-3 comment-kensuu-box">
-                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
-                            <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
-                        </a>
-                    </div> -->
+                </div>
+                <div class="general-top-title title-star row mt-5"> 
+                    
+                    <div class="star-average-box border-line-orange col-md-4">
+                        
+                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><h1 class="star-average">rate:{{ $average }}</h1></a>
+                            <div class="star-ratings-sprite-title ">
+                                <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating-title"></span>
+                            </div>
+                            <div class="toukou-kensu">
+                                <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p>{{$totalpost2s}}件</p></a>
+                            </div>
+                    </div>
+                    
+
                 </div>
     
     
@@ -117,6 +121,7 @@
 
 <div>
     <ul class="reset-ul row feature-title-box">
+
         <li class=" topcolor feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
         <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
@@ -148,8 +153,10 @@
                     <div class="comment-box">
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
+
                         @foreach ($subjecttops as $subjecttop)
                                 <div><p> {{ $subjecttop->name }}</p></div>
+
                         @endforeach
 
                         
@@ -194,7 +201,8 @@
                         <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
                                 <div class="f-item float-right">{{ $evaluation->year }}年</div>
-                                <div class="f-item float-right">{{ $evaluation->name }}</div>
+                                <div class="f-item float-right">{{ $evaluation->name }}さん</div>
+
                         </div>
                                 </div>
                     @endif
@@ -241,8 +249,10 @@
                         <div class="">
                             <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
-                                <div class="f-item float-right">{{ $bbs->name }}</div>
+
                                 <div class="f-item float-right ">{{ $bbs->year }}年</div>
+                                <div class="f-item float-right">{{ $bbs->name }}さん</div>
+
 
                             </div>
                         </div>
@@ -328,6 +338,8 @@
 <!--  
 <div>
 @foreach($categories as $id => $name)
+
 <span class="btn"><a href="{{ route('subjecttop.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
+
 @endforeach
 </div> -->
