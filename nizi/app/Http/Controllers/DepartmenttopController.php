@@ -23,6 +23,8 @@ class DepartmenttopController extends Controller{
 
     //学部とりだし
     $departmentcategorie2s=Departmentcategory::get();
+    //デパートメントidの学部名とりだし
+    $departmentcategorie3s=Departmentcategory::where('id',$departmentcategory_id)->get();
 
 
     $categorymo1s=Category::where('time','like','%月1%')->where('departmentcategory_id',$departmentcategory_id)->get();
@@ -62,6 +64,7 @@ class DepartmenttopController extends Controller{
         'departmentcategories' => $departmentcategories, 
         'departmentcategory_id'=>$departmentcategory_id,
         'departmentcategorie2s'=> $departmentcategorie2s,
+        'departmentcategorie3s'=> $departmentcategorie3s,
 
 
         'categorymo1s' => $categorymo1s,

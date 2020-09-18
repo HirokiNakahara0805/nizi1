@@ -2,18 +2,15 @@
 
 <html lang="ja">
 
- 
-<div class="mt-4 mb-4">
-    @foreach($departmentcategories as $id => $name)
-    <span class="btn"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
-    @endforeach
-</div>
+@foreach($departmentcategorie3s as $departmentcategorie3)
+<title>{{ $departmentcategorie3->name }}TOP - ∞pilotis</title>
+@endforeach
 
 <head>
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta http-equiv="X-UA-Compatible" content="ie=edge">
-			<title>全学共通科目の時間割-∞pilotis</title>
+		
 
 			<!-- Fonts -->
 			<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -61,9 +58,15 @@
 
 			<!--main開始-------------------------------------------->
 		<main class="general-page">
+			
 
-
-			<h1 class="text-center subject-title">一般教養</h1>
+			<div class="container dep-title-frame ">
+				<div class="dep-title-frame-top border-bottom">
+				@foreach($departmentcategorie3s as $departmentcategorie3)
+					<h1 class="department-bbs-title pl-5">{{ $departmentcategorie3->name }}時間割</h1>
+				@endforeach
+				</div>
+			</div>
 			<div class="text-center container">
 				<div class="mx-auto mb-5">
 
@@ -441,7 +444,9 @@
 
 			<div class="container dep-title-frame ">
 				<div class="dep-title-frame-top border-bottom">
-					<p class="department-bbs-title">掲示板</p>
+					@foreach($departmentcategorie3s as $departmentcategorie3)
+					<p class="department-bbs-title pl-5">{{$departmentcategorie3->name}} 掲示板</p>
+					@endforeach
 				</div>
 			</div>
 
