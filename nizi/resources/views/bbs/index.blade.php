@@ -92,7 +92,7 @@
       <!-- -->
     <div>
         <ul class="reset-ul row feature-title-box">
-            <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+            <li class="feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
             <li class="bbscolor feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
             <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
         </ul>
@@ -227,7 +227,7 @@
             @foreach ($posts as $post)
 
                 <div class="comment-box">
-                    <div class="comment-text">{!! nl2br(e(Str::limit($post->message, 100))) !!}
+                    <div class="comment-text">{{$post->message}}
                         @if ($post->comments->count() >= 1)
                             <p><span class="comment-number">{{ $post->comments->count() }}件</span></p>
                         @endif

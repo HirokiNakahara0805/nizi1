@@ -127,7 +127,7 @@
             @foreach ($chats as $chat)
 
                 <div class="comment-box">
-                    <div class="comment-text">{!! nl2br(e(Str::limit($chat->message, 100))) !!}
+                    <div class="comment-text">{{$chat->message}}
 
                     </div>
                     <div class="">

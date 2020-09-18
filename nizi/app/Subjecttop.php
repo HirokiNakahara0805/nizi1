@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Generaltop extends Model
+class Subjecttop extends Model
 {
     public function category()
     {

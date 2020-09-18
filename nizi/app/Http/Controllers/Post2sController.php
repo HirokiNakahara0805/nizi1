@@ -19,9 +19,9 @@ class Post2sController extends Controller
     
         $category_id = $request->category_id;
         if (!is_null($category_id)) {
-            $post2s = Post2::where('category_id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
+            $post2s = Post2::where('category_id', $category_id)->orderBy('created_at', 'desc')->paginate(6);
         } else {
-            $post2s = Post2::orderBy('created_at', 'desc')->paginate(10);
+            $post2s = Post2::orderBy('created_at', 'desc')->paginate(6);
         }
 
         
