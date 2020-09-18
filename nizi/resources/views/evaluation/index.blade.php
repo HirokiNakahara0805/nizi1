@@ -242,6 +242,15 @@
 
                         </div>
                     </div>
+                    @if ($errors->has('difficulty'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('difficulty') }}
+                            </div>
+                            <div　class="invalid-feedback">
+                                <p class="non-star">授業難易度を入力してください</P>
+                            </div>
+                    @endif
+
                 </div>
 
                     <!---------------------------------------------------------------------- レポートインプット-->
@@ -423,7 +432,16 @@
 <div class="d-flex justify-content-center mb-5">
                    {{ $post2s->appends(['category_id' => $category_id])->links() }}
         </div>
-       
+        <h3 class="text-center">授業科目</h3>
+    <div class="mt-4 mb-4 text-center underlist">
+    <select name="select" onChange="location.href=value;">
+        <option value="0"selected disabled>授業科目</option>
+            @foreach($categories as $id => $name)
+        <option value="{{ route('bbs.index', ['category_id'=>$id]) }}" title="{{ $name }}"><a class="class-list" >{{ $name }}</a>
+        </option>
+        @endforeach
+    </select>
+    </div>
 @endsection
 
 @include("layout.bbsfooter")
