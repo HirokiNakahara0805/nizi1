@@ -196,7 +196,7 @@
                         <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
                                 <div class="f-item float-right">{{ $evaluation->year }}年</div>
-                                <div class="f-item float-right">{{ $evaluation->name }}</div>
+                                <div class="f-item float-right">{{ $evaluation->name }}さん</div>
                         </div>
                                 </div>
                     @endif
@@ -243,8 +243,8 @@
                         <div class="">
                             <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
-                                <div class="f-item float-right">{{ $bbs->name }}</div>
                                 <div class="f-item float-right ">{{ $bbs->year }}年</div>
+                                <div class="f-item float-right">{{ $bbs->name }}さん</div>
 
                             </div>
                         </div>

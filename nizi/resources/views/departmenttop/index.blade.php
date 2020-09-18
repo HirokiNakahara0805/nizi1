@@ -562,7 +562,7 @@
 				<div class="">
 					<div class="f-container comment-info border-top">
 						<div class="f-item float-right">{{ $departmentpost->created_at->format('Y.m.d H:i') }}</div>
-						<div class="f-item float-right">{{ $departmentpost->name }}</div>
+						<div class="f-item float-right">{{ $departmentpost->name }}さん</div>
 					</div>
 				</div>
 			</div>

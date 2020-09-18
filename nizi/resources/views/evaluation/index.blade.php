@@ -106,7 +106,7 @@
                     </div>
                     
                 </div>
-                
+
             </div>
         @endforeach
     </div>
@@ -386,7 +386,7 @@
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post2->created_at->format('Y.m.d .H:i') }}</div>
                             <div class="f-item float-right">{{ $post2->year }}年</div>
-                            <div class="f-item float-right">{{ $post2->name }}</div>
+                            <div class="f-item float-right">{{ $post2->name }}さん</div>
                         </div>
                     </div>
 
