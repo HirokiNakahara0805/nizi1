@@ -558,7 +558,7 @@
 		@foreach ($departmentposts as $departmentpost)
 
 			<div class="comment-box">
-				<div class="comment-text">{!! nl2br(e(Str::limit($departmentpost->message, 100))) !!}
+				<div class="comment-text">{{$departmentpost->message}}
 					
 				</div>
 				<div class="">
