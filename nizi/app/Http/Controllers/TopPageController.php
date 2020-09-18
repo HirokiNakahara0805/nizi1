@@ -14,9 +14,8 @@ class TopPageController extends Controller {
         $category = new Category;
         $categories = $category->getLists();
         
-
-        //カテゴリー
-        $category2s=Category::paginate(10);
+        //評価投稿をカテゴリーごとにランダムで採取
+        $category2s=Category::inRandomOrder()->get();
 
         //学部とりだし
         $departmentcategories=Departmentcategory::get();

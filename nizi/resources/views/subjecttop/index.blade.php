@@ -59,6 +59,7 @@
             <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
             <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
             <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
+
         </div>
                 <div class="row">
                     <div class="subject-title-sets col-md-12 mt-5">
@@ -78,6 +79,7 @@
                             </div>
                     </div>
                     
+
                 </div>
     
     
@@ -119,7 +121,8 @@
 
 <div>
     <ul class="reset-ul row feature-title-box">
-        <li class=" topcolor feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+
+        <li class=" topcolor feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
         <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
     </ul>
@@ -150,8 +153,10 @@
                     <div class="comment-box">
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
-                        @foreach ($generaltops as $generaltop)
-                                <div><p> {{ $generaltop->name }}</p></div>
+
+                        @foreach ($subjecttops as $subjecttop)
+                                <div><p> {{ $subjecttop->name }}</p></div>
+
                         @endforeach
 
                         
@@ -197,6 +202,7 @@
                                 <div class="f-item float-right">{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
                                 <div class="f-item float-right">{{ $evaluation->year }}年</div>
                                 <div class="f-item float-right">{{ $evaluation->name }}さん</div>
+
                         </div>
                                 </div>
                     @endif
@@ -243,8 +249,10 @@
                         <div class="">
                             <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
+
                                 <div class="f-item float-right ">{{ $bbs->year }}年</div>
                                 <div class="f-item float-right">{{ $bbs->name }}さん</div>
+
 
                             </div>
                         </div>
@@ -330,6 +338,8 @@
 <!--  
 <div>
 @foreach($categories as $id => $name)
-<span class="btn"><a href="{{ route('generaltop.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
+
+<span class="btn"><a href="{{ route('subjecttop.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
+
 @endforeach
 </div> -->

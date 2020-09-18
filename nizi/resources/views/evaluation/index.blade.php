@@ -117,7 +117,7 @@
 <!-------------------------------------------------------遷移ボタン-->
     <div>
         <ul class="reset-ul row feature-title-box">
-            <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+            <li class="feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
             <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
             <li class="evaluationcolor feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
         </ul>
@@ -385,8 +385,13 @@
                         </div>
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post2->created_at->format('Y.m.d .H:i') }}</div>
+                            @if($post2->year==0)
+                                {{$post2->year="?"}}年
+                            @else
                             <div class="f-item float-right">{{ $post2->year }}年</div>
+ @endif
                             <div class="f-item float-right">{{ $post2->name }}さん</div>
+
                         </div>
                     </div>
 

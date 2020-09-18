@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Generaltop,App\Category,App\Post2,App\Post;
+use App\Subjecttop,App\Category,App\Post2,App\Post;
 
-class GeneraltopController extends Controller
+class SubjecttopController extends Controller
 {
     public function index(Request $request)
 {
@@ -16,9 +16,9 @@ class GeneraltopController extends Controller
  
     $category_id = $request->category_id;
     if (!is_null($category_id)) {
-        $generaltops = Category::where('id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
+        $subjecttops = Category::where('id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
     } else {
-        $generaltops = Category::orderBy('created_at', 'desc')->paginate(10);
+        $subjecttops = Category::orderBy('created_at', 'desc')->paginate(10);
     }
     //評価投稿をカテゴリーごとにランダムで採取
     $evaluations=Post2::where('category_id',$category_id)
@@ -68,8 +68,8 @@ class GeneraltopController extends Controller
     $categoryfr5s=Category::where('time','like','%金5%')->get();
     $categoryfr6s=Category::where('time','like','%金6%')->get();
 
-    return view('generaltop.index', [
-        'generaltops' => $generaltops, 
+    return view('subjecttop.index', [
+        'subjecttops' => $subjecttops, 
         'categories' => $categories, 
         'category_id'=>$category_id,
         'evaluations'=>$evaluations,
