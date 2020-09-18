@@ -6,9 +6,6 @@ $(function(){
     $('.thu12345').hide();
     $('.fri12345').hide();
 
-
-
-
     $('.secList').on('click',function(){
       $('.section').not($($(this).attr('href'))).hide();
 
@@ -32,10 +29,6 @@ $(function(){
       $('.wed12345').not($($(this).attr('href'))).hide();
       $('.thu12345').not($($(this).attr('href'))).hide();
       $('.fri12345').not($($(this).attr('href'))).hide();
-   
-    
-      
-
 
       // フェーイン・アウトのアニメーション付で、表示・非表示を交互に実行する
       $($(this).attr('href')).fadeToggle(1000);

@@ -311,8 +311,12 @@
  
 <!----------------------------------------------------------------投稿件数表示設定-->
 <div class="mt-4 mb-4 text-center">
-    <p>{{ $post2s->total() }}件が見つかりました。</p>
-</div>
+        @if ($post2s->total()=== 0 )
+            <p>初めての投稿をしてみましょう！</p>
+        @else
+        <p>{{ $post2s->total() }}件が見つかりました。</p>
+        @endif
+    </div>
 <!----------------------------------------------------------------ページネーション(投稿件数表示)設定-->
 <div class="d-flex justify-content-center mb-5">
                    {{ $post2s->appends(['category_id' => $category_id])->links() }}

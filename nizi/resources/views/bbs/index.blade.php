@@ -206,7 +206,11 @@
     </div>
 
     <div class="mt-4 mb-4 text-center">
+        @if ($posts->total()=== 0 )
+            <p>初めての投稿をしてみましょう！</p>
+        @else
         <p>{{ $posts->total() }}件が見つかりました。</p>
+        @endif
     </div>
 
 

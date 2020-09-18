@@ -539,24 +539,19 @@
 	</div>
 </div>
 
-<div class="mt-4 mb-4 text-center">
-	<p>{{ $departmentposts->total() }}件が見つかりました。</p>
-</div>
 
-
+<!---------------------------------------投稿件数表示（もし０件だったら初めての投稿をしよう！） -->
+	<div class="mt-4 mb-4 text-center">
+        @if ($departmentposts->total()=== 0 )
+            <p>初めての投稿をしてみましょう！</p>
+        @else
+        <p>{{ $departmentposts->total() }}件が見つかりました。</p>
+        @endif
+    </div>
 
 
 <div class="container">
 	<div class="row">
-		<!-- <thead>
-			<tr>
-
-				<th>投稿時間</th>
-				<th>ニックネーム</th>
-				<th>学年</th>
-				<th>メイン内容</th>
-			</tr>
-		</thead> -->
 		<div class="col-md-8">
 		@foreach ($departmentposts as $departmentpost)
 
