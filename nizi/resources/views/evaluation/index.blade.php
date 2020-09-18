@@ -142,7 +142,7 @@
                             class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
                             value="{{ old('name') }}"
                             type="text"
-                        >ニックネーム</textarea>
+                        >名無し</textarea>
                         @if ($errors->has('name'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('name') }}

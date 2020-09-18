@@ -123,7 +123,7 @@
                                 value="{{ old('name') }}"
                                 type="text"
                                 rows="1"
-                            >ニックネーム</textarea>
+                            >名無し</textarea>
                             @if ($errors->has('name'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('name') }}
