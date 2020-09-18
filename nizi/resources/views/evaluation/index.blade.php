@@ -136,16 +136,13 @@
                 <div class="row">
                      <!------------------------------------------ニックネームインプット------------>
                     <div class="form-group col-sm-5">
-                        <label for="name">
-                            ニックネーム
-                        </label>
-                        <input
+                        <textarea
                             id="name"
                             name="name"
                             class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
                             value="{{ old('name') }}"
                             type="text"
-                        >
+                        >ニックネーム</textarea>
                         @if ($errors->has('name'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('name') }}
@@ -165,15 +162,13 @@
                     </div>
                             <!-----------------------------------------学年インプット------------->
                     <div class="form-group col-sm-2">
-                        <label for="year">
-                            学年
-                        </label>
                         <select id="year"
                                 name="year"
                                 class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
                                 value="{{ old('year') }}"
                                 type="number"
-                                placeholder="学年">
+                                placeholder="学年"
+                                size="1">
                             <option value="0"selected disabled>学年</option>
 　　　　　　　　　　　　　　　　　<option value="1">１</option>
 　　　　　　　　　　　　　　　　　<option value="2">２</option>
@@ -188,8 +183,7 @@
                     </div>
                 </div>
                         <!------------------------------------------------------------------------ 星インプット-->
-　　　　　　　　　 <div class="row pb-3">
-
+　　　　　　　　　 <div class="row pb-3 star-difficult">
                     <div class="p-modal-bkm__fav-spinner col-sm-2 mb-5">
                         <label for="good">
                                 いいね
@@ -446,16 +440,14 @@
 
                 </div>
                 <div class="link-list">
-                　　<p>
-            　　    　　<a href="terms">利用規約</a>
-                   　　<a href="beginnersguide">初めての方へ</a>
-                   　　<a href="beginnersguide">運営組織</a>
-                  　　 <a href="contentpolicy">コンテンツポリシー</a>
-                   　　<a href="privacypolicy">プライバシーポリシー</a>
-                   　　<a href="beginnersguide">よくある質問</a>
-                   　　<a href="beginnersguide">お問い合わせ</a>
-                　　</p>
-                </div>
+                　　<div class="form-group col-sm-1"><a href="terms">利用規約</a></div>
+                    <div class="form-group col-sm-2"><a href="beginnersguide">初めての方へ</a></div>
+                    <div class="form-group col-sm-1"><a href="beginnersguide#organization">運営組織</a></div>
+                    <div class="form-group col-sm-2"><a href="contentpolicy">コンテンツポリシー</a></div>
+                    <div class="form-group col-sm-2"><a href="privacypolicy">プライバシーポリシー</a></div>
+                    <div class="form-group col-sm-2"><a href="beginnersguide#faq">よくある質問</a></div>
+                    <div class="form-group col-sm-2"><a href="beginnersguide#inquiry">お問い合わせ</a></div>
+            　　</div>
             </div>
 
         </div>

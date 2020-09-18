@@ -143,17 +143,17 @@ a:hover {
 .link-list{
     background-color: #333;
     display: flex;
+    flex-wrap: wrap;
     border-top: 1px solid #313130;
     border-left: 1px solid #313130;
     width: 100%;
     box-sizing: border-box;
-    display: list-item;
     list-style: none;
-    padding: 30px 10px 100px 0px;
+    padding: 30px 10px 120px 30px;
 }
+  
 .link-list a{
-    font-size: 3rem;
-    padding: 10px 10px 10px 0;
+    font-size: 15px;
     margin-top: 0;
 }
 
@@ -161,7 +161,11 @@ a:hover {
 
 .beginners-text,
 .content-text{
-    text-align: center;
+    text-align:center;
+}
+
+.beginners-text a{
+    color: purple;
 }
 
 .terms-text,
@@ -369,4 +373,23 @@ textarea {
         margin: 0 auto;
     }
 }
+
+/**************************************
+エラーページ設定
+***************************************/
   
+.error-title p{
+    font-size: 8rem;
+    padding: 120px;
+  }
+  
+  .local-error-text p{
+    padding: 42px 0 0;
+    margin-bottom: 16px;
+    font-size: 100px !important;
+  }
+
+  .error-body{
+    background-image: url("https://beiz.jp/images_T/orange/orange_00041.jpg");
+    background-size: cover;
+  }

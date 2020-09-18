@@ -360,7 +360,6 @@ display: flex;
   margin-bottom: 7px;
 }
 .range-group > a {
-  display: inline-block;
   width: 20px;
   height: 20px;
 }
@@ -375,8 +374,8 @@ display: flex;
   color: #fc3;
 }
 
-.on{
-  display: inline-block;
+.star-difficult{
+  display: inline;
 }
 
 /*難しさフォームタグ星の設定*/
@@ -388,9 +387,9 @@ display: flex;
   margin-bottom: 7px;
 }
 .range-group-d > a {
-  display: inline-block;
   width: 20px;
   height: 20px;
+  padding-right: 4px;
 }
 .range-group-d > a:before {
   content: "\f567";
@@ -554,5 +553,10 @@ display: flex;
 
 }
 
+/**********************
+評価投稿のニックネームの大きさ
+/*********************/
 
-
+.col-sm-5 textarea{
+  height: 25px !important;
+}
