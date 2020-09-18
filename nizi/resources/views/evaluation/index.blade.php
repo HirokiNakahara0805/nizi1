@@ -186,7 +186,7 @@
 　　　　　　　　　 <div class="row pb-3 star-difficult">
                     <div class="p-modal-bkm__fav-spinner col-sm-2 mb-5">
                         <label for="good">
-                                いいね
+                                オススメ
                         </label>
 　　　
                         <div class="range-group">
