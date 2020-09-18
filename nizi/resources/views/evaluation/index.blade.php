@@ -377,7 +377,11 @@
                         </div>
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post2->created_at->format('Y.m.d .H:i') }}</div>
+                            @if($post2->year==0)
+                                {{$post2->year="?"}}年
+                            @else
                             <div class="f-item float-right">{{ $post2->year }}年</div>
+                            @endif
                             <div class="f-item float-right">{{ $post2->name }}</div>
                         </div>
                     </div>
