@@ -96,7 +96,7 @@
         </div>
 
         <p class="subject-info-contents"> {{ $category2->book1 }}</p>
-        <p class="subject-info-contents"> {{ $category2->book1 }}</p>
+        <p class="subject-info-contents"> {{ $category2->book2 }}</p>
         <p class="subject-info-contents"> {{ $category2->book3 }}</p>
 
         <div class="row mt-5">
