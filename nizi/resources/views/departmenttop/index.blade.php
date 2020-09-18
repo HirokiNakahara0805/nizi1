@@ -455,7 +455,7 @@
 							value="{{ old('name') }}"
 							type="text"
 							rows="1"
-						>ニックネーム</textarea>
+						>名無し</textarea>
 						@if ($errors->has('name'))
 							<div class="invalid-feedback">
 								{{ $errors->first('name') }}
@@ -582,7 +582,11 @@
 	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
 </div>
 
-		
+<div>
+	@foreach($departmentcategorie2s as $departmentcategorie2)
+    <a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie2->id]) }}" title="{{ $departmentcategorie2->name}}">{{ $departmentcategorie2->name }}</a>
+@endforeach	
+</div>	
 
 
 

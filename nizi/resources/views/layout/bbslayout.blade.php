@@ -50,7 +50,7 @@
         @yield('content')
     </div><!--//container-->
 
-    @yield('footer')
+    @yield('layout.bbsfooter')
 
     </body>
 </html>

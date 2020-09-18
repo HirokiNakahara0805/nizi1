@@ -21,6 +21,9 @@ class DepartmenttopController extends Controller{
         $departmentposts = Departmentpost::orderBy('created_at', 'desc')->paginate(10);
     }
 
+    //学部とりだし
+    $departmentcategorie2s=Departmentcategory::get();
+
 
     $categorymo1s=Category::where('time','like','%月1%')->where('departmentcategory_id',$departmentcategory_id)->get();
     $categorymo2s=Category::where('time','like','%月2%')->where('departmentcategory_id',$departmentcategory_id)->get();
@@ -58,6 +61,7 @@ class DepartmenttopController extends Controller{
         'departmentposts' => $departmentposts,
         'departmentcategories' => $departmentcategories, 
         'departmentcategory_id'=>$departmentcategory_id,
+        'departmentcategorie2s'=> $departmentcategorie2s,
 
 
         'categorymo1s' => $categorymo1s,
