@@ -161,7 +161,11 @@ a:hover {
 
 .beginners-text,
 .content-text{
-    text-align: center;
+    text-align:center;
+}
+
+.beginners-text a{
+    color: purple;
 }
 
 .terms-text,
@@ -354,4 +358,23 @@ textarea {
         margin: 0 auto;
     }
 }
+
+/**************************************
+エラーページ設定
+***************************************/
   
+.error-title p{
+    font-size: 8rem;
+    padding: 120px;
+  }
+  
+  .local-error-text p{
+    padding: 42px 0 0;
+    margin-bottom: 16px;
+    font-size: 100px !important;
+  }
+
+  .error-body{
+    background-image: url("https://beiz.jp/images_T/orange/orange_00041.jpg");
+    background-size: cover;
+  }
