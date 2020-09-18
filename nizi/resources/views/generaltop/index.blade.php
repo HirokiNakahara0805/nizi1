@@ -88,32 +88,28 @@
             <p class="col-md-2 subject-info-contents"> {{ $category2->teacher }}</p>
 
         </div>
- 
+
+        <p class="subject-info-contents"> {{ $category2->book1 }}</p>
+        <p class="subject-info-contents"> {{ $category2->book1 }}</p>
+        <p class="subject-info-contents"> {{ $category2->book3 }}</p>
 
         <div class="row mt-5">
             <div class="col-md-2">
-                <p class="subject-info-contents"> {{ $category2->book1 }}</p>
-                <p class="subject-info-contents"> {{ $category2->link1 }}</p>
+                <div class="subject-info-contents">  <?= html_entity_decode($category2->link1 ); ?></div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="subject-info-contents">  <?= html_entity_decode($category2->link2 ); ?></div>
             </div>
             <div class="col-md-2">
-                <p class="subject-info-contents"> {{ $category2->book2 }}</p>
-                <p class="subject-info-contents"><?= html_entity_decode($category2->link2); ?></p>
-             
-                
+                <div class="subject-info-contents">  <?= html_entity_decode($category2->link3 ); ?></div>
             </div>
-            <div class="col-md-2">
-                <p class="subject-info-contents"> {{ $category2->book2 }}</p>
-                <p class="subject-info-contents"> {{ $category2->link2 }}</p>
-            </div>
-            
-           
 
         </div>
-        <div class="row subject-info-comment-frame">
+        <!-- <div class="row subject-info-comment-frame">
             <div class="col-md-6 subject-info-comment-top">
-                <?= html_entity_decode($category2->content ); ?>
             </div>
-        </div>
+        </div> -->
     </div>
     @endforeach
 </div>
@@ -216,16 +212,9 @@
 
 				</div>
 
-				<div class="col-md-4">
-						<a><p class="koukoku-box">教授名</p></a>
-						<a><p class="koukoku-box">時限</p></a>
-						<a><p class="koukoku-box">参考書リンク</p></a>
-						<a><p class="koukoku-box">教授名</p></a>
-						<a><p class="koukoku-box">時限</p></a>
-                        <a><p class="koukoku-box">参考書リンク</p></a>
-                        <a><p class="koukoku-box">教授名</p></a>
-						<a><p class="koukoku-box">時限</p></a>
-						<a><p class="koukoku-box">参考書リンク</p></a>
+				<div class="col-md-4 over-780ad mt-5 mb-5">
+                    <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=0c234c1bfa2f60e04c50c7fa12d2ef59&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+                    <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=0c234c1bfa2f60e04c50c7fa12d2ef59&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 				</div>
 
 			</div>
@@ -271,16 +260,9 @@
 
 				</div>
 
-				<div class="col-md-4">
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-						<a><p class="koukoku-box">広告</p></a>
-				</div>
+                <div class="col-md-4 under-780ad mt-5 mb-5">
+                    <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=288&l=ur1&category=amazonstudent&banner=1QVPY5WT2THVZY40E382&f=ifr&linkID=e6d5f51ee1373ddd7fbd7ff1b13c3590&t=8pilotis-22&tracking_id=8pilotis-22" width="320" height="50" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+                </div>
 
 			</div>
 

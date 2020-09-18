@@ -16,7 +16,7 @@ class TopPageController extends Controller {
         
 
         //カテゴリー
-        $category2s=Category::paginate(25);
+        $category2s=Category::paginate(10);
 
         //学部とりだし
         $departmentcategories=Departmentcategory::get();

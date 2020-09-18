@@ -28,6 +28,6 @@
         <!-- view point 読み込み-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- javascript  読み込み-->
-	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
 
 </head>
