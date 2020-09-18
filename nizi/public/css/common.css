@@ -164,8 +164,9 @@ a:hover {
     text-align:center;
 }
 
-.beginners-text a{
+.beginners-text i{
     color: purple;
+    font-size: 5rem;
 }
 
 .terms-text,
@@ -375,7 +376,7 @@ textarea {
 }
 
 /**************************************
-エラーページ設定
+           エラーページ設定
 ***************************************/
   
 .error-title p{
@@ -393,3 +394,17 @@ textarea {
     background-image: url("https://beiz.jp/images_T/orange/orange_00041.jpg");
     background-size: cover;
   }
+
+/**************************************
+　　　　　　　学部名ばらし後の設定
+***************************************/
+
+.underlist a{
+    color: black;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.underlist a:hover{
+    color:#e95014;
+}
