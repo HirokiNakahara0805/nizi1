@@ -316,6 +316,21 @@ textarea {
 
 }
 
+
+@media screen and (min-width: 0px) and (max-width: 760px) {
+    .over-780ad{
+        display:none;
+      }
+      .under-780ad{
+        display:inline-block;
+        margin: 0 auto;
+        text-align: center;
+    
+      }
+    
+    }
+    
+    
 /*************************
 メディアクエリ設定 0〜420
 *************************/

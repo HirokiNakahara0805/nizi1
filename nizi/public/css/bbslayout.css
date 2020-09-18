@@ -493,6 +493,13 @@ display: flex;
   margin:20px 0px 0px 0px;
 }
 
+
+/*広告設定*/
+
+.under-780ad{
+  display: none;
+}
+
 /* 画面サイズ小さくしたらPOSTボタンがはみでたので修正
     簡易的な修正他にも修正する時に一気に変更してください*/
     /*************************
@@ -526,7 +533,7 @@ display: flex;
 
 }
 
-@media screen and (min-width: 0px) and (max-width: 770px) {
+@media screen and (min-width: 0px) and (max-width: 760px) {
 
   .feature-title-1 a{
     font-size:12px;
@@ -534,6 +541,15 @@ display: flex;
 
   .comment-info{
     font-size:8px;
+  }
+  .over-780ad{
+    display:none;
+  }
+  .under-780ad{
+    display:inline-block;
+    margin: 0 auto;
+    text-align: center;
+
   }
 
 }
