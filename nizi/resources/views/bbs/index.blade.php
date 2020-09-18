@@ -126,7 +126,7 @@
                                 value="{{ old('name') }}"
                                 type="text"
                                 rows="1"
-                            >ニックネーム</textarea>
+                            >名無し</textarea>
                             @if ($errors->has('name'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('name') }}
@@ -265,8 +265,8 @@
     
     <h3 class="text-center">授業科目</h3>
     <div class="mt-4 mb-4 text-center underlist">
-    <select>@foreach($categories as $id => $name)
-        <option><li class="btn"><a class="class-list" href="{{ route('bbs.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a>
+    <select name="select" onChange="location.href=value;">@foreach($categories as $id => $name)
+        <option value="{{ route('bbs.index', ['category_id'=>$id]) }}" title="{{ $name }}"><a class="class-list" >{{ $name }}</a>
         </option>
         @endforeach
     </select>
@@ -279,49 +279,4 @@
       <script type="text/javascript" src="js/bbs_post.js"></script>
 @endsection
 
-@section('footer')
-<footer>
-        <!-- SNS連携 -->
-        <div class="footer-contents .align-middle">
-
-            <a class="footer-logo" href="">∞pilotis</a>
-
-            <div class="footer-sns justify-content-around footer-logo" >
-                <div class="sns-lists">
-
-                    <div class="sns-item twitter list-inline-item">
-                        <a target="_blank" href="https://mobile.twitter.com/8pilotis">
-                            <i class="fab fa-twitter-square"></i>
-                        </a>
-                    </div>
-
-                    <div class="sns-item youtube list-inline-item">
-                        <a target="_blank" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-
-                    <div class="sns-item instagram list-inline-item">
-                        <a target="_blank" href="https://www.instagram.com/8pilotis">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-
-                </div>
-                <div class="link-list">
-                　　　<div class="form-group col-sm-1"><a href="terms">利用規約</a></div>
-                    <div class="form-group col-sm-2"><a href="beginnersguide">初めての方へ</a></div>
-                    <div class="form-group col-sm-1"><a href="beginnersguide#organization">運営組織</a></div>
-                    <div class="form-group col-sm-2"><a href="contentpolicy">コンテンツポリシー</a></div>
-                    <div class="form-group col-sm-2"><a href="privacypolicy">プライバシーポリシー</a></div>
-                    <div class="form-group col-sm-2"><a href="beginnersguide#faq">よくある質問</a></div>
-                    <div class="form-group col-sm-2"><a href="beginnersguide#inquiry">お問い合わせ</a></div>
-            　　</div>
-            </div>
-            
-        </div>
-
-      
-
-    </footer>
-@endsection
+@include("layout.bbsfooter")

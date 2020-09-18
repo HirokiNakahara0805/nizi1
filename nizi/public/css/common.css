@@ -135,7 +135,7 @@ a:hover {
 .footer-contents a{
     
     font-size: 30px;
-    color: white;
+    color: white !important;
     text-decoration: none;
 }
 

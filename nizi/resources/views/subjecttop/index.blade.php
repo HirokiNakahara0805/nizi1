@@ -60,6 +60,7 @@
             <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
             <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
 
+
         </div>
                 <div class="row">
                     <div class="subject-title-sets col-md-12 mt-5">
@@ -79,6 +80,7 @@
                             </div>
                     </div>
                     
+
 
                 </div>
     
@@ -122,7 +124,9 @@
 <div>
     <ul class="reset-ul row feature-title-box">
 
+
         <li class=" topcolor feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+
         <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
         <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
     </ul>
@@ -154,8 +158,10 @@
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
 
+
                         @foreach ($subjecttops as $subjecttop)
                                 <div><p> {{ $subjecttop->name }}</p></div>
+
 
                         @endforeach
 
@@ -201,7 +207,9 @@
                         <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
                                 <div class="f-item float-right">{{ $evaluation->year }}年</div>
+
                                 <div class="f-item float-right">{{ $evaluation->name }}さん</div>
+
 
                         </div>
                                 </div>
@@ -250,8 +258,10 @@
                             <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
 
+
                                 <div class="f-item float-right ">{{ $bbs->year }}年</div>
                                 <div class="f-item float-right">{{ $bbs->name }}さん</div>
+
 
 
                             </div>
@@ -288,58 +298,5 @@
 @endsection
 
 
-@section('footer')
-<footer>
-        <!-- SNS連携 -->
-        <div class="footer-contents .align-middle">
 
-            <a class="footer-logo" href="">∞pilotis</a>
-
-            <div class="footer-sns justify-content-around footer-logo" >
-                <div class="sns-lists">
-
-                    <div class="sns-item twitter list-inline-item">
-                        <a target="_blank" href="https://mobile.twitter.com/8pilotis">
-                            <i class="fab fa-twitter-square"></i>
-                        </a>
-                    </div>
-
-                    <div class="sns-item youtube list-inline-item">
-                        <a target="_blank" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-
-                    <div class="sns-item instagram list-inline-item">
-                        <a target="_blank" href="https://www.instagram.com/8pilotis">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-
-                </div>
-                <div class="link-list">
-                　　　<div class="form-group col-sm-1"><a href="terms">利用規約</a></div>
-                    <div class="form-group col-sm-2"><a href="beginnersguide">初めての方へ</a></div>
-                    <div class="form-group col-sm-1"><a href="beginnersguide#organization">運営組織</a></div>
-                    <div class="form-group col-sm-2"><a href="contentpolicy">コンテンツポリシー</a></div>
-                    <div class="form-group col-sm-2"><a href="privacypolicy">プライバシーポリシー</a></div>
-                    <div class="form-group col-sm-2"><a href="beginnersguide#faq">よくある質問</a></div>
-                    <div class="form-group col-sm-2"><a href="beginnersguide#inquiry">お問い合わせ</a></div>
-            　　</div>
-            </div>
-            
-        </div>
-
-      
-
-    </footer>
-@endsection
-
-<!--  
-<div>
-@foreach($categories as $id => $name)
-
-<span class="btn"><a href="{{ route('subjecttop.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
-
-@endforeach
-</div> -->
+@include("layout.bbsfooter")

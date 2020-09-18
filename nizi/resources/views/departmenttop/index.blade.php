@@ -461,7 +461,7 @@
 							value="{{ old('name') }}"
 							type="text"
 							rows="1"
-						>ニックネーム</textarea>
+						>名無し</textarea>
 						@if ($errors->has('name'))
 							<div class="invalid-feedback">
 								{{ $errors->first('name') }}
@@ -579,8 +579,15 @@
 <div class="d-flex justify-content-center mb-5">
 	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
 </div>
-
-		
+<h3 class="text-center">学部名</h3>
+<div class="mt-4 mb-4 text-center underlist">
+<select name="select" onChange="location.href=value;">@foreach($departmentcategorie2s as $departmentcategorie2)
+	<option value="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie2->id]) }}" title="{{ $departmentcategorie2->name}}">
+		<a>{{ $departmentcategorie2->name }}</a>
+	</option>
+@endforeach	
+</select>
+</div>	
 
 
 

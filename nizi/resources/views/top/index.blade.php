@@ -54,7 +54,7 @@
 
 					<div class="col-md-8 text-center top-all-bbs-backgroundcolor">
 						<!-- カテゴリーテーブルを変数宣言してます -->
-						<h1	class="text-center m-2" >BBS title</h1>
+						<h1	class="text-center m-2" >一般教養</h1>
 						@foreach($category2s as $category2)
 						@if($loop->iteration < 6)
 						<div class="top-bbs-box">
