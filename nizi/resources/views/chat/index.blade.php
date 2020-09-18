@@ -15,7 +15,20 @@
 
 <div class="all-index">
 
-
+<!---------------------------------------------------アマゾンアソシエイト ----------------------------------------------------->
+<div class=" over-780ad mt-5 mb-5">
+			<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=48&l=ur1&category=amazonstudent&banner=1B2EJRSWS8V41M50QQG2&f=ifr&linkID=af9219f19375bad9edfa5e845452975a&t=8pilotis-22&tracking_id=8pilotis-22" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+		</div>
+		<div class="col-md-4 under-780ad mt-5 mb-5">
+            <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=288&l=ur1&category=amazonstudent&banner=1QVPY5WT2THVZY40E382&f=ifr&linkID=e6d5f51ee1373ddd7fbd7ff1b13c3590&t=8pilotis-22&tracking_id=8pilotis-22" width="320" height="50" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        </div>
+<!---------------------------------------------------掲示板タイトル ----------------------------------------------------->
+<div class="container dep-title-frame ">
+				<div class="dep-title-frame-top border-bottom">
+					<p class="department-bbs-title">上智大学全体掲示板</p>
+				</div>
+    </div>
+            
     <div class="container mt-4 ">
         <div class="comment-box-form">
 
@@ -127,13 +140,13 @@
             @foreach ($chats as $chat)
 
                 <div class="comment-box">
-                    <div class="comment-text">{!! nl2br(e(Str::limit($chat->message, 100))) !!}
+                    <div class="comment-text">{{$chat->message}}
 
                     </div>
                     <div class="">
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $chat->created_at->format('Y.m.d H:i') }}</div>
-                            <div class="f-item float-right">{{ $chat->name }}</div>
+                            <div class="f-item float-right">{{ $chat->name }}さん</div>
                         </div>
                     </div>
                 </div>

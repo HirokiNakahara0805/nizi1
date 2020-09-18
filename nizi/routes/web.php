@@ -28,7 +28,7 @@ Route::resource('evaluation', 'Post2sController', ['only' => ['index','create', 
 
 
 //般教Top画面テストページ
-Route::resource('generaltop', 'GeneraltopController', ['only' => ['index']]);
+Route::resource('subjecttop', 'SubjecttopController', ['only' => ['index']]);
 
 //チャットテストページ
 Route::resource('chat', 'ChatsController', ['only' => ['index', 'store']]);

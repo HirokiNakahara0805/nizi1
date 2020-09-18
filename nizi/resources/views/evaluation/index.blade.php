@@ -87,22 +87,26 @@
                     <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
                 </div>
 
-                <div class="general-top-title title-star row "> 
-                    <div class="col-md-3 border-line-orange">
-                        <tr>{{ $category2->name }}</tr>
-                     </div>
-                    <div class="col-md-4 star-average-box border-line-orange">
-                       <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p class="star-average">Rate:{{ $average }}</p></a>
-                        <div class="star-ratings-sprite ">
-                            <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span>
-                        </div>
+                <div class="row">
+                    <div class="subject-title-sets col-md-12 mt-5">
+                            <h1 class="border-line-orange">{{ $category2->name }}</h1>
                     </div>
-                    <!-- <div class="col-md-3 comment-kensuu-box">
-                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
-                            <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
-                        </a>
-                    </div> -->
                 </div>
+                <div class="general-top-title title-star row mt-5"> 
+                    
+                    <div class="star-average-box border-line-orange col-md-4">
+                        
+                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><h1 class="star-average">rate:{{ $average }}</h1></a>
+                            <div class="star-ratings-sprite-title ">
+                                <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating-title"></span>
+                            </div>
+                            <div class="toukou-kensu">
+                                <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p>{{$totalpost2s}}件</p></a>
+                            </div>
+                    </div>
+                    
+                </div>
+
             </div>
         @endforeach
     </div>
@@ -113,7 +117,7 @@
 <!-------------------------------------------------------遷移ボタン-->
     <div>
         <ul class="reset-ul row feature-title-box">
-            <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+            <li class="feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
             <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
             <li class="evaluationcolor feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
         </ul>
@@ -186,7 +190,9 @@
 　　　　　　　　　 <div class="row pb-3 star-difficult">
                     <div class="p-modal-bkm__fav-spinner col-sm-2 mb-5">
                         <label for="good">
+
                                 オススメ度
+
                         </label>
 　　　
                         <div class="range-group">
@@ -315,8 +321,12 @@
  
 <!----------------------------------------------------------------投稿件数表示設定-->
 <div class="mt-4 mb-4 text-center">
-    <p>{{ $post2s->total() }}件が見つかりました。</p>
-</div>
+        @if ($post2s->total()=== 0 )
+            <p>初めての投稿をしてみましょう！</p>
+        @else
+        <p>{{ $post2s->total() }}件が見つかりました。</p>
+        @endif
+    </div>
 <!----------------------------------------------------------------ページネーション(投稿件数表示)設定-->
 <div class="d-flex justify-content-center mb-5">
                    {{ $post2s->appends(['category_id' => $category_id])->links() }}
@@ -381,8 +391,13 @@
                         </div>
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post2->created_at->format('Y.m.d .H:i') }}</div>
+                            @if($post2->year==0)
+                                {{$post2->year="?"}}年
+                            @else
                             <div class="f-item float-right">{{ $post2->year }}年</div>
-                            <div class="f-item float-right">{{ $post2->name }}</div>
+ @endif
+                            <div class="f-item float-right">{{ $post2->name }}さん</div>
+
                         </div>
                     </div>
 
