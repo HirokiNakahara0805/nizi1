@@ -38,6 +38,12 @@
 						<a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie->id]) }}" title="{{ $departmentcategorie->name}}"><h1 class="your-class">{{ $departmentcategorie->name }}</h1></a>
 					</div>
 					@endforeach
+					<div class=" img-sophia col-md-2" >
+							<a href="{{ url('/chat') }}" >
+								<h1 class="your-class">Chat Room</h1>
+							</a>
+					</div>
+
 
 				</div>
 			</div>
