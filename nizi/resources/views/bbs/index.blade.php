@@ -227,7 +227,7 @@
             @foreach ($posts as $post)
 
                 <div class="comment-box">
-                    <div class="comment-text">{!! nl2br(e(Str::limit($post->message, 100))) !!}
+                    <div class="comment-text">{{$post->message}}
                         @if ($post->comments->count() >= 1)
                             <p><span class="comment-number">{{ $post->comments->count() }}件</span></p>
                         @endif
