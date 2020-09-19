@@ -63,7 +63,7 @@
 		<main class="general-page">
 			
 
-			<div class="container dep-title-frame ">
+			<div class="container dep-title-frame">
 				<div class="dep-title-frame-top border-bottom">
 				@foreach($departmentcategorie3s as $departmentcategorie3)
 					<h1 class="department-bbs-title pl-5"><a name="timetable">{{ $departmentcategorie3->name }}時間割</a></h1>

@@ -292,6 +292,18 @@ display: flex;
   margin:0 0 0 0;
 
 }
+ /*-----------------POSTアイコンの設定-------*/
+ .chat-post-botton{
+  background-color:rgb(94, 94, 252);
+  border:1px solid rgb(94, 94, 252);
+  color:grey;
+  width:150px;
+  height:35px;
+  border-radius: 10px;
+  padding:0px 10px;
+  margin:0 0 0 0;
+
+}
 .post-botton:hover{
  
   background-color:white;
@@ -493,6 +505,34 @@ font-size: 30px;
     background-color: #f8c3ae15;
 } 
 
+/*チャットペーじの箱設定*/
+.chat-box-form{
+
+  border-radius: 10px;
+  border: 1px solid #333333;
+  border-bottom: 2px solid blue;
+  box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+  padding: 10px 10px 10px 10px;
+  margin: 15px 0px 15px 0px;
+  background-color: #b5d2f715;
+} 
+/*--------------------------------コメントボックスの設定(大枠)------*/
+.chat-box{
+   
+  border-radius: 10px;
+  border: 1px solid #333333;
+  border-bottom: 2px solid blue;
+  box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+  padding: 10px 10px 10px 10px;
+  margin: 15px 0px 15px 0px;
+  background-color: white;
+  word-break: break-word;
+} 
+.chat-title-frame-top{
+  font-size: 15px;
+  border-left:5px solid blue;
+  background-color: white;
+}
 /*reply form 設定*/
 .reply-box-form{
    
@@ -546,7 +586,6 @@ font-size: 30px;
   font-size: 15px;
   border-left:5px solid #e95014;
   background-color: white;
- 
 }
 .dep-title-frame{
   padding:20px 0px;

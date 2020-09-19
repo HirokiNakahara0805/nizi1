@@ -40,7 +40,7 @@ h1.your-class{
     border-radius: 10px;
     background-color: white;
     border: 1px solid #333;
-    border-bottom: 1px solid #e95014;
+    border-bottom: 1px solid blue;
     box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
     margin:10px;
     padding:5px 5px;

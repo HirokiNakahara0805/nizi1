@@ -28,21 +28,21 @@
 <div class="all-index">
 
 <!---------------------------------------------------アマゾンアソシエイト ----------------------------------------------------->
-<div class=" over-780ad mt-5 mb-5">
+<!-- <div class=" over-780ad mt-5 mb-5">
 			<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=48&l=ur1&category=amazonstudent&banner=1B2EJRSWS8V41M50QQG2&f=ifr&linkID=af9219f19375bad9edfa5e845452975a&t=8pilotis-22&tracking_id=8pilotis-22" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 		</div>
 		<div class="col-md-4 under-780ad mt-5 mb-5">
             <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=288&l=ur1&category=amazonstudent&banner=1QVPY5WT2THVZY40E382&f=ifr&linkID=e6d5f51ee1373ddd7fbd7ff1b13c3590&t=8pilotis-22&tracking_id=8pilotis-22" width="320" height="50" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-        </div>
+        </div> -->
 <!---------------------------------------------------掲示板タイトル ----------------------------------------------------->
-<div class="container dep-title-frame ">
-				<div class="dep-title-frame-top border-bottom">
+<div class="container dep-title-frame mt-5">
+				<div class="chat-title-frame-top border-bottom">
 					<p class="department-bbs-title">上智大学全体掲示板</p>
 				</div>
     </div>
             
     <div class="container mt-4 " id="all-bbs">
-        <div class="comment-box-form">
+        <div class="chat-box-form">
 
             <form method="POST" action="{{ route('chat.store') }}" >
                 @csrf
@@ -54,7 +54,7 @@
                             <textarea
                                 id="name"
                                 name="name"
-                                class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
+                                class="chat-form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
                                 value="{{ old('name') }}"
                                 type="text"
                                 rows="1"
@@ -72,7 +72,7 @@
                         <div class="form-group col-sm-2">
                             <select id="year"
                                 name="year"
-                                class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
+                                class="chat-form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
                                 value="{{ old('year') }}"
                                 type="number"
                                 placeholder="学年"
@@ -107,7 +107,7 @@
                             <textarea
                                 id="message"
                                 name="message"
-                                class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
+                                class="chat-form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
                                 cols="20" rows="2"　 wrap="hard" 　
                             >{{ old('message') }}</textarea>
                             @if ($errors->has('message'))
@@ -122,7 +122,7 @@
         
                         <div class="post-position col-sm-3">
         
-                            <button type="submit" class="post-botton" >
+                            <button type="submit" class="chat-post-botton" >
                                 <i class="fas fa-paper-plane post-icon">POST</i>
                             </button>
                         </div>
@@ -154,7 +154,7 @@
             </div>
             @foreach ($chats as $chat)
 
-                <div class="comment-box">
+                <div class="chat-box">
                     <div class="comment-text">{{$chat->message}}
 
                     </div>
