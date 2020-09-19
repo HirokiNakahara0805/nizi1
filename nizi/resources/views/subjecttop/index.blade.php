@@ -15,12 +15,15 @@
     </div>
 </header>
 
-<div class="u2-global-navbar">
-    <ul class="reset-ul row v2-global-navbar__links">
-        <li class="u2-global-navbar__link"><a href="#evaluation">evaluation</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-        <li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-    </ul>
-</div>
+    <div class="u2-global-navbar">
+		<ul class="reset-ul row v2-global-navbar__links">
+            @foreach($category2s as $category2)
+            <li class="u2-global-navbar__link"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            @endforeach
+			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+		</ul>
+	</div>
 @endsection
 @section('title', 'LaravelPjt BBS 投稿の一覧ページ')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
