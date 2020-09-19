@@ -141,20 +141,7 @@ a:hover {
 }
 
 .sns-item i{
-    background-color: white;
-}
-
-.twitter i{
-    color:#1DA1F2;
-}
-
-.youtube i{
-    color: #cd201f;
-}
-
-.instagram i{
-background: linear-gradient(135deg,#427eff 0%,#f13f79 70%) no-repeat;
-background-image: linear-gradient(135deg, rgb(66, 126, 255) 0%, rgb(241, 63, 121) 70%);
+    color: white;
 }
 
 /*----フッターリンクの設定----*/
@@ -485,7 +472,7 @@ textarea {
 /**************************************
 　　　　　　　学部名ばらし後の設定
 ***************************************/
-
+/*
 .underlist a{
     color: black;
     text-align: left;
@@ -494,4 +481,12 @@ textarea {
 
 .underlist a:hover{
     color:#e95014;
+}*/
+
+.underlist select{
+    margin:0 auto;
 }
+
+
+
+
