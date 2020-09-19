@@ -287,7 +287,7 @@
 			</div>
 
         </div>
-
+<!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
         <h3 class="text-center">授業科目</h3>
     <div class="mt-4 mb-4 text-center underlist">
     <select name="select" onChange="location.href=value;">

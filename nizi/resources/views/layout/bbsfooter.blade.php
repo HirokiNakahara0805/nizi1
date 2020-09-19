@@ -30,13 +30,17 @@
                 </div>
 
                 <div class="link-list">
-                    <div class="form-group col-sm-1"><a href="terms">利用規約</a></div>
-                    <div class="form-group col-sm-2"><a href="beginnersguide">初めての方へ</a></div>
-                    <div class="form-group col-sm-1"><a href="beginnersguide#organization">運営組織</a></div>
-                    <div class="form-group col-sm-2"><a href="contentpolicy">コンテンツポリシー</a></div>
-                    <div class="form-group col-sm-2"><a href="privacypolicy">プライバシーポリシー</a></div>
-                    <div class="form-group col-sm-2"><a href="beginnersguide#faq">よくある質問</a></div>
-                    <div class="form-group col-sm-2"><a href="beginnersguide#inquiry">お問い合わせ</a></div>
+                    <div class="text-inline">
+                        <p class="">|<a href="terms">利用規約</a>|</p>
+                        <p class="">|<a href="beginnersguide">初めての方へ</a>|</p>
+                        <p class="">|<a href="beginnersguide#organization">運営組織</a>|</p>
+                        <p class="">|<a href="contentpolicy">コンテンツポリシー</a>|</p>
+                    </div>
+                    <div class="text-inline"> 
+                        <p class="">|<a href="privacypolicy">プライバシーポリシー</a>|</p>
+                        <p class="">|<a href="beginnersguide#faq">よくある質問</a>|</p>
+                        <p class="">|<a href="beginnersguide#inquiry">お問い合わせ</a>|</p>
+                    </div>
                 </div>
             </div>
 
