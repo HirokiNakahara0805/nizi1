@@ -32,5 +32,5 @@ class Category extends Model
         return $this->hasMany('App\Post');
     }
 
-    protected $fillable = ['name','teacher','department'];
+    protected $fillable = ['name','teacher','departmentcategory_id'];
 }

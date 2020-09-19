@@ -1,6 +1,11 @@
 @section('content')
 <div style="margin-top:50px;">
 <h1>検索結果</h1>
+
+@if(!empty($message))
+<div class="alert alert-primary" role="alert">{{ $message}}</div>
+@endif
+
 @if(isset($users))
 <table class="table">
   <tr>
@@ -17,16 +22,16 @@
 
 								<div class="">
 										<p class="bbs-name text-center" >{{ $user->name }}</p>
+                </div>
+                <div class="">
+										<p class="bbs-name text-center" >{{ $user->department }}</p>
 								</div>
 
 							</a>
 						</div>
     </tr>
   @endforeach
-  
+@endif
 </table>
-@endif
-@if(!empty($message))
-<div class="alert alert-primary" role="alert">{{ $message}}</div>
-@endif
+
 </div>
