@@ -34,7 +34,23 @@ h1.your-class{
     padding:60px 10px;
     
 }
+.img-sophia-chat{
+    height: auto;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #333;
+    border-bottom: 1px solid #e95014;
+    box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+    margin:10px;
+    padding:5px 5px;
+}
+h1.your-class-chat{
+    color:black;
+    padding:40px 0px;
 
+    
+}
 
 /*-----------slick setting*/
 .slick-prev:before,

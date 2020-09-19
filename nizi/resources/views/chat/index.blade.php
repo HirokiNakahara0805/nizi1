@@ -6,13 +6,25 @@
 @section('pageCss')
 <link href="/css/bbs/style.css" rel="stylesheet">
 @endsection
- 
-@include('layout.bbsheader')
- 
+<!--ヘッダの上の白いとこー-->
+<header class="u2-header">
+		<div class="u2-header__container-inner">
+			<a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+		</div>
+	</header>
+
+<!--ヘッダの下の黒いとこー-->
+	<div class="u2-global-navbar">
+		<ul class="reset-ul row v2-global-navbar__links">
+			<li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-about">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+		</ul>
+	</div>
 @section('content')
 
 
-
+<title>chat - ∞pilotis</title>
 <div class="all-index">
 
 <!---------------------------------------------------アマゾンアソシエイト ----------------------------------------------------->
@@ -29,7 +41,7 @@
 				</div>
     </div>
             
-    <div class="container mt-4 ">
+    <div class="container mt-4 " id="all-bbs">
         <div class="comment-box-form">
 
             <form method="POST" action="{{ route('chat.store') }}" >
@@ -137,6 +149,9 @@
                 </tr>
             </thead> -->
             <div class="col-md-8">
+            <div class="d-flex justify-content-center mb-5">
+                    {{ $chats->links() }}
+            </div>
             @foreach ($chats as $chat)
 
                 <div class="comment-box">
@@ -152,6 +167,9 @@
                 </div>
 
             @endforeach
+                <div class="d-flex justify-content-center mb-5">
+                    {{ $chats->links() }}
+                </div>
             </div>
             <!--投稿の横の空白部分-->
             <div class="col-md-4">

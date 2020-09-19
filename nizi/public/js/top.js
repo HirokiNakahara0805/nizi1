@@ -27,7 +27,7 @@ $('.your-class').slick({
         slidesToShow: 2
       }
     },{
-      breakpoint: 640,
+      breakpoint: 770,
       settings: {
         slidesToShow: 1
       }
