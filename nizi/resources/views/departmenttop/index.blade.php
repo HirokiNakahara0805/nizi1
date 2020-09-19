@@ -51,6 +51,8 @@
 
 		<div class="u2-global-navbar">
 			<ul class="reset-ul row v2-global-navbar__links">
+				<li class="u2-global-navbar__link"><a href="#timetable">timetable</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+				<li class="u2-global-navbar__link"><a href="#bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<!--	<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 				<li class="u2-global-navbar__link"><a href="#all-bbs"> </a><i class="fas fa-angle-double-down nav-arrows"></i></li> -->
 			</ul>
@@ -63,7 +65,7 @@
 			<div class="container dep-title-frame ">
 				<div class="dep-title-frame-top border-bottom">
 				@foreach($departmentcategorie3s as $departmentcategorie3)
-					<h1 class="department-bbs-title pl-5">{{ $departmentcategorie3->name }}時間割</h1>
+					<h1 class="department-bbs-title pl-5"><a name="timetable">{{ $departmentcategorie3->name }}時間割</a></h1>
 				@endforeach
 				</div>
 			</div>
@@ -445,7 +447,7 @@
 			<div class="container dep-title-frame ">
 				<div class="dep-title-frame-top border-bottom">
 					@foreach($departmentcategorie3s as $departmentcategorie3)
-					<p class="department-bbs-title pl-5">{{$departmentcategorie3->name}} 掲示板</p>
+					<p class="department-bbs-title pl-5"><a name="bbs">{{$departmentcategorie3->name}} 掲示板</a></p>
 					@endforeach
 				</div>
 			</div>

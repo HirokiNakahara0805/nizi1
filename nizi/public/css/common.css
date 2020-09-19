@@ -135,8 +135,26 @@ a:hover {
 .footer-contents a{
     
     font-size: 30px;
-    color: white !important;
+    color: white ;
     text-decoration: none;
+    
+}
+
+.sns-item i{
+    background-color: white;
+}
+
+.twitter i{
+    color:#1DA1F2;
+}
+
+.youtube i{
+    color: #cd201f;
+}
+
+.instagram i{
+background: linear-gradient(135deg,#427eff 0%,#f13f79 70%) no-repeat;
+background-image: linear-gradient(135deg, rgb(66, 126, 255) 0%, rgb(241, 63, 121) 70%);
 }
 
 /*----フッターリンクの設定----*/
@@ -164,7 +182,7 @@ a:hover {
 フッターリンクメディアクエリ設定 674~
 ************************************/
 
-@media screen and (min-width: 674px) and (max-width: 1024px) {
+@media screen and (min-width: 674px) {
     .link-list p{
         background-color: #333;
         display: inline-block;
@@ -175,7 +193,7 @@ a:hover {
 /***********************************
 フッターリンクメディアクエリ設定 1024~
 ************************************/
-
+/*----------------------------------
 @media screen and (min-width: 1024px){
     .link-list p{
         display: inline-flex;
@@ -185,7 +203,7 @@ a:hover {
         display: inline-flex;
     }
 }
-
+*-----------------------------------/
 /*-----フッターリンク先の設定-----*/
 
 .beginners-text,
