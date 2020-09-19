@@ -51,8 +51,9 @@
 
 		<div class="u2-global-navbar">
 			<ul class="reset-ul row v2-global-navbar__links">
-			<!--	<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-				<li class="u2-global-navbar__link"><a href="#all-bbs"> </a><i class="fas fa-angle-double-down nav-arrows"></i></li> -->
+				<li class="u2-global-navbar__link"><a href="#all-subject">other department</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+				<li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+				<li class="u2-global-navbar__link"><a href="#all-about">about</a><i class="fas fa-angle-double-down nav-arrows"></i></li> 
 			</ul>
 		</div>
 
@@ -422,11 +423,7 @@
 			<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 		</main>
 
-		@if (session('poststatus'))
-				<div class="alert alert-success mt-4 mb-4">
-					{{ session('poststatus') }}
-				</div>
-		@endif
+		
 
 
 <!---------------------------------------------------アマゾンアソシエイト ----------------------------------------------------->
@@ -452,7 +449,14 @@
 
 
 <div class="container mt-4 ">
+	<!---------------------------------------------------投稿完了メッセージ ----------------------------------------------------->
+	@if (session('poststatus'))
+				<div class="alert alert-success mt-4 mb-4">
+					{{ session('poststatus') }}
+				</div>
+		@endif
 	<div class="comment-box-form">
+
 
 		<form method="POST" action="{{ route('departmenttop.store') }}" >
 			@csrf
@@ -583,7 +587,7 @@
 
 	</div>
 </div>
-<div class="d-flex justify-content-center mb-5">
+<div class="d-flex justify-content-center mb-5" id="all-subject">
 	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
 </div>
 <!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->

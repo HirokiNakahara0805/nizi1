@@ -142,7 +142,9 @@ a:hover {
 /*----フッターリンクの設定----*/
 .link-list{
     background-color: #333;
+
     padding: 50px 0px 100px 0px;
+
 }
   
 .link-list a{
@@ -361,6 +363,18 @@ textarea {
         text-align: center;
     
       }
+      /* ヘッダー設定 */
+      .u2-global-navbar__link a{
+        color: white;
+        text-decoration:none;
+        font-size: 13px;
+    }
+    .u2-global-navbar__link {
+        display: block;
+        color: #ffffff;
+        font-size: 8px;
+        padding: 13px 20px 10px ;
+    }
     
     }
     
@@ -385,6 +399,18 @@ textarea {
     a {
         font-size: 15px;
     }
+      /* ヘッダー設定 */
+      .u2-global-navbar__link a{
+        
+        font-size: 14px;
+    }
+    .u2-global-navbar__link {
+        display: block;
+        color: #ffffff;
+        font-size: 8px;
+        padding: 13px 10px 10px ;
+    }
+  
 
 }
 

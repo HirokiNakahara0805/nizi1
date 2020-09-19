@@ -583,6 +583,11 @@ font-size: 30px;
     width:45px;
     font-size:10px;
   }
+  /*ジェネラルトップの科目ごとタイトル設定*/
+.subject-title-sets h1{
+  font-size: 25px;
+  
+  }
   
 }
 /*************************
@@ -595,6 +600,11 @@ font-size: 30px;
     padding:0px 0px;
     margin:0 0 0 0;
 
+  }
+  /*ジェネラルトップの科目ごとタイトル設定*/
+.subject-title-sets h1{
+  font-size: 20px;
+  
   }
 
 }
@@ -617,6 +627,15 @@ font-size: 30px;
     text-align: center;
 
   }
+
+  /*DEPARTMENT掲示板タイトル*/
+
+.department-bbs-title{
+  font-size:25px;
+
+  width: 100%;
+}
+
 
 }
 
