@@ -142,19 +142,50 @@ a:hover {
 /*----フッターリンクの設定----*/
 .link-list{
     background-color: #333;
-    /* padding:20px 200px 60px 200px; */
- 
+
+    padding: 50px 0px 100px 0px;
+
 }
   
 .link-list a{
-    font-size: 10px;
-    margin-top: 0;
+    font-size: 20px;
     color:white;
 }
 .link-list p{
     font-size: 10px;
     margin-top: 0;
     color:white;
+}
+
+.text-inline p{
+    color: #e95014;
+    font-size: 20px;
+}
+
+/***********************************
+フッターリンクメディアクエリ設定 674~
+************************************/
+
+@media screen and (min-width: 674px) and (max-width: 1024px) {
+    .link-list p{
+        background-color: #333;
+        display: inline-block;
+        padding: 20px;
+    }
+}
+
+/***********************************
+フッターリンクメディアクエリ設定 1024~
+************************************/
+
+@media screen and (min-width: 1024px){
+    .link-list p{
+        display: inline-flex;
+        padding: 20px;
+    }
+    .text-inline{
+        display: inline-flex;
+    }
 }
 
 /*-----フッターリンク先の設定-----*/
@@ -164,8 +195,9 @@ a:hover {
     text-align:center;
 }
 
-.beginners-text a{
+.beginners-text i{
     color: purple;
+    font-size: 5rem;
 }
 
 .terms-text,
@@ -399,21 +431,33 @@ textarea {
 }
 
 /**************************************
-エラーページ設定
+           エラーページ設定
 ***************************************/
-  
+
 .error-title p{
     font-size: 8rem;
-    padding: 120px;
+    padding: 50px;
   }
-  
-  .local-error-text p{
-    padding: 42px 0 0;
-    margin-bottom: 16px;
-    font-size: 100px !important;
+
+  .error-texts p{
+      font-size: 15px;
   }
 
   .error-body{
     background-image: url("https://beiz.jp/images_T/orange/orange_00041.jpg");
     background-size: cover;
   }
+
+/**************************************
+　　　　　　　学部名ばらし後の設定
+***************************************/
+
+.underlist a{
+    color: black;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.underlist a:hover{
+    color:#e95014;
+}

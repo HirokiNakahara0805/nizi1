@@ -432,6 +432,8 @@ font-size: 30px;
 
   .non-star{
     color:#3490dc !important;
+    margin-top: 0.25rem;
+    font-size: 80%;
 }
 /*いいねを星で表示する設定(title部分*/
 .star-ratings-sprite-title {
@@ -643,4 +645,8 @@ font-size: 30px;
 
 .col-sm-5 textarea{
   height: 25px !important;
+}
+
+.text-center select {
+  width: 300px;
 }

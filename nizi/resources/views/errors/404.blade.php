@@ -21,15 +21,20 @@
 		</ul>
     </div>
 	<div style="text-align:center">
-        <div class="error-title"><p>404 File not found.</p></div>
-        <p class=".local-error-text">ご指定のページが見つかりませんでした。</p>
-        <p>
+        <div class="error-title">
+          <p>ERROR</p>
+          <p>404 File not found.</p>
+        </div>
+        <div class="error-texts">
+            <p class="local-error-text">ご指定のページが見つかりませんでした。</p>
+            <p>
              アクセスしようとしたページは削除、変更されたか、現在利用できない可能性があります。
-            <br>
+              <br>
              お手数をおかけしますが、上部の∞pilotisロゴ、
-            <br>
+              <br>
              または下部のロゴよりトップページにお戻りいただきますようお願いいたします。
-        </p>
+            </p>
+        </div>
 </body>
 </div>
 @include("parts.footer")
