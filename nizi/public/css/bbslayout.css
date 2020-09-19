@@ -70,6 +70,7 @@ p{
     padding: 10px 10px 10px 10px;
     margin: 15px 0px 15px 0px;
     background-color: white;
+    word-break: break-word;
 } 
 
 
@@ -159,6 +160,32 @@ padding: 40px 50px 20px 40px;
   color:black;
 }
 
+.topcolor {
+  background-color: #e95014;
+}
+
+.topcolor a{
+  color: white!important;
+}
+
+.bbscolor {
+  color: white!important;
+  background-color: #e95014;
+}
+
+.bbscolor a{
+  color: white!important;
+}
+
+.evaluationcolor  {
+  color: white!important;
+  background-color: #e95014;
+}
+
+.evaluationcolor a {
+  color: white!important;
+}
+
 /*------------------コメントアイコンの設定-------*/
 .comment-icon{
   background-color:white;
@@ -241,10 +268,11 @@ display: flex;
   .common-btn{
     background-color:white;
     border:3px solid #e95014;
-    padding:8px 40px;
+    padding:8px 30px;
     margin:25px 10px;
     color:black;
     border-radius: 20px;
+    font-size:20px;
   }
 
   .common-btn:hover{
@@ -256,6 +284,18 @@ display: flex;
 .post-botton{
   background-color:#e95014;
   border:1px solid #e95014;
+  color:grey;
+  width:150px;
+  height:35px;
+  border-radius: 10px;
+  padding:0px 10px;
+  margin:0 0 0 0;
+
+}
+ /*-----------------POSTアイコンの設定-------*/
+ .chat-post-botton{
+  background-color:rgb(94, 94, 252);
+  border:1px solid rgb(94, 94, 252);
   color:grey;
   width:150px;
   height:35px;
@@ -283,13 +323,13 @@ display: flex;
 }
 .general-top-title{
       font-size:40px;
-      margin:5px 0px 20px 0px;
-      border-bottom:1px solid #e95014;
+      margin:5px 0px 10px 0px;
+      /* border-bottom:1px solid #e95014; */
 }
 
 .subject-info-top{
   margin:px 2px 2px 15px;
-  font-size:2px;
+  font-size:12px;
   border-left:3px solid #e95014;
   background-color:white;
 }
@@ -319,10 +359,14 @@ display: flex;
 .subject-info-comment-frame{
   padding:20px 0px;
   margin:20px 0px;
- 
-  
-  
+
 }
+/*ジェネラルトップの科目ごとタイトル設定*/
+.subject-title-sets h1{
+font-size: 30px;
+
+}
+
 /*いいねフォームタグ星の設定*/
 .input-range {
   display: none;
@@ -332,7 +376,6 @@ display: flex;
   margin-bottom: 7px;
 }
 .range-group > a {
-  display: inline-block;
   width: 20px;
   height: 20px;
 }
@@ -347,6 +390,10 @@ display: flex;
   color: #fc3;
 }
 
+.star-difficult{
+  display: inline;
+}
+
 /*難しさフォームタグ星の設定*/
 .input-range-d {
   display: none;
@@ -356,9 +403,9 @@ display: flex;
   margin-bottom: 7px;
 }
 .range-group-d > a {
-  display: inline-block;
   width: 20px;
   height: 20px;
+  padding-right: 4px;
 }
 .range-group-d > a:before {
   content: "\f567";
@@ -383,7 +430,7 @@ display: flex;
   overflow: hidden;
   text-indent: -999em;
   width: 110px;
-  margin:  auto;
+  margin:auto;
   }
   .star-ratings-sprite-rating {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
@@ -391,14 +438,64 @@ display: flex;
   float: left;
   height: 21px;
   display: block;
+  margin:auto;
   }
+
+
+  .non-star{
+    color:#3490dc !important;
+    margin-top: 0.25rem;
+    font-size: 80%;
+}
+/*いいねを星で表示する設定(title部分*/
+.star-ratings-sprite-title {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin:auto 10px auto 55px ;
+  }
+  .star-ratings-sprite-rating-title {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  background-position: 0 100%;
+  float: left;
+  height: 21px;
+  display: block;
+  margin:auto 10px auto 1px;
+
+  }
+
+  /*難易度表示する設定*/
+.dif-ratings-sprite {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin:  auto;
+  background-color: rgb(184, 186, 255);
+  }
+  .dif-ratings-sprite-rating {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  background-position: 0 100%;
+  float: left;
+  height: 21px;
+  display: block;
+  margin:auto;
+  background-color: rgb(184, 186, 255);
+  }
+
 /*タイトルと横の星表示する設定*/
   .title-star{
     display: flex;
   }
-
   .comment-box-form{
-   
+
     border-radius: 10px;
     border: 1px solid #333333;
     border-bottom: 2px solid #e95014;
@@ -408,9 +505,108 @@ display: flex;
     background-color: #f8c3ae15;
 } 
 
+/*チャットペーじの箱設定*/
+.chat-box-form{
 
-/* 画面サイズ小さくしたらPOSTボタンがはみでたので修正　
-    簡易的な修正　他にも修正する時に一気に変更してください*/
+  border-radius: 10px;
+  border: 1px solid #333333;
+  border-bottom: 2px solid blue;
+  box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+  padding: 10px 10px 10px 10px;
+  margin: 15px 0px 15px 0px;
+  background-color: #b5d2f715;
+} 
+/*--------------------------------コメントボックスの設定(大枠)------*/
+.chat-box{
+   
+  border-radius: 10px;
+  border: 1px solid #333333;
+  border-bottom: 2px solid blue;
+  box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+  padding: 10px 10px 10px 10px;
+  margin: 15px 0px 15px 0px;
+  background-color: white;
+  word-break: break-word;
+} 
+.chat-title-frame-top{
+  font-size: 15px;
+  border-left:5px solid blue;
+  background-color: white;
+}
+/*reply form 設定*/
+.reply-box-form{
+   
+  border-radius: 10px;
+  border: 1px solid #333333;
+  border-bottom: 2px solid #e95014;
+  box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+  padding: 10px 10px 50px 10px;
+  margin: 15px 0px 15px 0px;
+  background-color: #f8c3ae15;
+} 
+
+/*星の横の平均値設定*/
+
+.star-average{
+  font-size: 30px;
+  color:black;
+  margin:auto;
+}
+
+.star-average-box{
+  display: flex;
+}
+/*コメント数設定*/
+.comment-kennsuu{
+  color:black;
+  font-size: 15px;
+  margin:20px 0px 0px 0px;
+}
+
+
+/*広告設定*/
+
+.under-780ad{
+  display: none;
+}
+.over-780ad{
+
+  text-align: center;
+}
+
+/*DEPARTMENT掲示板タイトル*/
+
+.department-bbs-title{
+  font-size:35px;
+
+  width: 100%;
+}
+
+.dep-title-frame-top{
+  font-size: 15px;
+  border-left:5px solid #e95014;
+  background-color: white;
+}
+.dep-title-frame{
+  padding:20px 0px;
+  margin: 0px auto;
+
+
+}
+
+/*DEPARTMENT掲示板全体設定*/
+.all-index-dep{
+  background-color: white;
+}
+/*投稿件数の表示ヒロキ希望*/
+
+.toukou-kensu p{
+  font-size:3px;
+  color:black;
+  margin:30px 0px 0px 0px;
+}
+/* 画面サイズ小さくしたらPOSTボタンがはみでたので修正
+    簡易的な修正他にも修正する時に一気に変更してください*/
     /*************************
 メディアクエリ設定 420~1024
 *************************/
@@ -420,11 +616,16 @@ display: flex;
     margin: 0px 10px;
 }
   .comment-box p{
-    font-size:4px;
+    font-size:14px;
   }
   .comment-box .title{
     width:45px;
     font-size:10px;
+  }
+  /*ジェネラルトップの科目ごとタイトル設定*/
+.subject-title-sets h1{
+  font-size: 25px;
+  
   }
   
 }
@@ -439,10 +640,15 @@ display: flex;
     margin:0 0 0 0;
 
   }
+  /*ジェネラルトップの科目ごとタイトル設定*/
+.subject-title-sets h1{
+  font-size: 20px;
+  
+  }
 
 }
 
-@media screen and (min-width: 0px) and (max-width: 770px) {
+@media screen and (min-width: 0px) and (max-width: 760px) {
 
   .feature-title-1 a{
     font-size:12px;
@@ -451,8 +657,35 @@ display: flex;
   .comment-info{
     font-size:8px;
   }
+  .over-780ad{
+    display:none;
+  }
+  .under-780ad{
+    display:inline-block;
+    margin: 0 auto;
+    text-align: center;
 
+  }
+
+  /*DEPARTMENT掲示板タイトル*/
+
+.department-bbs-title{
+  font-size:25px;
+
+  width: 100%;
 }
 
 
+}
 
+/**********************
+評価投稿のニックネームの大きさ
+/*********************/
+
+.col-sm-5 textarea{
+  height: 25px !important;
+}
+
+.text-center select {
+  width: 300px;
+}

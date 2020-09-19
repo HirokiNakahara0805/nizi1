@@ -36,9 +36,11 @@
         <!-- view point 読み込み-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- javascript  読み込み-->
-		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
         <!--　font awesome　CSS指定よう-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+          <!-- javascript  読み込み-->
+      <script type="text/javascript" src="js/bbs_post.js"></script>
 
     @yield('pageCss')
     </head>
@@ -50,7 +52,7 @@
         @yield('content')
     </div><!--//container-->
 
-    @yield('footer')
+    @yield('layout.bbsfooter')
 
     </body>
 </html>

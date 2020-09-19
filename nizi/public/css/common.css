@@ -99,6 +99,10 @@ a .u2-header-logo {
     height: 250px;
     margin: 0 auto;
 }
+.header-img-in img{
+    width:100%;
+    height: 250px;
+}
 .header-img-frame{
     display:block;
     height:250px;
@@ -131,33 +135,74 @@ a:hover {
 .footer-contents a{
     
     font-size: 30px;
-    color: white;
+    color: white ;
     text-decoration: none;
+    
+}
+
+.sns-item i{
+    color: white;
 }
 
 /*----フッターリンクの設定----*/
 .link-list{
     background-color: #333;
-    display: flex;
-    border-top: 1px solid #313130;
-    border-left: 1px solid #313130;
-    width: 100%;
-    box-sizing: border-box;
-    display: list-item;
-    list-style: none;
-    padding: 10px 10px 10px 0;
+
+    padding: 50px 0px 100px 0px;
+
 }
+  
 .link-list a{
+    font-size: 20px;
+    color:white;
+}
+.link-list p{
     font-size: 10px;
-    padding: 10px 10px 10px 0;
     margin-top: 0;
+    color:white;
 }
 
+.text-inline p{
+    color: #e95014;
+    font-size: 20px;
+}
+
+/***********************************
+フッターリンクメディアクエリ設定 674~
+************************************/
+
+@media screen and (min-width: 674px) {
+    .link-list p{
+        background-color: #333;
+        display: inline-block;
+        padding: 20px;
+    }
+}
+
+/***********************************
+フッターリンクメディアクエリ設定 1024~
+************************************/
+/*----------------------------------
+@media screen and (min-width: 1024px){
+    .link-list p{
+        display: inline-flex;
+        padding: 20px;
+    }
+    .text-inline{
+        display: inline-flex;
+    }
+}
+*-----------------------------------/
 /*-----フッターリンク先の設定-----*/
 
 .beginners-text,
 .content-text{
-    text-align: center;
+    text-align:center;
+}
+
+.beginners-text i{
+    color: purple;
+    font-size: 5rem;
 }
 
 .terms-text,
@@ -191,86 +236,16 @@ a:hover {
     padding: 10px;
 }
 
-/**************************************
-フッターリンク先のメディアクエリ設定 ~420
-***************************************/
-@media only screen and (min-width: 420px){
-.terms-text,
-.beginners-text,
-.content-text,
-.privacy-text{
-    position: relative;
-    width: 1100px;
-    max-width: 95%;
-    margin: 0 auto;
-}
-/**************************************
-フッターリンク先のメディアクエリ設定 420~1024
-***************************************/
-@media screen and (min-width: 420px) and (max-width: 1024px){
-
-    .link-list a{
-        font-size: 13px;}
-
+.border-line-orange{
+    border-bottom:1px solid #e95014;
 }
 
-/**************************************
-フッターリンク先のメディアクエリ設定 420~1024
-***************************************/
-@media screen and (min-width: 1024px){
-
-    .link-list a{
-        font-size: 15px;
-    }
-
-}
 /*----------テキストエリアリサイズ禁止--------------*/
 
 textarea {
     resize: none;
   }
 
-/*************************
-メディアクエリ設定 420~1024
-*************************/
-@media screen and (min-width: 420px) and (max-width: 1024px) {
-
-
-    
-    .header-img-in {
-        width: 100%;
-        height: 200px;
-        margin: 0 auto;
-    }
-
-    .header-img-frame {
-      
-        height: 200px;
-    }
-
-}
-
-/*************************
-メディアクエリ設定 0〜420
-*************************/
-@media screen and (min-width: 0px) and (max-width: 420px) {
-
-
-    /*ヘッダー下の画像サイズ調整*/
-    .header-img-in {
-        width: 100%;
-        height: 200px;
-    }
-
-    .header-img-frame {
-
-        height: 200px;
-    }
-    a {
-        font-size: 15px;
-    }
-
-}
 
 
 
@@ -361,3 +336,157 @@ textarea {
     border-radius: 10px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+/*----チャット投稿フォーム設定--*/
+.chat-form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.6em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid blue;
+    border-radius: 10px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/*************************
+メディアクエリ設定 420~1024
+*************************/
+@media screen and (min-width: 420px) and (max-width: 1024px) {
+
+
+    
+    .header-img-in {
+        width: 100%;
+        height: 200px;
+       
+    }
+
+    .header-img-frame {
+
+        height: 200px;
+    }
+
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 760px) {
+    .over-780ad{
+        display:none;
+      }
+      .under-780ad{
+        display:inline-block;
+        margin: 0 auto;
+        text-align: center;
+    
+      }
+      /* ヘッダー設定 */
+      .u2-global-navbar__link a{
+        color: white;
+        text-decoration:none;
+        font-size: 13px;
+    }
+    .u2-global-navbar__link {
+        display: block;
+        color: #ffffff;
+        font-size: 8px;
+        padding: 13px 20px 10px ;
+    }
+    
+    }
+    
+    
+/*************************
+メディアクエリ設定 0〜420
+*************************/
+@media screen and (min-width: 0px) and (max-width: 420px) {
+
+
+    /*ヘッダー下の画像サイズ調整*/
+    .header-img-in {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .header-img-frame {
+
+        height: 200px;
+    }
+    a {
+        font-size: 15px;
+    }
+      /* ヘッダー設定 */
+      .u2-global-navbar__link a{
+        
+        font-size: 14px;
+    }
+    .u2-global-navbar__link {
+        display: block;
+        color: #ffffff;
+        font-size: 8px;
+        padding: 13px 10px 10px ;
+    }
+  
+
+}
+
+
+/**************************************
+フッターリンク先のメディアクエリ設定 ~420
+***************************************/
+@media only screen and (min-width: 420px){
+    .terms-text,
+    .beginners-text,
+    .content-text,
+    .privacy-text{
+        position: relative;
+        width: 1100px;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+
+/**************************************
+           エラーページ設定
+***************************************/
+
+.error-title p{
+    font-size: 8rem;
+    padding: 50px;
+  }
+
+  .error-texts p{
+      font-size: 15px;
+  }
+
+  .error-body{
+    background-image: url("https://beiz.jp/images_T/orange/orange_00041.jpg");
+    background-size: cover;
+  }
+
+/**************************************
+　　　　　　　学部名ばらし後の設定
+***************************************/
+/*
+.underlist a{
+    color: black;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.underlist a:hover{
+    color:#e95014;
+}*/
+
+.underlist select{
+    margin:0 auto;
+}
+
+
+
+

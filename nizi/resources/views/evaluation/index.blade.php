@@ -17,7 +17,7 @@
 
 <!-------------------------------------------------------ヘッダー挿入-->
 @section('header')
-
+ 
     <header class="u2-header">
         <div class="u2-header__container-inner">
             <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
@@ -25,11 +25,14 @@
     </header>
 
     <div class="u2-global-navbar">
-        <ul class="reset-ul row v2-global-navbar__links">
-            <li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-            <li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-        </ul>
-    </div>
+		<ul class="reset-ul row v2-global-navbar__links">
+            @foreach($category2s as $category2)
+            <li class="u2-global-navbar__link"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table-back</a></li>
+            @endforeach
+			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+		</ul>
+	</div>
 @endsection
 
 
@@ -54,6 +57,7 @@
 
 
 <!--いいね平均-->
+<!--いいね平均-->
 <?php
     $goodss = 0;
 
@@ -61,12 +65,17 @@
         $goodss +=$goodpost2->good;
         }
 
-    $average = round($goodss/$post2s->total(),2);
+        $totalpost2s=$post2s->total();
+        if($totalpost2s==0){
+            $totalpost2s=1;
+        }
+        // 投稿件数計算
+        $totalpostscounts = ($totalpost2s-1);
+        // 投稿平均計算
+        $average = round($goodss/$totalpost2s,2);
 
-    //全体星表示用数値
-    $stars = $average*20;
-
-
+     //全体星表示用数値
+     $stars = $average*20;
 ?>
 
 
@@ -82,13 +91,27 @@
                     <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
                     <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
                 </div>
-                <div class="title-star">
-                    <tr>
-                        {{ $category2->name }}
-                    </tr>
-                    <p><div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
-                    <p>{{$post2s->total()}}</p>{{$average}}
+
+                <div class="row">
+                    <div class="subject-title-sets col-md-12 mt-5">
+                            <h1 class="border-line-orange">{{ $category2->name }}</h1>
+                    </div>
                 </div>
+                <div class="general-top-title title-star row mt-5"> 
+                    
+                    <div class="star-average-box border-line-orange col-md-4">
+                        
+                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><h1 class="star-average">rate:{{ $average }}</h1></a>
+                            <div class="star-ratings-sprite-title ">
+                                <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating-title"></span>
+                            </div>
+                            <div class="toukou-kensu">
+                                <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p>{{$totalpostscounts}}件</p></a>
+                            </div>
+                    </div>
+                    
+                </div>
+
             </div>
         @endforeach
     </div>
@@ -99,9 +122,9 @@
 <!-------------------------------------------------------遷移ボタン-->
     <div>
         <ul class="reset-ul row feature-title-box">
-            <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+            <li class="feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
             <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
-            <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
+            <li class="evaluationcolor feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
         </ul>
     </div>
 
@@ -122,16 +145,13 @@
                 <div class="row">
                      <!------------------------------------------ニックネームインプット------------>
                     <div class="form-group col-sm-5">
-                        <label for="name">
-                            ニックネーム
-                        </label>
-                        <input
+                        <textarea
                             id="name"
                             name="name"
                             class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
                             value="{{ old('name') }}"
                             type="text"
-                        >
+                        >名無し</textarea>
                         @if ($errors->has('name'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('name') }}
@@ -151,15 +171,13 @@
                     </div>
                             <!-----------------------------------------学年インプット------------->
                     <div class="form-group col-sm-2">
-                        <label for="year">
-                            学年
-                        </label>
                         <select id="year"
                                 name="year"
                                 class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
                                 value="{{ old('year') }}"
                                 type="number"
-                                placeholder="学年">
+                                placeholder="学年"
+                                size="1">
                             <option value="0"selected disabled>学年</option>
 　　　　　　　　　　　　　　　　　<option value="1">１</option>
 　　　　　　　　　　　　　　　　　<option value="2">２</option>
@@ -174,11 +192,12 @@
                     </div>
                 </div>
                         <!------------------------------------------------------------------------ 星インプット-->
-　　　　　　　　　 <div class="row pb-3">
-
+　　　　　　　　　 <div class="row pb-3 star-difficult">
                     <div class="p-modal-bkm__fav-spinner col-sm-2 mb-5">
                         <label for="good">
-                                いいね
+
+                                オススメ度
+
                         </label>
 　　　
                         <div class="range-group">
@@ -186,7 +205,7 @@
                                         id="good"
                                         name="good"
                                         step="1" 
-                                        type="range" 
+                                        type="number" 
                                         min="1" 
                                         max="5" 
                                         value="{{ old('good') }}"
@@ -200,12 +219,16 @@
                             <div class="invalid-feedback">
                                 {{ $errors->first('good') }}
                             </div>
+                            <div　class="invalid-feedback">
+                                <p class="non-star">オススメ度を入力してください</P>
+
+                            </div>
                     @endif
 
                             <!----------------------------------------------------------------------- 難しさインプット-->
                     <div class="p-modal-bkm__fav-spinner col-sm-2 mb-3">
                         <label for="difficulty">
-                                難しさ
+                                授業難易度
                         </label>
 
                         <div class="range-group-d">
@@ -214,7 +237,7 @@
                                         id="difficulty"
                                         name="difficulty"
                                         step="1" 
-                                        type="range" 
+                                        type="number" 
                                         min="1" 
                                         max="5" 
                                         value="{{ old('difficulty') }}"
@@ -224,6 +247,15 @@
 
                         </div>
                     </div>
+                    @if ($errors->has('difficulty'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('difficulty') }}
+                            </div>
+                            <div　class="invalid-feedback">
+                                <p class="non-star">授業難易度を入力してください</P>
+                            </div>
+                    @endif
+
                 </div>
 
                     <!---------------------------------------------------------------------- レポートインプット-->
@@ -303,8 +335,12 @@
  
 <!----------------------------------------------------------------投稿件数表示設定-->
 <div class="mt-4 mb-4 text-center">
-    <p>{{ $post2s->total() }}件が見つかりました。</p>
-</div>
+        @if ($post2s->total()=== 0 )
+            <p>初めての投稿をしてみましょう！</p>
+        @else
+        <p>{{ $post2s->total() }}件が見つかりました。</p>
+        @endif
+    </div>
 <!----------------------------------------------------------------ページネーション(投稿件数表示)設定-->
 <div class="d-flex justify-content-center mb-5">
                    {{ $post2s->appends(['category_id' => $category_id])->links() }}
@@ -328,15 +364,27 @@
                                 <div><p> {{ $category2->name }}</p></div>
                                 @endforeach
 <!--------------------------------星のカラーにwidthで色づけしてます   いいねの平均値を を*100/5して100パーセント表示にしています--->
-                                <p><div class="star-ratings-sprite"><span style="width: {{  $post2->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
+                             
 
+                        </div>
+
+                        <div class="evaluation-text border-bottom mb-5 p-2">
+                            <div><p>オススメ度</p></div>
+
+                            <p><div class="star-ratings-sprite"><span style="width: {{  $post2->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
+                        </div>
+
+                        <div class="evaluation-text border-bottom mb-5 p-2">
+                            <div><p> 授業難易度</p></div>
+
+                            <p><div class="dif-ratings-sprite"><span style="width:{{ $post2->difficulty*20 }}%" class="dif-ratings-sprite-rating"></span></div></p>
                         </div>
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
 
                                 <div>
 
-                                    <div> <p>難しさ{{ $post2->difficulty }}</p></div>
+                  
 
                                     <div class="title text-center">レポート</div> <div class=""> <p>{{ $post2->report }}</p></div>
                                     <div class="title text-center">テスト</div> <div class=""><p>{{ $post2->test }}</p></div>
@@ -357,8 +405,13 @@
                         </div>
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post2->created_at->format('Y.m.d .H:i') }}</div>
+                            @if($post2->year==0)
+                                {{$post2->year="?"}}年
+                            @else
                             <div class="f-item float-right">{{ $post2->year }}年</div>
-                            <div class="f-item float-right">{{ $post2->name }}</div>
+ @endif
+                            <div class="f-item float-right">{{ $post2->name }}さん</div>
+
                         </div>
                     </div>
 
@@ -384,58 +437,18 @@
 <div class="d-flex justify-content-center mb-5">
                    {{ $post2s->appends(['category_id' => $category_id])->links() }}
         </div>
-        <!-- javascript  読み込み-->
-  <script type="text/javascript" src="js/bbs_post.js"></script>
+<!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
+        <h3 class="text-center">授業科目</h3>
+    <div class="mt-4 mb-4 text-center underlist">
+    <select size="1" class="form-control" name="select" onChange="location.href=value;">
+        <option value="0"selected disabled>授業科目</option>
+            @foreach($categories as $id => $name)
+        <option value="{{ route('subjecttop.index', ['category_id'=>$id]) }}" title="{{ $name }}"><a class="class-list" >{{ $name }}</a>
+        </option>
+        @endforeach
+    </select>
+    </div>
 @endsection
 
+@include("layout.bbsfooter")
 
-@section('footer')
-<footer>
-        <!------------------------------------------------------------------------------------ SNS連携 -->
-        <div class="footer-contents .align-middle" id="all-bbs">
-
-            <a class="footer-logo" href="">∞pilotis</a>
-
-               <!-- SNSリスト-->
-            <div class="footer-sns justify-content-around footer-logo" >
-                <div class="sns-lists">
-                     <!-- TWITTER　(fontawesomeでアイコン読み込み)-->
-                    <div class="sns-item twitter list-inline-item">
-                        <a target="_blank" href="https://mobile.twitter.com/8pilotis">
-                            <i class="fab fa-twitter-square"></i>
-                        </a>
-                    </div>
-                     <!-- youtube　(fontawesomeでアイコン読み込み)-->
-                    <div class="sns-item youtube list-inline-item">
-                        <a target="_blank" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                   <!-- facebook　(fontawesomeでアイコン読み込み)-->
-                   <div class="sns-item instagram list-inline-item">
-                        <a target="_blank" href="https://www.instagram.com/8pilotis">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-
-                </div>
-                <div class="link-list">
-                    <p>
-            　　         <a href="terms">利用規約</a>
-                        <a href="beginnersguide">初めての方へ</a>
-                        <a href="http://127.0.0.1:8000/beginnersguide#beginners-organization">運営組織</a>
-                        <a href="contentpolicy">コンテンツポリシー</a>
-                        <a href="privacypolicy">プライバシーポリシー</a>
-                        <a href="http://127.0.0.1:8000/beginnersguide#beginners-faq">よくある質問</a>
-                        <a href="http://127.0.0.1:8000/beginnersguide#beginners-inquiry">お問い合わせ</a>
-                    </p>
-
-                </div>
-            </div>
-
-        </div>
-
-</footer>
-@endsection
-
- 

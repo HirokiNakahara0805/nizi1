@@ -8,6 +8,7 @@
 @endforeach
 
 <!--いいね平均-->
+<!--いいね平均-->
 <?php
     $goodss = 0;
 
@@ -15,13 +16,19 @@
         $goodss +=$goodpost2->good;
         }
 
-    $average = round($goodss/$post2s->total(),2);
+        $totalpost2s=$post2s->total();
+        if($totalpost2s==0){
+            $totalpost2s=1;
+        }
+    // 投稿件数計算
+    $totalpostscounts = ($totalpost2s-1);
 
+    $average = round($goodss/$totalpost2s,2);
 
-    //全体星表示用数値
-    $stars = $average*20;
+     //全体星表示用数値
+     $stars = $average*20;
 ?>
-
+ 
 
     <header class="u2-header">
 		<div class="u2-header__container-inner">
@@ -29,8 +36,11 @@
 		</div>
 	</header>
 
-	<div class="u2-global-navbar">
+    <div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
+            @foreach($category2s as $category2)
+            <li class="u2-global-navbar__link"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table-back</a></li>
+            @endforeach
 			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
@@ -54,29 +64,44 @@
 
     <!-- トップのタイトル　掲示板と共通-->
     <div class="container general-top-title-frame pb-3 mt-5">
-    
-    @foreach ($category2s as $category2)
-    <div  class="general-top-title">
-        <div class="row subject-info-top-frame ">
-            <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
-            <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
-            <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
+        
+        @foreach ($category2s as $category2)
+        <div  class="general-top-title">
+            <div class="row subject-info-top-frame ">
+                <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
+                <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
+                <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
+            </div>
+
+            <div class="row">
+                    <div class="subject-title-sets col-md-12 mt-5">
+                            <h1 class="border-line-orange">{{ $category2->name }}</h1>
+                    </div>
+                </div>
+                <div class="general-top-title title-star row mt-5"> 
+                    
+                    <div class="star-average-box border-line-orange col-md-4">
+                        
+                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><h1 class="star-average">rate:{{ $average }}</h1></a>
+                            <div class="star-ratings-sprite-title ">
+                                <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating-title"></span>
+                            </div>
+                            <div class="toukou-kensu">
+                                <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p>{{$totalpostscounts}}件</p></a>
+                            </div>
+                    </div>
+                    
+                </div>
         </div>
-        <tr>
-            {{ $category2->name }}
-        </tr>
-        <p>{{$average}}<div class="star-ratings-sprite"><span style="width: {{ $stars }}%" class="star-ratings-sprite-rating"></span></div></p>
-        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >{{$post2s->total()}}</a>
-    </div>
-    @endforeach
+        @endforeach
     </div>
 
 
       <!-- -->
     <div>
         <ul class="reset-ul row feature-title-box">
-            <li class="feature-title-1 list-inline-item"><a href="{{ route('generaltop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
-            <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
+            <li class="feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+            <li class="bbscolor feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
             <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
         </ul>
     </div>
@@ -99,14 +124,14 @@
                     <div class="row">
                         <div class="form-group col-sm-2">
                             
-                            <input
+                            <textarea
                                 id="name"
                                 name="name"
                                 class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
                                 value="{{ old('name') }}"
                                 type="text"
-                                placeholder="ニックネーム"
-                            >
+                                rows="1"
+                            >名無し</textarea>
                             @if ($errors->has('name'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('name') }}
@@ -123,7 +148,9 @@
                                 class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
                                 value="{{ old('year') }}"
                                 type="number"
-                                placeholder="学年">
+                                placeholder="学年"
+                                size="1"
+                                >
                             <option value="0"selected disabled>学年</option>
 　　　　　　　　　　　　　　　　　<option value="1">１</option>
 　　　　　　　　　　　　　　　　　<option value="2">２</option>
@@ -187,7 +214,11 @@
     </div>
 
     <div class="mt-4 mb-4 text-center">
+        @if ($posts->total()=== 0 )
+            <p>初めての投稿をしてみましょう！</p>
+        @else
         <p>{{ $posts->total() }}件が見つかりました。</p>
+        @endif
     </div>
 
 
@@ -208,7 +239,7 @@
             @foreach ($posts as $post)
 
                 <div class="comment-box">
-                    <div class="comment-text">{!! nl2br(e(Str::limit($post->message, 100))) !!}
+                    <div class="comment-text">{{$post->message}}
                         @if ($post->comments->count() >= 1)
                             <p><span class="comment-number">{{ $post->comments->count() }}件</span></p>
                         @endif
@@ -216,8 +247,8 @@
                     <div class="">
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
-                            <div class="f-item float-right">{{ $post->name }}</div>
                             <div class="f-item float-right ">{{ $post->year }}年</div>
+                            <div class="f-item float-right">{{ $post->name }}さん</div>
                             <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class=""><i class="far fa-comment-dots reply-icon"> reply</i></a></div>
 
                         </div>
@@ -236,12 +267,16 @@
     <div class="d-flex justify-content-center mb-5">
         {{ $posts->appends(['category_id' => $category_id])->links() }}
     </div>
-    
+<!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
     <h3 class="text-center">授業科目</h3>
     <div class="mt-4 mb-4 text-center underlist">
-        @foreach($categories as $id => $name)
-        <li class="btn"><a class="class-list" href="{{ route('bbs.index', ['category_id'=>$id]) }}" title="{{ $name }}">{{ $name }}</a></span>
+    <select size="1" class="form-control" name="select" onChange="location.href=value;">
+        <option value="0"selected disabled>授業科目</option>
+            @foreach($categories as $id => $name)
+        <option value="{{ route('subjecttop.index', ['category_id'=>$id]) }}" title="{{ $name }}"><a class="class-list" >{{ $name }}</a>
+        </option>
         @endforeach
+    </select>
     </div>
 
 </div>
@@ -251,52 +286,4 @@
       <script type="text/javascript" src="js/bbs_post.js"></script>
 @endsection
 
-@section('footer')
-<footer>
-        <!-- SNS連携 -->
-        <div class="footer-contents .align-middle">
-
-            <a class="footer-logo" href="">∞pilotis</a>
-
-            <div class="footer-sns justify-content-around footer-logo" >
-                <div class="sns-lists">
-
-                    <div class="sns-item twitter list-inline-item">
-                        <a target="_blank" href="https://mobile.twitter.com/8pilotis">
-                            <i class="fab fa-twitter-square"></i>
-                        </a>
-                    </div>
-
-                    <div class="sns-item youtube list-inline-item">
-                        <a target="_blank" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-
-                    <div class="sns-item instagram list-inline-item">
-                        <a target="_blank" href="https://www.instagram.com/8pilotis">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-
-                </div>
-                <div class="link-list">
-                <p>
-            　　    <a href="terms">利用規約</a>
-                   <a href="beginnersguide">初めての方へ</a>
-                   <a href="http://127.0.0.1:8000/beginnersguide#beginners-organization">運営組織</a>
-                   <a href="contentpolicy">コンテンツポリシー</a>
-                   <a href="privacypolicy">プライバシーポリシー</a>
-                   <a href="http://127.0.0.1:8000/beginnersguide#beginners-faq">よくある質問</a>
-                   <a href="http://127.0.0.1:8000/beginnersguide#beginners-inquiry">お問い合わせ</a>
-                </p>
-
-            </div>
-            </div>
-            
-        </div>
-
-      
-
-    </footer>
-@endsection
+@include("layout.bbsfooter")

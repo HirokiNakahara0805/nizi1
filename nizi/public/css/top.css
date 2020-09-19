@@ -17,7 +17,7 @@
     margin:10px;
     padding:5px 5px;
 }
-
+ 
 /*--------------スライダーにカーソル合わせた時のアニメーション設定*/
 .img-sophia:hover {
     transform: scale(0.8,0.8); /*画像の拡大*/
@@ -34,7 +34,23 @@ h1.your-class{
     padding:60px 10px;
     
 }
+.img-sophia-chat{
+    height: auto;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #333;
+    border-bottom: 1px solid blue;
+    box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.884);
+    margin:10px;
+    padding:5px 5px;
+}
+h1.your-class-chat{
+    color:black;
+    padding:40px 0px;
 
+    
+}
 
 /*-----------slick setting*/
 .slick-prev:before,
@@ -82,7 +98,7 @@ a.class-list{
     opacity: .5;
   }
 
-
+ 
 
 /*-----------------------------------広告用設定*/
 .koukoku-box{
@@ -163,7 +179,7 @@ a.class-list{
         color: black;
         padding: 50px 5px;
         margin: 5px 5px 5px 2px;
-        font-size: 4px;
+        font-size: 12px;
     }
 
     .bbs-name{

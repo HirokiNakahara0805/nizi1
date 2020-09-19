@@ -29,6 +29,7 @@ class CreateCategoriesTable extends Migration
             $table->string('link3');
             $table->string('code');
             $table->text('content');
+            $table->integer('departmentcategory_id');
         });
     }
  

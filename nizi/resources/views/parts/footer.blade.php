@@ -1,13 +1,15 @@
 
 <footer>
         <!------------------------------------------------------------------------------------ SNS連携 -->
-        <div class="footer-contents .align-middle" id="all-bbs">
+        <div class="footer-contents .a pgn-middle" id="all-bbs">
 
-            <a class="footer-logo" href="">∞pilotis</a>
+            <a class="footer-logo" href="{{ url('/') }}">∞piotis</a>
 
                <!-- SNSリスト-->
-            <div class="footer-sns justify-content-around footer-logo" >
-                <div class="sns-lists">
+
+            <div class="footer-sns justify-content-around footer-logo" id="all-sns" >
+                <div class="sns- psts">
+
                      <!-- TWITTER　(fontawesomeでアイコン読み込み)-->
                     <div class="sns-item twitter list-inline-item">
                         <a target="_blank" href="https://mobile.twitter.com/8pilotis">
@@ -28,18 +30,21 @@
                     </div>
                 </div>
 
-            <div class="link-list">
-                <p>
-            　　    <a href="terms">利用規約</a>
-                   <a href="beginnersguide">初めての方へ</a>
-                   <a href="http://127.0.0.1:8000/beginnersguide#beginners-organization">運営組織</a>
-                   <a href="contentpolicy">コンテンツポリシー</a>
-                   <a href="privacypolicy">プライバシーポリシー</a>
-                   <a href="http://127.0.0.1:8000/beginnersguide#beginners-faq">よくある質問</a>
-                   <a href="http://127.0.0.1:8000/beginnersguide#beginners-inquiry">お問い合わせ</a>
-                </p>
-
-            </div>
+                <div class="link-list" id="all-about">
+                   <div class="text-center">
+                        <div class="text-inline">
+                            <p class=""><a href="terms">利用規約</a></p>
+                            <p class=""><a href="beginnersguide">初めての方へ</a></p>
+                            <p class=""><a href="beginnersguide#organization">運営組織</a></p>
+                            <p class=""><a href="contentpolicy">コンテンツポリシー</a></p>
+                        </div>
+                        <div class="text-inline"> 
+                            <p class=""><a href="privacypolicy">プライバシーポリシー</a></p>
+                            <p class=""><a href="beginnersguide#faq">よくある質問</a></p>
+                            <p class=""><a href="beginnersguide#inquiry">お問い合わせ</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>

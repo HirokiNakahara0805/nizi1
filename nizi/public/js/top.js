@@ -17,9 +17,19 @@ $('.your-class').slick({
     autoplaySpeed: 100000000000000,
     arrows:true,
     responsive: [{
-      breakpoint: 640,　//width:640px以下になったら
+      breakpoint: 1200,　//width:640px以下になったら
       settings: {
-        slidesToShow: 1,//１つのスクロールになる
+        slidesToShow: 3,//１つのスクロールになる
+      }
+    },{
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 2
+      }
+    },{
+      breakpoint: 770,
+      settings: {
+        slidesToShow: 1
       }
     }]
   });  });

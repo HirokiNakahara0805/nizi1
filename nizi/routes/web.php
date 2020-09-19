@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/', 'TopPageController', ['only' => ['index']]);
 
 //一般教養ページ
-Route::resource('subject', 'SubjectController', ['only' => ['index']]);
+Route::resource('departmenttop', 'DepartmenttopController', ['only' => ['index','store']]);
 
 //掲示板ページ
 Route::resource('bbs', 'PostsController', ['only' => ['index', 'show', 'create', 'store']]);
@@ -28,7 +28,10 @@ Route::resource('evaluation', 'Post2sController', ['only' => ['index','create', 
 
 
 //般教Top画面テストページ
-Route::resource('generaltop', 'GeneraltopController', ['only' => ['index']]);
+Route::resource('subjecttop', 'SubjecttopController', ['only' => ['index']]);
+
+//チャットテストページ
+Route::resource('chat', 'ChatsController', ['only' => ['index', 'store']]);
 
 //初めての方へページ
 Route::get('/beginnersguide', function () {
