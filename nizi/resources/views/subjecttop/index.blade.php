@@ -45,6 +45,9 @@
             $totalpost2s=1;
         }
 
+         // 投稿件数計算
+         $totalpostscounts = ($totalpost2s-1);
+
     $average = round($goodss/$totalpost2s,2);
 
      //全体星表示用数値
@@ -76,7 +79,7 @@
                                 <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating-title"></span>
                             </div>
                             <div class="toukou-kensu">
-                                <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p>{{$totalpost2s}}件</p></a>
+                                <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p>{{$totalpostscounts}}件</p></a>
                             </div>
                     </div>
                     

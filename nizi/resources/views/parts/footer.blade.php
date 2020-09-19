@@ -6,7 +6,7 @@
             <a class="footer-logo" href="{{ url('/') }}">∞piotis</a>
 
                <!-- SNSリスト-->
-            <div class="footer-sns justify-content-around footer-logo" >
+            <div class="footer-sns justify-content-around footer-logo" id="all-sns" >
                 <div class="sns- psts">
                      <!-- TWITTER　(fontawesomeでアイコン読み込み)-->
                     <div class="sns-item twitter list-inline-item">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
 
-                <div class="link-list">
+                <div class="link-list" id="all-about">
                    <div class="text-center">
                         <p>--------------------</p>
                         <p class=""><a href="terms">利用規約</a></p>
