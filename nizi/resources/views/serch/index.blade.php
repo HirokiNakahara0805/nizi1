@@ -8,8 +8,21 @@
       <input type="text" class="form-control col-md-5" placeholder="検索したい授業名を入力してください" name="name">
     <label>教授名</label>
       <input type="text" class="form-control col-md-5" placeholder="検索したい教授名を入力してください" name="teacher">
-    <label>学部名</label>
-      <input type="number" class="form-control col-md-5" placeholder="検索したい学部名を入力してください" name="departmentcategory_id">
+
+　　<div class="form-group col-sm-2">
+                            <select 
+                                name="departmentcategory_id"
+                                type="number"
+                                placeholder="学部名"
+                                size="1"
+                                >
+                            <option selected disabled>学部名</option>
+　　　　　　　　　　　　　　　　　<option value="1">共通</option>
+　　　　　　　　　　　　　　　　　<option value="2">理工学部</option>
+　　　　　　　　　　　　　　　　　<option value="3">FLA</option>
+　　　　　　　　　　　　　　　　　<option value="4">経済学部</option>
+　　　　　　　　　　　　　　　　</select>
+
   </div>
   <button type="submit" class="btn btn-primary col-md-5">検索</button>
 </form>
