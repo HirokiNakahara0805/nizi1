@@ -24,9 +24,9 @@ class CreateCategoriesTable extends Migration
             $table->string('book1');
             $table->string('book2');
             $table->string('book3');
-            $table->string('link1');
-            $table->string('link2');
-            $table->string('link3');
+            $table->text('link1');
+            $table->text('link2');
+            $table->text('link3');
             $table->string('code');
             $table->text('content');
             $table->integer('departmentcategory_id');

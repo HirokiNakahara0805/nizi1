@@ -4,7 +4,7 @@
 @if(isset($users))
 <table class="table">
   <tr>
-    <th>ユーザー名</th><th>先生</th><th>学部</th>
+    <th>時限</th><th>先生</th><th>授業名</th>
   </tr>
   @foreach($users as $user)
     <tr>
