@@ -164,6 +164,9 @@
                 </div>
 
             @endforeach
+                <div class="d-flex justify-content-center mb-5">
+                    {{ $posts->appends(['category_id' => $category_id])->links() }}
+                </div>
             </div>
             <!--投稿の横の空白部分-->
             <div class="col-md-4">

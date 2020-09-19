@@ -12,7 +12,7 @@ class ChatsController extends Controller
     //
     public function index()
     {
-        $chats = Chat::orderBy('created_at', 'desc')->get();
+        $chats = Chat::orderBy('created_at', 'desc')->paginate(20);
         return view('chat.index', ['chats' => $chats]);
     }
 
