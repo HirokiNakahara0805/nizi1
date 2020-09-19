@@ -149,6 +149,9 @@
                 </tr>
             </thead> -->
             <div class="col-md-8">
+            <div class="d-flex justify-content-center mb-5">
+                    {{ $chats->links() }}
+            </div>
             @foreach ($chats as $chat)
 
                 <div class="comment-box">
@@ -165,7 +168,7 @@
 
             @endforeach
                 <div class="d-flex justify-content-center mb-5">
-                    {{ $posts->appends(['category_id' => $category_id])->links() }}
+                    {{ $chats->links() }}
                 </div>
             </div>
             <!--投稿の横の空白部分-->
