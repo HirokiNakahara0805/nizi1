@@ -153,9 +153,9 @@
                         <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>
                     </div>
 
-                    <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
+                    <!-- <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
                             <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
-                    </a>
+                    </a> -->
 
                     @foreach ($evaluations as $evaluation)
                     @if($loop->iteration < 4)

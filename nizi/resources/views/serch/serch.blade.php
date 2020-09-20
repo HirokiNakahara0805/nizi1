@@ -65,8 +65,6 @@
 @section('content')
 
 
-<!-- @if(isset($users)) -->
-
   <div class="container">
     <div class="row">
        
@@ -77,13 +75,11 @@
             <div class="alert alert-primary" role="alert">{{ $message}}</div>
             @endif
         
-            @if ($users->total()=== 0 )
+            @if ($users->count()=== 0 )
             <p>検索結果は0件です</p>
+            @else
+            <p>検索結果は{{$users->count()}}件です</p>
             @endif
-
-            <div class="d-flex justify-content-center mb-5">
-                   {{ $users->links() }}
-            </div>
 
         @foreach($users as $user)
             <div class="top-bbs-box-serch">
@@ -102,9 +98,6 @@
                         </a>
             </div>
             @endforeach
-            <div class="d-flex justify-content-center mb-5">
-                   {{ $users->links() }}
-            </div>
         </div>
 
         <div class="col-md-4">
@@ -113,7 +106,6 @@
         </div>
     </div>
   </div>
-<!-- @endif -->
 
 
 
