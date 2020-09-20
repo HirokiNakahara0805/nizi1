@@ -78,11 +78,23 @@
             @if(!empty($message))
             <div class="alert alert-primary" role="alert">{{ $message}}</div>
             @endif
-        
+            
+            
+
             @if ($users->count()=== 0 )
-            <p>検索結果は0件です</p>
+            <p>検索結果は0件です。</p>
             @else
-            <p>検索結果は{{$users->count()}}件です</p>
+            <p>検索結果は{{$users->count()}}件です。</p>
+            @endif
+
+            @if ($users->count() >= 10 )
+            <div class="text-center common-btn-ikkoue ">
+                <a href="serch" class="common-btn">
+                                    検索画面に戻る
+                </a>
+            </div>
+            @else
+
             @endif
 
         @foreach($users as $user)
