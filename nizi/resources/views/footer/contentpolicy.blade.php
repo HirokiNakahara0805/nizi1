@@ -17,7 +17,12 @@
     
     <div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
-        <li class="u2-global-navbar__link"></li>
+        <li class="u2-global-navbar__link"><a href="terms">利用規約</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="beginnersguide">初めての方へ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="beginnersguide#organization">運営組織</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="privacypolicy">プライバシーポリシー</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="beginnersguide#faq">よくある質問</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="beginnersguide#inquiry">お問い合わせ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
     </div>
 

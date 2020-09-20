@@ -56,7 +56,7 @@
 		<div class="u2-global-navbar">
 			<ul class="reset-ul row v2-global-navbar__links">
 
-				<li class="u2-global-navbar__link"><a href="#all-subject">other department</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+				<li class="u2-global-navbar__link"><a href="#all-subject">他学部</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 				<li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 				<li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 				<li class="u2-global-navbar__link"><a href="#all-about">about</a><i class="fas fa-angle-double-down nav-arrows"></i></li> 

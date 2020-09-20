@@ -58,8 +58,7 @@
 <!--ヘッダの下の黒いとこー-->
   <div class="u2-global-navbar">
     <ul class="reset-ul row v2-global-navbar__links">
-    <li class="u2-global-navbar__link"><a href="subjecttop">トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-    <li class="u2-global-navbar__link"><a href="subjecttop">授業トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+    <li class="u2-global-navbar__link"><a href="/">トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
     </ul>
   </div>
 
