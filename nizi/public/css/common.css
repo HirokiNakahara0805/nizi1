@@ -82,13 +82,13 @@ a .u2-header-logo {
 .u2-global-navbar__link {
     display: block;
     color: #ffffff;
-    font-size: 8px;
-    padding: 8px 20px 6px ;
+    font-size: 10px;
+    padding: 10px 20px 10px;
 }
 .u2-global-navbar__link a{
     color: white;
     text-decoration:none;
-    font-size: 20px;
+    font-size: 17px;
 }
 .nav-arrows{
     padding:0 10px;
@@ -340,7 +340,6 @@ textarea {
 .chat-form-control {
     display: block;
     width: 100%;
-    height: calc(1.6em + 0.75rem + 2px);
     padding: 0.375rem 0.75rem;
     font-size: 0.9rem;
     font-weight: 400;
@@ -352,6 +351,27 @@ textarea {
     border-radius: 10px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.chat-form-control-name {
+    display: block;
+    width: 100%;
+    height: 22px;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid blue;
+    border-radius: 10px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+/*----postアイコンの位置--*/
+.post-position-chat{ margin: 14px 0px 0px 0px;
+    padding: 10px;
+    margin:50px 0px 0px 0px;
+}
+
 
 /*************************
 メディアクエリ設定 420~1024
@@ -396,6 +416,11 @@ textarea {
         font-size: 8px;
         padding: 13px 20px 10px ;
     }
+    /*----postアイコンの位置--*/
+.post-position-chat{ margin: 14px 0px 0px 0px;
+    padding: 10px;
+    margin:30px 0px 0px 0px;
+}
     
     }
     
@@ -431,25 +456,23 @@ textarea {
         font-size: 8px;
         padding: 13px 10px 10px ;
     }
+    /*INPUTタグズームにならないように*/
+input[type=text] {
+    font-size: 17px;
+  }
+  .terms-text,
+  .beginners-text,
+  .content-text,
+  .privacy-text{
+      position: relative;
+      width: 1100px;
+      max-width: 95%;
+      margin: 0 auto;
+  }
   
 
 }
 
-
-/**************************************
-フッターリンク先のメディアクエリ設定 ~420
-***************************************/
-@media only screen and (min-width: 420px){
-    .terms-text,
-    .beginners-text,
-    .content-text,
-    .privacy-text{
-        position: relative;
-        width: 1100px;
-        max-width: 95%;
-        margin: 0 auto;
-    }
-}
 
 /**************************************
            エラーページ設定
@@ -487,6 +510,24 @@ textarea {
     margin:0 auto;
 }
 
+form label{
+    margin: 5px 10px;
+}
 
+form input,
+form select{
+    margin: 0 auto;
+    height: 24.78px !important;
+    width: 100% !important;
+}
 
+.header-font{
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    list-style: none;
+}
 
+a .bbs-name{
+    font-size: 25px;
+}

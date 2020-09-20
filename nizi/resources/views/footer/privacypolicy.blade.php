@@ -3,9 +3,11 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+            <meta name="description" content=“上智大生向けの履修支援サイトです。このサイトでは授業のオススメ度や授業毎の掲示板機能などの有益な情報を得られるサイトになっております。”>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta http-equiv="X-UA-Compatible" content="ie=edge">
-			<title>利用規約</title>
+			<title>プライバシーポリシー - ∞pilotis</title>
+		
 </head>
 <body>
 @include("parts.common")
@@ -17,7 +19,12 @@
     
     <div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
-        <li class="u2-global-navbar__link"></li>
+        　　<li class="u2-global-navbar__link"><a href="terms">利用規約</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="beginnersguide">初めての方へ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="beginnersguide#organization">運営組織</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="contentpolicy">コンテンツポリシー</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="beginnersguide#faq">よくある質問</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="beginnersguide#inquiry">お問い合わせ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
 	</div>
 <div class="privacy-text">
@@ -108,6 +115,14 @@
 　　　<li>本ポリシーの内容は，法令その他本ポリシーに別段の定めのある事項を除いて，ユーザーに通知することなく，変更することができるものとします。</li>
 　　　<li>当社が別途定める場合を除いて，変更後のプライバシーポリシーは，本ウェブサイトに掲載したときから効力を生じるものとします。</li>
 </ol>
+<h2>第10条（グーグルアナリティスについて）</h2>
+<ol>
+　　<li>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細はGoogleアナリティクスサービス利用規約のページやGoogleポリシーと規約ページをご覧ください。</li>
+</ol>
 </div>
+
+
+
+
 </body>
 @include("parts.footer")

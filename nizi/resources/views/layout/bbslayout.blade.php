@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
        <!-- <title>@yield('title')｜magicmissile.info</title> -->
-        <meta name="description" itemprop="description" content="@yield('description')">
+        <meta name="description" itemprop="description" content="上智大生向けの履修支援サイトです。このサイトでは授業のオススメ度や授業毎の掲示板機能などの有益な情報を得られるサイトになっております。">
         <meta name="keywords" itemprop="keywords" content="@yield('keywords')">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -41,9 +41,13 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
           <!-- javascript  読み込み-->
       <script type="text/javascript" src="js/bbs_post.js"></script>
-
-    @yield('pageCss')
+        <!-- googleアナリティクス本番だけ反応-->
+        @if(env('APP_ENV') == 'production')
+        @include('google.analytics')
+        @endif
+    
     </head>
+    @yield('pageCss')
     <body>
 
     @yield('header')

@@ -18,14 +18,14 @@
     padding:5px 5px;
 }
  
-/*--------------スライダーにカーソル合わせた時のアニメーション設定*/
+/*--------------スライダーにカーソル合わせた時のアニメーション設定
 .img-sophia:hover {
-    transform: scale(0.8,0.8); /*画像の拡大*/
-    cursor: pointer; /*カーソルをポインターにする*/
+    transform: scale(0.8,0.8); /*画像の拡大
+    cursor: pointer; カーソルをポインターにする
     border-radius: 20px;
     transition: 0.7s ease-in-out;
     
-    }
+    } */
 
 
 /*------------------------学科科目スライダーのタイトルに関する設定*/
@@ -153,6 +153,9 @@ a.class-list{
 
 }
 
+.top-bbs-item-frame a{
+    font-size: 20px !important;
+}
 
 /*------------------トップページ初めて開いた時のアニメーション設定*/
 .start {

@@ -11,4 +11,17 @@ class Chat extends Model
         'name',
         'message', 
     ];
+
+    public function chatposts()
+    {
+        // カテゴリは複数のポストを持つ
+        return $this->hasMany('App\Chatpost');
+    }
+
+    public function getLists()
+{
+    $chats = Chat::orderBy('id','asc')->pluck('name', 'id');
+ 
+    return $chats;
+}
 }

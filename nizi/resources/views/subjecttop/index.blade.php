@@ -4,7 +4,7 @@
 @section('header')
 
 @foreach($category2s as $category2)
-<title>{{ $category2->name }}のTOP - ∞pilotis</title>
+<title>{{ $category2->name }} - ∞pilotis</title>
 @endforeach
 
 
@@ -20,6 +20,7 @@
             @foreach($category2s as $category2)
             <li class="u2-global-navbar__link"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table-back</a></li>
             @endforeach
+            <li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
@@ -152,9 +153,9 @@
                         <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>
                     </div>
 
-                    <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
+                    <!-- <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
                             <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
-                    </a>
+                    </a> -->
 
                     @foreach ($evaluations as $evaluation)
                     @if($loop->iteration < 4)
@@ -212,8 +213,11 @@
                         </div>
                         <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
+                                @if($evaluation->year==0)
+                                    {{$evaluation->year="?"}}年
+                                @else
                                 <div class="f-item float-right">{{ $evaluation->year }}年</div>
-
+                                @endif
                                 <div class="f-item float-right">{{ $evaluation->name }}さん</div>
 
 
@@ -264,12 +268,12 @@
                             <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
 
-
+                                @if($bbs->year==0)
+                                {{$bbs->year="?"}}年
+                                @else
                                 <div class="f-item float-right ">{{ $bbs->year }}年</div>
+                                @endif
                                 <div class="f-item float-right">{{ $bbs->name }}さん</div>
-
-
-
                             </div>
                         </div>
                     </div>

@@ -605,6 +605,27 @@ font-size: 30px;
   color:black;
   margin:30px 0px 0px 0px;
 }
+/*------------------TOPページ掲示板欄のタイトルの教授と曜日設定*/
+
+.top-bbs-item-frame{
+  display: flex;
+  padding: 5px 20px 0px 10px;
+
+}
+
+.top-bbs-item-frame a{
+  font-size: 20px !important;
+}
+
+element.style {
+}
+.top-bbs-box-serch{
+    border-bottom: 2px solid #e95014;
+    border-top: 1px solid #002549;
+    padding: 0px 0px 10px 0px;
+    margin: 15px 0px 15px 0px;
+    background-color: white;
+}
 /* 画面サイズ小さくしたらPOSTボタンがはみでたので修正
     簡易的な修正他にも修正する時に一気に変更してください*/
     /*************************

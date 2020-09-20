@@ -3,9 +3,11 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+            <meta name="description" content=“上智大生向けの履修支援サイトです。このサイトでは授業のオススメ度や授業毎の掲示板機能などの有益な情報を得られるサイトになっております。”>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta http-equiv="X-UA-Compatible" content="ie=edge">
-			<title>利用規約</title>
+            <title>利用規約 - ∞pilotis</title>
+         
 </head>
 <body>
 @include("parts.common")
@@ -17,7 +19,12 @@
     
     <div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
-        <li class="u2-global-navbar__link"></li>
+			<li class="u2-global-navbar__link"><a href="beginnersguide">初めての方へ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="beginnersguide#organization">運営組織</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="contentpolicy">コンテンツポリシー</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="privacypolicy">プライバシーポリシー</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="beginnersguide#faq">よくある質問</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="beginnersguide#inquiry">お問い合わせ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
 	</div>
 <div class="terms-text">

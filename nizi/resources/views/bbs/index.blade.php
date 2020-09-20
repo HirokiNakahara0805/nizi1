@@ -4,7 +4,7 @@
 @section('header')
 
 @foreach($category2s as $category2)
-<title>{{ $category2->name }}の掲示板 - ∞pilotis</title>
+<title>{{ $category2->name }} 掲示板 - ∞pilotis</title>
 @endforeach
 
 <!--いいね平均-->
@@ -41,6 +41,7 @@
             @foreach($category2s as $category2)
             <li class="u2-global-navbar__link"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table-back</a></li>
             @endforeach
+            <li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
@@ -122,7 +123,7 @@
 
                 <fieldset class="">
                     <div class="row">
-                        <div class="form-group col-sm-2">
+                        <div class="form-group col-sm-4">
                             
                             <textarea
                                 id="name"
@@ -151,7 +152,7 @@
                                 placeholder="学年"
                                 size="1"
                                 >
-                            <option value="0"selected disabled>学年</option>
+                            <option value="0"selected>学年</option>
 　　　　　　　　　　　　　　　　　<option value="1">１</option>
 　　　　　　　　　　　　　　　　　<option value="2">２</option>
 　　　　　　　　　　　　　　　　　<option value="3">３</option>
@@ -241,13 +242,17 @@
                 <div class="comment-box">
                     <div class="comment-text">{{$post->message}}
                         @if ($post->comments->count() >= 1)
-                            <p><span class="comment-number">{{ $post->comments->count() }}件</span></p>
+                            <p><span class="comment-number">コメント:{{ $post->comments->count() }}件</span></p>
                         @endif
                     </div>
                     <div class="">
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
+                            @if($post->year==0)
+                                {{$post->year="?"}}年
+                            @else
                             <div class="f-item float-right ">{{ $post->year }}年</div>
+                            @endif
                             <div class="f-item float-right">{{ $post->name }}さん</div>
                             <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class=""><i class="far fa-comment-dots reply-icon"> reply</i></a></div>
 

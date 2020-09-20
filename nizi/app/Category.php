@@ -31,4 +31,6 @@ class Category extends Model
         // カテゴリは複数のポストを持つ
         return $this->hasMany('App\Post');
     }
+
+    protected $fillable = ['name','teacher','department'];
 }

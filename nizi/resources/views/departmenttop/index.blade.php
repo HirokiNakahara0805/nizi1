@@ -3,11 +3,12 @@
 <html lang="ja">
 
 @foreach($departmentcategorie3s as $departmentcategorie3)
-<title>{{ $departmentcategorie3->name }}TOP - ∞pilotis</title>
+<title>{{ $departmentcategorie3->name }} - ∞pilotis</title>
 @endforeach
 
 <head>
 			<meta charset="UTF-8">
+			<meta name="description" content=“上智大生向けの履修支援サイトです。このサイトでは授業のオススメ度や授業毎の掲示板機能などの有益な情報を得られるサイトになっております。”>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		
@@ -37,6 +38,10 @@
 			<script type="text/javascript" src="{{  asset('js/common.js') }}"></script>
 			  <!-- javascript  読み込み-->
 			  <script type="text/javascript" src="js/bbs_post.js"></script>
+			   <!-- googleアナリティクス本番だけ反応-->
+				@if(env('APP_ENV') == 'production')
+					@include('google.analytics')
+				@endif
 
 </head>
 
@@ -52,7 +57,10 @@
 		<div class="u2-global-navbar">
 			<ul class="reset-ul row v2-global-navbar__links">
 
-				<li class="u2-global-navbar__link"><a href="#all-subject">other department</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+				<li class="u2-global-navbar__link"><a href="#all-subject">他学部</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+				<li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+				<li class="u2-global-navbar__link"><a href="#timetable">時間割</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+				<li class="u2-global-navbar__link"><a href="#bbs">掲示板</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 				<li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 				<li class="u2-global-navbar__link"><a href="#all-about">about</a><i class="fas fa-angle-double-down nav-arrows"></i></li> 
 
@@ -66,7 +74,7 @@
 			<div class="container dep-title-frame">
 				<div class="dep-title-frame-top border-bottom">
 				@foreach($departmentcategorie3s as $departmentcategorie3)
-					<h1 class="department-bbs-title pl-5"><a name="timetable">{{ $departmentcategorie3->name }}時間割</a></h1>
+					<h1 class="department-bbs-title pl-5"><a name="timetable">{{ $departmentcategorie3->name }} 時間割</a></h1>
 				@endforeach
 				</div>
 			</div>
@@ -482,28 +490,6 @@
 						@endif
 				 	</div>
 
-					<div class="form-group col-sm-2">
-						<select id="year"
-							name="year"
-							class="form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
-							value="{{ old('year') }}"
-							type="number"
-							placeholder="学年"
-							size="1"
-							>
-						<option value="0"selected disabled>学年</option>
-　　　　　　　　　　　　　　　　　<option value="1">１</option>
-　　　　　　　　　　　　　　　　　<option value="2">２</option>
-　　　　　　　　　　　　　　　　　<option value="3">３</option>
-　　　　　　　　　　　　　　　　　<option value="4">４</option>
-　　　　　　　　　　　　　　　　</select>
-						@if ($errors->has('year'))
-							<div class="invalid-feedback">
-								{{ $errors->first('year') }}
-							</div>
-						@endif
-					</div>
-
 				</div>
 				<div class="form-group">
 				
@@ -562,6 +548,9 @@
         @endif
     </div>
 
+<div class="d-flex justify-content-center mb-5" >
+	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
+</div>
 
 <div class="container">
 	<div class="row">
@@ -589,11 +578,11 @@
 
 	</div>
 </div>
-<div class="d-flex justify-content-center mb-5" id="all-subject">
+<div class="d-flex justify-content-center mb-5">
 	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
 </div>
 <!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
-<h3 class="text-center">学部名</h3>
+<h3 class="text-center" id="all-subject">学部名</h3>
 <div class="mt-4 mb-4 text-center underlist">
 <select size="1" class="form-control" name="select" onChange="location.href=value;">
         <option value="0"selected disabled>学部名</option>

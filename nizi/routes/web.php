@@ -32,6 +32,7 @@ Route::resource('subjecttop', 'SubjecttopController', ['only' => ['index']]);
 
 //チャットテストページ
 Route::resource('chat', 'ChatsController', ['only' => ['index', 'store']]);
+Route::resource('chatpost', 'ChatpostsController', ['only' => ['index', 'store']]);
 
 //初めての方へページ
 Route::get('/beginnersguide', function () {
@@ -68,3 +69,8 @@ Route::get('/inquiry', function () {
     return view('footer.inquiry');
 });
 
+//検索結果を表示する
+Route::get('/serchnew','UsersController@serch');
+
+//ユーザー一覧と検索画面
+Route::get('/serch','UsersController@index');

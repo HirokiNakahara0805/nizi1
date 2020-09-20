@@ -7,7 +7,7 @@
 
 <!-------------------------------------------------------タイトル挿入-->
 @foreach($category2s as $category2)
-<title>{{ $category2->name }}の評価投稿 - ∞pilotis</title>
+<title>{{ $category2->name }} 評価投稿 - ∞pilotis</title>
 @endforeach
 
 
@@ -29,6 +29,7 @@
             @foreach($category2s as $category2)
             <li class="u2-global-navbar__link"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table-back</a></li>
             @endforeach
+            <li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
@@ -178,7 +179,7 @@
                                 type="number"
                                 placeholder="学年"
                                 size="1">
-                            <option value="0"selected disabled>学年</option>
+                            <option value="0"selected>学年</option>
 　　　　　　　　　　　　　　　　　<option value="1">１</option>
 　　　　　　　　　　　　　　　　　<option value="2">２</option>
 　　　　　　　　　　　　　　　　　<option value="3">３</option>
@@ -409,7 +410,7 @@
                                 {{$post2->year="?"}}年
                             @else
                             <div class="f-item float-right">{{ $post2->year }}年</div>
- @endif
+                            @endif
                             <div class="f-item float-right">{{ $post2->name }}さん</div>
 
                         </div>
