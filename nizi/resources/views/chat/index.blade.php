@@ -16,7 +16,8 @@
 <!--ヘッダの下の黒いとこー-->
 	<div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
-			<li class="u2-global-navbar__link"><a href="#all-bbs">bbs</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+        　　<li class="u2-global-navbar__link"><a href="#all-sns">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#all-bbs">掲示板</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-about">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
@@ -54,11 +55,11 @@
                             <textarea
                                 id="name"
                                 name="name"
-                                class="chat-form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
+                                class="nanashi chat-form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
                                 value="{{ old('name') }}"
                                 type="text"
                                 size="1"
-                            >ニックネーム</textarea>
+                            >名無し</textarea>
                             @if ($errors->has('name'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('name') }}
