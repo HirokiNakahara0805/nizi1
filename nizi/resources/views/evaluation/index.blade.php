@@ -71,7 +71,7 @@
             $totalpost2s=1;
         }
         // 投稿件数計算
-        $totalpostscounts = ($totalpost2s-1);
+        $totalpostscounts=$post2s->total();
         // 投稿平均計算
         $average = round($goodss/$totalpost2s,2);
 
