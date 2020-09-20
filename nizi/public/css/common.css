@@ -458,8 +458,7 @@ textarea {
     }
     /*INPUTタグズームにならないように*/
 input[type=text] {
-    font-size: 20px;
-    transform: scale(0.5);
+    font-size: 17px;
   }
   .terms-text,
   .beginners-text,
