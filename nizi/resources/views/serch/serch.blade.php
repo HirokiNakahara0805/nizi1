@@ -41,6 +41,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
           <!-- javascript  読み込み-->
       <script type="text/javascript" src="js/bbs_post.js"></script>
+            <!-- googleアナリティクス本番だけ反応-->
+        @if(env('APP_ENV') == 'production')
+        @include('google.analytics')
+        @endif
+
+    </head>
 
 <!--ヘッダの上の白いとこー-->
 <header class="u2-header">
@@ -52,15 +58,12 @@
 <!--ヘッダの下の黒いとこー-->
   <div class="u2-global-navbar">
     <ul class="reset-ul row v2-global-navbar__links">
-    <li class="u2-global-navbar__link"><a href="subjecttop">トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-    <li class="u2-global-navbar__link"><a href="subjecttop">授業トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+    <li class="u2-global-navbar__link"><a href="/">トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
     </ul>
   </div>
 
 @section('content')
 
-
-<!-- @if(isset($users)) -->
 
   <div class="container">
     <div class="row">
@@ -71,9 +74,14 @@
             @if(!empty($message))
             <div class="alert alert-primary" role="alert">{{ $message}}</div>
             @endif
+        
+            @if ($users->count()=== 0 )
+            <p>検索結果は0件です</p>
+            @else
+            <p>検索結果は{{$users->count()}}件です</p>
+            @endif
 
-
-          @foreach($users as $user)
+        @foreach($users as $user)
             <div class="top-bbs-box-serch">
                 
                         <div class="border-bottom top-bbs-item-frame">
@@ -90,9 +98,6 @@
                         </a>
             </div>
             @endforeach
-            <div class="d-flex justify-content-center mb-5">
-                   {{ $users->links() }}
-            </div>
         </div>
 
         <div class="col-md-4">
@@ -101,7 +106,6 @@
         </div>
     </div>
   </div>
-<!-- @endif -->
 
 
 

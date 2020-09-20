@@ -41,9 +41,13 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
           <!-- javascript  読み込み-->
       <script type="text/javascript" src="js/bbs_post.js"></script>
-
-    @yield('pageCss')
+        <!-- googleアナリティクス本番だけ反応-->
+        @if(env('APP_ENV') == 'production')
+        @include('google.analytics')
+        @endif
+    
     </head>
+    @yield('pageCss')
     <body>
 
     @yield('header')

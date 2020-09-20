@@ -123,7 +123,7 @@
 
                 <fieldset class="">
                     <div class="row">
-                        <div class="form-group col-sm-2">
+                        <div class="form-group col-sm-4">
                             
                             <textarea
                                 id="name"
@@ -242,7 +242,7 @@
                 <div class="comment-box">
                     <div class="comment-text">{{$post->message}}
                         @if ($post->comments->count() >= 1)
-                            <p><span class="comment-number">{{ $post->comments->count() }}件</span></p>
+                            <p><span class="comment-number">コメント:{{ $post->comments->count() }}件</span></p>
                         @endif
                     </div>
                     <div class="">

@@ -37,6 +37,10 @@
 			<script type="text/javascript" src="{{  asset('js/common.js') }}"></script>
 			  <!-- javascript  読み込み-->
 			  <script type="text/javascript" src="js/bbs_post.js"></script>
+			   <!-- googleアナリティクス本番だけ反応-->
+				@if(env('APP_ENV') == 'production')
+					@include('google.analytics')
+				@endif
 
 </head>
 
@@ -52,7 +56,7 @@
 		<div class="u2-global-navbar">
 			<ul class="reset-ul row v2-global-navbar__links">
 
-				<li class="u2-global-navbar__link"><a href="#all-subject">other department</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+				<li class="u2-global-navbar__link"><a href="#all-subject">他学部</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 				<li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 				<li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 				<li class="u2-global-navbar__link"><a href="#all-about">about</a><i class="fas fa-angle-double-down nav-arrows"></i></li> 
@@ -67,7 +71,7 @@
 			<div class="container dep-title-frame">
 				<div class="dep-title-frame-top border-bottom">
 				@foreach($departmentcategorie3s as $departmentcategorie3)
-					<h1 class="department-bbs-title pl-5"><a name="timetable">{{ $departmentcategorie3->name }}時間割</a></h1>
+					<h1 class="department-bbs-title pl-5"><a name="timetable">{{ $departmentcategorie3->name }} 時間割</a></h1>
 				@endforeach
 				</div>
 			</div>
@@ -541,6 +545,9 @@
         @endif
     </div>
 
+<div class="d-flex justify-content-center mb-5" id="all-subject">
+	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
+</div>
 
 <div class="container">
 	<div class="row">

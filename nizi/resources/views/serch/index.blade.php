@@ -41,6 +41,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
           <!-- javascript  読み込み-->
       <script type="text/javascript" src="js/bbs_post.js"></script>
+            <!-- googleアナリティクス本番だけ反応-->
+        @if(env('APP_ENV') == 'production')
+        @include('google.analytics')
+        @endif
+
+</head>
 
 <!--ヘッダの上の白いとこー-->
 <header class="u2-header">
@@ -52,9 +58,7 @@
 <!--ヘッダの下の黒いとこー-->
   <div class="u2-global-navbar">
     <ul class="reset-ul row v2-global-navbar__links">
-    <li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-    <li class="u2-global-navbar__link"><a href="subjecttop">トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-    <li class="u2-global-navbar__link"><a href="subjecttop">授業トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+    <li class="u2-global-navbar__link"><a href="/">トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
     </ul>
   </div>
 
@@ -82,7 +86,7 @@
                                 placeholder="学部名"
                                 size="1"
                                 >
-                            <option selected disabled>検索したい学部名を選択してください</option>
+                            <option selected value="">検索したい学部名を選択してください</option>
                                 @foreach($departmentcategories as $departmentcategorie)
 　　　　　　　　　　　　　　　　　<option value="{{$departmentcategorie->name}}">{{$departmentcategorie->name}}</option>
                                 @endforeach

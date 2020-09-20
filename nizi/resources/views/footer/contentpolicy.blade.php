@@ -17,7 +17,12 @@
     
     <div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
-        <li class="u2-global-navbar__link"></li>
+        <li class="u2-global-navbar__link"><a href="terms">利用規約</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="beginnersguide">初めての方へ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="beginnersguide#organization">運営組織</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="privacypolicy">プライバシーポリシー</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="beginnersguide#faq">よくある質問</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+            <li class="u2-global-navbar__link"><a href="beginnersguide#inquiry">お問い合わせ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
     </div>
 
@@ -29,9 +34,9 @@
 <p>本サイトにて掲載されるすべての文章、イラスト、ロゴ、写真、動画、ソフトウェア、その他のすべての情報は、管理者または正当な権利を有する第三者が著作権を有しております。
 個人的な利用など著作権法によって認められる場合を除き、管理者に無断で転載、複製、放送、公衆送信、翻訳、販売、貸与などの利用をすることはできません。また管理者以外の第三者が著作権を有する場合は、該当者の許諾も必要となります。</p>
 <h1>免責事項について</h1>
-<p>本サイトに掲載されている情報の正確性については万全を期しておりますが、当社は利用者が本サイトの情報を用いて行う一切の行為について、何らの責任を負うものではありません。上記の行為に起因して利用者に生じた損害については、当社としては責任を負いかねますので御了承ください。</p>
+<p>本サイトに掲載されている情報の正確性については万全を期しておりますが、管理者は利用者が本サイトの情報を用いて行う一切の行為について、何らの責任を負うものではありません。上記の行為に起因して利用者に生じた損害については、管理者としては責任を負いかねますので御了承ください。</p>
 <h1>コンテンツポリシーの変更</h1>
-<p>当社は、必要と判断した場合には、利用者に通知することなくいつでも本規約を変更することができるものとします。</p>
+<p>管理者は、必要と判断した場合には、利用者に通知することなくいつでも本規約を変更することができるものとします。</p>
 </div>
 </body>
 @include("parts.footer")
