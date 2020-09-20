@@ -49,16 +49,16 @@
 
                 <fieldset class="">
                     <div class="row">
-                        <div class="form-group col-sm-2">
+                        <div class="form-group col-sm-4">
                             
                             <textarea
                                 id="name"
                                 name="name"
-                                class="chat-form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
+                                class="chat-form-control-name {{ $errors->has('name') ? 'is-invalid' : '' }}"
                                 value="{{ old('name') }}"
                                 type="text"
                                 size="1"
-                            >ニックネーム</textarea>
+                            >名無し</textarea>
                             @if ($errors->has('name'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('name') }}
@@ -84,7 +84,7 @@
                                 id="message"
                                 name="message"
                                 class="chat-form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
-                                cols="20" rows="2"　 wrap="hard" 　
+                                cols="20" rows="4"　 wrap="hard" 　
                             >{{ old('message') }}</textarea>
                             @if ($errors->has('message'))
                                 <div class="invalid-feedback">
@@ -96,7 +96,7 @@
                         
         
         
-                        <div class="post-position col-sm-3">
+                        <div class="post-position-chat col-sm-3">
         
                             <button type="submit" class="chat-post-botton" >
                                 <i class="fas fa-paper-plane post-icon">POST</i>
