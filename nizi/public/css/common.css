@@ -82,7 +82,7 @@ a .u2-header-logo {
 .u2-global-navbar__link {
     display: block;
     color: #ffffff;
-    font-size: 8px;
+    font-size: 20px;
     padding: 8px 20px 6px ;
 }
 .u2-global-navbar__link a{
@@ -487,6 +487,24 @@ textarea {
     margin:0 auto;
 }
 
+form label{
+    margin: 5px 10px;
+}
 
+form input,
+form select{
+    margin: 0 auto;
+    height: 24.78px !important;
+    width: 100% !important;
+}
 
+.header-font{
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    list-style: none;
+}
 
+a .bbs-name{
+    font-size: 25px;
+}
