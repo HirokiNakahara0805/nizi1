@@ -424,7 +424,7 @@ textarea {
 /*----投稿フォーム設定--*/
 .form-control {
     font-size: 16px;
-transform: scale(0.9);
+transform: scale(0.7);
   
 }
 /*----チャット投稿フォーム設定--*/
