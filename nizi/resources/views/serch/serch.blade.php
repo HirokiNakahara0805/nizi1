@@ -1,4 +1,7 @@
 <DOCTYPE HTML>
+
+<title>授業検索結果 - ∞pilotis</title>
+
     <html lang="ja">
     <head>
         <meta charset="UTF-8">

@@ -25,7 +25,7 @@
 @section('content')
 
 
-<title>chat - ∞pilotis</title>
+<title>ChatRoom - ∞pilotis</title>
 <div class="all-index">
 
 <!---------------------------------------------------アマゾンアソシエイト ----------------------------------------------------->
