@@ -102,9 +102,21 @@ class UsersController extends Controller
                         ]);
                         }
 
-                
+                        elseif(empty($keyword_name) && empty($keyword_teacher) && empty($keyword_department)) {
+                          $query = Category::query();
+                          $users = $query->where('name','あああああああああ')->get();
+                          $message = "検索条件を指定してください";        
+                                      
+                              return view('serch.serch')->with([
+                                'users' => $users,                              
+                                'message' => $message,
+                              ]);
+                              }
 
-                else {
+                  
+
+
+                        else {
                   $message = "検索結果はありません。";
                   return view('serch.serch')->with('message',$message);
                   }
