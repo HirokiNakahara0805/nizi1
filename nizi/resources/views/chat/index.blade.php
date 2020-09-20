@@ -16,8 +16,8 @@
 <!--ヘッダの下の黒いとこー-->
 	<div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
-        　　<li class="u2-global-navbar__link"><a href="#all-sns">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-			<li class="u2-global-navbar__link"><a href="#all-bbs">掲示板</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+        　　<li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+			<li class="u2-global-navbar__link"><a href="#chatbbs">掲示板</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 			<li class="u2-global-navbar__link"><a href="#all-about">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
 		</ul>
@@ -38,7 +38,7 @@
 <!---------------------------------------------------掲示板タイトル ----------------------------------------------------->
 <div class="container dep-title-frame mt-5">
 				<div class="chat-title-frame-top border-bottom">
-					<p class="department-bbs-title">上智大学全体掲示板</p>
+                <p class="department-bbs-title"><a name="chatbbs">上智大学全体掲示板</a></p>
 				</div>
     </div>
             
