@@ -344,7 +344,7 @@ progress {
   -webkit-appearance: none;
 }
 
-[type=search]::-webkit-search-decoration {
+[type=search]::-webkit--decoration {
   -webkit-appearance: none;
 }
 

@@ -153,6 +153,9 @@ a.class-list{
 
 }
 
+.top-bbs-item-frame a{
+    font-size: 20px !important;
+}
 
 /*------------------トップページ初めて開いた時のアニメーション設定*/
 .start {
