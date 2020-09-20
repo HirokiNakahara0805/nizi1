@@ -212,8 +212,11 @@
                         </div>
                         <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $evaluation->created_at->format('Y.m.d .H:i') }}</div>
+                                @if($evaluation->year==0)
+                                    {{$evaluation->year="?"}}年
+                                @else
                                 <div class="f-item float-right">{{ $evaluation->year }}年</div>
-
+                                @endif
                                 <div class="f-item float-right">{{ $evaluation->name }}さん</div>
 
 
@@ -264,12 +267,12 @@
                             <div class="f-container comment-info border-top">
                                 <div class="f-item float-right">{{ $bbs->created_at->format('Y.m.d H:i') }}</div>
 
-
+                                @if($bbs->year==0)
+                                {{$bbs->year="?"}}年
+                                @else
                                 <div class="f-item float-right ">{{ $bbs->year }}年</div>
+                                @endif
                                 <div class="f-item float-right">{{ $bbs->name }}さん</div>
-
-
-
                             </div>
                         </div>
                     </div>

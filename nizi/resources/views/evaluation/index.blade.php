@@ -178,7 +178,7 @@
                                 type="number"
                                 placeholder="学年"
                                 size="1">
-                            <option value="0"selected disabled>学年</option>
+                            <option value="0"selected>学年</option>
 　　　　　　　　　　　　　　　　　<option value="1">１</option>
 　　　　　　　　　　　　　　　　　<option value="2">２</option>
 　　　　　　　　　　　　　　　　　<option value="3">３</option>
@@ -409,7 +409,7 @@
                                 {{$post2->year="?"}}年
                             @else
                             <div class="f-item float-right">{{ $post2->year }}年</div>
- @endif
+                            @endif
                             <div class="f-item float-right">{{ $post2->name }}さん</div>
 
                         </div>
