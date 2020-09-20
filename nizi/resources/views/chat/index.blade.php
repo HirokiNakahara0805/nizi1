@@ -163,6 +163,11 @@
                             <div class="f-item float-right">{{ $chat->created_at->format('Y.m.d H:i') }}</div>
                             <div class="f-item float-right">{{ $chat->name }}さん</div>
                         </div>
+                        <span class="btn"><a href="{{ route('chatpost.index', ['chat_id'=>$chat->id]) }}" title="{{ $chat->name }}">{{ $chat->name }}</a></span>
+            @endforeach
+        </div>
+
+
                     </div>
                 </div>
 
