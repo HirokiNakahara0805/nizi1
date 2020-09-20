@@ -545,6 +545,9 @@
         @endif
     </div>
 
+<div class="d-flex justify-content-center mb-5" id="all-subject">
+	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
+</div>
 
 <div class="container">
 	<div class="row">
