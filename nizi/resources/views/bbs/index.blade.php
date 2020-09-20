@@ -151,7 +151,7 @@
                                 placeholder="学年"
                                 size="1"
                                 >
-                            <option value="0"selected disabled>学年</option>
+                            <option value="0"selected>学年</option>
 　　　　　　　　　　　　　　　　　<option value="1">１</option>
 　　　　　　　　　　　　　　　　　<option value="2">２</option>
 　　　　　　　　　　　　　　　　　<option value="3">３</option>
@@ -247,7 +247,11 @@
                     <div class="">
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
+                            @if($post->year==0)
+                                {{$post->year="?"}}年
+                            @else
                             <div class="f-item float-right ">{{ $post->year }}年</div>
+                            @endif
                             <div class="f-item float-right">{{ $post->name }}さん</div>
                             <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class=""><i class="far fa-comment-dots reply-icon"> reply</i></a></div>
 
