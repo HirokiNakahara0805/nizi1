@@ -7,7 +7,7 @@
 @section('pageCss')
 <!-- <link href="/css/bbs/style.css" rel="stylesheet"> -->
 @endsection
-
+<title>Reply - ∞pilotis</title>
 <!-- header追加 -->
 @section('header')
 
@@ -35,6 +35,12 @@
 
 <div class="container mt-4">
     <div class="border p-4 mb-4">
+            <!-- replyタイトル -->
+            <div class="container dep-title-frame">
+				<div class="dep-title-frame-top border-bottom">
+					<h1 class="department-bbs-title pl-5"><a name="timetable">{{ $post->name }}さんへの返信</a></h1>
+				</div>
+			</div>
 
         <div class="comment-box">
             <!-- 本文 -->
@@ -43,9 +49,13 @@
             </p>
 
             <div class="f-container comment-info border-top">
-                    <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
-                    <div class="f-item float-right">{{ $post->name }}</div>
-                    <div class="f-item float-right ">{{ $post->subject }}学年</div>
+                        <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
+                        <div class="f-item float-right">{{ $post->name }}さん</div>
+                    @if($post->subject==0)
+                        <div class="f-item float-right ">{{$post->year="?"}}年</div>
+                    @else
+                        <div class="f-item float-right ">{{ $post->year }}年</div>
+                    @endif
              </div>
         </div>
                     
@@ -70,7 +80,7 @@
                         value="{{ old('name') }}"
                         type="text"
                         rows="1"
-                    >匿名そふぃあ</textarea>
+                    >名無し</textarea>
                     @if ($errors->has('name'))
                     <div class="invalid-feedback">
                     {{ $errors->first('name') }}
@@ -88,7 +98,7 @@
                     name="comment"
                     class="form-control {{ $errors->has('comment') ? 'is-invalid' : '' }}"
                     rows="4"
-                >{{ old('comment') }}>>{!! nl2br(e($post->message)) !!}</textarea>
+                ></textarea>
                 @if ($errors->has('comment'))
                 <div class="invalid-feedback">
                 {{ $errors->first('comment') }}
@@ -186,3 +196,5 @@
 
     </footer>
 @endsection
+
+@include("layout.bbsfooter")
