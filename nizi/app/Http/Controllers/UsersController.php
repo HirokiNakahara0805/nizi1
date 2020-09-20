@@ -82,7 +82,7 @@ class UsersController extends Controller
                 elseif(empty($keyword_name) && !empty($keyword_teacher) && !empty($keyword_department)) {
                     $query = Category::query();
                     $users = $query->where('teacher','like', '%' .$keyword_teacher. '%')->where('department','like', '%' .$keyword_department. '%')->get();
-                    $message = "「". $keyword_name."」を含む教授名、且つ「". $keyword_department."」の検索が完了しました。";        
+                    $message = "「". $keyword_teacher."」を含む教授名、且つ「". $keyword_department."」の検索が完了しました。";        
                         
                         return view('serch.serch')->with([
                           'users' => $users,
@@ -94,7 +94,7 @@ class UsersController extends Controller
                 elseif(!empty($keyword_name) && !empty($keyword_teacher) && !empty($keyword_department)) {
                     $query = Category::query();
                     $users = $query->where('name','like', '%' .$keyword_name. '%')->where('teacher','like', '%' .$keyword_teacher. '%')->where('department','like', '%' .$keyword_department. '%')->get();
-                    $message = "「". $keyword_name."」を含む科目名、且つ「". $keyword_name."」を含む教授名、且つ「". $keyword_department."」の検索が完了しました。";        
+                    $message = "「". $keyword_name."」を含む科目名、且つ「". $keyword_teacher."」を含む教授名、且つ「". $keyword_department."」の検索が完了しました。";        
                                 
                         return view('serch.serch')->with([
                           'users' => $users,                              
