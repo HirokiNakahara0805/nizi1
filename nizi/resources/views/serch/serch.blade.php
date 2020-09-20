@@ -104,6 +104,7 @@
                             <div class="top-bbs-item "><p>{{ $user->department }}</p></div>
                             <div class="top-bbs-item "><p>{{ $user->time }}</p></div>
                             <div class="top-bbs-item "><p>{{ $user->teacher }}</p></div>
+                            <div class="top-bbs-item "><p>{{ $user->code }}</p></div>
                           
                         </div>
                         <a href="{{ route('subjecttop.index', ['category_id'=>$user->id ]) }}" title="{{ $user->name }}">
