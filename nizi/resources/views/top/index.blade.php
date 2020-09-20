@@ -107,6 +107,7 @@
 <!--------------------------------フッター読み込み-->
 @include("parts.footer")
 
+
 		 <!--CSS (top用読み込)-->
 		<link rel="stylesheet" href="{{ asset('/css/top.css') }}">
         <!--JS(slick用)読み込み-->
