@@ -123,7 +123,7 @@
 
                 <fieldset class="">
                     <div class="row">
-                        <div class="form-group col-sm-2">
+                        <div class="form-group col-sm-4">
                             
                             <textarea
                                 id="name"
