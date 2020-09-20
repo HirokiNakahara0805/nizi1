@@ -702,9 +702,6 @@ font-size: 30px;
 評価投稿のニックネームの大きさ
 /*********************/
 
-.col-sm-5 textarea{
-  height: 25px !important;
-}
 
 .text-center select {
   width: 300px;
