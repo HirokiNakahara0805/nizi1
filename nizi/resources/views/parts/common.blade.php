@@ -32,5 +32,7 @@
          <!-- googleアドセンス審査のやつ（多分）読み込み-->
         <script data-ad-client="ca-pub-3635512525147486" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- googleアナリティクス本番だけ反応-->
-        @includeWhen(env(GA_ENABLE), 'google.analytics')
+        @if(env('APP_ENV') == 'production')
+        @include('google.analytics')
+        @endif
 </head>

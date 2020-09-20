@@ -37,8 +37,10 @@
 			<script type="text/javascript" src="{{  asset('js/common.js') }}"></script>
 			  <!-- javascript  読み込み-->
 			  <script type="text/javascript" src="js/bbs_post.js"></script>
-			    <!-- googleアナリティクス本番だけ反応-->
-				@includeWhen(env(GA_ENABLE), 'google.analytics')
+			   <!-- googleアナリティクス本番だけ反応-->
+				@if(env('APP_ENV') == 'production')
+					@include('google.analytics')
+				@endif
 
 </head>
 
