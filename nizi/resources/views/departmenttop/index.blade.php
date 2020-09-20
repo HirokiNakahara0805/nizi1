@@ -545,7 +545,7 @@
         @endif
     </div>
 
-<div class="d-flex justify-content-center mb-5" id="all-subject">
+<div class="d-flex justify-content-center mb-5" >
 	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
 </div>
 
@@ -575,11 +575,11 @@
 
 	</div>
 </div>
-<div class="d-flex justify-content-center mb-5" id="all-subject">
+<div class="d-flex justify-content-center mb-5">
 	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
 </div>
 <!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
-<h3 class="text-center">学部名</h3>
+<h3 class="text-center" id="all-subject">学部名</h3>
 <div class="mt-4 mb-4 text-center underlist">
 <select size="1" class="form-control" name="select" onChange="location.href=value;">
         <option value="0"selected disabled>学部名</option>
