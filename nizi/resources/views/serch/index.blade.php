@@ -79,9 +79,9 @@
         {{method_field('get')}}
           <div class="form-group">
             <label>科目名</label>
-              <input type="text" class="form-control col-md-5" placeholder="検索したい授業名を入力してください" name="name">
+              <input type="text" class="form-control col-md-5" placeholder="" name="name">
             <label>教授名</label>
-              <input type="text" class="form-control col-md-5" placeholder="検索したい教授名を入力してください" name="teacher">
+              <input type="text" class="form-control col-md-5" placeholder="" name="teacher">
             <label>学部名</label>
               <select
                                 name="department"
