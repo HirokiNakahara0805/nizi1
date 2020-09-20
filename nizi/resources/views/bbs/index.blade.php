@@ -220,6 +220,10 @@
         @else
         <p>{{ $posts->total() }}件が見つかりました。</p>
         @endif
+<!--------------------------------------------------- ページネーション 設定 ------------------------------------------------------------------>
+        <div class="d-flex justify-content-center mb-5">
+            {{ $posts->appends(['category_id' => $category_id])->links() }}
+        </div>
     </div>
 
 
@@ -249,9 +253,9 @@
                         <div class="f-container comment-info border-top">
                             <div class="f-item float-right">{{ $post->created_at->format('Y.m.d H:i') }}</div>
                             @if($post->year==0)
-                                {{$post->year="?"}}年
+                                <div class="f-item float-right ">{{$post->year="?"}}年</div>
                             @else
-                            <div class="f-item float-right ">{{ $post->year }}年</div>
+                                <div class="f-item float-right ">{{ $post->year }}年</div>
                             @endif
                             <div class="f-item float-right">{{ $post->name }}さん</div>
                             <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class=""><i class="far fa-comment-dots reply-icon"> reply</i></a></div>
