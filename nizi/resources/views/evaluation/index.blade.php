@@ -145,20 +145,22 @@
             <fieldset class="mb-4">
                 <div class="row">
                      <!------------------------------------------ニックネームインプット------------>
-                    <div class="form-group col-sm-5">
-                        <textarea
-                            id="name"
-                            name="name"
-                            class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
-                            value="{{ old('name') }}"
-                            type="text"
-                        >名無し</textarea>
-                        @if ($errors->has('name'))
-                            <div class="invalid-feedback">
-                                {{ $errors->first('name') }}
-                            </div>
-                        @endif
-                    </div>
+                     <div class="form-group col-sm-4">
+                            
+                            <textarea
+                                id="name"
+                                name="name"
+                                class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
+                                value="{{ old('name') }}"
+                                type="text"
+                                rows="1"
+                            >名無し</textarea>
+                            @if ($errors->has('name'))
+                                <div class="invalid-feedback">
+                                    {{ $errors->first('name') }}
+                                </div>
+                            @endif
+                      </div>
                     <!-----------------------------------------カテゴリーIDインプット（隠されてます)------------->
                     <div class="form-group col-sm-1">
                     <input
