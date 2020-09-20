@@ -3,7 +3,7 @@
 <html lang="ja">
 
 @foreach($departmentcategorie3s as $departmentcategorie3)
-<title>{{ $departmentcategorie3->name }}TOP - ∞pilotis</title>
+<title>{{ $departmentcategorie3->name }} - ∞pilotis</title>
 @endforeach
 
 <head>

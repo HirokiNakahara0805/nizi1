@@ -6,7 +6,7 @@
     <meta name="description" content=“上智大生向けの履修支援サイトです。このサイトでは授業のオススメ度や授業毎の掲示板機能などの有益な情報を得られるサイトになっております。”>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>サイトをご利用になられる方へ</title>
+	<title>サイトをご利用になられる方へ - ∞pilotis</title>
 </head>
 <body>
 

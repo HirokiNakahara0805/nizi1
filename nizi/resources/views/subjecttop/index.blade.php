@@ -4,7 +4,7 @@
 @section('header')
 
 @foreach($category2s as $category2)
-<title>{{ $category2->name }}のTOP - ∞pilotis</title>
+<title>{{ $category2->name }} - ∞pilotis</title>
 @endforeach
 
 

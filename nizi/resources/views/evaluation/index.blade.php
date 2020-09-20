@@ -7,7 +7,7 @@
 
 <!-------------------------------------------------------タイトル挿入-->
 @foreach($category2s as $category2)
-<title>{{ $category2->name }}の評価投稿 - ∞pilotis</title>
+<title>{{ $category2->name }} 評価投稿 - ∞pilotis</title>
 @endforeach
 
 

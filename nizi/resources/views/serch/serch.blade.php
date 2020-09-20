@@ -1,4 +1,7 @@
 <DOCTYPE HTML>
+
+<title>授業検索結果 - ∞pilotis</title>
+
     <html lang="ja">
     <head>
         <meta name="description" content=“上智大生向けの履修支援サイトです。このサイトでは授業のオススメ度や授業毎の掲示板機能などの有益な情報を得られるサイトになっております。”>
