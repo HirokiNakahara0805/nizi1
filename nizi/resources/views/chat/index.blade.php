@@ -57,7 +57,7 @@
                                 class="chat-form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
                                 value="{{ old('name') }}"
                                 type="text"
-                                rows="1"
+                                size="1"
                             >ニックネーム</textarea>
                             @if ($errors->has('name'))
                                 <div class="invalid-feedback">
@@ -65,31 +65,7 @@
                                 </div>
                             @endif
                       </div>
-        
-                    
-            
-                            
-                        <div class="form-group col-sm-2">
-                            <select id="year"
-                                name="year"
-                                class="chat-form-control {{ $errors->has('year') ? 'is-invalid' : '' }}"
-                                value="{{ old('year') }}"
-                                type="number"
-                                placeholder="学年"
-                                size="1"
-                                >
-                            <option value="0"selected disabled>学年</option>
-　　　　　　　　　　　　　　　　　<option value="1">１</option>
-　　　　　　　　　　　　　　　　　<option value="2">２</option>
-　　　　　　　　　　　　　　　　　<option value="3">３</option>
-　　　　　　　　　　　　　　　　　<option value="4">４</option>
-　　　　　　　　　　　　　　　　</select>
-                            @if ($errors->has('year'))
-                                <div class="invalid-feedback">
-                                    {{ $errors->first('year') }}
-                                </div>
-                            @endif
-                        </div>
+
 
                     </div>
                     <div class="form-group">
@@ -139,42 +115,27 @@
 
     <div class="container">
         <div class="row">
-            <!-- <thead>
-                <tr>
-
-                    <th>投稿時間</th>
-                    <th>ニックネーム</th>
-                    <th>学年</th>
-                    <th>メイン内容</th>
-                </tr>
-            </thead> -->
             <div class="col-md-8">
-            <div class="d-flex justify-content-center mb-5">
-                    {{ $chats->links() }}
-            </div>
-            @foreach ($chats as $chat)
-
-                <div class="chat-box">
-                    <div class="comment-text">{{$chat->message}}
-
-                    </div>
-                    <div class="">
-                        <div class="f-container comment-info border-top">
-                            <div class="f-item float-right">{{ $chat->created_at->format('Y.m.d H:i') }}</div>
-                            <div class="f-item float-right">{{ $chat->name }}さん</div>
-                        </div>
-                        <span class="btn"><a href="{{ route('chatpost.index', ['chat_id'=>$chat->id]) }}" title="{{ $chat->name }}">{{ $chat->name }}</a></span>
-            @endforeach
-        </div>
-
-
-                    </div>
-                </div>
-
-            @endforeach
                 <div class="d-flex justify-content-center mb-5">
-                    {{ $chats->links() }}
+                        {{ $chats->links() }}
                 </div>
+                @foreach ($chats as $chat)
+
+                    <div class="chat-box">
+                        <div class="comment-text">{{$chat->message}}</div>
+                        
+                        <div class="">
+                            <div class="f-container comment-info border-top">
+                                <div class="f-item float-right">{{ $chat->created_at->format('Y.m.d H:i') }}</div>
+                                <div class="f-item float-right">{{ $chat->name }}さん</div>
+                            </div>
+                        </div>
+                    </div>
+
+                @endforeach
+                    <div class="d-flex justify-content-center mb-5">
+                        {{ $chats->links() }}
+                    </div>
             </div>
             <!--投稿の横の空白部分-->
             <div class="col-md-4">
