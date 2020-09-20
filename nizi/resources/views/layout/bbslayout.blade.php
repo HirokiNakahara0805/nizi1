@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
        <!-- <title>@yield('title')｜magicmissile.info</title> -->
-        <meta name="description" itemprop="description" content="@yield('description')">
+        <meta name="description" itemprop="description" content="上智大生向けの履修支援サイトです。このサイトでは授業のオススメ度や授業毎の掲示板機能などの有益な情報を得られるサイトになっております。">
         <meta name="keywords" itemprop="keywords" content="@yield('keywords')">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 

@@ -5,7 +5,7 @@
 
                 <meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+                <meta name="description" content=“上智大生向けの履修支援サイトです。このサイトでは授業のオススメ度や授業毎の掲示板機能などの有益な情報を得られるサイトになっております。”>
         <title>∞pilotis</title>
 
         <!-- Fonts -->
