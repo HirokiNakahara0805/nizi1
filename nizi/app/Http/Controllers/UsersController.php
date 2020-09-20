@@ -51,7 +51,7 @@ class UsersController extends Controller
     //学部名のみ検索    
         elseif(empty($keyword_name) && empty($keyword_teacher) && !empty($keyword_department)) {
             $query = Category::query();
-            $users = $query->where('department','like', '%' .$keyword_department. '%')->paginate(25);
+            $users = $query->where('department','like', '%' .$keyword_department. '%')->paginate(50);
             $message = "「". $keyword_department."」の検索が完了しました。";
             return view('serch.serch')->with([
                   'users' => $users,
@@ -102,10 +102,12 @@ class UsersController extends Controller
                         ]);
                         }
 
-      else {
-        $message = "検索結果はありません。";
-        return view('serch.serch')->with('message',$message);
-        }
+                
+
+                else {
+                  $message = "検索結果はありません。";
+                  return view('serch.serch')->with('message',$message);
+                  }
   }
 
     

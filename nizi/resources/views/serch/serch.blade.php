@@ -71,9 +71,16 @@
             @if(!empty($message))
             <div class="alert alert-primary" role="alert">{{ $message}}</div>
             @endif
+        
+            @if ($users->total()=== 0 )
+            <p>検索結果は0件です</p>
+            @endif
 
+            <div class="d-flex justify-content-center mb-5">
+                   {{ $users->links() }}
+            </div>
 
-          @foreach($users as $user)
+        @foreach($users as $user)
             <div class="top-bbs-box-serch">
                 
                         <div class="border-bottom top-bbs-item-frame">
