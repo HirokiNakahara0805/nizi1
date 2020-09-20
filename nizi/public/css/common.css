@@ -456,10 +456,7 @@ textarea {
         font-size: 8px;
         padding: 13px 10px 10px ;
     }
-    /*INPUTタグズームにならないように*/
-input[type=text] {
-    font-size: 17px;
-  }
+
   .terms-text,
   .beginners-text,
   .content-text,
