@@ -88,7 +88,7 @@
                                 placeholder="学部名"
                                 size="1"
                                 >
-                            <option selected disabled>検索したい学部名を選択してください</option>
+                            <option selected value="">検索したい学部名を選択してください</option>
                                 @foreach($departmentcategories as $departmentcategorie)
 　　　　　　　　　　　　　　　　　<option value="{{$departmentcategorie->name}}">{{$departmentcategorie->name}}</option>
                                 @endforeach
