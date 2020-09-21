@@ -50,7 +50,7 @@
         }
 
          // 投稿件数計算
-         $totalpostscounts = ($totalpost2s-1);
+         $totalpostscounts=$post2s->total();
 
     $average = round($goodss/$totalpost2s,2);
 
@@ -206,7 +206,6 @@
 
                             <div class="title text-center">コメント</div>
                             <div class="evaluation-message evaluation-text mb-5 p-2">
-                                        
                                 <p>{{ $evaluation->message }}</p>
                             </div>
 
