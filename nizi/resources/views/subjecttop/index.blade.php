@@ -78,12 +78,12 @@
                     
                     <div class="star-average-box border-line-orange col-md-4">
                         
-                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><h1 class="star-average">rate:{{ $average }}</h1></a>
+                        <a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" ><h1 class="star-average">rate:{{ $average }}</h1></a>
                             <div class="star-ratings-sprite-title ">
                                 <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating-title"></span>
                             </div>
                             <div class="toukou-kensu">
-                                <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" ><p>{{$totalpostscounts}}件</p></a>
+                                <a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" ><p>{{$totalpostscounts}}件</p></a>
                             </div>
                     </div>
                     
@@ -132,10 +132,10 @@
     <ul class="reset-ul row feature-title-box">
 
 
-        <li class=" topcolor feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id]) }}" >トップ</a></li>
+        <li class=" topcolor feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >トップ</a></li>
 
-        <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" >掲示板</a></li>
-        <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >評価投稿画面</a></li>
+        <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >掲示板</a></li>
+        <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >評価投稿画面</a></li>
     </ul>
 </div>
 
@@ -148,12 +148,12 @@
 				<div class="col-md-8  top-all-bbs-backgroundcolor"  id="evaluation">
 
                     <div class="row">
-                        <div class="text-center col-md-4"><a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" class="common-btn list-inline-item">評価投稿</a></div>
+                        <div class="text-center col-md-4"><a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" class="common-btn list-inline-item">評価投稿</a></div>
 
                         <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>
                     </div>
 
-                    <!-- <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" >
+                    <!-- <a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >
                             <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
                     </a> -->
 
@@ -228,7 +228,7 @@
 
 
                      <div class="text-center common-btn-ikkoue ">
-                         <a href="{{ route('evaluation.index', ['category_id'=>$category_id]) }}" class="common-btn">
+                         <a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" class="common-btn">
 
                                 All post
                           </a>
@@ -254,7 +254,7 @@
 				<div class="col-md-8 top-all-bbs-backgroundcolor2" id="all-bbs">
 
                     <div class="row mx-auto" >
-                        <div class="text-center col-md-4"><a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}"  class=" common-btn list-inline-item">掲示板</a></div>
+                        <div class="text-center col-md-4"><a href="{{ route('bbs.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}"  class=" common-btn list-inline-item">掲示板</a></div>
 
                         <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>
                     </div>
@@ -281,7 +281,7 @@
                     @endforeach
 
                     <div class="text-center common-btn-ikkoue ">
-                         <a href="{{ route('bbs.index', ['category_id'=>$category_id]) }}" class="common-btn">
+                         <a href="{{ route('bbs.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" class="common-btn">
 
                                 All post
                           </a>
@@ -302,8 +302,8 @@
     <div class="mt-4 mb-4 text-center underlist">
     <select size="1" class="form-control" name="select" onChange="location.href=value;">
         <option value="0"selected disabled>授業科目</option>
-            @foreach($categories as $id => $name)
-        <option value="{{ route('subjecttop.index', ['category_id'=>$id]) }}" title="{{ $name }}"><a class="class-list" >{{ $name }}</a>
+            @foreach($categorydepas as $categorydepa)
+        <option value="{{ route('subjecttop.index', ['category_id'=>$categorydepa->id ,'departmentcategory_id'=>$categorydepa->departmentcategory_id]) }}" title="{{ $categorydepa->name }}"><a class="class-list" >{{ $categorydepa->name }}</a>
         </option>
         @endforeach
     </select>
