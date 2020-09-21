@@ -258,7 +258,6 @@
                                 <div class="f-item float-right ">{{ $post->year }}年</div>
                             @endif
                             <div class="f-item float-right">{{ $post->name }}さん</div>
-                            <div class="f-item float-right"><a href="{{ action('PostsController@show', $post->id) }}" class=""><i class="far fa-comment-dots reply-icon"> reply</i></a></div>
 
                         </div>
                     </div>
