@@ -77,7 +77,7 @@
 										<div class="top-bbs-item "><p>{{ $category2->time }}</p></div>
 										<div class="top-bbs-item "><p>{{ $category2->teacher }}</p></div>
 								</div>
-							<a href="{{ route('subjecttop.index', ['category_id'=>$category2->id ]) }}" title="{{ $category2->name }}">
+							<a href="{{ route('subjecttop.index', ['category_id'=>$category2->id ,'departmentcategory_id'=>$category2->departmentcategory_id]) }}" title="{{ $category2->name }}">
 
 								<div class="">
 										<p class="bbs-name text-center" >{{ $category2->name }}</p>

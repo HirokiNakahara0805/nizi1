@@ -107,7 +107,7 @@
                             <div class="top-bbs-item "><p>{{ $user->code }}</p></div>
                           
                         </div>
-                        <a href="{{ route('subjecttop.index', ['category_id'=>$user->id ]) }}" title="{{ $user->name }}">
+                        <a href="{{ route('subjecttop.index', ['category_id'=>$user->id,'departmentcategory_id'=>$user->departmentcategory_id]) }}" title="{{ $user->name }}">
 
                               <div class="">
                                   <p class="bbs-name text-center" >{{ $user->name }}</p>

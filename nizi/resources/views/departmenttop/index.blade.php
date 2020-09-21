@@ -138,7 +138,7 @@
 											<a><p class="subject-name-top-period">1st period</p></a>
 											<!--月曜日1限だけ出力-->
 											@foreach($categorymo1s as $categorymo1)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categorymo1->id]) }}" title="{{ $categorymo1->name }}"><p class="subjectname">{{ $categorymo1->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categorymo1->id,'departmentcategory_id'=>$categorymo1->departmentcategory_id]) }}" title="{{ $categorymo1->name }}"><p class="subjectname">{{ $categorymo1->name }}</p></a>
 											@endforeach
 										</div>
 										
@@ -147,27 +147,27 @@
 										<a><p class="subject-name-top-period">2nd period</p></a>
 										<!--月曜日2限だけ出力-->
 										@foreach($categorymo2s as $categorymo2)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categorymo2->id]) }}" title="{{ $categorymo2->name }}"><p class="subjectname">{{ $categorymo2->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categorymo2->id,'departmentcategory_id'=>$categorymo2->departmentcategory_id]) }}" title="{{ $categorymo2->name }}"><p class="subjectname">{{ $categorymo2->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="mon3" class="mon12345">
 										<a><p class="subject-name-top-period">3rd period</p></a>
 										@foreach($categorymo3s as $categorymo3)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categorymo3->id]) }}" title="{{ $categorymo3->name }}"><p class="subjectname">{{ $categorymo3->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categorymo3->id,'departmentcategory_id'=>$categorymo3->departmentcategory_id]) }}" title="{{ $categorymo3->name }}"><p class="subjectname">{{ $categorymo3->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="mon4" class="mon12345">
 										<a><p class="subject-name-top-period">4th period</p></a>
 										<!--月曜日4限だけ出力-->
 										@foreach($categorymo4s as $categorymo4)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categorymo4->id]) }}" title="{{ $categorymo4->name }}"><p class="subjectname">{{ $categorymo4->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categorymo4->id,'departmentcategory_id'=>$categorymo4->departmentcategory_id]) }}" title="{{ $categorymo4->name }}"><p class="subjectname">{{ $categorymo4->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="mon5" class="mon12345">
 										<a><p class="subject-name-top-period">5th period</p></a>
 										<!--月曜日5限だけ出力-->
 										@foreach($categorymo5s as $categorymo5)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categorymo5->id]) }}" title="{{ $categorymo5->name }}"><p class="subjectname">{{ $categorymo5->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categorymo5->id,'departmentcategory_id'=>$categorymo5->departmentcategory_id]) }}" title="{{ $categorymo5->name }}"><p class="subjectname">{{ $categorymo5->name }}</p></a>
 										@endforeach
 									</div>
 								</div>
@@ -200,14 +200,14 @@
 									<div id="tue1" class="tue12345">
 										<a><p class="subject-name-top-period">1st period</p></a>
 										@foreach($categorytu1s as $categorytu1)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorytu1->id]) }}" title="{{ $categorytu1->name }}"><p class="subjectname">{{ $categorytu1->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorytu1->id,'departmentcategory_id'=>$categorytu1->departmentcategory_id]) }}" title="{{ $categorytu1->name }}"><p class="subjectname">{{ $categorytu1->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="tue2" class="tue12345">
 										<a><p class="subject-name-top-period">2nd period</p></a>
 											<!--火曜日2限だけ出力-->
 										@foreach($categorytu2s as $categorytu2)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorytu2->id]) }}" title="{{ $categorytu2->name }}"><p class="subjectname">{{ $categorytu2->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorytu2->id,'departmentcategory_id'=>$categorytu2->departmentcategory_id]) }}" title="{{ $categorytu2->name }}"><p class="subjectname">{{ $categorytu2->name }}</p></a>
 										@endforeach
 									</div>
 
@@ -216,21 +216,21 @@
 										<a><p class="subject-name-top-period">3rd period</p></a>
 										<!--火曜日3限だけ出力-->
 										@foreach($categorytu3s as $categorytu3)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorytu3->id]) }}" title="{{ $categorytu3->name }}"><p class="subjectname">{{ $categorytu3->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorytu3->id,'departmentcategory_id'=>$categorytu3->departmentcategory_id]) }}" title="{{ $categorytu3->name }}"><p class="subjectname">{{ $categorytu3->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="tue4" class="tue12345">
 										<a><p class="subject-name-top-period">4th period</p></a>
 										<!--火曜日4限だけ出力-->
 										@foreach($categorytu4s as $categorytu4)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorytu4->id]) }}" title="{{ $categorytu4->name }}"><p class="subjectname">{{ $categorytu4->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorytu4->id,'departmentcategory_id'=>$categorytu4->departmentcategory_id]) }}" title="{{ $categorytu4->name }}"><p class="subjectname">{{ $categorytu4->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="tue5" class="tue12345">
 										<a><p class="subject-name-top-period">5th period</p></a>
 										<!--火曜日5限だけ出力-->
 										@foreach($categorytu5s as $categorytu5)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorytu5->id]) }}" title="{{ $categorytu5->name }}"><p class="subjectname">{{ $categorytu5->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorytu5->id,'departmentcategory_id'=>$categorytu5->departmentcategory_id]) }}" title="{{ $categorytu5->name }}"><p class="subjectname">{{ $categorytu5->name }}</p></a>
 										@endforeach
 									</div>
 								</div>
@@ -263,35 +263,35 @@
 										<a><p class="subject-name-top-period">1st period</p></a>
 										<!--水曜日1限だけ出力-->
 										@foreach($categorywe1s as $categorywe1)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe1->id]) }}" title="{{ $categorywe1->name }}"><p class="subjectname">{{ $categorywe1->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe1->id,'departmentcategory_id'=>$categorywe1->departmentcategory_id]) }}" title="{{ $categorywe1->name }}"><p class="subjectname">{{ $categorywe1->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="wed2" class="wed12345">
 										<a><p class="subject-name-top-period">2nd period</p></a>
 										<!--水曜日2限だけ出力-->
 										@foreach($categorywe2s as $categorywe2)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe2->id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe2->id,'departmentcategory_id'=>$categorywe1->departmentcategory_id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="wed3" class="wed12345">
 										<a><p class="subject-name-top-period">3rd period</p></a>
 										<!--水曜日3限だけ出力-->
-										@foreach($categorywe2s as $categorywe2)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe2->id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										@foreach($categorywe3s as $categorywe3)
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe3->id,'departmentcategory_id'=>$categorywe3->departmentcategory_id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="wed4" class="wed12345">
 										<a><p class="subject-name-top-period">4th period</p></a>
 										<!--水曜日4限だけ出力-->
-										@foreach($categorywe2s as $categorywe2)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe2->id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										@foreach($categorywe4s as $categorywe4)
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe4->id,'departmentcategory_id'=>$categorywe4->departmentcategory_id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="wed5" class="wed12345">
 										<a><p class="subject-name-top-period">5th period</p></a>
 										<!--水曜日5限だけ出力-->
-										@foreach($categorywe2s as $categorywe2)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe2->id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										@foreach($categorywe5s as $categorywe5)
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe5->id,'departmentcategory_id'=>$categorywe5->departmentcategory_id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
 										@endforeach
 									</div>
 								</div>
@@ -323,35 +323,35 @@
 											<a><p class="subject-name-top-period">1st period</p></a>
 											<!--木曜日1限だけ出力-->
 										@foreach($categoryth1s as $categoryth1)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categoryth1->id]) }}" title="{{ $categoryth1->name }}"><p class="subjectname">{{ $categoryth1->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categoryth1->id,'departmentcategory_id'=>$categoryth1->departmentcategory_id]) }}" title="{{ $categoryth1->name }}"><p class="subjectname">{{ $categoryth1->name }}</p></a>
 										@endforeach
 										</div>
 										<div id="thu2" class="thu12345">
 											<a><p class="subject-name-top-period">2nd period</p></a>
 											<!--木曜日2限だけ出力-->
 										@foreach($categoryth2s as $categoryth2)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categoryth2->id]) }}" title="{{ $categoryth2->name }}"><p class="subjectname">{{ $categoryth2->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categoryth2->id,'departmentcategory_id'=>$categoryth2->departmentcategory_id]) }}" title="{{ $categoryth2->name }}"><p class="subjectname">{{ $categoryth2->name }}</p></a>
 										@endforeach
 										</div>
 										<div id="thu3" class="thu12345">
 											<a><p class="subject-name-top-period">3rd period</p></a>
 											<!--木曜日3限だけ出力-->
 										@foreach($categoryth3s as $categoryth3)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categoryth3->id]) }}" title="{{ $categoryth3->name }}"><p class="subjectname">{{ $categoryth3->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categoryth3->id,'departmentcategory_id'=>$categoryth3->departmentcategory_id]) }}" title="{{ $categoryth3->name }}"><p class="subjectname">{{ $categoryth3->name }}</p></a>
 										@endforeach
 										</div>
 										<div id="thu4" class="thu12345">
 											<a><p class="subject-name-top-period">4th period</p></a>
 											<!--木曜日4限だけ出力-->
 										@foreach($categoryth4s as $categoryth4)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categoryth4->id]) }}" title="{{ $categoryth4->name }}"><p class="subjectname">{{ $categoryth4->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categoryth4->id,'departmentcategory_id'=>$categoryth4->departmentcategory_id]) }}" title="{{ $categoryth4->name }}"><p class="subjectname">{{ $categoryth4->name }}</p></a>
 										@endforeach
 										</div>
 										<div id="thu5" class="thu12345">
 											<a><p class="subject-name-top-period">5th period</p></a>
 											<!--木曜日5限だけ出力-->
 										@foreach($categoryth5s as $categoryth5)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categoryth5->id]) }}" title="{{ $categoryth5->name }}"><p class="subjectname">{{ $categoryth5->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categoryth5->id,'departmentcategory_id'=>$categoryth5->departmentcategory_id]) }}" title="{{ $categoryth5->name }}"><p class="subjectname">{{ $categoryth5->name }}</p></a>
 										@endforeach
 										</div>
 									</div>
@@ -387,42 +387,42 @@
 											<a><p class="subject-name-top-period">1st period</p></a>
 											<!--金曜日1限だけ出力-->
 											@foreach($categoryfr1s as $categoryfr1)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr1->id]) }}" title="{{ $categoryfr1->name }}"><p class="subjectname">{{ $categoryfr1->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr1->id,'departmentcategory_id'=>$categoryfr1->departmentcategory_id]) }}" title="{{ $categoryfr1->name }}"><p class="subjectname">{{ $categoryfr1->name }}</p></a>
 											@endforeach
 										</div>
 										<div id="fri2" class="fri12345">
 											<a><p class="subject-name-top-period">2nd period</p></a>
 											<!--金曜日2限だけ出力-->
 											@foreach($categoryfr2s as $categoryfr2)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr2->id]) }}" title="{{ $categoryfr2->name }}"><p class="subjectname">{{ $categoryfr2->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr2->id,'departmentcategory_id'=>$categoryfr2->departmentcategory_id]) }}" title="{{ $categoryfr2->name }}"><p class="subjectname">{{ $categoryfr2->name }}</p></a>
 											@endforeach
 										</div>
 										<div id="fri3" class="fri12345">
 											<a><p class="subject-name-top-period">3rd period</p></a>
 											<!--金曜日3限だけ出力-->
 											@foreach($categoryfr3s as $categoryfr3)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr3->id]) }}" title="{{ $categoryfr3->name }}"><p class="subjectname">{{ $categoryfr3->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr3->id,'departmentcategory_id'=>$categoryfr3->departmentcategory_id]) }}" title="{{ $categoryfr3->name }}"><p class="subjectname">{{ $categoryfr3->name }}</p></a>
 											@endforeach
 										</div>
 										<div id="fri4" class="fri12345">
 											<a><p class="subject-name-top-period">4th period</p></a>
 											<!--金曜日4限だけ出力-->
 											@foreach($categoryfr4s as $categoryfr4)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr4->id]) }}" title="{{ $categoryfr4->name }}"><p class="subjectname">{{ $categoryfr4->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr4->id,'departmentcategory_id'=>$categoryfr4->departmentcategory_id]) }}" title="{{ $categoryfr4->name }}"><p class="subjectname">{{ $categoryfr4->name }}</p></a>
 											@endforeach
 										</div>
 										<div id="fri5" class="fri12345">
 											<a><p class="subject-name-top-period">5th period</p></a>
 											<!--金曜日5限だけ出力-->
 											@foreach($categoryfr5s as $categoryfr5)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr5->id]) }}" title="{{ $categoryfr5->name }}"><p class="subjectname">{{ $categoryfr5->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr5->id,'departmentcategory_id'=>$categoryfr5->departmentcategory_id]) }}" title="{{ $categoryfr5->name }}"><p class="subjectname">{{ $categoryfr5->name }}</p></a>
 											@endforeach
 										</div>
 										<div id="fri6" class="fri12345">
 											<a><p class="subject-name-top-period">6th period</p></a>
 											<!--金曜日6限だけ出力-->
 											@foreach($categoryfr6s as $categoryfr6)
-											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr6->id]) }}" title="{{ $categoryfr6->name }}"><p class="subjectname">{{ $categoryfr6->name }}</p></a>
+											<a href="{{ route('subjecttop.index', ['category_id'=>$categoryfr6->id,'departmentcategory_id'=>$categoryfr6->departmentcategory_id]) }}" title="{{ $categoryfr6->name }}"><p class="subjectname">{{ $categoryfr6->name }}</p></a>
 											@endforeach
 										</div>
 									</div>
@@ -579,21 +579,23 @@
 		</div>
 
 	</div>
+	
+	<div class="d-flex justify-content-center mb-5">
+		{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
+	</div>
+	<!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
+	<h3 class="text-center" id="all-subject">学部名</h3>
+	<div class="mt-4 mb-4 text-center underlist">
+		<select size="1" class="form-control" name="select" onChange="location.href=value;">
+			<option value="0"selected disabled>学部名</option>
+			@foreach($departmentcategorie2s as $departmentcategorie2)
+			<option value="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie2->id]) }}" title="{{ $departmentcategorie2->name}}"><a class="class-list" >{{ $departmentcategorie2->name }}</a>
+			</option>
+			@endforeach
+		</select>
+	</div>	
 </div>
-<div class="d-flex justify-content-center mb-5">
-	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
-</div>
-<!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
-<h3 class="text-center" id="all-subject">学部名</h3>
-<div class="mt-4 mb-4 text-center underlist">
-<select size="1" class="form-control" name="select" onChange="location.href=value;">
-        <option value="0"selected disabled>学部名</option>
-		@foreach($departmentcategorie2s as $departmentcategorie2)
-        <option value="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie2->id]) }}" title="{{ $departmentcategorie2->name}}"><a class="class-list" >{{ $departmentcategorie2->name }}</a>
-        </option>
-        @endforeach
-    </select>
-</div>	
+
 
 
 
