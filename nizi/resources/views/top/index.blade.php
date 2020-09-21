@@ -43,6 +43,19 @@
 
 				</div>
 			</div>
+
+			<!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
+		<h3 class="text-center mt-5 pt-5" id="all-subject">学部名</h3>
+		<div class="mt-4 mb-4 text-center underlist">
+			<select size="1" class="form-control-top" name="select" onChange="location.href=value;">
+				<option value="0"selected disabled>学部名</option>
+				@foreach($departmentcategories as $departmentcategorie)
+				<option value="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie->id]) }}" title="{{ $departmentcategorie->name}}"><h1 class="your-class">{{ $departmentcategorie->name }}</a>
+				</option>
+				@endforeach
+			</select>
+		</div>
+</div>	
 		</div>
 
 
@@ -74,8 +87,7 @@
 						</div>
 						@endif
 						@endforeach
-						
-					
+
 						<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=288&l=ur1&category=amazonstudent&banner=1QVPY5WT2THVZY40E382&f=ifr&linkID=a3950fadcf8940a4ec34f800f1964e9e&t=8pilotis-22&tracking_id=8pilotis-22" width="280" height="50" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 					</div>
 

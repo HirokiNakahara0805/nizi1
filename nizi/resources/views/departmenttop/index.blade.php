@@ -19,6 +19,8 @@
 			<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 			<!-- CSS(common用)読み込み -->
 			<link href="{{ asset('css/common.css') }}" rel="stylesheet">
+			<!-- CSS読み込み -->
+			<link href="{{ asset('css/general.css') }}" rel="stylesheet">
 			  <!--CSS読み込み-->
 			  <link href="{{ asset('css/bbslayout.css') }}" rel="stylesheet">
 			<!--CSS (slick用)読み込み-->
@@ -597,8 +599,7 @@
 
 		<!--フッター読み込み-->
 		@include("parts.footer")
-		<!-- CSS読み込み -->
-		<link href="{{ asset('css/general.css') }}" rel="stylesheet">
+	
         <!-- javascript (general) 読み込み-->
 		<script type="text/javascript" src="js/general.js"></script>
 
