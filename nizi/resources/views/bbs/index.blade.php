@@ -21,7 +21,7 @@
             $totalpost2s=1;
         }
     // 投稿件数計算
-    $totalpostscounts = ($totalpost2s-1);
+    $totalpostscounts=$post2s->total();
 
     $average = round($goodss/$totalpost2s,2);
 
