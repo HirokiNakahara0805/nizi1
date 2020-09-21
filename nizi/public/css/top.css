@@ -190,6 +190,14 @@ select.form-control-top{
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.form-control-top:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #a1cbef;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  }
+
 /*************************
 メディアクエリ設定 0〜420
 *************************/
