@@ -277,21 +277,21 @@
 										<a><p class="subject-name-top-period">3rd period</p></a>
 										<!--水曜日3限だけ出力-->
 										@foreach($categorywe3s as $categorywe3)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe3->id,'departmentcategory_id'=>$categorywe3->departmentcategory_id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe3->id,'departmentcategory_id'=>$categorywe3->departmentcategory_id]) }}" title="{{ $categorywe3->name }}"><p class="subjectname">{{ $categorywe3->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="wed4" class="wed12345">
 										<a><p class="subject-name-top-period">4th period</p></a>
 										<!--水曜日4限だけ出力-->
 										@foreach($categorywe4s as $categorywe4)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe4->id,'departmentcategory_id'=>$categorywe4->departmentcategory_id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe4->id,'departmentcategory_id'=>$categorywe4->departmentcategory_id]) }}" title="{{ $categorywe4->name }}"><p class="subjectname">{{ $categorywe4 ->name }}</p></a>
 										@endforeach
 									</div>
 									<div id="wed5" class="wed12345">
 										<a><p class="subject-name-top-period">5th period</p></a>
 										<!--水曜日5限だけ出力-->
 										@foreach($categorywe5s as $categorywe5)
-										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe5->id,'departmentcategory_id'=>$categorywe5->departmentcategory_id]) }}" title="{{ $categorywe2->name }}"><p class="subjectname">{{ $categorywe2->name }}</p></a>
+										<a href="{{ route('subjecttop.index', ['category_id'=>$categorywe5->id,'departmentcategory_id'=>$categorywe5->departmentcategory_id]) }}" title="{{ $categorywe5->name }}"><p class="subjectname">{{ $categorywe5->name }}</p></a>
 										@endforeach
 									</div>
 								</div>
@@ -587,7 +587,7 @@
 	<h3 class="text-center" id="all-subject">学部名</h3>
 	<div class="mt-4 mb-4 text-center underlist">
 		<select size="1" class="form-control" name="select" onChange="location.href=value;">
-			<option value="0"selected disabled>学部名</option>
+			<option value="0"selected>学部名</option>
 			@foreach($departmentcategorie2s as $departmentcategorie2)
 			<option value="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie2->id]) }}" title="{{ $departmentcategorie2->name}}"><a class="class-list" >{{ $departmentcategorie2->name }}</a>
 			</option>
