@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Category,App\Post2,App\Post;
+use App\Category,App\Post2,App\Post,App\Departmentcategory;
 
 class SubjecttopController extends Controller
 {
@@ -42,6 +42,10 @@ class SubjecttopController extends Controller
     $departmentcategory_id = $request->departmentcategory_id;
     $categorydepas=Category::where('departmentcategory_id',$departmentcategory_id)->get();
 
+    //デパートメントidの学部名とりだし
+    $departmentcategories=Departmentcategory::where('id',$departmentcategory_id)->get();
+
+
    
 
     return view('subjecttop.index', [
@@ -56,6 +60,7 @@ class SubjecttopController extends Controller
         
         'categorydepas' => $categorydepas,
         'departmentcategory_id'=>$departmentcategory_id,
+        'departmentcategories'=>$departmentcategories,
         
 
 

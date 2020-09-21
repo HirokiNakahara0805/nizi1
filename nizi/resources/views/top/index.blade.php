@@ -48,7 +48,7 @@
 		<h3 class="text-center mt-5 pt-5" id="all-subject">学部名</h3>
 		<div class="mt-4 mb-4 text-center underlist">
 			<select size="1" class="form-control-top" name="select" onChange="location.href=value;">
-				<option value="0"selected disabled>学部名</option>
+				<option value="0"selected>学部名</option>
 				@foreach($departmentcategories as $departmentcategorie)
 				<option value="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie->id]) }}" title="{{ $departmentcategorie->name}}"><h1 class="your-class">{{ $departmentcategorie->name }}</a>
 				</option>

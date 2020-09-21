@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post2,App\Category;// ←★忘れず追記
+use App\Post2,App\Category,App\Departmentcategory;// ←★忘れず追記
 use App\Http\Requests\Post2Request; // class宣言の外に追記
 
 class Post2sController extends Controller
@@ -35,6 +35,8 @@ class Post2sController extends Controller
         //下の科目名一覧
         $departmentcategory_id = $request->departmentcategory_id;
         $categorydepas=Category::where('departmentcategory_id',$departmentcategory_id)->get();
+        //デパートメントidの学部名とりだし
+        $departmentcategories=Departmentcategory::where('id',$departmentcategory_id)->get();
         
         
     
@@ -47,6 +49,7 @@ class Post2sController extends Controller
 
             'categorydepas' => $categorydepas,
             'departmentcategory_id'=>$departmentcategory_id,
+            'departmentcategories'=>$departmentcategories,
             
         ]);
     }

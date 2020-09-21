@@ -276,10 +276,12 @@
         {{ $posts->appends(['category_id' => $category_id])->links() }}
     </div>
 <!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
-    <h3 class="text-center">授業科目</h3>
+            @foreach($departmentcategories as $departmentcategorie)
+        <h3 class="text-center">{{$departmentcategorie->name}} 授業科目</h3>
+            @endforeach
     <div class="mt-4 mb-4 text-center underlist">
     <select size="1" class="form-control" name="select" onChange="location.href=value;">
-        <option value="0"selected disabled>授業科目</option>
+        <option value="0"selected>授業科目一覧</option>
         @foreach($categorydepas as $categorydepa)
         <option value="{{ route('subjecttop.index', ['category_id'=>$categorydepa->id ,'departmentcategory_id'=>$categorydepa->departmentcategory_id]) }}" title="{{ $categorydepa->name }}"><a class="class-list" >{{ $categorydepa->name }}</a>
         </option>
