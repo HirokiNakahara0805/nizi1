@@ -554,6 +554,7 @@
 	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
 </div>
 
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-8">
@@ -561,7 +562,7 @@
 
 			<div class="comment-box">
 				<div class="comment-text">{{$departmentpost->message}}
-					
+
 				</div>
 				<div class="">
 					<div class="f-container comment-info border-top">
@@ -579,7 +580,7 @@
 		</div>
 
 	</div>
-	
+
 	<div class="d-flex justify-content-center mb-5">
 		{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
 	</div>
@@ -601,7 +602,7 @@
 
 		<!--フッター読み込み-->
 		@include("parts.footer")
-	
+
         <!-- javascript (general) 読み込み-->
 		<script type="text/javascript" src="assets/js/general.js"></script>
 
