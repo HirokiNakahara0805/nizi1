@@ -1,19 +1,20 @@
 <!---------------------------GENERAL TOPのページ------------------------------>
 
+<!------------ layout読み込み ----------------------------->
 @extends('layout.bbslayout')
+
+<!------------ header----------------------------->
 @section('header')
 
-@foreach($category2s as $category2)
-<title>{{ $category2->name }} - ∞pilotis</title>
-@endforeach
+    @foreach($category2s as $category2)
+    <title>{{ $category2->name }} - ∞pilotis</title>
+    @endforeach
 
-
-
-<header class="u2-header">
-    <div class="u2-header__container-inner">
-        <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
-    </div>
-</header>
+    <header class="u2-header">
+        <div class="u2-header__container-inner">
+            <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+        </div>
+    </header>
 
     <div class="u2-global-navbar">
 		<ul class="reset-ul row v2-global-navbar__links">
@@ -26,14 +27,8 @@
 		</ul>
 	</div>
 @endsection
-@section('title', 'LaravelPjt BBS 投稿の一覧ページ')
-@section('keywords', 'キーワード1,キーワード2,キーワード3')
-@section('description', '投稿一覧ページの説明文')
-@section('pageCss')
 
-@endsection
- 
- 
+<!------------ content ----------------------------->
 @section('content')
 
 <!--いいね平均-->
@@ -58,86 +53,77 @@
      $stars = $average*20;
 ?>
 
+<!------------ 授業情報---------------------------->
+    <div class="container general-top-title-frame mt-5">
 
-<div class="container general-top-title-frame mt-5">
+        @foreach ($category2s as $category2)
+            <div class="row subject-info-top-frame">
+                <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
+                <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
+                <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
+            </div>
 
-@foreach ($category2s as $category2)
-        <div class="row subject-info-top-frame">
-            <p class="col-md-1 subject-info-top"> {{ $category2->department }}</p>
-            <p class="col-md-1 subject-info-top"> {{ $category2->period }}</p>
-            <p class="col-md-1 subject-info-top"> {{ $category2->time }}</p>
-
-
-        </div>
-                <div class="row">
-                    <div class="subject-title-sets col-md-12 mt-5">
-                            <h1 class="border-line-orange">{{ $category2->name }}</h1>
-                    </div>
+            <div class="row">
+                <div class="subject-title-sets col-md-12 mt-5">
+                        <h1 class="border-line-orange">{{ $category2->name }}</h1>
                 </div>
-                <div class="general-top-title title-star row mt-5"> 
-                    
-                    <div class="star-average-box border-line-orange col-md-4">
-                        
+            </div>
+
+            <div class="general-top-title title-star row mt-5">
+                <div class="star-average-box border-line-orange col-md-4">
                         <a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" ><h1 class="star-average">rate:{{ $average }}</h1></a>
-                            <div class="star-ratings-sprite-title ">
-                                <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating-title"></span>
-                            </div>
-                            <div class="toukou-kensu">
-                                <a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" ><p>{{$totalpostscounts}}件</p></a>
-                            </div>
-                    </div>
-                    
-
-
+                        <div class="star-ratings-sprite-title ">
+                            <span style="width: {{ $stars }}%" class="star-ratings-sprite-rating-title"></span>
+                        </div>
+                        <div class="toukou-kensu">
+                            <a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" ><p>{{$totalpostscounts}}件</p></a>
+                        </div>
                 </div>
-    
-    
-    <div>
-        <div class="row mb-5">
-            <p class="col-md-2 subject-info-contents"> {{ $category2->department }}</p>
-            <p class="col-md-2 subject-info-contents"> {{ $category2->period }}</p>
-            <p class="col-md-2 subject-info-contents"> {{ $category2->time }}</p>
-            <p class="col-md-2 subject-info-contents"> {{ $category2->code }}</p>
-            <p class="col-md-2 subject-info-contents"> {{ $category2->teacher }}</p>
-
-        </div>
-
-        <p class="subject-info-contents"> {{ $category2->book1 }}</p>
-        <p class="subject-info-contents"> {{ $category2->book2 }}</p>
-        <p class="subject-info-contents"> {{ $category2->book3 }}</p>
-
-        <div class="row mt-5">
-            <div class="col-md-2">
-                <div class="subject-info-contents">  <?= html_entity_decode($category2->link1 ); ?></div>
             </div>
 
-            <div class="col-md-2">
-                <div class="subject-info-contents">  <?= html_entity_decode($category2->link2 ); ?></div>
-            </div>
-            <div class="col-md-2">
-                <div class="subject-info-contents">  <?= html_entity_decode($category2->link3 ); ?></div>
+            <div>
+
+                <div class="row mb-5">
+                    <p class="col-md-2 subject-info-contents"> {{ $category2->department }}</p>
+                    <p class="col-md-2 subject-info-contents"> {{ $category2->period }}</p>
+                    <p class="col-md-2 subject-info-contents"> {{ $category2->time }}</p>
+                    <p class="col-md-2 subject-info-contents"> {{ $category2->code }}</p>
+                    <p class="col-md-2 subject-info-contents"> {{ $category2->teacher }}</p>
+                </div>
+
+                <p class="subject-info-contents"> {{ $category2->book1 }}</p>
+                <p class="subject-info-contents"> {{ $category2->book2 }}</p>
+                <p class="subject-info-contents"> {{ $category2->book3 }}</p>
+
+                <div class="row mt-5">
+                    <div class="col-md-2">
+                        <div class="subject-info-contents">  <?= html_entity_decode($category2->link1 ); ?></div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="subject-info-contents">  <?= html_entity_decode($category2->link2 ); ?></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="subject-info-contents">  <?= html_entity_decode($category2->link3 ); ?></div>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
-        <!-- <div class="row subject-info-comment-frame">
-            <div class="col-md-6 subject-info-comment-top">
-            </div>
-        </div> -->
+        @endforeach
     </div>
-    @endforeach
-</div>
+
+<!------------ トップ・掲示板・評価投稿ボタン---------------------------->
+    <div>
+        <ul class="reset-ul row feature-title-box">
 
 
-<div>
-    <ul class="reset-ul row feature-title-box">
+            <li class=" topcolor feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >トップ</a></li>
 
-
-        <li class=" topcolor feature-title-1 list-inline-item"><a href="{{ route('subjecttop.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >トップ</a></li>
-
-        <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >掲示板</a></li>
-        <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >評価投稿画面</a></li>
-    </ul>
-</div>
+            <li class="feature-title-1 list-inline-item"><a href="{{ route('bbs.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >掲示板</a></li>
+            <li class="feature-title-1 list-inline-item"><a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >評価投稿画面</a></li>
+        </ul>
+    </div>
 
 
 
@@ -153,9 +139,6 @@
                         <div class="newtopic-evaluation col-md-6"><p class="text-center">New post</p></div>
                     </div>
 
-                    <!-- <a href="{{ route('evaluation.index', ['category_id'=>$category_id,'departmentcategory_id'=>$departmentcategory_id]) }}" >
-                            <p class="comment-kennsuu ">{{$post2s->total()}}件の投稿</p>
-                    </a> -->
 
                     @foreach ($evaluations as $evaluation)
                     @if($loop->iteration < 4)
@@ -165,26 +148,21 @@
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
 
-
                         @foreach ($subjecttops as $subjecttop)
                                 <div><p> {{ $subjecttop->name }}</p></div>
 
 
                         @endforeach
 
-                        
-
                         </div>
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
                             <div><p>オススメ度</p></div>
-
                             <p><div class="star-ratings-sprite"><span style="width: {{  $evaluation->good*20 }}%" class="star-ratings-sprite-rating"></span></div></p>
                         </div>
 
                         <div class="evaluation-text border-bottom mb-5 p-2">
                             <div><p> 授業難易度</p></div>
-
                             <p><div class="dif-ratings-sprite"><span style="width:{{ $evaluation->difficulty*20 }}%" class="dif-ratings-sprite-rating"></span></div></p>
                         </div>
 
@@ -193,10 +171,8 @@
 
                                 <div>
 
-
                                     <div class="title text-center">レポート</div> <div class=""> <p>{{ $evaluation->report }}</p></div>
                                     <div class="title text-center">テスト</div> <div class=""><p>{{ $evaluation->test }}</p></div>
-
 
                                 </div>
 
@@ -218,7 +194,6 @@
                                 <div class="f-item float-right">{{ $evaluation->year }}年</div>
                                 @endif
                                 <div class="f-item float-right">{{ $evaluation->name }}さん</div>
-
 
                         </div>
                                 </div>
@@ -245,7 +220,7 @@
 			</div>
 
         </div>
-        
+
 <div class="container" >
 
 			<div class="row top-all-bbs-backgroundcolor2-bottom">
@@ -297,27 +272,31 @@
 
         </div>
 <!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
-            @foreach($departmentcategories as $departmentcategorie)
+    @foreach($departmentcategories as $departmentcategorie)
         <h3 class="text-center">{{$departmentcategorie->name}} 授業科目</h3>
-            @endforeach
+    @endforeach
+
     <div class="mt-4 mb-4 text-center underlist">
-    <select size="1" class="form-control" name="select" onChange="location.href=value;">
-            
-        <option value="0"selected>授業科目一覧</option>
-            
-            @foreach($categorydepas as $categorydepa)
-        <option value="{{ route('subjecttop.index', ['category_id'=>$categorydepa->id ,'departmentcategory_id'=>$categorydepa->departmentcategory_id]) }}" title="{{ $categorydepa->name }}"><a class="class-list" >{{ $categorydepa->name }}</a>
-        </option>
-            @endforeach
-    </select>
+
+        <select size="1" class="form-control" name="select" onChange="location.href=value;">
+            <option value="0"selected>授業科目一覧</option>
+
+                @foreach($categorydepas as $categorydepa)
+            <option value="{{ route('subjecttop.index', ['category_id'=>$categorydepa->id ,'departmentcategory_id'=>$categorydepa->departmentcategory_id]) }}" title="{{ $categorydepa->name }}"><a class="class-list" >{{ $categorydepa->name }}</a>
+            </option>
+                @endforeach
+        </select>
     </div>
 
-            
-            <p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
+
+        <!--右下の画面スクロールボタン-->
+        <p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 
         <!--CSS読み込み-->
         <link href="{{ asset('assets/css/generaltop.css') }}" rel="stylesheet">
 @endsection
 
 
+
+ <!--------------------------------------------フッター読み込み------------------------------------------>
 @include("layout.bbsfooter")
