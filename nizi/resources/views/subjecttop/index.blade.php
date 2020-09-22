@@ -316,7 +316,7 @@
             <p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 
         <!--CSS読み込み-->
-        <link href="{{ asset('css/generaltop.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/generaltop.css') }}" rel="stylesheet">
 @endsection
 
 

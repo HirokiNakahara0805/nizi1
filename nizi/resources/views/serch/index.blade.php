@@ -17,15 +17,15 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
         <!-- Custom styles for this template -->
-        <link href="/css/bbs/sticky-footer.css" rel="stylesheet">
+        <link href="{{ asset('assets/css/bbs/sticky-footer.css') }}" rel="stylesheet">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
          <!-- CSS(Bootstrap)読み込み -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
         <!--CSS読み込み-->
-        <link href="{{ asset('css/bbslayout.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/common.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/bbslayout.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/common.css') }}" rel="stylesheet">
 
         <!-- fontawesome 読み込み -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -40,7 +40,7 @@
         <!-- view point 読み込み-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- javascript  読み込み-->
-    <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/common.js') }}"></script>
         <!--　font awesome　CSS指定よう-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
           <!-- javascript  読み込み-->

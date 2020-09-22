@@ -12,14 +12,14 @@
 <body id="vw vh">
 
 	<!-- トップページ最初に開いた時のアニメーション-->
-	 <div class="start"><img src="{{ asset('img/8pilotis.1.jpg') }}" alt=""></div>
+	 <div class="start"><img src="{{ asset('assets/img/8pilotis.1.jpg') }}" alt=""></div>
 
 	<main>
 
 		<!-- 画像挿入-->
 		<div class='header-img-frame'>
 			<div class='header-img-in'>
-				<img src="{{ asset('img/IMG_9584.JPG') }}" class="" >
+				<img src="{{ asset('assets/img/IMG_9584.JPG') }}" class="" >
 			</div>
 		</div>
 	
@@ -121,10 +121,10 @@
 
 
 		 <!--CSS (top用読み込)-->
-		<link rel="stylesheet" href="{{ asset('/css/top.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/top.css') }}">
         <!--JS(slick用)読み込み-->
-		<script type="text/javascript" src="js/top.js"></script>
-		<script type="text/javascript" src="js/slick.min.js"></script>
+		<script type="text/javascript" src="assets/js/top.js"></script>
+		<script type="text/javascript" src="assets/js/slick.min.js"></script>
 
 
 

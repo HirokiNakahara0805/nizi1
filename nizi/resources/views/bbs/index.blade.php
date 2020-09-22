@@ -293,7 +293,7 @@
 <p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 
       <!-- javascript  読み込み-->
-      <script type="text/javascript" src="js/bbs_post.js"></script>
+      <script type="text/javascript" src="assets/js/bbs_post.js"></script>
 @endsection
 
 @include("layout.bbsfooter")
