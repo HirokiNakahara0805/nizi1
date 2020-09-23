@@ -32,7 +32,6 @@ Route::resource('subjecttop', 'SubjecttopController', ['only' => ['index']]);
 
 //チャットテストページ
 Route::resource('chat', 'ChatsController', ['only' => ['index', 'store']]);
-Route::resource('chatpost', 'ChatpostsController', ['only' => ['index', 'store']]);
 
 //初めての方へページ
 Route::get('/beginnersguide', function () {

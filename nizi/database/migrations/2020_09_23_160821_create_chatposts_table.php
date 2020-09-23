@@ -14,14 +14,11 @@ class CreateChatpostsTable extends Migration
     public function up()
     {
         Schema::create('chatposts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();   // created_at, updated_atが自動設定されるとのこと
-            $table->string('is_deleted', 4)->default('0');
-            $table->integer('chat_id');
-            $table->text('message');
-            $table->string('name');
+            $table->id();
+            $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
