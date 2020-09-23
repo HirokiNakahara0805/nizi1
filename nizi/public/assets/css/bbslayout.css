@@ -1,6 +1,5 @@
 /*----------------------------BBSのレイアウト用CSS----------*
 
-     
 /*----BODY背景--------*/
 body{
 
@@ -101,8 +100,7 @@ p{
   background-color:white;
   padding: 15px 15px 20px 15px;
   margin:15px 15px 10px 15px;
- 
-  
+
 }
 /*------------------コメント画面の返信ボックス（INPUTボックス）の設定-------*/
 .reply-form-box{

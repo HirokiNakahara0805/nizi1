@@ -376,6 +376,46 @@ textarea {
 }
 
 
+/**************************************
+           エラーページ設定
+***************************************/
+
+.error-title p{
+    font-size: 8rem;
+    padding: 50px;
+  }
+
+  .error-texts p{
+      font-size: 15px;
+  }
+
+  .error-body{
+    background-image: url("https://beiz.jp/images_T/orange/orange_00041.jpg");
+    background-size: cover;
+  }
+
+/********学部名ばらし後の設定*********/
+
+
+.underlist select{
+    margin:0 auto;
+}
+
+form label{
+    margin: 5px 10px;
+}
+
+
+.header-font{
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    list-style: none;
+}
+
+
+
+
 /*************************
 メディアクエリ設定 420~1024
 *************************/
@@ -487,54 +527,5 @@ transform: scale(0.7);
   }
   
 
-}
-
-
-/**************************************
-           エラーページ設定
-***************************************/
-
-.error-title p{
-    font-size: 8rem;
-    padding: 50px;
-  }
-
-  .error-texts p{
-      font-size: 15px;
-  }
-
-  .error-body{
-    background-image: url("https://beiz.jp/images_T/orange/orange_00041.jpg");
-    background-size: cover;
-  }
-
-/**************************************
-　　　　　　　学部名ばらし後の設定
-***************************************/
-/*
-.underlist a{
-    color: black;
-    text-align: left;
-    font-size: 3rem;
-}
-
-.underlist a:hover{
-    color:#e95014;
-}*/
-
-.underlist select{
-    margin:0 auto;
-}
-
-form label{
-    margin: 5px 10px;
-}
-
-
-.header-font{
-    color: white;
-    padding: 10px;
-    font-size: 20px;
-    list-style: none;
 }
 
