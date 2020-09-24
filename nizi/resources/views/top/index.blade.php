@@ -4,25 +4,24 @@
 
 
 
-	<!-- -------------------COMMONPARTS読み込み-->
+<!-- -------------------COMMONPARTS読み込み-->
 @include("parts.common")
 <!-- -------------------HEADER読み込み-->
 @include("parts.header")
 
-<body id="vw vh">
-
+<body>
 	<!-- トップページ最初に開いた時のアニメーション-->
-	 <div class="start"><img src="{{ asset('img/8pilotis.1.jpg') }}" alt=""></div>
+	 <div class="start"><img src="{{ asset('assets/img/8pilotis.1.jpg') }}" alt=""></div>
 
 	<main>
 
 		<!-- 画像挿入-->
 		<div class='header-img-frame'>
 			<div class='header-img-in'>
-				<img src="{{ asset('img/IMG_9584.JPG') }}" class="" >
+				<img src="{{ asset('assets/img/IMG_9584.JPG') }}" class="" >
 			</div>
 		</div>
-	
+
 		<!-- 科目一覧表示 -->
 		<div class="to-class" id="class-sub">
 
@@ -38,28 +37,30 @@
 						<a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie->id]) }}" title="{{ $departmentcategorie->name}}"><h1 class="your-class">{{ $departmentcategorie->name }}</h1></a>
 					</div>
 					@endforeach
-					
-
 
 				</div>
 			</div>
 
+
 			<!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
-		<h3 class="text-center mt-5 pt-5" id="all-subject">学部名</h3>
-		<div class="mt-4 mb-4 text-center underlist">
-			<select size="1" class="form-control-top" name="select" onChange="location.href=value;">
-				<option value="0"selected>学部名</option>
-				@foreach($departmentcategories as $departmentcategorie)
-				<option value="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie->id]) }}" title="{{ $departmentcategorie->name}}"><h1 class="your-class">{{ $departmentcategorie->name }}</a>
-				</option>
-				@endforeach
-			</select>
-		</div>
-</div>	
+
+			<h3 class="text-center mt-5 pt-5" id="all-subject">学部名</h3>
+
+			<div class="mt-4 mb-4 text-center underlist">
+				<select size="1" class="form-control-top" name="select" onChange="location.href=value;">
+					<option value="0"selected>学部名</option>
+					@foreach($departmentcategories as $departmentcategorie)
+					<option value="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie->id]) }}" title="{{ $departmentcategorie->name}}"><h1 class="your-class">{{ $departmentcategorie->name }}</a></option>
+					@endforeach
+				</select>
+			</div>
+
 		</div>
 
 
-		<!-- 掲示板一覧 -->
+
+
+		<!--------------------------------------------- 掲示板一覧 --------------------------------------------->
 
 			<div class="container" id="all-bbs">
 
@@ -113,6 +114,7 @@
 
 	<!--------------------------------上にスクロール設定-->
 		<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
+
 	</main>
 
 
@@ -121,10 +123,10 @@
 
 
 		 <!--CSS (top用読み込)-->
-		<link rel="stylesheet" href="{{ asset('/css/top.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/top.css') }}">
         <!--JS(slick用)読み込み-->
-		<script type="text/javascript" src="js/top.js"></script>
-		<script type="text/javascript" src="js/slick.min.js"></script>
+		<script type="text/javascript" src="assets/js/top.js"></script>
+		<script type="text/javascript" src="assets/js/slick.min.js"></script>
 
 
 

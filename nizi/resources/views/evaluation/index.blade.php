@@ -39,12 +39,7 @@
 
 
 
-@section('title', 'LaravelPjt BBS 投稿の一覧ページ')
-@section('keywords', 'キーワード1,キーワード2,キーワード3')
-@section('description', '投稿一覧ページの説明文')
-@section('pageCss')
-<!-- <link href="/css/bbs/style.css" rel="stylesheet">  -->
-@endsection
+
 
 
 
@@ -57,8 +52,7 @@
 @endif
 
 
-<!--いいね平均-->
-<!--いいね平均-->
+
 <?php
     $goodss = 0;
 
@@ -82,7 +76,7 @@
 
 
 
-<!-- トップのタイトル　掲示板と共通-->
+<!-- トップのタイトル掲示板と共通-->
     <div class="container general-top-title-frame pb-3 mt-5">
 
         @foreach ($category2s as $category2)

@@ -17,58 +17,63 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
         <!-- Custom styles for this template -->
-        <link href="/css/bbs/sticky-footer.css" rel="stylesheet">
+        <link href="{{ asset('assets/css/bbs/sticky-footer.css') }}" rel="stylesheet">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
          <!-- CSS(Bootstrap)読み込み -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
         <!--CSS読み込み-->
-        <link href="{{ asset('css/bbslayout.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/common.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/bbslayout.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/common.css') }}" rel="stylesheet">
 
         <!-- fontawesome 読み込み -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-        <!--  <link rel="stylesheet" href="{{  asset('css/style.css') }}" /> -->
         <!-- jQuery読み込み-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
          <!-- jquery slick -->
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
         <!-- view point 読み込み-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- javascript  読み込み-->
-    <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('assets/js/common.js') }}"></script>
         <!--　font awesome　CSS指定よう-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-          <!-- javascript  読み込み-->
-      <script type="text/javascript" src="js/bbs_post.js"></script>
-            <!-- googleアナリティクス本番だけ反応-->
+        <!-- javascript  読み込み
+        <script type="text/javascript" src="{{ asset('assets/js/bbs_post.js') }}"></script> -->
+        <!-- googleアナリティクス本番だけ反応-->
         @if(env('APP_ENV') == 'production')
         @include('google.analytics')
         @endif
 
-</head>
+    </head>
 
-<!--ヘッダの上の白いとこー-->
-<header class="u2-header">
-    <div class="u2-header__container-inner">
-      <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
-    </div>
-  </header>
+    <!--ヘッダー-->
+    <header>
 
-<!--ヘッダの下の黒いとこー-->
-  <div class="u2-global-navbar">
-    <ul class="reset-ul row v2-global-navbar__links">
-    <li class="u2-global-navbar__link"><a href="/">トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-    </ul>
-  </div>
+      <!--ヘッダの上の白いとこー-->
+      <div class="u2-header">
+        <div class="u2-header__container-inner">
+          <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+        </div>
+      </div>
+    
+
+      <!--ヘッダの下の黒いとこー-->
+      <div class="u2-global-navbar">
+        <ul class="reset-ul row v2-global-navbar__links">
+          <li class="u2-global-navbar__link"><a href="/">トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+        </ul>
+      </div>
+
+    </header>
+
+
+
 
   <div class="container">
     <div class="row">
-
 
       <div class="col-md-12 mt-5 text-center">
 
@@ -104,10 +109,14 @@
         <div class="alert alert-primary" role="alert" style="margin-top:50px;">{{ session('flash_message')}}</div>
         @endif
       </div>
+
     </div>
   </div>
 
-<footer>
+
+
+  <footer>
+
         <!------------------------------------------------------------------------------------ SNS連携 -->
         <div class="footer-contents .a pgn-middle" id="all-bbs">
 
@@ -157,4 +166,4 @@
 
         </div>
 
-</footer>
+  </footer>
