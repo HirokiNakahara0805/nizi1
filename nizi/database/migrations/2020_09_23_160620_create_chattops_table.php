@@ -16,6 +16,9 @@ class CreateChattopsTable extends Migration
         Schema::create('chattops', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('is_deleted', 4)->default('0');
+            $table->string('subject');
+            $table->text('text');
         });
     }
 

@@ -14,8 +14,12 @@ class CreateChatpostsTable extends Migration
     public function up()
     {
         Schema::create('chatposts', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->timestamps();   // created_at, updated_atが自動設定されるとのこと
+            $table->string('is_deleted', 4)->default('0');
+            $table->integer('chattop_id');
+            $table->text('message');
+            $table->string('name');
         });
     }
 
