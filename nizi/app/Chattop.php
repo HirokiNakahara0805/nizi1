@@ -12,4 +12,9 @@ class Chattop extends Model
         // カテゴリは複数のポストを持つ
         return $this->hasMany('App\chatpost');
     }
+    // 割り当て許可
+    protected $fillable = [
+        'subject',
+        'text', 
+    ];
 }
