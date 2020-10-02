@@ -15,7 +15,7 @@ class ChatpostRequest extends FormRequest
     {
         return true;
     }
-
+ 
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,12 +24,16 @@ class ChatpostRequest extends FormRequest
     public function rules()
     {
         return [
-            //
             'name' => 'required|max:40',
             'message' => 'required|max:350',
+            'chattop_id' => 'required|integer',
         ];
     }
-
+ 
+    /**
+     * エラーメッセージを日本語化
+     * 
+     */
     public function messages()
     {
         return [
@@ -37,6 +41,8 @@ class ChatpostRequest extends FormRequest
             'name.max' => '名前は40文字以内で入力してください',
             'message.required' => 'メッセージを入力してください',
             'message.max' => 'メッセージは350文字以内で入力してください',
+            'chattop_id.required' => 'カテゴリーを選択してください',
+            'chattop_id.integer' => 'カテゴリーの入力形式が不正です',
         ];
     }
 }

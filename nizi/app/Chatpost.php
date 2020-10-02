@@ -7,15 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Chatpost extends Model
 {
     //
-    public function chat()
+    /**
+     * 
+     */
+    public function category()
     {
-        // 投稿は1つのチャット属する
-        return $this->belongsTo('App\Chat');
+        // 投稿は1つのカテゴリーに属する
+        return $this->belongsTo('App\Chattop');
     }
-
+    // 割り当て許可
     protected $fillable = [
         'name',
-        'message',
-        'chat_id'
+        'message', 
+        'chattop_id'
     ];
 }

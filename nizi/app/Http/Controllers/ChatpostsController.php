@@ -2,43 +2,42 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\ChatpostRequest; 
-use App\Chatpost, App\Chat;
+use App\Chatpost,App\Chattop; // ←★忘れず追記
+use App\Http\Requests\ChatpostRequest; // class宣言の外に追記
 
 class ChatpostsController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
-        $chatposts = Chatpost::orderBy('created_at', 'desc')->paginate(10);
-        return view('chatpost.index', ['chatposts' => $chatposts]);
+        // カテゴリ取得
+        $chattop = new Chattop;
+    
+        $chattop_id = $request->chattop_id;
+        if (!is_null($chattop_id)) {
+            $chatposts = Chatpost::where('chattop_id', $chattop_id)->orderBy('created_at', 'desc')->paginate(10);
+        } else {
+            $chatposts = Chatpost::orderBy('created_at', 'desc')->paginate(10);
+        }
+    
+        return view('chatpost.index', [
+            'chatposts' => $chatposts, 
+            'chattop_id'=>$chattop_id
+        ]);
     }
 
-    public function create()
-    {
-        $chat = new Chat;
-        $chats = $chat->getLists()->prepend('選択', '');
-
-    return view('chatposts.index');
-    }
- 
- 
-/**
- * バリデーション、登録データの整形など
- */
     public function store(ChatpostRequest $request)
     {
-    $savedata = [
-        'name' => $request->name,
-        'message' => $request->message,
-        'chat_id' => $request->chat_id,
-    ];
- 
-    $chatposts = new Chatpost;
-    $chatposts->fill($savedata)->save();
- 
-    return redirect('/chatpost')->with('chatpoststatus', '新規投稿しました');
-}
+        $savedata = [
+            'name' => $request->name,
+            'message' => $request->message,
+            'chattop_id' => $request->chattop_id,
+        ];
+    
+        $chatpost = new Chatpost;
+        $chatpost->fill($savedata)->save();
+    
+        return redirect('/chatpost')->with('poststatus', '新規投稿しました');
+    }
 }

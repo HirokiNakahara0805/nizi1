@@ -1,7 +1,12 @@
+@if (session('poststatus'))
+    <div class="alert alert-success mt-4 mb-4">
+        {{ session('poststatus') }}
+    </div>
+@endif
 
-
-
-<h1 class="h4 mb-4 font-weight-bold">
+<div class="container mt-4">
+    <div class="border p-4">
+        <h1 class="h4 mb-4 font-weight-bold">
             投稿の新規作成
         </h1>
  
@@ -33,20 +38,18 @@
                         カテゴリー
                     </label>
                     <input
-                        id="chat_id"
-                        name="chat_id"
-                        class="form-control {{ $errors->has('chat_id') ? 'is-invalid' : '' }}"
-                        value="{{ old('chat_id') }}"
+                        id="chattop_id"
+                        name="chattop_id"
+                        class="form-control {{ $errors->has('chattop_id') ? 'is-invalid' : '' }}"
+                        value="{{ old('chattop_id') }}"
                         type="text"
                     >
-                    @if ($errors->has('chat_id'))
+                    @if ($errors->has('chattop_id'))
                         <div class="invalid-feedback">
-                            {{ $errors->first('chat_id') }}
+                            {{ $errors->first('chattop_id') }}
                         </div>
                     @endif
                 </div>
- 
-                
  
                 <div class="form-group">
                     <label for="message">
@@ -66,42 +69,37 @@
                     @endif
                 </div>
  
-                <div class="mt-5">
-                    <a class="btn btn-secondary" href="{{ route('chatpost.index') }}">
-                        キャンセル
-                    </a>
- 
                     <button type="submit" class="btn btn-primary">
                         投稿する
                     </button>
                 </div>
             </fieldset>
         </form>
+    </div>
+</div>
+
+    <p>{{ $chatposts->count() }}件が見つかりました。</p>
 
 
-        <div class="mt-4 mb-4">
-            <p>{{ $chatposts->total() }}件が見つかりました。</p>
-        </div>
-
+<div class="table-responsive">
+    <table class="table table-hover">
+<thead>
         <tr>
-            <th>ID</th>
+            <th>チャットID</th>
             <th>作成日時</th>
-            <th>チャットid</th>
             <th>名前</th>
-            <th>メッセージ</th>
+            <th>コメント</th>
         </tr>
         </thead>
         <tbody id="tbl">
         @foreach ($chatposts as $chatpost)
             <tr>
-                <td>{{ $chatpost->id }}</td>
+                <td>{{ $chatpost->chattop_id }}</td>
                 <td>{{ $chatpost->created_at->format('Y.m.d') }}</td>
-                <td>{{ $chatpost->chat->id }}</td>
                 <td>{{ $chatpost->name }}</td>
-                <td>{{ $chatpost->message}}</td>
+                <td>{{ $chatpost->message }}
             </tr>
         @endforeach
         </tbody>
-        <div class="d-flex justify-content-center mb-5">
-            {{ $chatposts->links() }}
-         </div>
+    </table>
+</div>
