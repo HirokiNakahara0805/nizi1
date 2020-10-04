@@ -18,6 +18,23 @@ $('a[href^="rolling"]').click(function() {
    });
 
 
-});
 
+
+    $('.open-menu img').on('click', function () {
+        $('#menu').toggleClass('none');
+        $('#menu').toggleClass('flex');
+        $('body').append('<p class="dummy"></p>');
+
+        if($('p').hasClass('.dummy')){
+         $('p.dummy').remove();}え
+    });
+    $('body').on('click', '.dummy', function() {
+        $('#menu').toggleClass('none');
+        $('#menu').toggleClass('flex');
+        $('p.dummy').remove();
+      });
+
+
+
+});
 
