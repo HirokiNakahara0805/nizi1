@@ -37,7 +37,7 @@
 		<div class="menu none"  id="menu">
 			<div class="main-menu">
                 @foreach($category2s as $category2)
-                   <a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table-back</a>
+                    <a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" class="menu-item">time table-back</a>
                 @endforeach
 				<a href="serch" class="menu-item">授業検索<i class="fas fa-angle-double-down nav-arrows"></i></a>
 				<a href="#all-sns" class="menu-item">sns<i class="fas fa-angle-double-down nav-arrows"></i></a>
