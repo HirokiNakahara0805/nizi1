@@ -12,27 +12,34 @@
 
    
 <!--ヘッダー-->
-	<header>
-			
-            <!--ヘッダの下の黒いとこー-->
-            <div class="u2-global-navbar">
-                <div class="u2-header__container-inner">
-                    <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+
+        <header>
+		    <div class="menu none"  id="menu">
+                <div class="main-menu">
+                    @foreach($category2s as $category2)
+                    <a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" class="menu-item">time table-back</a>
+                    @endforeach
+                    <a href="#class-sub" class="menu-item">学部<i class="fas fa-angle-double-down nav-arrows"></i></a>
+                    <a href="#all-bbs" class="menu-item">掲示板<i class="fas fa-angle-double-down nav-arrows"></i></a>
+                    <a href="serch" class="menu-item">授業検索<i class="fas fa-angle-double-down nav-arrows"></i></a>
+                    <a href="#all-sns" class="menu-item">sns<i class="fas fa-angle-double-down nav-arrows"></i></a>
+                    <a href="#all-about" class="menu-item">about <i class="fas fa-angle-double-down nav-arrows"></i></a>
                 </div>
-                
-                <ul class="reset-ul row v2-global-navbar__links">
-                @foreach($category2s as $category2)
-                    <li class="u2-global-navbar__link"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table-back</a></li>
-                @endforeach
-                    <li class="u2-global-navbar__link"><a href="#class-sub">学部</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-                    <li class="u2-global-navbar__link"><a href="#all-bbs">掲示板</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-                    <li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-                    <li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-                    <li class="u2-global-navbar__link"><a href="#all-about">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-                </ul>
-            </div>
-    
-        </header>
+			<div>
+		
+			</div>
+		</div>
+		<!--ヘッダの下の黒いとこー-->
+		<div class="u2-global-navbar">
+			<div class="open-menu">
+				<img src="{{ asset('assets/img/hum.png') }}" alt="">
+			</div>
+
+				<a href="/" class="u2-header__container-inner">∞pilotis</a>
+
+		</div>
+
+	</header>
 @endsection
 
 <!------------ content ----------------------------->
@@ -61,7 +68,7 @@
 ?>
 
 <!------------ 授業情報---------------------------->
-    <div class="container general-top-title-frame mt-5">
+    <div class="container general-top-title-frame">
 
         @foreach ($category2s as $category2)
             <div class="row subject-info-top-frame">

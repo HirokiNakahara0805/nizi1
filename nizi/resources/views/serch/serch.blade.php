@@ -52,26 +52,32 @@
 
     </head>
 
-       
-    <!--ヘッダー-->
-        <header>
-			
-            <!--ヘッダの下の黒いとこー-->
-            <div class="u2-global-navbar">
-                <div class="u2-header__container-inner">
-                    <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
-                </div>
-                <ul class="reset-ul row v2-global-navbar__links">
-                    <li class="u2-global-navbar__link"><a href="/">トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-                </ul>
-            </div>
-    
-        </header>
+
+
+
+<!--ヘッダー-->
+	<header>
+		<div class="menu none"  id="menu">
+			<div class="main-menu">
+                <a href="/" class="menu-item">トップ</a><i class="fas fa-angle-double-down nav-arrows">
+				<a href="serch" class="menu-item">授業検索<i class="fas fa-angle-double-down nav-arrows"></i></a>
+			</div>
+
+		</div>
+		<!--ヘッダの下の黒いとこー-->
+		<div class="u2-global-navbar">
+			<div class="open-menu">
+				<img src="{{ asset('assets/img/hum.png') }}" alt="">
+			</div>
+				<a href="/" class="u2-header__container-inner">∞pilotis</a>
+		</div>
+
+	</header>
 
 @section('content')
 
 
-<div class="container">
+<main class="container">
 
     <div class="row">
 
@@ -127,7 +133,7 @@
         </div>
 
      </div>
-</div>
+</main>
 
     <!--検索画面に戻るボタン-->
     <div class="text-center common-btn-ikkoue ">

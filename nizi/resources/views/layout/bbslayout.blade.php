@@ -47,9 +47,9 @@
 
     @yield('header')
 
-    <div class="container">
+    <main class="container">
         @yield('content')
-    </div>
+    </main>
 
     @yield('layout.bbsfooter')
 

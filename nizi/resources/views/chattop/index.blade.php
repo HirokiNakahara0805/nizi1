@@ -19,7 +19,7 @@
     </div>
 @endif
 
-<div class="container mt-4">
+<main class="container mt-4">
     <div class="border p-4">
         <h1 class="h4 mb-4 font-weight-bold">
             投稿の新規作成
@@ -75,7 +75,7 @@
             </fieldset>
         </form>
     </div>
-</div>
+</main>
 
 
     <p>{{ $chattops->count() }}件が見つかりました。</p>

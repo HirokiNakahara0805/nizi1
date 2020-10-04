@@ -17,26 +17,30 @@
 
 <!-------------------------------------------------------ヘッダー挿入-->
 @section('header')
- 
-    <header>
-			
-            <!--ヘッダの下の黒いとこー-->
-            <div class="u2-global-navbar">
-                <div class="u2-header__container-inner">
-                    <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
-                </div>
-                
-                <ul class="reset-ul row v2-global-navbar__links">
-                    @foreach($category2s as $category2)
-                    <li class="u2-global-navbar__link"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table-back</a></li>
-                    @endforeach
-                    <li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-                    <li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-                    <li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-		        </ul>
-            </div>
-    
-        </header>
+
+<!--ヘッダー-->
+	<header>
+		<div class="menu none"  id="menu">
+			<div class="main-menu">
+                @foreach($category2s as $category2)
+                    <a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" class="menu-item">time table-back</a>
+                @endforeach
+				<a href="serch" class="menu-item">授業検索<i class="fas fa-angle-double-down nav-arrows"></i></a>
+				<a href="#all-sns" class="menu-item">sns<i class="fas fa-angle-double-down nav-arrows"></i></a>
+				<a href="#all-about" class="menu-item">about <i class="fas fa-angle-double-down nav-arrows"></i></a>
+			</div>
+		</div>
+		<!--ヘッダの下の黒いとこー-->
+		<div class="u2-global-navbar">
+			<div class="open-menu">
+				<img src="{{ asset('assets/img/hum.png') }}" alt="">
+			</div>
+
+				<a href="/" class="u2-header__container-inner">∞pilotis</a>
+
+		</div>
+
+	</header>
 @endsection
 
 
@@ -80,7 +84,7 @@
 
 
 <!-- トップのタイトル掲示板と共通-->
-    <div class="container general-top-title-frame pb-3 mt-5">
+    <div class="container general-top-title-frame pb-3">
 
         @foreach ($category2s as $category2)
             <div  class="general-top-title">

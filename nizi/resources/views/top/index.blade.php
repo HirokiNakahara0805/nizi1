@@ -17,11 +17,13 @@
 
 		<!-- 画像挿入-->
 		<div class='header-frame'>
-			<div class="m-5 p-5">
+			<div class="mt-5 pt-5 over-780ad">
 				<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=13&l=ur1&category=amazonstudent&banner=1RCZMYHREWCEW2PFSGR2&f=ifr&linkID=6032706919c6704fcddda6698deecafb&t=8pilotis-22&tracking_id=8pilotis-22" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 			</div>
-
-			<div class="m-5 p-5">
+			<div class="mt-5 pt-5 under-780ad">
+				<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=294&l=ur1&category=amazonrotate&f=ifr&linkID=abcb38b2cb41364fb86af7ac0c928a76&t=8pilotis-22&tracking_id=8pilotis-22" width="320" height="100" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+			</div>
+			<div class="mt-5 pt-5 pb-5">
 				<input type="text" class="top-form-control col-md-5" placeholder="" name="name">
 			</div>
 		</div>
@@ -62,7 +64,7 @@
 		
 
 		</div>
-		<div class="header-frame p-5 m-5">
+		<div class="header-frame pt-5 pb-5 mt-5 pt-5">
 				<!-----------------------------------------------全体チャットルーム--------------------------------------------------->
 
 				<div class="top-chat-view">

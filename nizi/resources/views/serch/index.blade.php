@@ -50,26 +50,29 @@
     </head>
 
 
-      <!--ヘッダー-->
-      <header>
-            
-            <!--ヘッダの下の黒いとこー-->
-            <div class="u2-global-navbar">
-              <div class="u2-header__container-inner">
-                <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
-              </div>
-              
-              <ul class="reset-ul row v2-global-navbar__links">
-                 <li class="u2-global-navbar__link"><a href="/">トップ</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-              </ul>
-            </div>
-        
-    </header>
+  <!--ヘッダー-->
+	<header>
+		<div class="menu none"  id="menu">
+			<div class="main-menu">
+                <a href="/" class="menu-item">トップ<i class="fas fa-angle-double-down nav-arrows"></i></a>
+				        <a href="serch" class="menu-item">授業検索<i class="fas fa-angle-double-down nav-arrows"></i></a>
+			</div>
+
+		</div>
+		<!--ヘッダの下の黒いとこー-->
+		<div class="u2-global-navbar">
+			<div class="open-menu">
+				<img src="{{ asset('assets/img/hum.png') }}" alt="">
+			</div>
+				<a href="/" class="u2-header__container-inner">∞pilotis</a>
+		</div>
+
+	</header>
 
 
 
 
-  <div class="container">
+  <main class="container">
     <div class="row">
 
       <div class="col-md-12 mt-5 text-center">
@@ -108,7 +111,7 @@
       </div>
 
     </div>
-  </div>
+  </main>
 
 
 
