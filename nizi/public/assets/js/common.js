@@ -23,10 +23,10 @@ $('a[href^="rolling"]').click(function() {
     $('.open-menu img').on('click', function () {
         $('#menu').toggleClass('none');
         $('#menu').toggleClass('flex');
-        $('body').append('<p class="dummy"></p>');
-
-        if($('p').hasClass('.dummy')){
-         $('p.dummy').remove();}え
+        if($('p').hasClass('dummy')){
+         $('p.dummy').remove();}else{
+            $('body').append('<p class="dummy"></p>');
+         }
     });
     $('body').on('click', '.dummy', function() {
         $('#menu').toggleClass('none');
