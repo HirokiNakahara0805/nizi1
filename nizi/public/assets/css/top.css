@@ -27,7 +27,18 @@
     
     } */
 
-
+.all-botton{
+    background-color: #e95014;
+    border: 1px solid #e95014;
+    color: white;
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin: auto;}
+    .all-botton:hover{
+        background-color: #ee7e52;
+    }
 /*------------------------学科科目スライダーのタイトルに関する設定*/
 h1.your-class{
     color:black;

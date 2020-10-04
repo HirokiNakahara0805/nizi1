@@ -16,16 +16,18 @@
 	<main>
 
 		<!-- 画像挿入-->
-		<div class='header-img-frame'>
-			<div class='header-img-in'>
-				<img src="{{ asset('assets/img/IMG_9584.JPG') }}" class="" >
-			</div>
+		<div class='header-frame p-5'>
+			<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=13&l=ur1&category=amazonstudent&banner=1RCZMYHREWCEW2PFSGR2&f=ifr&linkID=6032706919c6704fcddda6698deecafb&t=8pilotis-22&tracking_id=8pilotis-22" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+		</div>
+
+		<div class='header-frame p-5'>
+			<input type="text" class="top-form-control col-md-5" placeholder="" name="name">
 		</div>
 
 		<!-- 科目一覧表示 -->
 		<div class="to-class" id="class-sub">
 
-			<h1	class="text-center p-5 mt-5" >DEPARTMENT</h1>
+			<h1	class="text-center p-5 mt-5" >学部</h1>
 
 			<div class="container text-center fluid">
 				<!-- 学科表示(スライダー) -->
@@ -54,10 +56,21 @@
 					@endforeach
 				</select>
 			</div>
+				
+		
 
 		</div>
+		<div class="header-frame p-5 m-5">
+				<!-----------------------------------------------全体チャットルーム--------------------------------------------------->
 
+				<div class="top-chat-view">
+					<h1 class="your-class-chat text-center m-5 p-5">上智大学全体チャット</h1>
+					<h3 class="your-class-chat text-center m-5 -5 ">授業の質問などができます。</h3>
+					<a href="{{ url('/chat') }}" class="m-5 p-5"><p class="all-botton">全体チャットにいく</p></a>
+				</div>
 
+		</div>
+	
 
 
 		<!--------------------------------------------- 掲示板一覧 --------------------------------------------->
@@ -94,11 +107,6 @@
 
 					<div class="col-md-4  ">
 
-							<div class=" img-sophia-chat mt-5 mb-5" >
-								<a href="{{ url('/chat') }}" >
-									<h1 class="your-class-chat text-center">Chat Room</h1>
-								</a>
-							</div>
 							<div class="over-780ad">
 								<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=09028NTWEEQWX1H30B82&f=ifr&linkID=6499a59af2a79013c26dfaa2dba3ee1d&t=8pilotis-22&tracking_id=8pilotis-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" class="m-5"></iframe>
 							</div>

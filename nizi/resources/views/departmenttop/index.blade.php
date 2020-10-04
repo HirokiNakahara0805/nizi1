@@ -49,37 +49,46 @@
 
 
 <body>
-		<!-----ヘッダー開始------->
-		<header class="u2-header">
-			<div class="u2-header__container-inner">
-				<a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+	
+		<header>
+			
+			<!--ヘッダの下の黒いとこー-->
+			<div class="u2-global-navbar">
+				<div class="u2-header__container-inner">
+					<a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+				</div>
+				
+				<ul class="reset-ul row v2-global-navbar__links">
+					<li class="u2-global-navbar__link"><a href="#class-sub">学部</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+					<li class="u2-global-navbar__link"><a href="#all-bbs">掲示板</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+					<li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+					<li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+					<li class="u2-global-navbar__link"><a href="#all-about">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+				</ul>
 			</div>
+	
 		</header>
 
-		<div class="u2-global-navbar">
-			<ul class="reset-ul row v2-global-navbar__links">
-
-				<li class="u2-global-navbar__link"><a href="#all-subject">他学部</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-				<li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-				<li class="u2-global-navbar__link"><a href="#timetable">時間割</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-				<li class="u2-global-navbar__link"><a href="#bbs">掲示板</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-				<li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-				<li class="u2-global-navbar__link"><a href="#all-about">about</a><i class="fas fa-angle-double-down nav-arrows"></i></li> 
-
-			</ul>
-		</div>
-
 			<!--main開始-------------------------------------------->
-		<main class="general-page">
+		<main class="container">
 			
+
 
 			<div class="container dep-title-frame">
 				<div class="dep-title-frame-top border-bottom">
 				@foreach($departmentcategorie3s as $departmentcategorie3)
-					<h1 class="department-bbs-title pl-5"><a name="timetable">{{ $departmentcategorie3->name }} 時間割</a></h1>
+					<h1 class="department-bbs-title pl-5"><a name="timetable">{{ $departmentcategorie3->name }}</a></h1>
 				@endforeach
 				</div>
 			</div>
+			
+			<!------------ 時間割・掲示板・ボタン---------------------------->
+			<div>
+				<ul class="reset-ul row feature-title-box">
+					<li class=" topcolor feature-title-1 list-inline-item"><a href="" >時間割</a></li>
+					<li class="feature-title-1 list-inline-item"><a href="" >掲示板</a></li>
+				</ul>
+    		</div>
 			<div class="text-center container">
 				<div class="mx-auto mb-5">
 
@@ -435,167 +444,6 @@
 			<p id="page-top" ><a href="rolling"><i class="fas fa-arrow-up"></i></a></p>
 		</main>
 
-		
-
-
-<!---------------------------------------------------アマゾンアソシエイト ----------------------------------------------------->
-		<div class=" over-780ad mt-5 mb-5">
-			<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=48&l=ur1&category=amazonstudent&banner=1B2EJRSWS8V41M50QQG2&f=ifr&linkID=af9219f19375bad9edfa5e845452975a&t=8pilotis-22&tracking_id=8pilotis-22" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-		</div>
-		<div class="col-md-4 under-780ad mt-5 mb-5">
-            <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=288&l=ur1&category=amazonstudent&banner=1QVPY5WT2THVZY40E382&f=ifr&linkID=e6d5f51ee1373ddd7fbd7ff1b13c3590&t=8pilotis-22&tracking_id=8pilotis-22" width="320" height="50" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-        </div>
-
-
-
-<!---------------------------------------------------掲示板タイトル ----------------------------------------------------->
-		<div class="all-index-dep">
-
-			<div class="container dep-title-frame ">
-				<div class="dep-title-frame-top border-bottom">
-					@foreach($departmentcategorie3s as $departmentcategorie3)
-					<p class="department-bbs-title pl-5"><a name="bbs">{{$departmentcategorie3->name}} 掲示板</a></p>
-					@endforeach
-				</div>
-			</div>
-
-
-<div class="container mt-4 ">
-	<!---------------------------------------------------投稿完了メッセージ ----------------------------------------------------->
-	@if (session('poststatus'))
-				<div class="alert alert-success mt-4 mb-4">
-					{{ session('poststatus') }}
-				</div>
-		@endif
-	<div class="comment-box-form">
-
-
-		<form method="POST" action="{{ route('departmenttop.store') }}" >
-			@csrf
-
-			<fieldset class="">
-				<div class="row">
-					<div class="form-group col-sm-2">
-
-						<textarea
-							id="name"
-							name="name"
-							class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
-							value="{{ old('name') }}"
-							type="text"
-							rows="1"
-						>名無し</textarea>
-						@if ($errors->has('name'))
-							<div class="invalid-feedback">
-								{{ $errors->first('name') }}
-							</div>
-						@endif
-				 	</div>
-
-				</div>
-				<div class="form-group">
-				
-				<input
-					id="departmentcategory_id"
-					name="departmentcategory_id"
-					value = "{{$departmentcategory_id}}"
-					class="form-control {{ $errors->has('departmentcategory_id') ? 'is-invalid' : '' }}"
-					type="hidden"
-				>
-				</div>
-				
-				<div class="row text-center">
-
-					<div class="form-group col-sm-6">
-						<label for="message">
-							メイン内容
-						</label>
-	
-						<textarea
-							id="message"
-							name="message"
-							class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}"
-							cols="20" rows="2"　 wrap="hard" 　
-						>{{ old('message') }}</textarea>
-						@if ($errors->has('message'))
-							<div class="invalid-feedback">
-								{{ $errors->first('message') }}
-							</div>
-						@endif
-					</div>
-
-					
-	
-	
-					<div class="post-position col-sm-3">
-	
-						<button type="submit" class="post-botton" >
-							<i class="fas fa-paper-plane post-icon">POST</i>
-						</button>
-					</div>
-
-				</div>
-			</fieldset>
-		</form>
-	</div>
-</div>
-
-
-<!---------------------------------------投稿件数表示（もし０件だったら初めての投稿をしよう！） -->
-	<div class="mt-4 mb-4 text-center">
-        @if ($departmentposts->total()=== 0 )
-            <p>初めての投稿をしてみましょう！</p>
-        @else
-        <p>{{ $departmentposts->total() }}件が見つかりました。</p>
-        @endif
-    </div>
-
-<div class="d-flex justify-content-center mb-5" >
-	{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
-</div>
-
-
-<div class="container">
-	<div class="row">
-		<div class="col-md-8">
-		@foreach ($departmentposts as $departmentpost)
-
-			<div class="comment-box">
-				<div class="comment-text">{{$departmentpost->message}}
-
-				</div>
-				<div class="">
-					<div class="f-container comment-info border-top">
-						<div class="f-item float-right">{{ $departmentpost->created_at->format('Y.m.d H:i') }}</div>
-						<div class="f-item float-right">{{ $departmentpost->name }}さん</div>
-					</div>
-				</div>
-			</div>
-
-		@endforeach
-		</div>
-		<!--投稿の横の空白部分-->
-		<div class="col-md-4">
-
-		</div>
-
-	</div>
-
-	<div class="d-flex justify-content-center mb-5">
-		{{ $departmentposts->appends(['departmentcategory_id' => $departmentcategory_id])->links() }}
-	</div>
-	<!-----------------------------------------------授業科目セレクトボックス--------------------------------------------------->
-	<h3 class="text-center" id="all-subject">学部名</h3>
-	<div class="mt-4 mb-4 text-center underlist">
-		<select size="1" class="form-control" name="select" onChange="location.href=value;">
-			<option value="0"selected>学部名</option>
-			@foreach($departmentcategorie2s as $departmentcategorie2)
-			<option value="{{ route('departmenttop.index', ['departmentcategory_id'=>$departmentcategorie2->id]) }}" title="{{ $departmentcategorie2->name}}"><a class="class-list" >{{ $departmentcategorie2->name }}</a>
-			</option>
-			@endforeach
-		</select>
-	</div>	
-</div>
 
 
 

@@ -10,22 +10,29 @@
     <title>{{ $category2->name }} - ∞pilotis</title>
     @endforeach
 
-    <header class="u2-header">
-        <div class="u2-header__container-inner">
-            <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
-        </div>
-    </header>
-
-    <div class="u2-global-navbar">
-		<ul class="reset-ul row v2-global-navbar__links">
-            @foreach($category2s as $category2)
-            <li class="u2-global-navbar__link"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table-back</a></li>
-            @endforeach
-            <li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-			<li class="u2-global-navbar__link"><a href="#all-bbs">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-			<li class="u2-global-navbar__link"><a href="#all-bbs">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-		</ul>
-	</div>
+   
+<!--ヘッダー-->
+	<header>
+			
+            <!--ヘッダの下の黒いとこー-->
+            <div class="u2-global-navbar">
+                <div class="u2-header__container-inner">
+                    <a href="/" ><p class="u2-header-logo">∞pilotis</p></a>
+                </div>
+                
+                <ul class="reset-ul row v2-global-navbar__links">
+                @foreach($category2s as $category2)
+                    <li class="u2-global-navbar__link"><a href="{{ route('departmenttop.index', ['departmentcategory_id'=>$category2->departmentcategory_id]) }}" >time table-back</a></li>
+                @endforeach
+                    <li class="u2-global-navbar__link"><a href="#class-sub">学部</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+                    <li class="u2-global-navbar__link"><a href="#all-bbs">掲示板</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+                    <li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+                    <li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+                    <li class="u2-global-navbar__link"><a href="#all-about">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
+                </ul>
+            </div>
+    
+        </header>
 @endsection
 
 <!------------ content ----------------------------->

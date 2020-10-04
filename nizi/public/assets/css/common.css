@@ -57,6 +57,7 @@ nav{display: block;}
     height: 50px;
     border-top: 1px solid #e95014;
     border-bottom: 1px solid #e95014;
+    display: flex;
 }
 .u2-header{
     background-color: white;
@@ -69,8 +70,9 @@ nav{display: block;}
     color:black;
 }
 a .u2-header-logo {
-    color:black;
+    color:white;
     font-size:30px;
+    padding: 10px 20px 10px;
 }
 
 .u2-global-navbar ul {
@@ -93,20 +95,10 @@ a .u2-header-logo {
 .nav-arrows{
     padding:0 10px;
 }
-.header-img-in{
 
-    width: 700px;
-    height: 250px;
-    margin: 0 auto;
-}
-.header-img-in img{
-    width:100%;
-    height: 250px;
-}
-.header-img-frame{
-    display:block;
-    height:250px;
-    width:100%;
+
+.header-frame{
+    text-align:center;
     background-color:rgba(224, 224, 224, 0.356);
 }
 /*--------------------------------aタグの設定*/
@@ -324,7 +316,7 @@ textarea {
 .form-control {
     display: block;
     width: 100%;
-    height: calc(1.6em + 0.75rem + 2px);
+    height: calc(1.6em + 0.75rem + 10px);
     margin:auto;
     padding: 0.375rem 0.75rem;
     font-size: 0.9rem;
@@ -369,11 +361,29 @@ textarea {
     border-radius: 10px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+/*----トップページ投稿フォーム設定--*/
+.top-form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.6em + 0.75rem + 20px);
+    margin:auto;
+    padding: 0.375rem 0.75rem;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #e95014;
+    border-radius: 10px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 /*----postアイコンの位置--*/
 .post-position-chat{ margin: 14px 0px 0px 0px;
     padding: 10px;
     margin:50px 0px 0px 0px;
 }
+
 
 
 /**************************************
@@ -413,6 +423,27 @@ form label{
     list-style: none;
 }
 
+   /*-----------------POSTアイコンの設定-------*/
+   .post-botton{
+    background-color:#e95014;
+    border:1px solid #e95014;
+    color:grey;
+    width:150px;
+    height:35px;
+    border-radius: 10px;
+    padding:0px 10px;
+    margin:auto;
+  
+  }
+     /*------------------------*/
+.top-chat-view{
+    background-color:white;
+    border-color: white;
+    margin:auto;
+    width:300px;
+    height:200px;
+    box-shadow: 9px 9px 9px rgba(231, 229, 229, 0.884);
+}
 
 
 

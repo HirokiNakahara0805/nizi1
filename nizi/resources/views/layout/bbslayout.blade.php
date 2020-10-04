@@ -11,7 +11,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <!-- Custom styles for this template -->
-        <link href="/css/bbs/sticky-footer.css" rel="stylesheet">
+        <link href="{{ asset('assets/css/bbs/sticky-footer.css') }}" rel="stylesheet">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
          <!-- CSS(Bootstrap)読み込み -->
@@ -34,7 +34,7 @@
         <!--　font awesome　CSS指定よう-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
           <!-- javascript  読み込み-->
-      <script type="text/javascript" src="js/bbs_post.js"></script>
+      <script type="text/javascript" src="{{ asset('assets/js/bbs_post.js') }}"></script>
         <!-- googleアナリティクス本番だけ反応-->
         @if(env('APP_ENV') == 'production')
         @include('google.analytics')
