@@ -18,17 +18,9 @@
 			<div class="open-menu">
 				<img src="{{ asset('assets/img/hum.png') }}" alt="">
 			</div>
-			<h1 class="u2-header__container-inner">
-				<p class="u2-header-logo"><a href="/" >∞pilotis</a></p>
-			</h1>
 
-			<!-- <ul class="reset-ul row v2-global-navbar__links">
-				<li class="u2-global-navbar__link"><a href="#class-sub">学部</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-				<li class="u2-global-navbar__link"><a href="#all-bbs">掲示板</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-				<li class="u2-global-navbar__link"><a href="serch">授業検索</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-				<li class="u2-global-navbar__link"><a href="#all-sns">sns</a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-				<li class="u2-global-navbar__link"><a href="#all-about">about </a><i class="fas fa-angle-double-down nav-arrows"></i></li>
-			</ul> -->
+				<a href="/" class="u2-header__container-inner">∞pilotis</a>
+
 		</div>
 
 	</header>

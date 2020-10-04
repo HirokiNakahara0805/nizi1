@@ -9,15 +9,7 @@ html {
 
  
 /*--------------------------一番上の余白の設定*/
-header {
-    width: 100%;
-    left:0;
-    top:0;
-    z-index: 10;
-    background-color:white;
-    position: fixed;
 
-}
 
   /*--------------------------------header設定*/
   .header-logo {
@@ -53,12 +45,19 @@ nav{display: block;}
 }
 
 .u2-global-navbar {
-    min-width: 100%;
-    background: #333;
+    position: fixed;
     height: 50px;
+    background-color: #333;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1999;
+    width: auto;
+    min-width: 1024px;
+    margin: auto;
+    box-shadow: 0 0 2px #666, 0 0 8px #222;
     border-top: 1px solid #e95014;
     border-bottom: 1px solid #e95014;
-    display: flex;
 }
 .u2-header{
     background-color: white;
@@ -66,12 +65,12 @@ nav{display: block;}
     height: 66px;
 }
 .u2-header__container-inner {
-    position: relative;
-    line-height: 1;
-    color:black;
+    text-align: center;
+    display: block;
+    width: 104px;
+    margin: 0 auto;
+    opacity: .9;
     font-size: 30px;
-    padding: 10px;
-    margin: auto;
 }
 a .u2-header-logo {
     color:white;
@@ -476,18 +475,17 @@ form label{
     font-size:14px;
 }
 
-.header .open-menu {
+.open-menu {
+   
     position: absolute;
     cursor: pointer;
     left: 20px;
     top: 9px;
     width: 28px;
     opacity: .9;
-    padding:3px 5px;
 }
-.open-menu img{
-    padding:6px 20px;
-}
+
+
 .none{
     display: none;
 
