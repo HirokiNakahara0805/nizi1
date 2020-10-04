@@ -59,7 +59,7 @@
 	<header>
 		<div class="menu none"  id="menu">
 			<div class="main-menu">
-                <a href="/" class="menu-item">トップ</a><i class="fas fa-angle-double-down nav-arrows">
+                <a href="/" class="menu-item">トップ<i class="fas fa-angle-double-down nav-arrows"></i></a>
 				<a href="serch" class="menu-item">授業検索<i class="fas fa-angle-double-down nav-arrows"></i></a>
 			</div>
 
